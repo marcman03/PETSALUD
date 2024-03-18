@@ -130,7 +130,6 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Clinica_Class.h" />
     <ClInclude Include="DBConnection.h" />
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
@@ -140,7 +139,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
-    <ClCompile Include="Clinica_Class.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="DBConnection.cpp" />
     <ClCompile Include="Form1.cpp" />
@@ -150,7 +148,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Connection_Test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />
@@ -164,11 +161,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.h</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

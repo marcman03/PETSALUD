@@ -26,13 +26,10 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Form1.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Clinica_Class.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DBConnection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Form1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -46,16 +43,10 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Form1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Connection_Test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Clinica_Class.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DBConnection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Form1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
