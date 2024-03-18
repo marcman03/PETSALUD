@@ -22,9 +22,8 @@ DBConnection::DBConnection() {
         conn = gcnew MySqlConnection(connectionString);
 
         System::Diagnostics::Debug::WriteLine("Connected to MySQL database successfully!");
-    }
-    catch (Exception^ ex) {
-        System::Diagnostics::Debug::WriteLine("Error connecting to MySQL database: " + ex->Message);
+    } catch (Exception^ ex) {
+        MessageBox::Show(ex->Message);
     }
 }
 
