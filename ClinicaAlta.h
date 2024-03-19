@@ -11,12 +11,12 @@ namespace PetSalut {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Resumen de MyForm
+	/// Resumen de CinicaAlta
 	/// </summary>
-	public ref class MyForm : public System::Windows::Forms::Form
+	public ref class CinicaAlta : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm(void)
+		CinicaAlta(void)
 		{
 			InitializeComponent();
 			//
@@ -28,7 +28,7 @@ namespace PetSalut {
 		/// <summary>
 		/// Limpiar los recursos que se estén usando.
 		/// </summary>
-		~MyForm()
+		~CinicaAlta()
 		{
 			if (components)
 			{
@@ -78,7 +78,7 @@ namespace PetSalut {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(100, 31);
 			this->textBox1->TabIndex = 0;
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox1_TextChanged);
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &CinicaAlta::textBox1_TextChanged);
 			// 
 			// textBox2
 			// 
@@ -86,7 +86,7 @@ namespace PetSalut {
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(100, 31);
 			this->textBox2->TabIndex = 1;
-			this->textBox2->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox2_TextChanged);
+			this->textBox2->TextChanged += gcnew System::EventHandler(this, &CinicaAlta::textBox2_TextChanged);
 			// 
 			// textBox3
 			// 
@@ -94,7 +94,7 @@ namespace PetSalut {
 			this->textBox3->Name = L"textBox3";
 			this->textBox3->Size = System::Drawing::Size(100, 31);
 			this->textBox3->TabIndex = 2;
-			this->textBox3->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox3_TextChanged);
+			this->textBox3->TextChanged += gcnew System::EventHandler(this, &CinicaAlta::textBox3_TextChanged);
 			// 
 			// textBox4
 			// 
@@ -102,7 +102,7 @@ namespace PetSalut {
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->Size = System::Drawing::Size(100, 31);
 			this->textBox4->TabIndex = 3;
-			this->textBox4->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox4_TextChanged);
+			this->textBox4->TextChanged += gcnew System::EventHandler(this, &CinicaAlta::textBox4_TextChanged);
 			// 
 			// label1
 			// 
@@ -112,7 +112,7 @@ namespace PetSalut {
 			this->label1->Size = System::Drawing::Size(56, 25);
 			this->label1->TabIndex = 4;
 			this->label1->Text = L"Nom";
-			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
+			this->label1->Click += gcnew System::EventHandler(this, &CinicaAlta::label1_Click);
 			// 
 			// label2
 			// 
@@ -122,7 +122,7 @@ namespace PetSalut {
 			this->label2->Size = System::Drawing::Size(178, 25);
 			this->label2->TabIndex = 5;
 			this->label2->Text = L"Correu Electrònic";
-			this->label2->Click += gcnew System::EventHandler(this, &MyForm::label2_Click);
+			this->label2->Click += gcnew System::EventHandler(this, &CinicaAlta::label2_Click);
 			// 
 			// label3
 			// 
@@ -149,7 +149,7 @@ namespace PetSalut {
 			this->label5->Size = System::Drawing::Size(84, 25);
 			this->label5->TabIndex = 8;
 			this->label5->Text = L"Telefon";
-			this->label5->Click += gcnew System::EventHandler(this, &MyForm::label5_Click);
+			this->label5->Click += gcnew System::EventHandler(this, &CinicaAlta::label5_Click);
 			// 
 			// button1
 			// 
@@ -159,10 +159,10 @@ namespace PetSalut {
 			this->button1->TabIndex = 9;
 			this->button1->Text = L"Submit";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm::Submit);
-			this->button1->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::button1_MouseClick);
+			this->button1->Click += gcnew System::EventHandler(this, &CinicaAlta::Submit);
+			this->button1->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &CinicaAlta::button1_MouseClick);
 			// 
-			// MyForm
+			// CinicaAlta
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -177,9 +177,10 @@ namespace PetSalut {
 			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
-			this->Name = L"MyForm";
+			this->Name = L"CinicaAlta";
 			this->RightToLeftLayout = true;
-			this->Text = L"MyForm";
+			this->Text = L"CinicaAlta";
+			this->Load += gcnew System::EventHandler(this, &CinicaAlta::CinicaAlta_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -211,5 +212,7 @@ namespace PetSalut {
 	}
 	private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-	};
+	private: System::Void CinicaAlta_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }
