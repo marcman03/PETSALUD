@@ -6,9 +6,18 @@ ref class Clinica
 
 
 public:
+	
+	String^ nom;
+	String^ correu;
+	String^ telefon;
+	String^ ubicacio;
+	String^ descripcio;
+
 	Clinica();
-	void altaClinica(String^ nom, String^ correu, String^ ubicacio, String^ descripcio);
+	void altaClinica();
+	void static ultimaColumna();
 private:
+
 
 };
 

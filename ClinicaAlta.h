@@ -36,16 +36,21 @@ namespace PetSalut {
 			}
 		}
 	protected:
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::TextBox^ NomText;
+	private: System::Windows::Forms::TextBox^ CorreuText;
+	private: System::Windows::Forms::TextBox^ TelefonText;
+	private: System::Windows::Forms::TextBox^ UbicacioText;
+	private: System::Windows::Forms::TextBox^ DescripcioText;
+	private: System::Windows::Forms::Label^ NomLabel;
+	private: System::Windows::Forms::Label^ CorreuLabel;
+	private: System::Windows::Forms::Label^ UbicacioLabel;
+	private: System::Windows::Forms::Label^ DescripcioLabel;
+	private: System::Windows::Forms::Label^ TelefonLabel;
+	private: System::Windows::Forms::Button^ SubmitButton;
+
+
+
+
 
 	private:
 		/// <summary>
@@ -60,159 +65,157 @@ namespace PetSalut {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->NomText = (gcnew System::Windows::Forms::TextBox());
+			this->CorreuText = (gcnew System::Windows::Forms::TextBox());
+			this->TelefonText = (gcnew System::Windows::Forms::TextBox());
+			this->UbicacioText = (gcnew System::Windows::Forms::TextBox());
+			this->NomLabel = (gcnew System::Windows::Forms::Label());
+			this->CorreuLabel = (gcnew System::Windows::Forms::Label());
+			this->UbicacioLabel = (gcnew System::Windows::Forms::Label());
+			this->TelefonLabel = (gcnew System::Windows::Forms::Label());
+			this->SubmitButton = (gcnew System::Windows::Forms::Button());
+			this->DescripcioLabel = (gcnew System::Windows::Forms::Label());
+			this->DescripcioText = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
-			// textBox1
+			// NomText
 			// 
-			this->textBox1->Location = System::Drawing::Point(296, 188);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 31);
-			this->textBox1->TabIndex = 0;
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &CinicaAlta::textBox1_TextChanged);
+			this->NomText->Location = System::Drawing::Point(171, 87);
+			this->NomText->Margin = System::Windows::Forms::Padding(2);
+			this->NomText->Name = L"NomText";
+			this->NomText->Size = System::Drawing::Size(107, 20);
+			this->NomText->TabIndex = 0;
 			// 
-			// textBox2
+			// CorreuText
 			// 
-			this->textBox2->Location = System::Drawing::Point(296, 271);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(100, 31);
-			this->textBox2->TabIndex = 1;
-			this->textBox2->TextChanged += gcnew System::EventHandler(this, &CinicaAlta::textBox2_TextChanged);
+			this->CorreuText->Location = System::Drawing::Point(171, 120);
+			this->CorreuText->Margin = System::Windows::Forms::Padding(2);
+			this->CorreuText->Name = L"CorreuText";
+			this->CorreuText->Size = System::Drawing::Size(131, 20);
+			this->CorreuText->TabIndex = 1;
 			// 
-			// textBox3
+			// TelefonText
 			// 
-			this->textBox3->Location = System::Drawing::Point(296, 362);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(100, 31);
-			this->textBox3->TabIndex = 2;
-			this->textBox3->TextChanged += gcnew System::EventHandler(this, &CinicaAlta::textBox3_TextChanged);
+			this->TelefonText->Location = System::Drawing::Point(171, 155);
+			this->TelefonText->Margin = System::Windows::Forms::Padding(2);
+			this->TelefonText->Name = L"TelefonText";
+			this->TelefonText->Size = System::Drawing::Size(107, 20);
+			this->TelefonText->TabIndex = 2;
 			// 
-			// textBox4
+			// UbicacioText
 			// 
-			this->textBox4->Location = System::Drawing::Point(296, 470);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(100, 31);
-			this->textBox4->TabIndex = 3;
-			this->textBox4->TextChanged += gcnew System::EventHandler(this, &CinicaAlta::textBox4_TextChanged);
+			this->UbicacioText->Location = System::Drawing::Point(171, 186);
+			this->UbicacioText->Margin = System::Windows::Forms::Padding(2);
+			this->UbicacioText->Name = L"UbicacioText";
+			this->UbicacioText->Size = System::Drawing::Size(251, 20);
+			this->UbicacioText->TabIndex = 3;
 			// 
-			// label1
+			// NomLabel
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(47, 191);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(56, 25);
-			this->label1->TabIndex = 4;
-			this->label1->Text = L"Nom";
-			this->label1->Click += gcnew System::EventHandler(this, &CinicaAlta::label1_Click);
+			this->NomLabel->AutoSize = true;
+			this->NomLabel->Location = System::Drawing::Point(72, 90);
+			this->NomLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->NomLabel->Name = L"NomLabel";
+			this->NomLabel->Size = System::Drawing::Size(29, 13);
+			this->NomLabel->TabIndex = 4;
+			this->NomLabel->Text = L"Nom";
 			// 
-			// label2
+			// CorreuLabel
 			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(47, 277);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(178, 25);
-			this->label2->TabIndex = 5;
-			this->label2->Text = L"Correu Electrònic";
-			this->label2->Click += gcnew System::EventHandler(this, &CinicaAlta::label2_Click);
+			this->CorreuLabel->AutoSize = true;
+			this->CorreuLabel->Location = System::Drawing::Point(72, 123);
+			this->CorreuLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->CorreuLabel->Name = L"CorreuLabel";
+			this->CorreuLabel->Size = System::Drawing::Size(88, 13);
+			this->CorreuLabel->TabIndex = 5;
+			this->CorreuLabel->Text = L"Correu Electrònic";
 			// 
-			// label3
+			// UbicacioLabel
 			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(47, 368);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(0, 25);
-			this->label3->TabIndex = 6;
+			this->UbicacioLabel->AutoSize = true;
+			this->UbicacioLabel->Location = System::Drawing::Point(72, 193);
+			this->UbicacioLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->UbicacioLabel->Name = L"UbicacioLabel";
+			this->UbicacioLabel->Size = System::Drawing::Size(49, 13);
+			this->UbicacioLabel->TabIndex = 7;
+			this->UbicacioLabel->Text = L"Ubicació";
 			// 
-			// label4
+			// TelefonLabel
 			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(52, 476);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(56, 25);
-			this->label4->TabIndex = 7;
-			this->label4->Text = L"Nom";
+			this->TelefonLabel->AutoSize = true;
+			this->TelefonLabel->Location = System::Drawing::Point(72, 158);
+			this->TelefonLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->TelefonLabel->Name = L"TelefonLabel";
+			this->TelefonLabel->Size = System::Drawing::Size(43, 13);
+			this->TelefonLabel->TabIndex = 8;
+			this->TelefonLabel->Text = L"Telefon";
 			// 
-			// label5
+			// SubmitButton
 			// 
-			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(52, 368);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(84, 25);
-			this->label5->TabIndex = 8;
-			this->label5->Text = L"Telefon";
-			this->label5->Click += gcnew System::EventHandler(this, &CinicaAlta::label5_Click);
+			this->SubmitButton->Location = System::Drawing::Point(302, 277);
+			this->SubmitButton->Margin = System::Windows::Forms::Padding(2);
+			this->SubmitButton->Name = L"SubmitButton";
+			this->SubmitButton->Size = System::Drawing::Size(120, 31);
+			this->SubmitButton->TabIndex = 9;
+			this->SubmitButton->Text = L"Submit";
+			this->SubmitButton->UseVisualStyleBackColor = true;
+			this->SubmitButton->Click += gcnew System::EventHandler(this, &CinicaAlta::submitButton_Click);
 			// 
-			// button1
+			// DescripcioLabel
 			// 
-			this->button1->Location = System::Drawing::Point(52, 566);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(241, 60);
-			this->button1->TabIndex = 9;
-			this->button1->Text = L"Submit";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &CinicaAlta::Submit);
-			this->button1->MouseClick += gcnew System::Windows::Forms::MouseEventHandler(this, &CinicaAlta::button1_MouseClick);
+			this->DescripcioLabel->AutoSize = true;
+			this->DescripcioLabel->Location = System::Drawing::Point(72, 225);
+			this->DescripcioLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->DescripcioLabel->Name = L"DescripcioLabel";
+			this->DescripcioLabel->Size = System::Drawing::Size(57, 13);
+			this->DescripcioLabel->TabIndex = 10;
+			this->DescripcioLabel->Text = L"Descripció";
+			// 
+			// DescripcioText
+			// 
+			this->DescripcioText->Location = System::Drawing::Point(171, 222);
+			this->DescripcioText->Margin = System::Windows::Forms::Padding(2);
+			this->DescripcioText->Name = L"DescripcioText";
+			this->DescripcioText->Size = System::Drawing::Size(251, 20);
+			this->DescripcioText->TabIndex = 11;
 			// 
 			// CinicaAlta
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(885, 743);
-			this->Controls->Add(this->button1);
-			this->Controls->Add(this->label5);
-			this->Controls->Add(this->label4);
-			this->Controls->Add(this->label3);
-			this->Controls->Add(this->label2);
-			this->Controls->Add(this->label1);
-			this->Controls->Add(this->textBox4);
-			this->Controls->Add(this->textBox3);
-			this->Controls->Add(this->textBox2);
-			this->Controls->Add(this->textBox1);
+			this->ClientSize = System::Drawing::Size(486, 393);
+			this->Controls->Add(this->DescripcioText);
+			this->Controls->Add(this->DescripcioLabel);
+			this->Controls->Add(this->SubmitButton);
+			this->Controls->Add(this->TelefonLabel);
+			this->Controls->Add(this->UbicacioLabel);
+			this->Controls->Add(this->CorreuLabel);
+			this->Controls->Add(this->NomLabel);
+			this->Controls->Add(this->UbicacioText);
+			this->Controls->Add(this->TelefonText);
+			this->Controls->Add(this->CorreuText);
+			this->Controls->Add(this->NomText);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"CinicaAlta";
 			this->RightToLeftLayout = true;
 			this->Text = L"CinicaAlta";
-			this->Load += gcnew System::EventHandler(this, &CinicaAlta::CinicaAlta_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
+
 #pragma endregion
-	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void label5_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
+	private: System::Void submitButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		System::Diagnostics::Debug::WriteLine("ButtonClicked");
 
-	private: System::Void Submit(System::Object^ sender, System::EventArgs^ e) {
-		
-	}
-	private: System::Void button1_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
-		System::String^ nom = textBox1->Text;
-		System::String^ nom = textBox1->Text;
-		System::String^ nom = textBox1->Text;
-		System::String^ nom = textBox1->Text;
-		System::String^ nom = textBox1->Text;
-	}
-	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		Clinica clinica;
+		clinica.nom = NomText->Text;
+		clinica.correu = CorreuText->Text;
+		clinica.telefon = TelefonText->Text;
+		clinica.ubicacio = UbicacioText->Text;
+		clinica.descripcio = DescripcioText->Text;
 
-	}
-	private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void textBox3_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void textBox4_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void CinicaAlta_Load(System::Object^ sender, System::EventArgs^ e) {
+		clinica.altaClinica();
 	}
 };
 }

@@ -4,6 +4,7 @@
 #include <windows.h>
 #include <string> // For exception message conversion (optional)
 #include "CliniquesClass.h"
+#include "DBConnection.h"
 
 
 using namespace System::Windows::Forms;
@@ -15,23 +16,32 @@ using namespace MySql::Data::MySqlClient;
 
 Clinica::Clinica()
 {
-	throw gcnew System::NotImplementedException();
+	nom = "";
+	correu = "";
+	telefon = "";
+	ubicacio = "";
+	descripcio = "";
 }
 
-void Clinica::altaClinica(String^ nom, String^ correu, String^ ubicacio, String^ descripcio)
+void Clinica::altaClinica()
 {
-	string host = "ubiwan.epsevg.upc.edu";
-	string database = "amep03";
-	string port = "3306";
-	string user = "amep03";
-	string password = "yieV7tooPae7-";
-	string connectionString = "datasource=" + host + ";port=" + port + ";user=" + user + ";password=" + password + ";database=" + database + ";";
-	System::String^ managedConnectionString = msclr::interop::marshal_as<System::String^>(connectionString);
-	MySqlConnection^ conn = gcnew MySqlConnection(managedConnectionString);
+	MySqlConnection^ conn = (gcnew DBConnection())->getConnection(); 
+	
 
-	String^ sql = "INSERT INTO cliiques VALUES" + nom + "," + correu + "," + ubicacio + "," + descripcio + ";";
-	MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
+	Diagnostics::Debug::WriteLine(String::Format("Nom: {0}", nom));
+
+    String^ sql = "INSERT INTO cliniques VALUES (@nom, @correu, @telefon, @ubicacio, @descripcio);";
+
+    MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
+    cmd->Parameters->AddWithValue("@nom", nom);
+    cmd->Parameters->AddWithValue("@correu", correu);
+	cmd->Parameters->AddWithValue("@telefon", telefon);
+    cmd->Parameters->AddWithValue("@ubicacio", ubicacio);
+    cmd->Parameters->AddWithValue("@descripcio", descripcio);
+	
 	MySqlDataReader^ dataReader;
+
+
 	try {
 		// obrim la connexió
 		conn->Open();
@@ -40,7 +50,36 @@ void Clinica::altaClinica(String^ nom, String^ correu, String^ ubicacio, String^
 	}
 	catch (Exception^ ex) {
 		// codi per mostrar l’error en una finestra
-		System::Windows::Forms::MessageBox::Show(ex->Message);
+		MessageBox::Show(ex->Message);
+	}
+	finally {
+		// si tot va bé es tanca la connexió
+		conn->Close();
+	}
+}
+
+void Clinica::ultimaColumna()
+{
+	MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
+
+	String^ sql = "SELECT * FROM cliniques;";
+
+	MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
+
+	MySqlDataReader^ dataReader;
+	try {
+		// obrim la connexió
+		conn->Open();
+		// executem la comanda creada abans del try
+		dataReader = cmd->ExecuteReader();
+		if (dataReader->Read()) {
+			Diagnostics::Debug::WriteLine("Read");
+			Diagnostics::Debug::WriteLine(String::Format("Nom: {0}", dataReader->GetString(0)));
+		}
+	}
+	catch (Exception^ ex) {
+		// codi per mostrar l’error en una finestra
+		MessageBox::Show(ex->Message);
 	}
 	finally {
 		// si tot va bé es tanca la connexió
