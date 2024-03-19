@@ -1,3 +1,3 @@
 #include "pch.h"
-#include "MyForm.h"
+#include "ClinicaAlta.h"
 
