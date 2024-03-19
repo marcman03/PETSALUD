@@ -1,59 +1,33 @@
-#include "DBConnection.h"
 #include "pch.h"
+#include "DBConnection.h"
 #include <iostream>
-#include <msclr/marshal_cppstd.h>
+
 using namespace System;
 using namespace std;
+using namespace System::Windows::Forms;
 
-namespace PetSalut {
+DBConnection::DBConnection() {
+    try {
+        String^ host = "ubiwan.epsevg.upc.edu";
+        String^ database = "amep03";
+        String^ port = "3306";
+        String^ user = "amep03";
+        String^ password = "yieV7tooPae7-";
 
-	DBConnection::DBConnection(const string& hostname, const string& port, const string& username,
-		const string& password, const string& database) {
-		try {
-			string connectionString = "datasource=" + hostname + ";port=" + port + ";user=" + username + ";password=" + password + ";database=" + database + ";";
-			
-			System::String^ managedConnectionString = msclr::interop::marshal_as<System::String^>(connectionString);
-			connection = std::make_unique<MySql::Data::MySqlClient::MySqlConnection>(managedConnectionString);
-			
-			cout << "Connected to MySQL database successfully!" << endl;
-		}
-		catch (const MySql::Data::MySqlClient::MySqlException& ex) {
-			std::cerr << "Error connecting to MySQL database: " << ex.Message << std::endl;
-			throw std::runtime_error("DBConnection: Connection failed"); 
-		}
-	}
+        String^ connectionString = "datasource=" + host + ";port=" + port + ";username=" + user + ";password=\"" + password + "\";database=" + database + ";";
 
-	DBConnection::~DBConnection() {
-		if (connection) {
-			try {
-				connection->Close();
-				cout << "Disconnected from MySQL database." << endl;
-			}
-			catch (const MySql::Data::MySqlClient::MySqlException& ex) {
-				std::cerr << "Error disconnecting from MySQL database: " << ex.Message << endl;
-			}
-		}
-	}
+        System::Diagnostics::Debug::WriteLine("connectionString:" + connectionString);
 
-	void DBConnection::executeQuery(const string& query) {
-		cerr << "** Implementation for executeQuery is missing! **" << endl;
-	}
 
-	int DBConnection::executeUpdate(const string& query) {
-		try {
-			
-			cerr << "** Implementation for executeUpdate is missing! **" << endl;
-			return -1; 
-		}
-		catch (const MySql::Data::MySqlClient::MySqlException& ex) {
-			cerr << "Error executing update: " << ex.Message << endl;
-			return -1;
-		}
-	}
+        conn = gcnew MySqlConnection(connectionString);
 
-	unique_ptr<MySqlConnection> DBConnection::getConnection()
-	{
-		return std::move(connection);
-	}
+        System::Diagnostics::Debug::WriteLine("Connected to MySQL database successfully!");
+    } catch (Exception^ ex) {
+        MessageBox::Show(ex->Message);
+    }
+}
 
+MySqlConnection^ DBConnection::getConnection()
+{
+    return conn;
 }
