@@ -106,15 +106,6 @@ namespace PetSalut {
 
 		}
 #pragma endregion
-	private: System::Void clinicaAlta_Clicked(System::Object^ sender, System::EventArgs^ e) {
-		CinicaAlta^ alta = gcnew CinicaAlta();
-
-		alta->TopLevel = false;
-		alta->AutoScroll = true;
-		alta->Dock = DockStyle::Fill;
-
-		this->Controls->Add(alta);
-		alta->Show();
-	}
+	private: System::Void clinicaAlta_Clicked(System::Object^ sender, System::EventArgs^ e);
 	};
 }

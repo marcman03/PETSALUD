@@ -199,23 +199,15 @@ namespace PetSalut {
 			this->Name = L"CinicaAlta";
 			this->RightToLeftLayout = true;
 			this->Text = L"CinicaAlta";
+			this->Load += gcnew System::EventHandler(this, &CinicaAlta::CinicaAlta_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 
 #pragma endregion
-	private: System::Void submitButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		System::Diagnostics::Debug::WriteLine("ButtonClicked");
+	private: System::Void submitButton_Click(System::Object^ sender, System::EventArgs^ e);
 
-		Clinica clinica;
-		clinica.nom = NomText->Text;
-		clinica.correu = CorreuText->Text;
-		clinica.telefon = TelefonText->Text;
-		clinica.ubicacio = UbicacioText->Text;
-		clinica.descripcio = DescripcioText->Text;
-
-		clinica.altaClinica();
-	}
+	private: System::Void CinicaAlta_Load(System::Object^ sender, System::EventArgs^ e) {}
 };
 }
