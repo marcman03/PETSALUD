@@ -1,5 +1,5 @@
 ﻿#pragma once
-
+#include "TxEliminaMascota.h"
 namespace CppCLRWinFormsProject {
 
 	using namespace System;
@@ -68,6 +68,8 @@ namespace CppCLRWinFormsProject {
 	private: System::Void deletebutton_Click(System::Object^ sender, System::EventArgs^ e) {
 		// Oculta el panel1, lo que tambi�n oculta todos los controles dentro de �l
 		this->panel2->Visible = true;
+		TxEliminaMascota^ elimMascota = TxEliminaMascota::crear();
+		elimMascota->ejecutar();
 	}
 	private:
 		/// <summary>

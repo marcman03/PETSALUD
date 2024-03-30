@@ -7,7 +7,7 @@ using namespace System;
 //    return 0;
 // }
 
-#include "Form1.h"
+#include "Delete_Mascota_forms.h"
 
 using namespace System::Windows::Forms;
 
