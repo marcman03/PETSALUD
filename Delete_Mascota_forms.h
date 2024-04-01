@@ -1,4 +1,9 @@
 ﻿#pragma once
+#include <string>
+#include <iostream>
+#include <vector>
+#include "PassarellaPropietari.h"
+#include "TxConsultarMascotes.h"
 #include "TxEliminaMascota.h"
 namespace CppCLRWinFormsProject {
 
@@ -42,7 +47,7 @@ namespace CppCLRWinFormsProject {
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Button^ button2;
+
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Panel^ panelConfirmacion;
 	private: System::Windows::Forms::Label^ labelConfirmacion;
@@ -50,6 +55,9 @@ namespace CppCLRWinFormsProject {
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::ComboBox^ petsList;
+
+
 	private: System::Windows::Forms::Button^ buttonCerrarConfirmacion;
 
 	private: System::Void exitbutton_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -66,10 +74,31 @@ namespace CppCLRWinFormsProject {
 		this->panel1->Visible = false;
 	}
 	private: System::Void deletebutton_Click(System::Object^ sender, System::EventArgs^ e) {
-		// Oculta el panel1, lo que tambi�n oculta todos los controles dentro de �l
-		this->panel2->Visible = true;
-		TxEliminaMascota^ elimMascota = TxEliminaMascota::crear();
-		elimMascota->ejecutar();
+		if (petsList->SelectedItem != nullptr) {
+			String^ selectedChipString = dynamic_cast<String^>(petsList->SelectedItem);
+			int selectedChip = Int32::Parse(selectedChipString); // Convierte el chip de String a int
+
+			TxEliminaMascota^ elimMascota = TxEliminaMascota::crear();
+			elimMascota->ejecutar(selectedChip);// Ahora pasamos el chip seleccionado como argumento
+			panel2->Visible;
+			// Opcional: Actualizar la GUI si es necesario, por ejemplo, recargar la lista de mascotas
+		}
+	}
+	private: System::Void consultar_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		PassarellaPropietari^ propietari = gcnew PassarellaPropietari("pepitoxx", "", "", "", "", "", "");
+		TxConsultarMascotes^ consultaMascotas = TxConsultarMascotes::crear(propietari);
+		vector<int> mascotas = consultaMascotas->obteResultat();
+		// Limpiar el ComboBox
+		petsList->Items->Clear();
+
+		// Llenar el ComboBox con los identificadores de mascotas
+		for (int i = 0; i < mascotas.size(); ++i) {
+			petsList->Items->Add(mascotas[i].ToString());
+		}
+
+
+
 	}
 	private:
 		/// <summary>
@@ -91,8 +120,8 @@ namespace CppCLRWinFormsProject {
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->petsList = (gcnew System::Windows::Forms::ComboBox());
 			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -133,8 +162,8 @@ namespace CppCLRWinFormsProject {
 			this->panel1->BackColor = System::Drawing::Color::LightGray;
 			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel1->Controls->Add(this->panel2);
+			this->panel1->Controls->Add(this->petsList);
 			this->panel1->Controls->Add(this->button3);
-			this->panel1->Controls->Add(this->button2);
 			this->panel1->Controls->Add(this->label7);
 			this->panel1->Controls->Add(this->button1);
 			this->panel1->Controls->Add(this->label1);
@@ -154,7 +183,7 @@ namespace CppCLRWinFormsProject {
 			this->panel2->Controls->Add(this->button4);
 			this->panel2->Controls->Add(this->label2);
 			this->panel2->Controls->Add(this->label3);
-			this->panel2->Location = System::Drawing::Point(3, 72);
+			this->panel2->Location = System::Drawing::Point(7, 73);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(619, 181);
 			this->panel2->TabIndex = 16;
@@ -179,11 +208,12 @@ namespace CppCLRWinFormsProject {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Arial", 14, System::Drawing::FontStyle::Bold));
-			this->label2->Location = System::Drawing::Point(253, 16);
+			this->label2->Location = System::Drawing::Point(221, 21);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(132, 22);
+			this->label2->Size = System::Drawing::Size(203, 22);
 			this->label2->TabIndex = 11;
-			this->label2->Text = L"DELETE PET";
+			this->label2->Text = L"ELIMINAR MASCOTA";
+			this->label2->Click += gcnew System::EventHandler(this, &Form1::label2_Click);
 			// 
 			// label3
 			// 
@@ -193,12 +223,21 @@ namespace CppCLRWinFormsProject {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(214, 88);
+			this->label3->Location = System::Drawing::Point(147, 90);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(206, 22);
+			this->label3->Size = System::Drawing::Size(332, 22);
 			this->label3->TabIndex = 3;
-			this->label3->Text = L"Your pet has been deleted.";
+			this->label3->Text = L"La teva mascota s\'ha eliminat correctament.";
 			this->label3->Click += gcnew System::EventHandler(this, &Form1::label3_Click);
+			// 
+			// petsList
+			// 
+			this->petsList->FormattingEnabled = true;
+			this->petsList->Location = System::Drawing::Point(123, 164);
+			this->petsList->Name = L"petsList";
+			this->petsList->Size = System::Drawing::Size(204, 21);
+			this->petsList->TabIndex = 14;
+			this->petsList->Click += gcnew System::EventHandler(this, &Form1::consultar_Click);
 			// 
 			// button3
 			// 
@@ -212,32 +251,17 @@ namespace CppCLRWinFormsProject {
 			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Click += gcnew System::EventHandler(this, &Form1::exitbutton_Click);
 			// 
-			// button2
-			// 
-			this->button2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(161, 140);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(125, 67);
-			this->button2->TabIndex = 12;
-			this->button2->Text = L"NO";
-			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &Form1::nobutton_Click);
-			// 
 			// label7
 			// 
 			this->label7->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Arial", 14, System::Drawing::FontStyle::Bold));
-			this->label7->Location = System::Drawing::Point(257, 37);
+			this->label7->Location = System::Drawing::Point(225, 34);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(132, 22);
+			this->label7->Size = System::Drawing::Size(203, 22);
 			this->label7->TabIndex = 11;
-			this->label7->Text = L"DELETE PET";
+			this->label7->Text = L"ELIMINAR MASCOTA";
 			this->label7->Click += gcnew System::EventHandler(this, &Form1::label7_Click);
 			// 
 			// button1
@@ -252,7 +276,7 @@ namespace CppCLRWinFormsProject {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(125, 67);
 			this->button1->TabIndex = 10;
-			this->button1->Text = L"DELETE";
+			this->button1->Text = L"ELIMINAR";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &Form1::deletebutton_Click);
 			// 
@@ -264,11 +288,11 @@ namespace CppCLRWinFormsProject {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(182, 89);
+			this->label1->Location = System::Drawing::Point(195, 73);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(284, 22);
+			this->label1->Size = System::Drawing::Size(250, 22);
 			this->label1->TabIndex = 3;
-			this->label1->Text = L"Are you SURE you want to DELETE\?";
+			this->label1->Text = L"Quina Mascota vols ELIMINAR\?";
 			this->label1->Click += gcnew System::EventHandler(this, &Form1::label1_Click);
 			// 
 			// panelConfirmacion
@@ -325,5 +349,7 @@ namespace CppCLRWinFormsProject {
 	}
 	private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-	};
+	private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }
