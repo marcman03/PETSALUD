@@ -1,16 +1,21 @@
 
 #include "pch.h"
 #include "CercadoraPropietari.h"
+#include "DBConnection.h" 
 
-PasarellaPropietari CercadoraPropietari::cercaUsuari(String^ usernameU)
+using namespace System;
+
+PassarellaPropietari^ CercadoraPropietari::cercaPropietari(String^ usernameU)
 {
 	MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
-	String^ sql = "SELECT * FROM propietaris WHERE username = @username";
-	MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
-	cmd->Parameters->AddWithValue("@username", usernameU);
-	MySqlDataReader^ dataReader;
 
-	PasarellaPropietari prop;
+	String^ sql = "SELECT * FROM propietaris WHERE username = @username";
+
+	MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
+
+	cmd->Parameters->AddWithValue("@username", usernameU);
+
+	MySqlDataReader^ dataReader;
 
 	conn->Open();
 	dataReader = cmd->ExecuteReader();
@@ -22,10 +27,12 @@ PasarellaPropietari CercadoraPropietari::cercaUsuari(String^ usernameU)
 		String^ contrasenya = dataReader->GetString(2);
 		String^ correu = dataReader->GetString(3);
 		String^ telefon = dataReader->GetString(4);
-		String^ datanaixament = dataReader->GetString(5);
+		String^ data = dataReader->GetString(5);
 		String^ descripcio = dataReader->GetString(6);
+		
+		conn->Close();
 
-		PasarellaPropietari prop(nom, username, contrasenya, datanaixament, correu, descripcio, telefon);
+		return gcnew PassarellaPropietari(username, nom, contrasenya, correu, telefon, data, descripcio);
 
 	}
 
@@ -34,9 +41,5 @@ PasarellaPropietari CercadoraPropietari::cercaUsuari(String^ usernameU)
 		throw gcnew Exception("Hi ha hagut un error amb el nom d'usuari o la contrasneya");
 
 	}
-
-	conn->Close();
-
-	return prop;
 
 }

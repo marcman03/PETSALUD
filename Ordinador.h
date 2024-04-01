@@ -1,40 +1,24 @@
-
 #pragma once
-
 #include <iostream>
-#include "PasarellaPropietari.h"
-
-using namespace System;
-using namespace std;
+#include "PassarellaPropietari.h"
+#include "DBConnection.h"
 
 ref class Ordinador
 {
 public:
 
-    static Ordinador^ getInstance() {
+	static Ordinador^ getInstance() {
 
-        return instancia;
+		return instance;
 
-    }
+	}
 
-    PasarellaPropietari getOrdinador();
-
-    void iniciaSessio(PasarellaPropietari u);
-    void tancaSessio();
+	void iniciaSessio(PassarellaPropietari^ c);
 
 private:
 
-    static Ordinador^ instancia;
-    PasarellaPropietari ord;
-
-    Ordinador() {
-        ord.setNom("");
-        ord.setUsername("");
-        ord.setContrasenya("");
-        ord.setDataNaixement("");
-        ord.setCorreuElectronic("");
-        ord.setDescripcio("");
-        ord.setTelefon("");
-    }
+	static Ordinador^ instance;
+	PassarellaPropietari^ ord;
+	Ordinador();
 
 };

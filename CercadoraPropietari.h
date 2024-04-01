@@ -2,7 +2,7 @@
 #pragma once
 
 #include <iostream>
-#include "PasarellaPropietari.h"
+#include "PassarellaPropietari.h"
 
 using namespace System;
 
@@ -11,6 +11,6 @@ ref class CercadoraPropietari
 
 public:
 
-	static PasarellaPropietari cercaUsuari(String^ usernameU);
+	static PassarellaPropietari^ cercaPropietari(String^ usernameU);
 
 };

@@ -11,8 +11,9 @@ void TxIniciSessio::crear(String^& sU, String^& cU)
 void TxIniciSessio::executar()
 {
 	try {
-		PasarellaPropietari prop = CercadoraPropietari::cercaUsuari(username);
-		String^ cont = prop.getContrasenya();
+
+		PassarellaPropietari^ prop = CercadoraPropietari::cercaPropietari(username);
+		String^ cont = prop->getContrasenya();
 
 		if (cont != contrasenya)
 			throw gcnew Exception("Hi ha hagut un error amb el nom d'usuari o la contrasneya");
