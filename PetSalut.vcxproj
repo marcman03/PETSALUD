@@ -135,7 +135,7 @@
     </ClInclude>
     <ClInclude Include="DBConnection.h" />
     <ClInclude Include="PassarellaMascota.h" />
-    <ClInclude Include="PasarellaPropietari.h" />
+    <ClInclude Include="PassarellaPropietari.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="TxConsultarMascotes.h" />
@@ -147,7 +147,7 @@
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="DBConnection.cpp" />
     <ClCompile Include="PassarellaMascota.cpp" />
-    <ClCompile Include="PasarellaPropietari.cpp" />
+    <ClCompile Include="PassarellaPropietari.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

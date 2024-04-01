@@ -3,11 +3,11 @@
 
 
 // Implementación del constructor
-TxConsultarMascotes::TxConsultarMascotes(PasarellaPropietari^ _propietari) {
+TxConsultarMascotes::TxConsultarMascotes(PassarellaPropietari^ _propietari) {
     propietari = _propietari;
 }
 
-TxConsultarMascotes^ TxConsultarMascotes::crear(PasarellaPropietari^ _propietari) {
+TxConsultarMascotes^ TxConsultarMascotes::crear(PassarellaPropietari^ _propietari) {
     return gcnew TxConsultarMascotes(_propietari);
 }
 

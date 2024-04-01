@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
-#include "PasarellaPropietari.h"
+#include "PassarellaPropietari.h"
 #include "TxConsultarMascotes.h"
 
 namespace PetSalut {
@@ -67,7 +67,7 @@ namespace PetSalut {
 	}
 	private: System::Void fillPets(System::Object^ sender, System::EventArgs^ e) {
 
-		PasarellaPropietari^ propietari = gcnew PasarellaPropietari("","pepitoxx","","","","","");
+		PassarellaPropietari^ propietari = gcnew PassarellaPropietari("pepitoxx","","","","","","");
 		TxConsultarMascotes^ consultaMascotas = TxConsultarMascotes::crear(propietari);
 		vector<int> mascotas = consultaMascotas->obteResultat();
 		// Limpiar el ComboBox
