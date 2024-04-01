@@ -6,26 +6,26 @@
 
 using namespace System;
 
-ref class PasarellaPropietari {
+ref class PassarellaPropietari {
 
 private:
-
-	String^ nom;
-	String^ username;
+    String^ username;
+    String^ nom;
 	String^ contrasenya;
+    String^ correu;
+    String^ telefon;
 	String^ data_naixament;
-	String^ correu_electronic;
-	String^ descripcio;
-	String^ telefon;
-
+    String^ descripcio;
+    
 public:
 
-	PasarellaPropietari();
-	PasarellaPropietari(String^ _nom, String^ _username, String^ _contrasenya, String^ _data_naixament, String^ _correu_electronic, String^ _descripcio, String^ _telefon);
-	PasarellaPropietari(const PasarellaPropietari% PU);
+	PassarellaPropietari();
 
-	void insereix();
-	void esborra();
+    PassarellaPropietari(String^ _username, String^ _nom, String^ _contrasenya, String^ _correu, String^ _telefon, String^ _data_naixament, String^ _descripcio);
+
+	PassarellaPropietari(const PassarellaPropietari^ p);
+
+	void crear();
 
 	String^ getNom();
 	String^ getUsername();

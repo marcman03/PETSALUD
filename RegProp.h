@@ -1,4 +1,6 @@
-#pragma once
+ï»¿#pragma once
+#include "TxRegistraProp.h"
+#include "MenuProp.h"
 
 namespace PetSalut {
 
@@ -19,12 +21,14 @@ namespace PetSalut {
 		{
 			InitializeComponent();
 			//
-			//TODO: agregar código de constructor aquí
+			//TODO: agregar cï¿½digo de constructor aquï¿½
 			//
 		}
 		bool mostra1 = false;
 	private: System::Windows::Forms::Label^ PassLong;
 	private: System::Windows::Forms::Label^ DiffPasswd;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::TextBox^ descripcio;
 	public:
 
 	public:
@@ -33,7 +37,7 @@ namespace PetSalut {
 
 	protected:
 		/// <summary>
-		/// Limpiar los recursos que se estén usando.
+		/// Limpiar los recursos que se estï¿½n usando.
 		/// </summary>
 		~RegProp()
 		{
@@ -66,14 +70,14 @@ namespace PetSalut {
 
 	private:
 		/// <summary>
-		/// Variable del diseñador necesaria.
+		/// Variable del diseï¿½ador necesaria.
 		/// </summary>
 		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Método necesario para admitir el Diseñador. No se puede modificar
-		/// el contenido de este método con el editor de código.
+		/// Mï¿½todo necesario para admitir el Diseï¿½ador. No se puede modificar
+		/// el contenido de este mï¿½todo con el editor de cï¿½digo.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -98,6 +102,8 @@ namespace PetSalut {
 			this->show2 = (gcnew System::Windows::Forms::Button());
 			this->PassLong = (gcnew System::Windows::Forms::Label());
 			this->DiffPasswd = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->descripcio = (gcnew System::Windows::Forms::TextBox());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -248,11 +254,11 @@ namespace PetSalut {
 			this->valid_button->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->valid_button->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->valid_button->Location = System::Drawing::Point(706, 371);
+			this->valid_button->Location = System::Drawing::Point(26, 465);
 			this->valid_button->Name = L"valid_button";
-			this->valid_button->Size = System::Drawing::Size(357, 65);
+			this->valid_button->Size = System::Drawing::Size(273, 65);
 			this->valid_button->TabIndex = 25;
-			this->valid_button->Text = L"VALIDAR INFORMACIÓ";
+			this->valid_button->Text = L"VALIDAR INFORMACIï¿½";
 			this->valid_button->UseVisualStyleBackColor = false;
 			this->valid_button->Click += gcnew System::EventHandler(this, &RegProp::valid_button_Click);
 			// 
@@ -269,6 +275,7 @@ namespace PetSalut {
 			this->reg_button->Text = L"REGISTRAR-SE";
 			this->reg_button->UseVisualStyleBackColor = false;
 			this->reg_button->Visible = false;
+			this->reg_button->Click += gcnew System::EventHandler(this, &RegProp::reg_button_Click);
 			// 
 			// show1
 			// 
@@ -322,12 +329,32 @@ namespace PetSalut {
 			this->DiffPasswd->Text = L"La contrasenyes no coincideixen!";
 			this->DiffPasswd->Visible = false;
 			// 
-			// RegU
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label9->Location = System::Drawing::Point(700, 380);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(172, 33);
+			this->label9->TabIndex = 31;
+			this->label9->Text = L"Descripciï¿½";
+			// 
+			// descripcio
+			// 
+			this->descripcio->Location = System::Drawing::Point(706, 416);
+			this->descripcio->Name = L"descripcio";
+			this->descripcio->Size = System::Drawing::Size(357, 20);
+			this->descripcio->TabIndex = 32;
+			// 
+			// RegProp
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->ClientSize = System::Drawing::Size(1184, 661);
+			this->Controls->Add(this->descripcio);
+			this->Controls->Add(this->label9);
 			this->Controls->Add(this->DiffPasswd);
 			this->Controls->Add(this->PassLong);
 			this->Controls->Add(this->show2);
@@ -349,7 +376,7 @@ namespace PetSalut {
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Name = L"RegU";
+			this->Name = L"RegProp";
 			this->Text = L"RegistrarUsuari";
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -386,6 +413,36 @@ namespace PetSalut {
 
 			DiffPasswd->Visible = true;
 
+		}
+
+	}
+	private: System::Void reg_button_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		try {
+
+			String^ usernameS = username->Text;
+			String^ nomComplertS = name->Text;
+			String^ contrasenyaS = passwd1->Text;
+			String^ telefonS = phone->Text;
+			String^ correuElectronicS = mail->Text;
+			String^ dataNaixementS = date->Text;
+			String^ descripcioS = descripcio->Text;
+
+			TxRegistraProp regS;
+
+			regS.crear(usernameS, contrasenyaS, nomComplertS, telefonS, dataNaixementS, correuElectronicS, descripcioS);
+			regS.executar();
+
+			PetSalut::MenuProp^ menuProp = gcnew PetSalut::MenuProp();
+
+			this->Visible = false;
+
+			menuProp->Show();
+
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show("Error: " + ex->Message);
 		}
 
 	}
