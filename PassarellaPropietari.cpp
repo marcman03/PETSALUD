@@ -37,38 +37,67 @@ PassarellaPropietari::PassarellaPropietari(const PassarellaPropietari^ p)
 
 void PassarellaPropietari::crear()
 {
-    
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
-    String^ sql = "INSERT INTO propietaris (username, nom, contrasenya, correu, telefon, datanaixement, descripcio) VALUES (@username, @nom, @contrasenya, @correu, @datanaixement, @descripcio)";
+
+    String^ sql = "SELECT * FROM propietaris WHERE username = @username";
+    String^ sql1 = "SELECT * FROM propietaris WHERE correu = @correu";
+    String^ sql2 = "SELECT * FROM propietaris WHERE telefon = @telefon";
+
     MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
+    MySqlCommand^ cmd1 = gcnew MySqlCommand(sql1, conn);
+    MySqlCommand^ cmd2 = gcnew MySqlCommand(sql2, conn);
+
     cmd->Parameters->AddWithValue("@username", username);
-    cmd->Parameters->AddWithValue("@contrasenya", contrasenya);
-    cmd->Parameters->AddWithValue("@nom", nom);
-    cmd->Parameters->AddWithValue("@telefon", telefon);
-    cmd->Parameters->AddWithValue("@datanaixement", data_naixament);
-    cmd->Parameters->AddWithValue("@correu", correu);
-    cmd->Parameters->AddWithValue("@descripcio", descripcio);
+    cmd1->Parameters->AddWithValue("@correu", correu);
+    cmd2->Parameters->AddWithValue("@telefon", telefon);
+
+    conn->Open();
+    MySqlDataReader^ dataReader = cmd->ExecuteReader();
+
+    if (dataReader->Read()) {
+        conn->Close();
+        throw gcnew Exception("Aquest nom d'usuari ja existeix, prova amb un de diferent");
+    }
+
+    dataReader->Close(); // Cerrar el primer DataReader después de su uso
+
+    dataReader = cmd1->ExecuteReader();
+
+    if (dataReader->Read()) {
+        conn->Close();
+        throw gcnew Exception("Aquest correu electronic ja te un usuari associat");
+    }
+
+    dataReader->Close(); // Cerrar el segundo DataReader después de su uso
+
+    dataReader = cmd2->ExecuteReader();
+
+    if (dataReader->Read()) {
+        conn->Close();
+        throw gcnew Exception("Aquest telefon ja te un usuari associat");
+    }
+
+    dataReader->Close(); // Cerrar el tercer DataReader después de su uso
 
     try {
+        String^ sql0 = "INSERT INTO propietaris VALUES (@username, @nom, @contrasenya, @correu, @telefon, @datanaixement, @descripcio);";
+        MySqlCommand^ cmd0 = gcnew MySqlCommand(sql0, conn);
+        cmd0->Parameters->AddWithValue("@username", username);
+        cmd0->Parameters->AddWithValue("@contrasenya", contrasenya);
+        cmd0->Parameters->AddWithValue("@nom", nom);
+        cmd0->Parameters->AddWithValue("@telefon", telefon);
+        cmd0->Parameters->AddWithValue("@datanaixement", data_naixament);
+        cmd0->Parameters->AddWithValue("@correu", correu);
+        cmd0->Parameters->AddWithValue("@descripcio", descripcio);
 
-        conn->Open();
-        cmd->ExecuteNonQuery();
-
+        cmd0->ExecuteNonQuery();
     }
-
     catch (Exception^ ex) {
-
-        //throw gcnew Exception("Hi ha hagut un error al registrar el propietari");
-        MessageBox::Show("Error: " + ex->Message);
-
+        throw gcnew Exception("Hi ha hagut un error al registrar el propietari");
     }
-
     finally {
-
         conn->Close();
-
     }
-
 }
 
 String^ PassarellaPropietari::getNom()

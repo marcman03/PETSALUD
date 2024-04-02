@@ -258,7 +258,7 @@ namespace PetSalut {
 			this->valid_button->Name = L"valid_button";
 			this->valid_button->Size = System::Drawing::Size(273, 65);
 			this->valid_button->TabIndex = 25;
-			this->valid_button->Text = L"VALIDAR INFORMACI�";
+			this->valid_button->Text = L"VALIDAR INFORMACIO";
 			this->valid_button->UseVisualStyleBackColor = false;
 			this->valid_button->Click += gcnew System::EventHandler(this, &RegProp::valid_button_Click);
 			// 
@@ -338,7 +338,7 @@ namespace PetSalut {
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(172, 33);
 			this->label9->TabIndex = 31;
-			this->label9->Text = L"Descripci�";
+			this->label9->Text = L"Descripcio";
 			// 
 			// descripcio
 			// 

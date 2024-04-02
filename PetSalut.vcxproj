@@ -191,6 +191,9 @@
     <EmbeddedResource Include="MenuProp.resx">
       <DependentUpon>MenuProp.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegProp.resx">
+      <DependentUpon>RegProp.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
