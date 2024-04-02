@@ -8,6 +8,19 @@ Ordinador::Ordinador() {
 }
 
 void Ordinador::iniciaSessio(PassarellaPropietari^ c) {
+
 	PassarellaPropietari ord(c);
+
+}
+
+void Ordinador::tancaSessio() {
+
+	ord->setUsername("");
+	ord->setNom("");
+	ord->setContrasenya("");
+	ord->setDataNaixement("");
+	ord->setCorreuElectronic("");
+	ord->setDescripcio("");
+	ord->setTelefon("");
 
 }
