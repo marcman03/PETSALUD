@@ -80,7 +80,7 @@ namespace CppCLRWinFormsProject {
 
 			TxEliminaMascota^ elimMascota = TxEliminaMascota::crear();
 			elimMascota->ejecutar(selectedChip);// Ahora pasamos el chip seleccionado como argumento
-			panel2->Visible;
+			panel2->Visible = true;
 			// Opcional: Actualizar la GUI si es necesario, por ejemplo, recargar la lista de mascotas
 		}
 	}
@@ -159,7 +159,7 @@ namespace CppCLRWinFormsProject {
 			this->panel1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->panel1->BackColor = System::Drawing::Color::LightGray;
+			this->panel1->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
 			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel1->Controls->Add(this->panel2);
 			this->panel1->Controls->Add(this->petsList);
@@ -178,12 +178,12 @@ namespace CppCLRWinFormsProject {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->panel2->AutoScroll = true;
-			this->panel2->BackColor = System::Drawing::Color::LightGray;
+			this->panel2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->panel2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel2->Controls->Add(this->button4);
 			this->panel2->Controls->Add(this->label2);
 			this->panel2->Controls->Add(this->label3);
-			this->panel2->Location = System::Drawing::Point(7, 73);
+			this->panel2->Location = System::Drawing::Point(3, 73);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(619, 181);
 			this->panel2->TabIndex = 16;
