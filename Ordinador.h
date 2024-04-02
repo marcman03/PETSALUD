@@ -17,6 +17,8 @@ public:
 
 	void tancaSessio();
 
+	PassarellaPropietari^ obtePropietari();
+
 private:
 
 	static Ordinador^ instance;

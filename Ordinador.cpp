@@ -24,3 +24,8 @@ void Ordinador::tancaSessio() {
 	ord->setTelefon("");
 
 }
+
+PassarellaPropietari^ Ordinador::obtePropietari()
+{
+	return ord;
+}
