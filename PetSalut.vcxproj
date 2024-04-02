@@ -150,6 +150,7 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="TxIniciSessio.h" />
     <ClInclude Include="TxRegistraProp.h" />
+    <ClInclude Include="TxTancaSessio.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
@@ -170,6 +171,7 @@
     </ClCompile>
     <ClCompile Include="TxIniciSessio.cpp" />
     <ClCompile Include="TxRegistraProp.cpp" />
+    <ClCompile Include="TxTancaSessio.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />

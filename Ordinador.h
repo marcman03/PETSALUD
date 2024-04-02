@@ -15,6 +15,8 @@ public:
 
 	void iniciaSessio(PassarellaPropietari^ c);
 
+	void tancaSessio();
+
 private:
 
 	static Ordinador^ instance;
