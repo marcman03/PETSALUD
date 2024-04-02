@@ -135,6 +135,9 @@
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="InfoProp.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="IniProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -158,6 +161,7 @@
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="DBConnection.cpp" />
     <ClCompile Include="Form1.cpp" />
+    <ClCompile Include="InfoProp.cpp" />
     <ClCompile Include="IniProp.cpp" />
     <ClCompile Include="MenuProp.cpp" />
     <ClCompile Include="RegProp.cpp" />
@@ -189,6 +193,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoProp.resx">
+      <DependentUpon>InfoProp.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuProp.resx">
       <DependentUpon>MenuProp.h</DependentUpon>
