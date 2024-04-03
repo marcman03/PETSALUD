@@ -18,7 +18,7 @@ private:
 
 public:
 
-	void crear(String^& sU, String^& cU);
+	void crear(String^ sU, String^ cU);
 	void executar();
 
 };

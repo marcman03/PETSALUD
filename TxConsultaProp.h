@@ -7,7 +7,7 @@
 ref class TxConsultaProp
 {
 
-private:
+public:
 
 	value struct Resultat {
 
@@ -21,13 +21,14 @@ private:
 
 	};
 
-	Resultat res;
-	PassarellaPropietari^ prop;
-
-public:
-
 	Resultat obteResultat();
+	PassarellaPropietari^ obtePropietari();
 	void crear();
 	void executar();
+
+private:
+
+	Resultat res;
+	PassarellaPropietari^ prop;
 
 };

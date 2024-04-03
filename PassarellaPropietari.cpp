@@ -11,7 +11,6 @@ PassarellaPropietari::PassarellaPropietari() : PassarellaPropietari("", "", "", 
 
 PassarellaPropietari::PassarellaPropietari(String^ _username, String^ _nom, String^ _contrasenya, String^ _correu_electronic, String^ _telefon, String^ _data_naixament, String^ _descripcio)
 {
-
     username = _username;
     nom = _nom;
     contrasenya = _contrasenya;
@@ -24,7 +23,6 @@ PassarellaPropietari::PassarellaPropietari(String^ _username, String^ _nom, Stri
 
 PassarellaPropietari::PassarellaPropietari(const PassarellaPropietari^ p)
 {
-
     this->username = p->username;
     this->nom = p->nom;
     this->contrasenya = p->contrasenya;

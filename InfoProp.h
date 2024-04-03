@@ -377,18 +377,20 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	try {
-		TxConsultaProp conP;
 
+		TxConsultaProp conP;
 		conP.crear();
 		conP.executar();
 
-		this->nameLabel->Text = conP.obteResultat().nom;
-		this->mailLabel->Text = conP.obteResultat().correu;
-		this->phoneLabel->Text = conP.obteResultat().telefon;
-		this->DateLabel->Text = conP.obteResultat().data_naixament;
-		this->usernameLabel->Text = conP.obteResultat().username;
-		this->passwordLabel->Text = conP.obteResultat().contrasenya;
-		this->descripcio->Text = conP.obteResultat().descripcio;
+		TxConsultaProp::Resultat res = conP.obteResultat();
+
+		this->nameLabel->Text = res.nom;
+		this->mailLabel->Text = res.correu;
+		this->phoneLabel->Text = res.telefon;
+		this->DateLabel->Text = res.data_naixament;
+		this->usernameLabel->Text = res.username;
+		this->passwordLabel->Text = res.contrasenya;
+		this->descripcio->Text = res.descripcio;
 
 	}
 

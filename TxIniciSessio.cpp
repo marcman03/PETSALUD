@@ -2,7 +2,7 @@
 #include "pch.h"
 #include "TxIniciSessio.h"
 
-void TxIniciSessio::crear(String^& sU, String^& cU)
+void TxIniciSessio::crear(String^ sU, String^ cU)
 {
 	username = sU;
 	contrasenya = cU;
@@ -18,10 +18,12 @@ void TxIniciSessio::executar()
 		if (cont != contrasenya)
 			throw gcnew Exception("Hi ha hagut un error amb el nom d'usuari o la contrasneya");
 
-		Ordinador^ ord = Ordinador::getInstance();
+		Ordinador^ ord;
+		ord = Ordinador::getInstance();
 		ord->iniciaSessio(prop);
 
 	}
+
 	catch (Exception^ ex) {
 
 		throw ex;

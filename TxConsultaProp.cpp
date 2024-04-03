@@ -6,6 +6,11 @@ TxConsultaProp::Resultat TxConsultaProp::obteResultat()
 	return res;
 }
 
+PassarellaPropietari^ TxConsultaProp::obtePropietari()
+{
+	return prop;
+}
+
 void TxConsultaProp::crear()
 {	
 	res.nom = "";
