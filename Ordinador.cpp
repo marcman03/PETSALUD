@@ -4,17 +4,19 @@
 #include "PassarellaPropietari.h"
 #include "DBConnection.h"
 
-Ordinador::Ordinador() {
+void Ordinador::iniciaSessio(PassarellaPropietari^ c) 
+{
+	 ord->setUsername(c->getUsername());
+	 ord->setNom(c->getNom());
+	 ord->setContrasenya(c->getContrasenya());
+	 ord->setDataNaixement(c->getDataNaixement());
+	 ord->setTelefon(c->getTelefon());
+	 ord->setCorreuElectronic(c->getCorreuElectronic());
+	 ord->setDescripcio(c->getDescripcio());
 }
 
-void Ordinador::iniciaSessio(PassarellaPropietari^ c) {
-
-	PassarellaPropietari ord(c);
-
-}
-
-void Ordinador::tancaSessio() {
-
+void Ordinador::tancaSessio() 
+{
 	ord->setUsername("");
 	ord->setNom("");
 	ord->setContrasenya("");
@@ -22,5 +24,12 @@ void Ordinador::tancaSessio() {
 	ord->setCorreuElectronic("");
 	ord->setDescripcio("");
 	ord->setTelefon("");
+	
+	delete instance;
+	instance = nullptr;
+}
 
+PassarellaPropietari^ Ordinador::obtePropietari()
+{
+	return ord;
 }

@@ -3,12 +3,15 @@
 #include "PassarellaPropietari.h"
 #include "DBConnection.h"
 
-ref class Ordinador
+public ref class Ordinador
 {
 public:
 
 	static Ordinador^ getInstance() {
 
+		if (instance == nullptr) 
+			instance = gcnew Ordinador();
+		
 		return instance;
 
 	}
@@ -17,10 +20,16 @@ public:
 
 	void tancaSessio();
 
+	PassarellaPropietari^ obtePropietari();
+
 private:
 
 	static Ordinador^ instance;
 	PassarellaPropietari^ ord;
-	Ordinador();
+	
+	Ordinador::Ordinador()
+	{
+		ord = gcnew PassarellaPropietari();
+	}
 
 };
