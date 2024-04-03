@@ -22,6 +22,30 @@ namespace PetSalut {
 			//
 			//TODO: agregar código de constructor aquí
 			//
+
+			try {
+
+				TxConsultaProp conP;
+				conP.crear();
+				conP.executar();
+
+				TxConsultaProp::Resultat res = conP.obteResultat();
+
+				this->nameLabel->Text = res.nom;
+				this->mailLabel->Text = res.correu;
+				this->phoneLabel->Text = res.telefon;
+				this->DateLabel->Text = res.data_naixament;
+				this->usernameLabel->Text = res.username;
+				this->passwordLabel->Text = res.contrasenya;
+				this->descripcio->Text = res.descripcio;
+
+			}
+
+			catch (Exception^ ex)
+			{
+				MessageBox::Show("Error: " + ex->Message);
+			}
+
 		}
 
 	protected:
@@ -54,7 +78,7 @@ namespace PetSalut {
 	private: System::Windows::Forms::Button^ Accepta_Tanca;
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button3;
+
 
 	private:
 		/// <summary>
@@ -87,7 +111,6 @@ namespace PetSalut {
 			this->Accepta_Tanca = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label9
@@ -322,26 +345,12 @@ namespace PetSalut {
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &InfoProp::button2_Click);
 			// 
-			// button3
-			// 
-			this->button3->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(349, 668);
-			this->button3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(287, 97);
-			this->button3->TabIndex = 57;
-			this->button3->Text = L"Visualitza";
-			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &InfoProp::button3_Click);
-			// 
 			// InfoProp
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->ClientSize = System::Drawing::Size(1579, 814);
-			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->Accepta_Tanca);
@@ -360,7 +369,7 @@ namespace PetSalut {
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"InfoProp";
 			this->Text = L"InfoProp";
 			this->ResumeLayout(false);
@@ -374,31 +383,6 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	try {
-
-		TxConsultaProp conP;
-		conP.crear();
-		conP.executar();
-
-		TxConsultaProp::Resultat res = conP.obteResultat();
-
-		this->nameLabel->Text = res.nom;
-		this->mailLabel->Text = res.correu;
-		this->phoneLabel->Text = res.telefon;
-		this->DateLabel->Text = res.data_naixament;
-		this->usernameLabel->Text = res.username;
-		this->passwordLabel->Text = res.contrasenya;
-		this->descripcio->Text = res.descripcio;
-
-	}
-
-	catch (Exception^ ex)
-	{
-		MessageBox::Show("Error: " + ex->Message);
-	}
-
-}
 };
 }
