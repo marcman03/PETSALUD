@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CercadoraPropietari.h" />
+    <ClInclude Include="CtrlModProp.h" />
     <ClInclude Include="DBConnection.h" />
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
@@ -144,6 +145,9 @@
     <ClInclude Include="MenuProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ModProp.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="RegProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -153,6 +157,7 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="TxConsultaProp.h" />
     <ClInclude Include="TxIniciSessio.h" />
+    <ClInclude Include="TxModProp.h" />
     <ClInclude Include="TxRegistraProp.h" />
     <ClInclude Include="TxTancaSessio.h" />
   </ItemGroup>
@@ -160,11 +165,13 @@
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="CercadoraPropietari.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
+    <ClCompile Include="CtrlModProp.cpp" />
     <ClCompile Include="DBConnection.cpp" />
     <ClCompile Include="Form1.cpp" />
     <ClCompile Include="InfoProp.cpp" />
     <ClCompile Include="IniProp.cpp" />
     <ClCompile Include="MenuProp.cpp" />
+    <ClCompile Include="ModProp.cpp" />
     <ClCompile Include="RegProp.cpp" />
     <ClCompile Include="Ordinador.cpp" />
     <ClCompile Include="PassarellaPropietari.cpp" />
@@ -176,6 +183,7 @@
     </ClCompile>
     <ClCompile Include="TxConsultaProp.cpp" />
     <ClCompile Include="TxIniciSessio.cpp" />
+    <ClCompile Include="TxModProp.cpp" />
     <ClCompile Include="TxRegistraProp.cpp" />
     <ClCompile Include="TxTancaSessio.cpp" />
   </ItemGroup>
@@ -201,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuProp.resx">
       <DependentUpon>MenuProp.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModProp.resx">
+      <DependentUpon>ModProp.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegProp.resx">
       <DependentUpon>RegProp.h</DependentUpon>
