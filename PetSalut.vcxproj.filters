@@ -68,9 +68,6 @@
     <ClInclude Include="ModProp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CtrlModProp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="TxModProp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -125,9 +122,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ModProp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CtrlModProp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TxModProp.cpp">
