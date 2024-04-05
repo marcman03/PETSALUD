@@ -1,5 +1,6 @@
 #pragma once
 #include "InfoProp.h"
+#include "ModProp.h"
 
 namespace PetSalut {
 
@@ -273,13 +274,12 @@ private: System::Void Consulta_Click(System::Object^ sender, System::EventArgs^ 
 private: System::Void Modifica_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	//Redirigir al form de modificaProp
-	/*
-	PetSalut::ModificaProp^ modProp = gcnew PetSalut::ModificaProp();
+
+	PetSalut::ModProp^ modProp = gcnew PetSalut::ModProp();
 
 	this->Visible = false;
 
 	modProp->Show();
-	*/
 
 }
 private: System::Void Tanca_Click(System::Object^ sender, System::EventArgs^ e) {
