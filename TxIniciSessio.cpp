@@ -11,12 +11,11 @@ void TxIniciSessio::crear(String^ sU, String^ cU)
 void TxIniciSessio::executar()
 {
 	try {
-
 		PassarellaPropietari^ prop = CercadoraPropietari::cercaPropietari(username);
 		String^ cont = prop->getContrasenya();
 
 		if (cont != contrasenya)
-			throw gcnew Exception("Hi ha hagut un error amb el nom d'usuari o la contrasneya");
+			throw gcnew Exception("Hi ha hagut un error amb el nom d'usuari o la contrasenya");
 
 		Ordinador^ ord;
 		ord = Ordinador::getInstance();

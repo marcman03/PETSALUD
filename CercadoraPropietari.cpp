@@ -39,7 +39,7 @@ PassarellaPropietari^ CercadoraPropietari::cercaPropietari(String^ usernameU)
 
 	catch (Exception^ ex) {
 
-		throw gcnew Exception("Hi ha hagut un error amb el nom d'usuari o la contrasneya");
+		throw gcnew Exception("Hi ha hagut un error amb el nom d'usuari o la contrasenya");
 	}
 
 	finally {
