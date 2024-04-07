@@ -131,7 +131,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CercadoraPropietari.h" />
-    <ClInclude Include="CtrlModProp.h" />
     <ClInclude Include="DBConnection.h" />
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
@@ -165,7 +164,6 @@
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="CercadoraPropietari.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
-    <ClCompile Include="CtrlModProp.cpp" />
     <ClCompile Include="DBConnection.cpp" />
     <ClCompile Include="Form1.cpp" />
     <ClCompile Include="InfoProp.cpp" />
