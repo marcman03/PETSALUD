@@ -50,7 +50,7 @@ void TxModProp::executar()
         }
         dataReader2->Close();
 
-        // Realizar la modificación del propietario
+        // Realizar la modificació del propietari
         String^ sql0 = "UPDATE propietaris SET contrasenya = @contrasenya, nom = @nom, correu = @correu, telefon = @telefon, datanaixement = @datanaixement, descripcio = @descripcio WHERE username = @username";
         MySqlCommand^ cmd0 = gcnew MySqlCommand(sql0, conn);
         cmd0->Parameters->AddWithValue("@username", _username);
