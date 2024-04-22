@@ -139,6 +139,9 @@
     <ClInclude Include="InfoProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="IniCli.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="IniProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -149,6 +152,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="PassarellaClinica.h" />
+    <ClInclude Include="RegCli.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="RegProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -170,10 +176,13 @@
     <ClCompile Include="DBConnection.cpp" />
     <ClCompile Include="Form1.cpp" />
     <ClCompile Include="InfoProp.cpp" />
+    <ClCompile Include="IniCli.cpp" />
     <ClCompile Include="IniProp.cpp" />
+    <ClCompile Include="MenuCli.cpp" />
     <ClCompile Include="MenuProp.cpp" />
     <ClCompile Include="ModProp.cpp" />
     <ClCompile Include="PassarellaClinica.cpp" />
+    <ClCompile Include="RegCli.cpp" />
     <ClCompile Include="RegProp.cpp" />
     <ClCompile Include="Ordinador.cpp" />
     <ClCompile Include="PassarellaPropietari.cpp" />
@@ -208,6 +217,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InfoProp.resx">
       <DependentUpon>InfoProp.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniCli.resx">
+      <DependentUpon>IniCli.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniProp.resx">
+      <DependentUpon>IniProp.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuProp.resx">
       <DependentUpon>MenuProp.h</DependentUpon>
