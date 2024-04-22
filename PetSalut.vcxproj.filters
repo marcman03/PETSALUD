@@ -68,10 +68,28 @@
     <ClInclude Include="ModProp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CtrlModProp.h">
+    <ClInclude Include="TxModProp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TxModProp.h">
+    <ClInclude Include="CercadoraClinica.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IniCli.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCli.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PassarellaClinica.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RegCli.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InfoCli.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ModCli.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -127,10 +145,28 @@
     <ClCompile Include="ModProp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CtrlModProp.cpp">
+    <ClCompile Include="TxModProp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TxModProp.cpp">
+    <ClCompile Include="CercadoraClinica.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IniCli.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCli.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassarellaClinica.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RegCli.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InfoCli.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModCli.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

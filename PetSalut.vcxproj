@@ -136,6 +136,9 @@
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="InfoCli.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="InfoProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -145,7 +148,13 @@
     <ClInclude Include="IniProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MenuCli.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MenuProp.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ModCli.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="ModProp.h">
@@ -175,11 +184,13 @@
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="DBConnection.cpp" />
     <ClCompile Include="Form1.cpp" />
+    <ClCompile Include="InfoCli.cpp" />
     <ClCompile Include="InfoProp.cpp" />
     <ClCompile Include="IniCli.cpp" />
     <ClCompile Include="IniProp.cpp" />
     <ClCompile Include="MenuCli.cpp" />
     <ClCompile Include="MenuProp.cpp" />
+    <ClCompile Include="ModCli.cpp" />
     <ClCompile Include="ModProp.cpp" />
     <ClCompile Include="PassarellaClinica.cpp" />
     <ClCompile Include="RegCli.cpp" />
@@ -223,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IniProp.resx">
       <DependentUpon>IniProp.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuCli.resx">
+      <DependentUpon>MenuCli.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuProp.resx">
       <DependentUpon>MenuProp.h</DependentUpon>
