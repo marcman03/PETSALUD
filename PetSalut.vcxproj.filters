@@ -92,6 +92,12 @@
     <ClInclude Include="ModCli.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TxConsultaCli.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxModCli.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -167,6 +173,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ModCli.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxConsultaCli.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxModCli.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

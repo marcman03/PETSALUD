@@ -178,11 +178,6 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
 
-	PetSalut::IniProp^ iniProp = gcnew PetSalut::IniProp();
-
-	this->Visible = false;
-
-	iniProp->Show();
 }
 
 private: System::Void iniCliButton_Click(System::Object^ sender, System::EventArgs^ e) {

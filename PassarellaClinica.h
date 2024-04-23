@@ -12,14 +12,13 @@ private:
 	String^ descripcio;
 	String^ contrasenya;
 public:
+	PassarellaClinica::PassarellaClinica() : PassarellaClinica("", "", "", "", "", "") {}
 
 	PassarellaClinica(String^ _username, String^ _nom, String^ _correu, String^ _telefon, String^ _descripcio, String^ _contrasenya);
 
 	static PassarellaClinica^ crear(String^ _username, String^ _nom, String^ _correu, String^ _telefon, String^ _descripcio, String^ _contrasenya);
 
 	PassarellaClinica(const PassarellaClinica^ p);
-
-	String^ getContrasenya();
 
 	property String^ Username {
 		String^ get() { return username; }

@@ -59,7 +59,3 @@ PassarellaClinica::PassarellaClinica(const PassarellaClinica^ p) {
 	this->descripcio = p->descripcio;
 	this->contrasenya = p->contrasenya;
 }
-
-String^ PassarellaClinica::getContrasenya() {
-	return contrasenya;
-}

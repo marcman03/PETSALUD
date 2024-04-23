@@ -1,6 +1,6 @@
 #pragma once
 #include "TxConsultaProp.h"
-#include "TxModProp.h"
+#include "TxModCli.h"
 
 namespace PetSalut {
 
@@ -443,9 +443,9 @@ namespace PetSalut {
 			if (!this->dateLabel->Visible) iniDate = this->date->Text;
 			if (!this->phoneLabel->Visible) iniPhone = this->phone->Text;
 
-			TxModProp modProp;
-			modProp.crear(iniUsername, iniPasswd, iniName, iniPhone, iniDate, iniMail, iniDesc);
-			modProp.executar();
+			TxModCli modCli;
+			modCli.crear(iniUsername, iniPasswd, iniName, iniPhone, iniMail, iniDesc);
+			modCli.executar();
 			// Llamar a la función modificarPropietario con los parámetros necesarios
 
 			// Si la modificación se realiza correctamente, puedes mostrar un mensaje de éxito

@@ -154,8 +154,8 @@ namespace PetSalut {
 			String^ contrasenya = textBox2->Text;
 
 			TxIniciSessio iniS;
-
-			iniS.crear(username, contrasenya);
+			
+			iniS.crear(username, contrasenya, TxIniciSessio::TipusUsuari::Propietari);
 			iniS.executar();
 
 			PetSalut::MenuProp^ menuProp = gcnew PetSalut::MenuProp();
@@ -163,7 +163,6 @@ namespace PetSalut {
 			this->Visible = false;
 
 			menuProp->Show();
-			
 		}
 		catch (Exception^ ex)
 		{

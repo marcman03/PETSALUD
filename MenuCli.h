@@ -88,7 +88,6 @@ namespace PetSalut {
 			this->LabelTancaSessio->TabIndex = 17;
 			this->LabelTancaSessio->Text = L"Estas segur de que vols tancar la sessió actual en aquest dispositu\?";
 			this->LabelTancaSessio->TextAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->LabelTancaSessio->Visible = false;
 			// 
 			// AceptaButton
 			// 
@@ -101,7 +100,6 @@ namespace PetSalut {
 			this->AceptaButton->TabIndex = 16;
 			this->AceptaButton->Text = L"Acceptar";
 			this->AceptaButton->UseVisualStyleBackColor = true;
-			this->AceptaButton->Visible = false;
 			this->AceptaButton->Click += gcnew System::EventHandler(this, &MenuCli::AceptaButton_Click);
 			// 
 			// CancelaButton
@@ -115,7 +113,6 @@ namespace PetSalut {
 			this->CancelaButton->TabIndex = 15;
 			this->CancelaButton->Text = L"Cancelar";
 			this->CancelaButton->UseVisualStyleBackColor = true;
-			this->CancelaButton->Visible = false;
 			this->CancelaButton->Click += gcnew System::EventHandler(this, &MenuCli::CancelaButton_Click);
 			// 
 			// menuCliTitle
@@ -138,7 +135,7 @@ namespace PetSalut {
 			this->EliminarButton->Name = L"EliminarButton";
 			this->EliminarButton->Size = System::Drawing::Size(311, 58);
 			this->EliminarButton->TabIndex = 12;
-			this->EliminarButton->Text = L"Eliminar Propietari";
+			this->EliminarButton->Text = L"Eliminar Clinica";
 			this->EliminarButton->UseVisualStyleBackColor = true;
 			this->EliminarButton->Click += gcnew System::EventHandler(this, &MenuCli::EliminarButton_Click);
 			// 
@@ -186,10 +183,11 @@ namespace PetSalut {
 			this->TancaSessioBox->Controls->Add(this->AceptaButton);
 			this->TancaSessioBox->Controls->Add(this->LabelTancaSessio);
 			this->TancaSessioBox->Controls->Add(this->CancelaButton);
-			this->TancaSessioBox->Location = System::Drawing::Point(21, 108);
+			this->TancaSessioBox->Location = System::Drawing::Point(12, 79);
 			this->TancaSessioBox->Name = L"TancaSessioBox";
 			this->TancaSessioBox->Size = System::Drawing::Size(570, 247);
 			this->TancaSessioBox->TabIndex = 18;
+			this->TancaSessioBox->Visible = false;
 			// 
 			// MenuCli
 			// 
@@ -230,19 +228,16 @@ namespace PetSalut {
 		modCli->Show();
 	}
 	private: System::Void TancarButton_Click(System::Object^ sender, System::EventArgs^ e) {
-
+		TancaSessioBox->Visible = true;
 	}
 	private: System::Void EliminarButton_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	}
 	private: System::Void CancelaButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		AceptaButton->Visible = false;
-		CancelaButton->Visible = false;
-		LabelTancaSessio->Visible = false;
 		TancaSessioBox->Visible = false;
-
 	}
 	private: System::Void AceptaButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		
 	}
 };
 }

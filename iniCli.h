@@ -111,18 +111,14 @@ namespace PetSalut {
 			this->PasswordTextBox->Margin = System::Windows::Forms::Padding(2);
 			this->PasswordTextBox->Name = L"PasswordTextBox";
 			this->PasswordTextBox->Size = System::Drawing::Size(308, 20);
-			this->PasswordTextBox->TabIndex = 8;
-			this->PasswordTextBox->TextChanged += gcnew System::EventHandler(this, &IniCli::PasswordTextBox_TextChanged);
-			// 
+			this->PasswordTextBox->TabIndex = 8;			// 
 			// UsernameTextBox
 			// 
 			this->UsernameTextBox->Location = System::Drawing::Point(88, 143);
 			this->UsernameTextBox->Margin = System::Windows::Forms::Padding(2);
 			this->UsernameTextBox->Name = L"UsernameTextBox";
 			this->UsernameTextBox->Size = System::Drawing::Size(307, 20);
-			this->UsernameTextBox->TabIndex = 7;
-			this->UsernameTextBox->TextChanged += gcnew System::EventHandler(this, &IniCli::UsernameTextBox_TextChanged);
-			// 
+			this->UsernameTextBox->TabIndex = 7;			// 
 			// ClinicaLoginTitle
 			// 
 			this->ClinicaLoginTitle->AutoSize = true;
@@ -161,7 +157,7 @@ namespace PetSalut {
 
 			TxIniciSessio iniS;
 
-			iniS.crear(username, contrasenya);
+			iniS.crear(username, contrasenya, TxIniciSessio::TipusUsuari::Clinica);
 			iniS.executar();
 
 			PetSalut::MenuCli^ menuCli = gcnew PetSalut::MenuCli();
@@ -169,7 +165,6 @@ namespace PetSalut {
 			this->Visible = false;
 
 			menuCli->Show();
-
 		}
 		catch (Exception^ ex)
 		{
