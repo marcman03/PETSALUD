@@ -437,7 +437,7 @@ namespace PetSalut {
 
 			this->Visible = false;
 
-			menuProp->Show();
+			this->Close();
 
 		}
 		catch (Exception^ ex)

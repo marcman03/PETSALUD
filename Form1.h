@@ -164,7 +164,9 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 
 	this->Visible = false;
 
-	iniProp->Show();
+	iniProp->ShowDialog();
+
+	this->Visible = true;
 
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -173,7 +175,9 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 
 	this->Visible = false;
 
-	regProp->Show();
+	regProp->ShowDialog();
+
+	this->Visible = true;
 
 }
 private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {

@@ -163,6 +163,10 @@ namespace PetSalut {
 			this->Visible = false;
 
 			menuProp->Show();
+			menuProp->ShowDialog();
+
+			this->Visible = true;
+			
 		}
 		catch (Exception^ ex)
 		{

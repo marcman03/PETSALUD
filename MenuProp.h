@@ -267,7 +267,9 @@ private: System::Void Consulta_Click(System::Object^ sender, System::EventArgs^ 
 
 	this->Visible = false;
 
-	infoProp->Show();
+	infoProp->ShowDialog();
+
+	this->Visible = true;
 
 
 }
@@ -279,7 +281,9 @@ private: System::Void Modifica_Click(System::Object^ sender, System::EventArgs^ 
 
 	this->Visible = false;
 
-	modProp->Show();
+	modProp->ShowDialog();
+
+	this->Visible = true;
 
 }
 private: System::Void Tanca_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -289,12 +293,8 @@ private: System::Void Tanca_Click(System::Object^ sender, System::EventArgs^ e) 
 	LabelTancaSessio->Visible = true;
 	TancaSessioBox->Visible = true;
 
-	//Redirigir a la pagina de inicio
-	/*
-	this->Close();  // Cerrar el formulario actual (RegProp)
-	CppCLRWinFormsProject::Form^ formPrincipal = gcnew CppCLRWinFormsProject::Form1();  // Crear una instancia del formulario principal (Form1)
-	formPrincipal->Show();
-	*/
+	this->Close();
+
 }
 };
 }
