@@ -294,12 +294,7 @@ private: System::Void Tanca_Click(System::Object^ sender, System::EventArgs^ e) 
 	TancaSessioBox->Visible = true;
 
 	this->Close();
-	//Redirigir a la pagina de inicio
-	/*
-	this->Close();  // Cerrar el formulario actual (RegProp)
-	CppCLRWinFormsProject::Form^ formPrincipal = gcnew CppCLRWinFormsProject::Form1();  // Crear una instancia del formulario principal (Form1)
-	formPrincipal->Show();
-	*/
+
 }
 };
 }
