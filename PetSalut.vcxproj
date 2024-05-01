@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CercadoraPropietari.h" />
+    <ClInclude Include="CercadoraUsuari.h" />
     <ClInclude Include="DBConnection.h" />
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
@@ -147,6 +148,7 @@
     <ClInclude Include="ModProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="PassarellaUsuari.h" />
     <ClInclude Include="RegProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -154,15 +156,17 @@
     <ClInclude Include="PassarellaPropietari.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
-    <ClInclude Include="TxConsultaProp.h" />
+    <ClInclude Include="TxConsultaUsu.h" />
+    <ClInclude Include="TxEsborraUsu.h" />
     <ClInclude Include="TxIniciSessio.h" />
-    <ClInclude Include="TxModProp.h" />
-    <ClInclude Include="TxRegistraProp.h" />
+    <ClInclude Include="TxModUsu.h" />
+    <ClInclude Include="TxRegistraUsu.h" />
     <ClInclude Include="TxTancaSessio.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="CercadoraPropietari.cpp" />
+    <ClCompile Include="CercadoraUsuari.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="DBConnection.cpp" />
     <ClCompile Include="Form1.cpp" />
@@ -170,6 +174,7 @@
     <ClCompile Include="IniProp.cpp" />
     <ClCompile Include="MenuProp.cpp" />
     <ClCompile Include="ModProp.cpp" />
+    <ClCompile Include="PassarellaUsuari.cpp" />
     <ClCompile Include="RegProp.cpp" />
     <ClCompile Include="Ordinador.cpp" />
     <ClCompile Include="PassarellaPropietari.cpp" />
@@ -179,10 +184,11 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="TxConsultaProp.cpp" />
+    <ClCompile Include="TxConsultaUsu.cpp" />
+    <ClCompile Include="TxEsborraUsu.cpp" />
     <ClCompile Include="TxIniciSessio.cpp" />
-    <ClCompile Include="TxModProp.cpp" />
-    <ClCompile Include="TxRegistraProp.cpp" />
+    <ClCompile Include="TxModUsu.cpp" />
+    <ClCompile Include="TxRegistraUsu.cpp" />
     <ClCompile Include="TxTancaSessio.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -1,32 +1,33 @@
 #include "pch.h"
-#include "TxModProp.h"
+#include "TxModUsu.h"
 
-void TxModProp::crear(String^ usernameS, String^ contrasenyaS, String^ nomComplertS, String^ telefonS, String^ dataNaixementS, String^ correuElectronicS, String^ descripcioS)
+void TxModUsu::crear(String^ usernameS, String^ contrasenyaS, String^ nomComplertS, String^ telefonS, String^ dataS, String^ correuElectronicS, String^ descripcioS, String^ tipusS)
 {
     
     _username = usernameS;
     _contrasenya = contrasenyaS;
     _nomComplert = nomComplertS;
     _telefon = telefonS;
-    _dataNaixement = dataNaixementS;
+    _data = dataS;
     _correuElectronic = correuElectronicS;
     _descripcio = descripcioS;
+    _tipus = tipusS;
 
 }
 
-void TxModProp::executar()
+void TxModUsu::executar()
 {
     
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
 
     // Comprobar si el nuevo correo electrónico ya está asociado a otro usuario
-    String^ sql1 = "SELECT * FROM propietaris WHERE correu = @correu AND username != @username";
+    String^ sql1 = "SELECT * FROM usuari WHERE correu_electronic = @correu AND username != @username";
     MySqlCommand^ cmd1 = gcnew MySqlCommand(sql1, conn);
     cmd1->Parameters->AddWithValue("@correu", _correuElectronic);
     cmd1->Parameters->AddWithValue("@username", _username);
 
     // Comprobar si el nuevo teléfono ya está asociado a otro usuario
-    String^ sql2 = "SELECT * FROM propietaris WHERE telefon = @telefon AND username != @username";
+    String^ sql2 = "SELECT * FROM usuari WHERE telefon = @telefon AND username != @username";
     MySqlCommand^ cmd2 = gcnew MySqlCommand(sql2, conn);
     cmd2->Parameters->AddWithValue("@telefon", _telefon);
     cmd2->Parameters->AddWithValue("@username", _username);
@@ -51,20 +52,32 @@ void TxModProp::executar()
         dataReader2->Close();
 
         // Realizar la modificació del propietari
-        String^ sql0 = "UPDATE propietaris SET contrasenya = @contrasenya, nom = @nom, correu = @correu, telefon = @telefon, datanaixement = @datanaixement, descripcio = @descripcio WHERE username = @username";
+        String^ sql0 = "UPDATE usuari SET contrasenya = @contrasenya, nom = @nom, correu_electronic = @correu, telefon = @telefon, descripcio = @descripcio WHERE username = @username";
         MySqlCommand^ cmd0 = gcnew MySqlCommand(sql0, conn);
         cmd0->Parameters->AddWithValue("@username", _username);
         cmd0->Parameters->AddWithValue("@contrasenya", _contrasenya);
         cmd0->Parameters->AddWithValue("@nom", _nomComplert);
         cmd0->Parameters->AddWithValue("@telefon", _telefon);
-        cmd0->Parameters->AddWithValue("@datanaixement", _dataNaixement);
         cmd0->Parameters->AddWithValue("@correu", _correuElectronic);
         cmd0->Parameters->AddWithValue("@descripcio", _descripcio);
 
         cmd0->ExecuteNonQuery();
+
+        if (_tipus == "propietari") {
+
+            String^ sql3 = "UPDATE propietari SET data_naixement = @data_naixement WHERE username = @username";
+            MySqlCommand^ cmd3 = gcnew MySqlCommand(sql3, conn);
+            cmd3->Parameters->AddWithValue("@username", _username);
+            cmd3->Parameters->AddWithValue("@data_naixement", _data);
+
+            cmd3->ExecuteNonQuery();
+            
+        }
+
     }
     catch (Exception^ ex) {
-        throw gcnew Exception("Hi ha hagut un error al modificar el propietari");
+        //throw gcnew Exception("Hi ha hagut un error al modificar el usuari");
+        throw ex;
     }
     finally {
         conn->Close();

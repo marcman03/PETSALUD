@@ -9,7 +9,7 @@ PassarellaPropietari^ CercadoraPropietari::cercaPropietari(String^ usernameU)
 {
 
 	MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
-	String^ sql = "SELECT * FROM propietaris WHERE username = @username";
+	String^ sql = "SELECT * FROM propietari WHERE username = @username";
 	MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
 	cmd->Parameters->AddWithValue("@username", usernameU);
 
@@ -23,15 +23,9 @@ PassarellaPropietari^ CercadoraPropietari::cercaPropietari(String^ usernameU)
 
 		if (dataReader->Read()) {
 
-			String^ username = dataReader->GetString(0);
-			String^ nom = dataReader->GetString(1);
-			String^ contrasenya = dataReader->GetString(2);
-			String^ correu = dataReader->GetString(3);
-			String^ telefon = dataReader->GetString(4);
-			String^ data = dataReader->GetString(5);
-			String^ descripcio = dataReader->GetString(6);
+			String^ data = dataReader->GetString(1);
 
-			prop = gcnew PassarellaPropietari(username, nom, contrasenya, correu, telefon, data, descripcio);
+			prop = gcnew PassarellaPropietari(usernameU, data);
 
 		}
 
@@ -39,7 +33,7 @@ PassarellaPropietari^ CercadoraPropietari::cercaPropietari(String^ usernameU)
 
 	catch (Exception^ ex) {
 
-		throw gcnew Exception("Hi ha hagut un error amb el nom d'usuari o la contrasneya");
+		throw gcnew Exception("Hi ha hagut un error amb el nom d'usuari o la contrasenya");
 	}
 
 	finally {

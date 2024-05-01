@@ -2,9 +2,9 @@
 #include "pch.h"
 #include <iostream>
 #include "DBConnection.h"
-#include "PassarellaPropietari.h"
+#include "PassarellaUsuari.h"
 
-ref class TxModProp
+ref class TxModUsu
 {
 
 private:
@@ -13,13 +13,14 @@ private:
 	String^ _contrasenya;
 	String^ _nomComplert;
 	String^ _telefon;
-	String^ _dataNaixement;
+	String^ _data;
 	String^ _correuElectronic;
 	String^ _descripcio;
+	String^ _tipus;
 
 public:
 
-	void crear(String^ usernameS, String^ contrasenyaS, String^ nomComplertS, String^ telefonS, String^ dataNaixementS, String^ correuElectronicS, String^ descipcio);
+	void crear(String^ usernameS, String^ contrasenyaS, String^ nomComplertS, String^ telefonS, String^ dataS, String^ correuElectronicS, String^ descripcioS, String^ tipusS);
 	void executar();
 
 };

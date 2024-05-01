@@ -56,10 +56,10 @@
     <ClInclude Include="PassarellaPropietari.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TxConsultaProp.h">
+    <ClInclude Include="TxConsultaUsu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TxRegistraProp.h">
+    <ClInclude Include="TxRegistraUsu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TxTancaSessio.h">
@@ -68,7 +68,16 @@
     <ClInclude Include="ModProp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TxModProp.h">
+    <ClInclude Include="TxModUsu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PassarellaUsuari.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CercadoraUsuari.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxEsborraUsu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -112,10 +121,10 @@
     <ClCompile Include="PassarellaPropietari.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TxConsultaProp.cpp">
+    <ClCompile Include="TxConsultaUsu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TxRegistraProp.cpp">
+    <ClCompile Include="TxRegistraUsu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TxTancaSessio.cpp">
@@ -124,7 +133,16 @@
     <ClCompile Include="ModProp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TxModProp.cpp">
+    <ClCompile Include="TxModUsu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassarellaUsuari.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CercadoraUsuari.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxEsborraUsu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

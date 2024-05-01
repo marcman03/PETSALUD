@@ -1,6 +1,7 @@
 #pragma once
 #include "InfoProp.h"
 #include "ModProp.h"
+#include "TxEsborraUsu.h"
 
 namespace PetSalut {
 
@@ -242,7 +243,7 @@ private: System::Void Cancela_Tanca_Click(System::Object^ sender, System::EventA
 }
 private: System::Void Accepta_Tanca_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	//Retorna a la pagina principal
+	this->Close();
 
 }
 
@@ -250,7 +251,26 @@ private: System::Void Accepta_Tanca_Click(System::Object^ sender, System::EventA
 private: System::Void Elimina_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	//pedir la constraseña al usuario
-	//Pulsar aceptar
+	//Pulsar aceptar 
+		// En el boton de acceptar hacer lo siguiente (mas o menos):
+		
+		/*
+			TxEsborraUsu esbU;
+
+			try {
+				esbU.crear(coger la contrasenya del input que se ha escrito)
+				esbU.executar();
+			}
+
+			catch (Exception^ ex) {
+				MessageBox::Show(ex->Message);
+			}
+
+			Ordinador^ ord = Ordinador::getInstance();
+			ord->tancaSessio();
+
+		*/
+
 	//Volver a la pagina principal
 	/*
 	this->Close();  // Cerrar el formulario actual (RegProp)
@@ -292,8 +312,6 @@ private: System::Void Tanca_Click(System::Object^ sender, System::EventArgs^ e) 
 	Cancela_Tanca->Visible = true;
 	LabelTancaSessio->Visible = true;
 	TancaSessioBox->Visible = true;
-
-	this->Close();
 
 }
 };

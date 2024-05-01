@@ -3,7 +3,7 @@
 
 #include "pch.h"
 #include <iostream>
-#include "CercadoraPropietari.h"
+#include "CercadoraUsuari.h"
 #include "Ordinador.h"
 
 using namespace System;

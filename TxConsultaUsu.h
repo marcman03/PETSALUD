@@ -3,8 +3,10 @@
 #include "pch.h"
 #include <iostream>
 #include "Ordinador.h"
+#include "PassarellaPropietari.h"
+#include "CercadoraPropietari.h"
 
-ref class TxConsultaProp
+ref class TxConsultaUsu
 {
 
 public:
@@ -16,19 +18,19 @@ public:
 		String^ contrasenya;
 		String^ correu;
 		String^ telefon;
-		String^ data_naixament;
+		String^ data;
 		String^ descripcio;
 
 	};
 
 	Resultat obteResultat();
-	PassarellaPropietari^ obtePropietari();
+	PassarellaUsuari^ obteUsuari();
 	void crear();
 	void executar();
 
 private:
 
 	Resultat res;
-	PassarellaPropietari^ prop;
+	PassarellaUsuari^ usu;
 
 };
