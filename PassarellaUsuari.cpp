@@ -102,15 +102,23 @@ void PassarellaUsuari::esborra(String^ contrasenyaU) {
 
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
 
-    String^ sql = "DELETE FROM usuari WHERE @contrasenya = contrasenyaU AND @username = username";
-    MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
+    try {
 
-    cmd->Parameters->AddWithValue("@username", username);
-    cmd->Parameters->AddWithValue("@contrasenya", contrasenyaU);
+        String^ sql = "DELETE FROM usuari WHERE @username = username AND @contrasenya = contrasenya";
+        MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
 
-    conn->Close();
+        cmd->Parameters->AddWithValue("@username", username);
+        cmd->Parameters->AddWithValue("@contrasenya", contrasenyaU);
 
-    cmd->ExecuteNonQuery();
+        conn->Open();
+        cmd->ExecuteNonQuery();
+        conn->Close();
+
+    }
+    catch (Exception^ ex) {
+        throw gcnew Exception("La contrasenya es incorrecta, no s'eliminara l'usuari");
+    
+    }
 
 }
 

@@ -15,7 +15,7 @@ void TxEsborraUsu::executar()
     PassarellaUsuari^ usu = ord->obteUsuari();
 
     if (contraU != usu->getContrasenya())
-        throw exception("La contrasenya no es correcta, l'usuari no s'ha esborrat");
+        throw gcnew Exception("La contrasenya no es correcta, l'usuari no s'ha esborrat");
 
     usu->esborra(contraU);
 

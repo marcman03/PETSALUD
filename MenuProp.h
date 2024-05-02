@@ -54,6 +54,16 @@ namespace PetSalut {
 
 	private: System::Windows::Forms::Button^ Accepta_Tanca;
 	private: System::Windows::Forms::Label^ LabelTancaSessio;
+	private: System::Windows::Forms::Label^ labelelimina;
+
+	private: System::Windows::Forms::Button^ eliminar_compte_acceptar;
+	private: System::Windows::Forms::Button^ cancelar_eliminar_compte;
+	private: System::Windows::Forms::PictureBox^ boxeliminar;
+	private: System::Windows::Forms::TextBox^ contrasenyaelimina;
+
+
+
+
 
 
 
@@ -81,7 +91,13 @@ namespace PetSalut {
 			this->Cancela_Tanca = (gcnew System::Windows::Forms::Button());
 			this->Accepta_Tanca = (gcnew System::Windows::Forms::Button());
 			this->LabelTancaSessio = (gcnew System::Windows::Forms::Label());
+			this->labelelimina = (gcnew System::Windows::Forms::Label());
+			this->eliminar_compte_acceptar = (gcnew System::Windows::Forms::Button());
+			this->cancelar_eliminar_compte = (gcnew System::Windows::Forms::Button());
+			this->boxeliminar = (gcnew System::Windows::Forms::PictureBox());
+			this->contrasenyaelimina = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->TancaSessioBox))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->boxeliminar))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// ConsultaButton
@@ -198,15 +214,79 @@ namespace PetSalut {
 			this->LabelTancaSessio->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->LabelTancaSessio->Visible = false;
 			// 
+			// labelelimina
+			// 
+			this->labelelimina->BackColor = System::Drawing::SystemColors::Control;
+			this->labelelimina->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->labelelimina->Location = System::Drawing::Point(343, 182);
+			this->labelelimina->Name = L"labelelimina";
+			this->labelelimina->Size = System::Drawing::Size(495, 110);
+			this->labelelimina->TabIndex = 12;
+			this->labelelimina->Text = L"Per eliminar el compte introdueixi la contrasenya";
+			this->labelelimina->TextAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->labelelimina->Visible = false;
+			// 
+			// eliminar_compte_acceptar
+			// 
+			this->eliminar_compte_acceptar->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->eliminar_compte_acceptar->Location = System::Drawing::Point(593, 381);
+			this->eliminar_compte_acceptar->Margin = System::Windows::Forms::Padding(2);
+			this->eliminar_compte_acceptar->Name = L"eliminar_compte_acceptar";
+			this->eliminar_compte_acceptar->Size = System::Drawing::Size(280, 58);
+			this->eliminar_compte_acceptar->TabIndex = 11;
+			this->eliminar_compte_acceptar->Text = L"Acceptar";
+			this->eliminar_compte_acceptar->UseVisualStyleBackColor = true;
+			this->eliminar_compte_acceptar->Visible = false;
+			this->eliminar_compte_acceptar->Click += gcnew System::EventHandler(this, &MenuProp::eliminar_compte_acceptar_Click);
+			// 
+			// cancelar_eliminar_compte
+			// 
+			this->cancelar_eliminar_compte->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->cancelar_eliminar_compte->Location = System::Drawing::Point(316, 381);
+			this->cancelar_eliminar_compte->Margin = System::Windows::Forms::Padding(2);
+			this->cancelar_eliminar_compte->Name = L"cancelar_eliminar_compte";
+			this->cancelar_eliminar_compte->Size = System::Drawing::Size(273, 58);
+			this->cancelar_eliminar_compte->TabIndex = 10;
+			this->cancelar_eliminar_compte->Text = L"Cancelar";
+			this->cancelar_eliminar_compte->UseVisualStyleBackColor = true;
+			this->cancelar_eliminar_compte->Visible = false;
+			this->cancelar_eliminar_compte->Click += gcnew System::EventHandler(this, &MenuProp::cancelar_eliminar_compte_Click);
+			// 
+			// boxeliminar
+			// 
+			this->boxeliminar->BackColor = System::Drawing::SystemColors::Control;
+			this->boxeliminar->Location = System::Drawing::Point(301, 157);
+			this->boxeliminar->Name = L"boxeliminar";
+			this->boxeliminar->Size = System::Drawing::Size(588, 288);
+			this->boxeliminar->TabIndex = 9;
+			this->boxeliminar->TabStop = false;
+			this->boxeliminar->Visible = false;
+			// 
+			// contrasenyaelimina
+			// 
+			this->contrasenyaelimina->Location = System::Drawing::Point(376, 308);
+			this->contrasenyaelimina->Name = L"contrasenyaelimina";
+			this->contrasenyaelimina->Size = System::Drawing::Size(422, 20);
+			this->contrasenyaelimina->TabIndex = 13;
+			this->contrasenyaelimina->Visible = false;
+			// 
 			// MenuProp
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->ClientSize = System::Drawing::Size(1184, 661);
-			this->Controls->Add(this->LabelTancaSessio);
+			this->Controls->Add(this->eliminar_compte_acceptar);
+			this->Controls->Add(this->cancelar_eliminar_compte);
 			this->Controls->Add(this->Accepta_Tanca);
 			this->Controls->Add(this->Cancela_Tanca);
+			this->Controls->Add(this->contrasenyaelimina);
+			this->Controls->Add(this->labelelimina);
+			this->Controls->Add(this->LabelTancaSessio);
+			this->Controls->Add(this->boxeliminar);
 			this->Controls->Add(this->TancaSessioBox);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->EliminarButton);
@@ -217,6 +297,7 @@ namespace PetSalut {
 			this->Name = L"MenuProp";
 			this->Text = L"PETSALUT";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->TancaSessioBox))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->boxeliminar))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -250,33 +331,11 @@ private: System::Void Accepta_Tanca_Click(System::Object^ sender, System::EventA
 
 private: System::Void Elimina_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	//pedir la constraseña al usuario
-	//Pulsar aceptar 
-		// En el boton de acceptar hacer lo siguiente (mas o menos):
-		
-		/*
-			TxEsborraUsu esbU;
-
-			try {
-				esbU.crear(coger la contrasenya del input que se ha escrito)
-				esbU.executar();
-			}
-
-			catch (Exception^ ex) {
-				MessageBox::Show(ex->Message);
-			}
-
-			Ordinador^ ord = Ordinador::getInstance();
-			ord->tancaSessio();
-
-		*/
-
-	//Volver a la pagina principal
-	/*
-	this->Close();  // Cerrar el formulario actual (RegProp)
-	CppCLRWinFormsProject::Form^ formPrincipal = gcnew CppCLRWinFormsProject::Form1();  // Crear una instancia del formulario principal (Form1)
-	formPrincipal->Show();
-	*/
+	this->eliminar_compte_acceptar->Visible = true;
+	this->cancelar_eliminar_compte->Visible = true;
+	this->contrasenyaelimina->Visible = true;
+	this->labelelimina->Visible = true;
+	this->boxeliminar->Visible = true;
 
 }
 private: System::Void Consulta_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -312,6 +371,41 @@ private: System::Void Tanca_Click(System::Object^ sender, System::EventArgs^ e) 
 	Cancela_Tanca->Visible = true;
 	LabelTancaSessio->Visible = true;
 	TancaSessioBox->Visible = true;
+
+}
+private: System::Void eliminar_compte_acceptar_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	//pedir la constraseña al usuario
+	//Pulsar aceptar 
+	// En el boton de acceptar hacer lo siguiente (mas o menos):
+		
+			TxEsborraUsu esbU;
+
+			try {
+				esbU.crear(this->contrasenyaelimina->Text);
+				esbU.executar();
+				Ordinador^ ord = Ordinador::getInstance();
+				ord->tancaSessio();
+			}
+
+			catch (Exception^ ex) {
+				MessageBox::Show(ex->Message);
+			}
+
+			
+
+		//Volver a la pagina principal
+		this->Close();  // Cerrar el formulario actual (RegProp)
+
+
+}
+private: System::Void cancelar_eliminar_compte_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	this->boxeliminar->Visible = false;
+	this->eliminar_compte_acceptar->Visible = false;
+	this->cancelar_eliminar_compte->Visible = false;
+	this->contrasenyaelimina->Visible = false;
+	this->labelelimina->Visible = false;
 
 }
 };
