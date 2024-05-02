@@ -165,6 +165,8 @@ namespace PetSalut {
 			menuProp->ShowDialog();
 
 			this->Visible = true;
+
+			this->Close();
 			
 		}
 		catch (Exception^ ex)
