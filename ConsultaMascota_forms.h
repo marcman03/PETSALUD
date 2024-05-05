@@ -62,6 +62,60 @@ namespace PetSalut {
 		if (petsList->SelectedIndex != -1) {
 			// Si hay un elemento seleccionado, muestra el panel de descripción
 			descriptionPannel->Visible = true;
+			descriptionPannel->Controls->Clear();
+			// Obtén la mascota seleccionada del ComboBox
+			String^ mascotaSeleccionada = petsList->SelectedItem->ToString();
+
+			// Extrae el chip de la mascota seleccionada (asumiendo que el chip está entre paréntesis)
+			int indiceParentesisAbierto = mascotaSeleccionada->IndexOf('(');
+			int indiceParentesisCerrado = mascotaSeleccionada->IndexOf(')');
+			String^ chipString = mascotaSeleccionada->Substring(indiceParentesisAbierto + 1, indiceParentesisCerrado - indiceParentesisAbierto - 1);
+			int chip = Int32::Parse(chipString);
+
+			// Utiliza el chip para buscar y obtener más información de la mascota
+			CercadoraMascota^ cercadora = gcnew CercadoraMascota();
+			PassarellaMascota^ mascota = cercadora->cercaMascota(chip);
+
+			// Muestra la información de la mascota en el panel de descripción
+			// Por ejemplo, podrías mostrar el chip, el nombre, la fecha de nacimiento, etc.
+			// Aquí se muestra el chip, nombre, fecha de nacimiento, descripción, propietario y tipo
+			Label^ labelChip = gcnew Label();
+			labelChip->Text = "Chip: " + mascota->Chip;
+			labelChip->Location = Point(10, 10); // Establece la posición del label dentro del panel
+			labelChip->AutoSize = true;
+			descriptionPannel->Controls->Add(labelChip);
+
+			Label^ labelNombre = gcnew Label();
+			labelNombre->Text = "Nombre: " + mascota->Nom;
+			labelNombre->Location = Point(10, labelChip->Bottom + 5);
+			labelNombre->AutoSize = true;
+			descriptionPannel->Controls->Add(labelNombre);
+
+			Label^ labelFechaNacimiento = gcnew Label();
+			labelFechaNacimiento->Text = "Fecha de Nacimiento: " + mascota->DataNaixament.ToString();
+			labelFechaNacimiento->Location = Point(10, labelNombre->Bottom + 5); // Establece la posición del label debajo del anterior
+			labelFechaNacimiento->AutoSize = true; // Ajusta automáticamente el tamaño del label al texto
+			descriptionPannel->Controls->Add(labelFechaNacimiento);
+
+			Label^ labelDescripcion = gcnew Label();
+			labelDescripcion->Text = "Descripción: " + mascota->Descripcio;
+			labelDescripcion->MaximumSize = System::Drawing::Size(descriptionPannel->Width - 10, 0);
+			labelDescripcion->Location = Point(10, labelFechaNacimiento->Bottom + 5); // Establece la posición del label debajo del anterior
+			labelDescripcion->AutoSize = true; // Ajusta automáticamente el tamaño del label al texto
+			descriptionPannel->Controls->Add(labelDescripcion);
+
+			Label^ labelPropietario = gcnew Label();
+			labelPropietario->Text = "Propietario: " + mascota->Propietari;
+			labelPropietario->Location = Point(10, labelDescripcion->Bottom + 5); // Establece la posición del label debajo del anterior
+			labelPropietario->AutoSize = true; // Ajusta automáticamente el tamaño del label al texto
+			descriptionPannel->Controls->Add(labelPropietario);
+
+			Label^ labelTipo = gcnew Label();
+			labelTipo->Text = "Tipo: " + mascota->Tipus;
+			labelTipo->Location = Point(10, labelPropietario->Bottom + 5); // Establece la posición del label debajo del anterior
+			descriptionPannel->Controls->Add(labelTipo);
+
+			// Añade más labels con la información que quieras mostrar
 		}
 		else {
 			// Si no hay elementos seleccionados, muestra un mensaje de error o realiza alguna otra acción según tus necesidades
@@ -148,7 +202,6 @@ namespace PetSalut {
 			this->petsList->Size = System::Drawing::Size(265, 24);
 			this->petsList->TabIndex = 3;
 			this->petsList->Click += gcnew System::EventHandler(this, &ConsultaMascota_forms::fillPets);
-
 			// 
 			// consultar
 			// 
@@ -164,6 +217,8 @@ namespace PetSalut {
 			// 
 			this->descriptionPannel->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->descriptionPannel->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->descriptionPannel->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->descriptionPannel->Location = System::Drawing::Point(287, 209);
 			this->descriptionPannel->Name = L"descriptionPannel";
 			this->descriptionPannel->Size = System::Drawing::Size(510, 242);
