@@ -130,6 +130,7 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CercadoraMascota.h" />
     <ClInclude Include="ConsultaMascota_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -143,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="CercadoraMascota.cpp" />
     <ClCompile Include="ConsultaMascota_forms.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="DBConnection.cpp" />

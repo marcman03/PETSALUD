@@ -3,6 +3,9 @@
 #include <iostream>
 #include "PassarellaPropietari.h"
 #include "TxConsultarMascotes.h"
+#include "PassarellaMascota.h"
+#include "CercadoraMascota.h"
+
 
 namespace PetSalut {
 	using namespace std;
@@ -72,10 +75,18 @@ namespace PetSalut {
 		vector<int> mascotas = consultaMascotas->obteResultat();
 		// Limpiar el ComboBox
 		petsList->Items->Clear();
-
+		CercadoraMascota^ cercadora = gcnew CercadoraMascota();
 		// Llenar el ComboBox con los identificadores de mascotas
 		for (int i = 0; i < mascotas.size(); ++i) {
-			petsList->Items->Add(mascotas[i].ToString());
+			
+			PassarellaMascota^ mascota = cercadora->cercaMascota(mascotas[i]);
+
+			int chip = mascota->Chip;
+			String^ nombre = mascota->Nom;
+
+			// Concatenar el chip y el nombre y agregarlos a la lista
+			String^ infoMascota = nombre + "(" + chip.ToString() + ")";
+			petsList->Items->Add(infoMascota);
 		}
 
 
