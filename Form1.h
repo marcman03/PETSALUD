@@ -1,15 +1,17 @@
 ﻿#pragma once
+#include "IniProp.h"
+#include "iniCli.h"
+#include "RegProp.h"
+#include "RegCli.h"
 
-#include "ClinicaAlta.h"
+namespace CppCLRWinFormsProject {
 
-namespace PetSalut {
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
 
 	/// TEST GIT N� 1
 	/// <summary>
@@ -37,12 +39,14 @@ namespace PetSalut {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::MenuStrip^ menuStrip1;
-	private: System::Windows::Forms::ToolStripMenuItem^ cliniquesToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ altaToolStripMenuItem;
+	private: System::Windows::Forms::Label^ label1;
 	protected:
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ iniCliButton;
+	private: System::Windows::Forms::Button^ signUpButton;
 
-	protected:
+
 
 	protected:
 
@@ -59,53 +63,142 @@ namespace PetSalut {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
-			this->cliniquesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->altaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->menuStrip1->SuspendLayout();
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->iniCliButton = (gcnew System::Windows::Forms::Button());
+			this->signUpButton = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// menuStrip1
+			// label1
 			// 
-			this->menuStrip1->ImageScalingSize = System::Drawing::Size(32, 32);
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->cliniquesToolStripMenuItem });
-			this->menuStrip1->Location = System::Drawing::Point(0, 0);
-			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Padding = System::Windows::Forms::Padding(3, 1, 0, 1);
-			this->menuStrip1->Size = System::Drawing::Size(487, 24);
-			this->menuStrip1->TabIndex = 0;
-			this->menuStrip1->Text = L"menuStrip1";
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(405, 121);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(332, 69);
+			this->label1->TabIndex = 0;
+			this->label1->Text = L"PETSALUT";
 			// 
-			// cliniquesToolStripMenuItem
+			// button1
 			// 
-			this->cliniquesToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->altaToolStripMenuItem });
-			this->cliniquesToolStripMenuItem->Name = L"cliniquesToolStripMenuItem";
-			this->cliniquesToolStripMenuItem->Size = System::Drawing::Size(68, 22);
-			this->cliniquesToolStripMenuItem->Text = L"Cliniques";
+			this->button1->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button1->Location = System::Drawing::Point(193, 222);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(273, 107);
+			this->button1->TabIndex = 1;
+			this->button1->Text = L"INICIAR SESSIÓ";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
 			// 
-			// altaToolStripMenuItem
+			// button2
 			// 
-			this->altaToolStripMenuItem->Name = L"altaToolStripMenuItem";
-			this->altaToolStripMenuItem->Size = System::Drawing::Size(180, 22);
-			this->altaToolStripMenuItem->Text = L"Alta";
-			this->altaToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::clinicaAlta_Clicked);
+			this->button2->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button2->Location = System::Drawing::Point(193, 379);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(273, 107);
+			this->button2->TabIndex = 2;
+			this->button2->Text = L"REGISTRAR-SE";
+			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &Form1::button2_Click);
+			// 
+			// iniCliButton
+			// 
+			this->iniCliButton->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->iniCliButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->iniCliButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->iniCliButton->Location = System::Drawing::Point(665, 222);
+			this->iniCliButton->Name = L"iniCliButton";
+			this->iniCliButton->Size = System::Drawing::Size(273, 107);
+			this->iniCliButton->TabIndex = 3;
+			this->iniCliButton->Text = L"Iniciar Sessió Clínica";
+			this->iniCliButton->UseVisualStyleBackColor = false;
+			this->iniCliButton->Click += gcnew System::EventHandler(this, &Form1::iniCliButton_Click);
+			// 
+			// signUpButton
+			// 
+			this->signUpButton->BackColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->signUpButton->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->signUpButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->signUpButton->Location = System::Drawing::Point(665, 379);
+			this->signUpButton->Name = L"signUpButton";
+			this->signUpButton->Size = System::Drawing::Size(273, 107);
+			this->signUpButton->TabIndex = 4;
+			this->signUpButton->Text = L"Registrase Clinica";
+			this->signUpButton->UseVisualStyleBackColor = false;
+			this->signUpButton->Click += gcnew System::EventHandler(this, &Form1::signUpButton_Click);
 			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(487, 379);
-			this->Controls->Add(this->menuStrip1);
-			this->MainMenuStrip = this->menuStrip1;
+			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->ClientSize = System::Drawing::Size(1128, 661);
+			this->Controls->Add(this->signUpButton);
+			this->Controls->Add(this->iniCliButton);
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->button1);
+			this->Controls->Add(this->label1);
 			this->Name = L"Form1";
-			this->Text = L"Form1";
-			this->menuStrip1->ResumeLayout(false);
-			this->menuStrip1->PerformLayout();
+			this->Text = L"PETSALUT";
+			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	private: System::Void clinicaAlta_Clicked(System::Object^ sender, System::EventArgs^ e);
-	};
+
+
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	PetSalut::IniProp^ iniProp = gcnew PetSalut::IniProp();
+
+	this->Visible = false;
+
+	iniProp->ShowDialog();
+
+	this->Visible = true;
+
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	PetSalut::RegProp^ regProp = gcnew PetSalut::RegProp();
+
+	this->Visible = false;
+
+	regProp->ShowDialog();
+
+	this->Visible = true;
+
+}
+private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
+
+}
+
+private: System::Void iniCliButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	PetSalut::IniCli^ iniCli = gcnew PetSalut::IniCli();
+
+	this->Visible = false;
+
+	iniCli->Show();
+}
+
+private: System::Void signUpButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	PetSalut::RegCli^ regCli = gcnew PetSalut::RegCli();
+
+	this->Visible = false;
+
+	regCli->Show();
+}
+
+};
 }
