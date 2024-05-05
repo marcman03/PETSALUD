@@ -6,23 +6,17 @@ using namespace System;
 using namespace MySql::Data::MySqlClient;
 using namespace System::Windows::Forms; //Per mostrar MessageBox::Show una caixa amb el missatge d'error
 
-PassarellaClinica^ PassarellaClinica::crear(String^ _username, String^ _nom, String^ _correu, String^ _telefon, String^ _descripcio, String^ _contrasenya)
+PassarellaClinica^ PassarellaClinica::crear()
 {
 
 	MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
 
-	String^ sql = "INSERT INTO cliniques (username, nom, correu, telefon, descripcio, contrasenya) VALUES (@username, @nom, @correu, @telefon, @descripcio, @contrasenya)";
+	String^ sql = "INSERT INTO clinica (username) VALUES (@username)";
 
 	MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
 
 	// Establecer los par�metros de la consulta con los valores proporcionados
-	cmd->Parameters->AddWithValue("@username", _username);
-	cmd->Parameters->AddWithValue("@nom", _nom);
-	cmd->Parameters->AddWithValue("@correu", _correu);
-	cmd->Parameters->AddWithValue("@telefon", _telefon);
-	cmd->Parameters->AddWithValue("@descripcio", _descripcio);
-	cmd->Parameters->AddWithValue("@contrasenya", _contrasenya);
-
+	cmd->Parameters->AddWithValue("@username", username);
 	try {
 		// obrim la connexi�
 		conn->Open();
@@ -37,25 +31,16 @@ PassarellaClinica^ PassarellaClinica::crear(String^ _username, String^ _nom, Str
 		// si tot va b� es tanca la connexi�
 		conn->Close();
 	}
-	return gcnew PassarellaClinica(_username, _nom, _correu, _telefon, _descripcio, _contrasenya);
+	return gcnew PassarellaClinica(username);
 
 }
 
-PassarellaClinica::PassarellaClinica(String^ _username, String^ _nom, String^ _correu, String^ _telefon, String^ _descripcio, String^ _contrasenya) {
-	username = _username;
-	nom = _nom;
-	correu = _correu;
-	telefon = _telefon;
-	descripcio = _descripcio;
-	contrasenya = _contrasenya;
+
+
+PassarellaClinica::PassarellaClinica(String^ username) {
+	username = username;
 }
 
 PassarellaClinica::PassarellaClinica(const PassarellaClinica^ p) {
-
 	this->username = p->username;
-	this->nom = p->nom;
-	this->correu = p->correu;
-	this->telefon = p->telefon;
-	this->descripcio = p->descripcio;
-	this->contrasenya = p->contrasenya;
 }

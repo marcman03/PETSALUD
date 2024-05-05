@@ -27,7 +27,7 @@ PassarellaClinica^ CercadoraClinica::cercaClinica(String^ usernameU)
 		String^ contrasenya = dataReader->GetString(5);
 
 		conn->Close();
-		return gcnew PassarellaClinica(username, nom, correu, telefon, descripcio, contrasenya);
+		return gcnew PassarellaClinica(username);
 
 	}
 

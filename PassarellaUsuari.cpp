@@ -9,12 +9,12 @@ using namespace System::Windows::Forms; //Per mostrar MessageBox::Show una caixa
 
 PassarellaUsuari::PassarellaUsuari() : PassarellaUsuari("", "", "", "", "", "", "") {}
 
-PassarellaUsuari::PassarellaUsuari(String^ _username, String^ _nom, String^ _contrasenya, String^ _correu_electronic, String^ _telefon, String^ _tipus, String^ _descripcio)
+PassarellaUsuari::PassarellaUsuari(String^ _username, String^ _nom, String^ _contrasenya, String^ _correu, String^ _telefon, String^ _tipus, String^ _descripcio)
 {
     username = _username;
     nom = _nom;
     contrasenya = _contrasenya;
-    correu = _correu_electronic;
+    correu = _correu;
     telefon = _telefon;
     tipus = _tipus;
     descripcio = _descripcio;
@@ -139,7 +139,7 @@ String^ PassarellaUsuari::getContrasenya()
 
 String^ PassarellaUsuari::getTipus()
 {
-    return tipus;
+    return tipus->ToString();
 }
 
 String^ PassarellaUsuari::getCorreuElectronic()
@@ -173,9 +173,9 @@ void PassarellaUsuari::setContrasenya(String^ nuevaContrasenya)
     contrasenya = nuevaContrasenya;
 }
 
-void PassarellaUsuari::setTipus(String^ nuevoTipo)
+void PassarellaUsuari::setTipus(String^ nouTipus)
 {
-    tipus = nuevoTipo;
+    tipus = nouTipus;
 }
 
 void PassarellaUsuari::setCorreuElectronic(String^ nuevoCorreuElectronic)

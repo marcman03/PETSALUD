@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "InfoProp.h"
 #include "ModProp.h"
 #include "TxEsborraUsu.h"
@@ -22,13 +22,13 @@ namespace PetSalut {
 		{
 			InitializeComponent();
 			//
-			//TODO: agregar código de constructor aquí
+			//TODO: agregar cï¿½digo de constructor aquï¿½
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Limpiar los recursos que se estén usando.
+		/// Limpiar los recursos que se estï¿½n usando.
 		/// </summary>
 		~MenuProp()
 		{
@@ -71,14 +71,14 @@ namespace PetSalut {
 
 	private:
 		/// <summary>
-		/// Variable del diseñador necesaria.
+		/// Variable del diseï¿½ador necesaria.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Método necesario para admitir el Diseñador. No se puede modificar
-		/// el contenido de este método con el editor de código.
+		/// Mï¿½todo necesario para admitir el Diseï¿½ador. No se puede modificar
+		/// el contenido de este mï¿½todo con el editor de cï¿½digo.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -109,7 +109,7 @@ namespace PetSalut {
 			this->ConsultaButton->Name = L"ConsultaButton";
 			this->ConsultaButton->Size = System::Drawing::Size(311, 58);
 			this->ConsultaButton->TabIndex = 0;
-			this->ConsultaButton->Text = L"Consultar Informació";
+			this->ConsultaButton->Text = L"Consultar Informaciï¿½";
 			this->ConsultaButton->UseVisualStyleBackColor = true;
 			this->ConsultaButton->Click += gcnew System::EventHandler(this, &MenuProp::Consulta_Click);
 			// 
@@ -122,7 +122,7 @@ namespace PetSalut {
 			this->ModificarButton->Name = L"ModificarButton";
 			this->ModificarButton->Size = System::Drawing::Size(311, 58);
 			this->ModificarButton->TabIndex = 1;
-			this->ModificarButton->Text = L"Modificar Informació";
+			this->ModificarButton->Text = L"Modificar Informaciï¿½";
 			this->ModificarButton->UseVisualStyleBackColor = true;
 			this->ModificarButton->Click += gcnew System::EventHandler(this, &MenuProp::Modifica_Click);
 			// 
@@ -135,7 +135,7 @@ namespace PetSalut {
 			this->TancarButton->Name = L"TancarButton";
 			this->TancarButton->Size = System::Drawing::Size(311, 58);
 			this->TancarButton->TabIndex = 2;
-			this->TancarButton->Text = L"Tancar Sessió";
+			this->TancarButton->Text = L"Tancar SessiÃ³";
 			this->TancarButton->UseVisualStyleBackColor = true;
 			this->TancarButton->Click += gcnew System::EventHandler(this, &MenuProp::Tanca_Click);
 			// 
@@ -210,7 +210,7 @@ namespace PetSalut {
 			this->LabelTancaSessio->Name = L"LabelTancaSessio";
 			this->LabelTancaSessio->Size = System::Drawing::Size(495, 110);
 			this->LabelTancaSessio->TabIndex = 8;
-			this->LabelTancaSessio->Text = L"Estas segur de que vols tancar la sessió actual en aquest dispositu\?";
+			this->LabelTancaSessio->Text = L"Estas segur de que vols tancar la sessiÃ³ actual en aquest dispositu\?";
 			this->LabelTancaSessio->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->LabelTancaSessio->Visible = false;
 			// 
@@ -303,110 +303,110 @@ namespace PetSalut {
 
 		}
 #pragma endregion
-private: System::Void ac_ts_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
-	// Cambiar el color de fondo del botón cuando el mouse entra
-	//Cancela_Tanca->BackColor = System::Drawing::Color::Red; // Cambiar a cualquier color que desees
-}
+	private: System::Void ac_ts_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
+		// Cambiar el color de fondo del botï¿½n cuando el mouse entra
+		//Cancela_Tanca->BackColor = System::Drawing::Color::Red; // Cambiar a cualquier color que desees
+	}
 
-	   // Manejador de eventos para el evento MouseLeave del botón
-private: System::Void ac_ts_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
-	// Restaurar el color de fondo del botón cuando el mouse sale
-	//Cancela_Tanca->BackColor = System::Drawing::SystemColors::Control; // Puedes restaurarlo al color predeterminado del sistema
-}
+		   // Manejador de eventos para el evento MouseLeave del botï¿½n
+	private: System::Void ac_ts_MouseLeave(System::Object^ sender, System::EventArgs^ e) {
+		// Restaurar el color de fondo del botï¿½n cuando el mouse sale
+		//Cancela_Tanca->BackColor = System::Drawing::SystemColors::Control; // Puedes restaurarlo al color predeterminado del sistema
+	}
 
-private: System::Void Cancela_Tanca_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void Cancela_Tanca_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	Accepta_Tanca->Visible = false;
-	Cancela_Tanca->Visible = false;
-	LabelTancaSessio->Visible = false;
-	TancaSessioBox->Visible = false;
+		Accepta_Tanca->Visible = false;
+		Cancela_Tanca->Visible = false;
+		LabelTancaSessio->Visible = false;
+		TancaSessioBox->Visible = false;
 
-}
-private: System::Void Accepta_Tanca_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void Accepta_Tanca_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	this->Close();
+		this->Close();
 
-}
-
-
-private: System::Void Elimina_Click(System::Object^ sender, System::EventArgs^ e) {
-
-	this->eliminar_compte_acceptar->Visible = true;
-	this->cancelar_eliminar_compte->Visible = true;
-	this->contrasenyaelimina->Visible = true;
-	this->labelelimina->Visible = true;
-	this->boxeliminar->Visible = true;
-
-}
-private: System::Void Consulta_Click(System::Object^ sender, System::EventArgs^ e) {
-
-	//Redirigir al form de infoProp
-
-	PetSalut::InfoProp^ infoProp = gcnew PetSalut::InfoProp();
-
-	this->Visible = false;
-
-	infoProp->ShowDialog();
-
-	this->Visible = true;
+	}
 
 
-}
-private: System::Void Modifica_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void Elimina_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	//Redirigir al form de modificaProp
+		this->eliminar_compte_acceptar->Visible = true;
+		this->cancelar_eliminar_compte->Visible = true;
+		this->contrasenyaelimina->Visible = true;
+		this->labelelimina->Visible = true;
+		this->boxeliminar->Visible = true;
 
-	PetSalut::ModProp^ modProp = gcnew PetSalut::ModProp();
+	}
+	private: System::Void Consulta_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	this->Visible = false;
+		//Redirigir al form de infoProp
 
-	modProp->ShowDialog();
+		PetSalut::InfoProp^ infoProp = gcnew PetSalut::InfoProp();
 
-	this->Visible = true;
+		this->Visible = false;
 
-}
-private: System::Void Tanca_Click(System::Object^ sender, System::EventArgs^ e) {
+		infoProp->ShowDialog();
 
-	Accepta_Tanca->Visible = true;
-	Cancela_Tanca->Visible = true;
-	LabelTancaSessio->Visible = true;
-	TancaSessioBox->Visible = true;
+		this->Visible = true;
 
-}
-private: System::Void eliminar_compte_acceptar_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	//pedir la constraseña al usuario
-	//Pulsar aceptar 
-	// En el boton de acceptar hacer lo siguiente (mas o menos):
-		
-			TxEsborraUsu esbU;
+	}
+	private: System::Void Modifica_Click(System::Object^ sender, System::EventArgs^ e) {
 
-			try {
-				esbU.crear(this->contrasenyaelimina->Text);
-				esbU.executar();
-				Ordinador^ ord = Ordinador::getInstance();
-				ord->tancaSessio();
-			}
+		//Redirigir al form de modificaProp
 
-			catch (Exception^ ex) {
-				MessageBox::Show(ex->Message);
-			}
+		PetSalut::ModProp^ modProp = gcnew PetSalut::ModProp();
 
-			
+		this->Visible = false;
+
+		modProp->ShowDialog();
+
+		this->Visible = true;
+
+	}
+	private: System::Void Tanca_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		Accepta_Tanca->Visible = true;
+		Cancela_Tanca->Visible = true;
+		LabelTancaSessio->Visible = true;
+		TancaSessioBox->Visible = true;
+
+	}
+	private: System::Void eliminar_compte_acceptar_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		//pedir la constraseï¿½a al usuario
+		//Pulsar aceptar 
+		// En el boton de acceptar hacer lo siguiente (mas o menos):
+
+		TxEsborraUsu esbU;
+
+		try {
+			esbU.crear(this->contrasenyaelimina->Text);
+			esbU.executar();
+			Ordinador^ ord = Ordinador::getInstance();
+			ord->tancaSessio();
+		}
+
+		catch (Exception^ ex) {
+			MessageBox::Show(ex->Message);
+		}
+
+
 
 		//Volver a la pagina principal
 		this->Close();  // Cerrar el formulario actual (RegProp)
 
 
-}
-private: System::Void cancelar_eliminar_compte_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void cancelar_eliminar_compte_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	this->boxeliminar->Visible = false;
-	this->eliminar_compte_acceptar->Visible = false;
-	this->cancelar_eliminar_compte->Visible = false;
-	this->contrasenyaelimina->Visible = false;
-	this->labelelimina->Visible = false;
+		this->boxeliminar->Visible = false;
+		this->eliminar_compte_acceptar->Visible = false;
+		this->cancelar_eliminar_compte->Visible = false;
+		this->contrasenyaelimina->Visible = false;
+		this->labelelimina->Visible = false;
 
-}
-};
+	}
+	};
 }

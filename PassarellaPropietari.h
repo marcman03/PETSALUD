@@ -6,8 +6,8 @@
 
 using namespace System;
 
-ref class PassarellaPropietari {
 
+ref class PassarellaPropietari {
 private:
 	String^ data_naixament;
 	String^ username;

@@ -6,7 +6,7 @@
 
 #ifndef PCH_H
 #define PCH_H
-
 // add headers that you want to pre-compile here
+enum class Tipus { Propietari, Clinica };
 
 #endif //PCH_H

@@ -133,45 +133,38 @@
     <ClInclude Include="CercadoraClinica.h" />
     <ClInclude Include="CercadoraPropietari.h" />
     <ClInclude Include="CercadoraUsuari.h" />
+    <ClInclude Include="ClinicaAlta.h" />
+    <ClInclude Include="CliniquesClass.h" />
     <ClInclude Include="DBConnection.h" />
     <ClInclude Include="Form1.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="InfoCli.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="InfoProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="IniCli.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="IniProp.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="MenuCli.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MenuProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="ModCli.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="ModProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="RegProp.h">
+    <ClInclude Include="RegUsu.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="PassarellaClinica.h" />
+    <ClInclude Include="PassarellaUsuari.h" />
     <ClInclude Include="Ordinador.h" />
     <ClInclude Include="PassarellaPropietari.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
-    <ClInclude Include="TxConsultaProp.h" />
+    <ClInclude Include="TxConsultaUsu.h" />
+    <ClInclude Include="TxEsborraUsu.h" />
     <ClInclude Include="TxIniciSessio.h" />
-    <ClInclude Include="TxModProp.h" />
-    <ClInclude Include="TxRegistraProp.h" />
+    <ClInclude Include="TxModUsu.h" />
+    <ClInclude Include="TxRegistraUsu.h" />
     <ClInclude Include="TxTancaSessio.h" />
   </ItemGroup>
   <ItemGroup>
@@ -179,20 +172,17 @@
     <ClCompile Include="CercadoraClinica.cpp" />
     <ClCompile Include="CercadoraPropietari.cpp" />
     <ClCompile Include="CercadoraUsuari.cpp" />
+    <ClCompile Include="ClinicaAlta.cpp" />
+    <ClCompile Include="CliniquesClass.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="DBConnection.cpp" />
     <ClCompile Include="Form1.cpp" />
-    <ClCompile Include="InfoCli.cpp" />
     <ClCompile Include="InfoProp.cpp" />
-    <ClCompile Include="IniCli.cpp" />
     <ClCompile Include="IniProp.cpp" />
-    <ClCompile Include="MenuCli.cpp" />
     <ClCompile Include="MenuProp.cpp" />
-    <ClCompile Include="ModCli.cpp" />
     <ClCompile Include="ModProp.cpp" />
     <ClCompile Include="PassarellaClinica.cpp" />
-    <ClCompile Include="RegCli.cpp" />
-    <ClCompile Include="RegProp.cpp" />
+    <ClCompile Include="PassarellaUsuari.cpp" />
     <ClCompile Include="Ordinador.cpp" />
     <ClCompile Include="PassarellaPropietari.cpp" />
     <ClCompile Include="pch.cpp">
@@ -201,12 +191,12 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="TxConsultaCli.cpp" />
-    <ClCompile Include="TxConsultaProp.cpp" />
+    <ClCompile Include="RegUsu.cpp" />
+    <ClCompile Include="TxConsultaUsu.cpp" />
+    <ClCompile Include="TxEsborraUsu.cpp" />
     <ClCompile Include="TxIniciSessio.cpp" />
-    <ClCompile Include="TxModCli.cpp" />
-    <ClCompile Include="TxModProp.cpp" />
-    <ClCompile Include="TxRegistraProp.cpp" />
+    <ClCompile Include="TxModUsu.cpp" />
+    <ClCompile Include="TxRegistraUsu.cpp" />
     <ClCompile Include="TxTancaSessio.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -223,35 +213,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ClinicaAlta.resx" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InfoCli.resx">
-      <DependentUpon>InfoCli.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InfoProp.resx">
       <DependentUpon>InfoProp.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IniCli.resx">
-      <DependentUpon>IniCli.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="IniProp.resx">
-      <DependentUpon>IniProp.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuCli.resx">
-      <DependentUpon>MenuCli.h</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="IniProp.resx" />
     <EmbeddedResource Include="MenuProp.resx">
       <DependentUpon>MenuProp.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModCli.resx">
-      <DependentUpon>ModCli.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModProp.resx">
       <DependentUpon>ModProp.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegProp.resx">
-      <DependentUpon>RegProp.h</DependentUpon>
+    <EmbeddedResource Include="RegUsu.resx">
+      <DependentUpon>ModProp.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

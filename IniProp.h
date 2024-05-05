@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "TxIniciSessio.h"
 #include "MenuProp.h"
 
@@ -21,13 +21,13 @@ namespace PetSalut {
 		{
 			InitializeComponent();
 			//
-			//TODO: agregar código de constructor aquí
+			//TODO: agregar cï¿½digo de constructor aquï¿½
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Limpiar los recursos que se estén usando.
+		/// Limpiar los recursos que se estï¿½n usando.
 		/// </summary>
 		~IniProp()
 		{
@@ -46,14 +46,14 @@ namespace PetSalut {
 
 	private:
 		/// <summary>
-		/// Variable del diseñador necesaria.
+		/// Variable del diseï¿½ador necesaria.
 		/// </summary>
 		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Método necesario para admitir el Diseñador. No se puede modificar
-		/// el contenido de este método con el editor de código.
+		/// Mï¿½todo necesario para admitir el Diseï¿½ador. No se puede modificar
+		/// el contenido de este mï¿½todo con el editor de cï¿½digo.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -75,7 +75,7 @@ namespace PetSalut {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(420, 67);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"Iniciar Sessió";
+			this->label1->Text = L"Iniciar SessiÃ³";
 			// 
 			// textBox1
 			// 
@@ -123,7 +123,7 @@ namespace PetSalut {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(234, 75);
 			this->button1->TabIndex = 5;
-			this->button1->Text = L"Iniciar Sessió";
+			this->button1->Text = L"Iniciar SessiÃ³";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &IniProp::button1_Click);
 			// 
@@ -154,21 +154,20 @@ namespace PetSalut {
 			String^ contrasenya = textBox2->Text;
 
 			TxIniciSessio iniS;
-			
-			iniS.crear(username, contrasenya, TxIniciSessio::TipusUsuari::Propietari);
+
+			iniS.crear(username, contrasenya);
 			iniS.executar();
 
 			PetSalut::MenuProp^ menuProp = gcnew PetSalut::MenuProp();
 
 			this->Visible = false;
 
-			menuProp->Show();
 			menuProp->ShowDialog();
 
 			this->Visible = true;
 
 			this->Close();
-			
+
 		}
 		catch (Exception^ ex)
 		{

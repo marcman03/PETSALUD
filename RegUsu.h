@@ -25,10 +25,16 @@ namespace PetSalut {
 			//
 		}
 		bool mostra1 = false;
-	private: System::Windows::Forms::Label^ PassLong;
-	private: System::Windows::Forms::Label^ DiffPasswd;
-	private: System::Windows::Forms::Label^ label9;
-	private: System::Windows::Forms::TextBox^ descripcio;
+		String^ tipusSelected = "Propietari";
+		private: System::Windows::Forms::Label^ PassLong;
+		private: System::Windows::Forms::Label^ DiffPasswd;
+		private: System::Windows::Forms::Label^ label9;
+		private: System::Windows::Forms::TextBox^ descripcio;
+		private: System::Windows::Forms::Label^ tipusLabel;
+		private: System::Windows::Forms::RadioButton^ radioPropietariButton;
+		private: System::Windows::Forms::RadioButton^ radioClinicaButton;
+
+
 	public:
 
 	public:
@@ -104,6 +110,9 @@ namespace PetSalut {
 			this->DiffPasswd = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->descripcio = (gcnew System::Windows::Forms::TextBox());
+			this->tipusLabel = (gcnew System::Windows::Forms::Label());
+			this->radioPropietariButton = (gcnew System::Windows::Forms::RadioButton());
+			this->radioClinicaButton = (gcnew System::Windows::Forms::RadioButton());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -169,7 +178,7 @@ namespace PetSalut {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(20, 380);
+			this->label5->Location = System::Drawing::Point(20, 433);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(257, 33);
 			this->label5->TabIndex = 8;
@@ -218,7 +227,7 @@ namespace PetSalut {
 			// 
 			// date
 			// 
-			this->date->Location = System::Drawing::Point(28, 416);
+			this->date->Location = System::Drawing::Point(28, 469);
 			this->date->Mask = L"00/00/0000";
 			this->date->Name = L"date";
 			this->date->Size = System::Drawing::Size(271, 20);
@@ -254,7 +263,7 @@ namespace PetSalut {
 			this->valid_button->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->valid_button->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->valid_button->Location = System::Drawing::Point(26, 465);
+			this->valid_button->Location = System::Drawing::Point(26, 527);
 			this->valid_button->Name = L"valid_button";
 			this->valid_button->Size = System::Drawing::Size(273, 65);
 			this->valid_button->TabIndex = 25;
@@ -347,12 +356,49 @@ namespace PetSalut {
 			this->descripcio->Size = System::Drawing::Size(357, 20);
 			this->descripcio->TabIndex = 32;
 			// 
+			// tipusLabel
+			// 
+			this->tipusLabel->AutoSize = true;
+			this->tipusLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->tipusLabel->Location = System::Drawing::Point(20, 359);
+			this->tipusLabel->Name = L"tipusLabel";
+			this->tipusLabel->Size = System::Drawing::Size(227, 33);
+			this->tipusLabel->TabIndex = 33;
+			this->tipusLabel->Text = L"Tipus d\'Usuari";
+			// 
+			// radioPropietariButton
+			// 
+			this->radioPropietariButton->AutoSize = true;
+			this->radioPropietariButton->Checked = true;
+			this->radioPropietariButton->Location = System::Drawing::Point(28, 396);
+			this->radioPropietariButton->Name = L"radioPropietariButton";
+			this->radioPropietariButton->Size = System::Drawing::Size(69, 17);
+			this->radioPropietariButton->TabIndex = 34;
+			this->radioPropietariButton->TabStop = true;
+			this->radioPropietariButton->Text = L"Propietari";
+			this->radioPropietariButton->UseVisualStyleBackColor = true;
+			// 
+			// radioClinicaButton
+			// 
+			this->radioClinicaButton->AutoSize = true;
+			this->radioClinicaButton->Location = System::Drawing::Point(141, 396);
+			this->radioClinicaButton->Name = L"radioClinicaButton";
+			this->radioClinicaButton->Size = System::Drawing::Size(56, 17);
+			this->radioClinicaButton->TabIndex = 35;
+			this->radioClinicaButton->Text = L"Clinica";
+			this->radioClinicaButton->UseVisualStyleBackColor = true;
+			this->radioClinicaButton->CheckedChanged += gcnew System::EventHandler(this, &RegProp::radioClinicaButton_CheckedChanged);
+			// 
 			// RegProp
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->ClientSize = System::Drawing::Size(1184, 661);
+			this->Controls->Add(this->radioClinicaButton);
+			this->Controls->Add(this->radioPropietariButton);
+			this->Controls->Add(this->tipusLabel);
 			this->Controls->Add(this->descripcio);
 			this->Controls->Add(this->label9);
 			this->Controls->Add(this->DiffPasswd);
@@ -424,13 +470,15 @@ namespace PetSalut {
 			String^ nomComplertS = name->Text;
 			String^ contrasenyaS = passwd1->Text;
 			String^ telefonS = phone->Text;
+			String^ tipusS = tipusSelected;
 			String^ correuElectronicS = mail->Text;
 			String^ dataNaixementS = date->Text;
 			String^ descripcioS = descripcio->Text;
 
+
 			TxRegistraUsu regUsu;
 
-			regUsu.crear(usernameS, contrasenyaS, nomComplertS, telefonS, "propietari", correuElectronicS, descripcioS, dataNaixementS);
+			regUsu.crear(usernameS, contrasenyaS, nomComplertS, telefonS, tipusSelected, correuElectronicS, descripcioS, dataNaixementS);
 			regUsu.executar();
 
 			PetSalut::MenuProp^ menuProp = gcnew PetSalut::MenuProp();
@@ -438,13 +486,26 @@ namespace PetSalut {
 			this->Visible = false;
 
 			this->Close();
-
 		}
 		catch (Exception^ ex)
 		{
 			MessageBox::Show("Error: " + ex->Message);
 		}
 
+	}
+	private: System::Void radioClinicaButton_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+		if (this->radioClinicaButton->Checked) {
+			this->label5->Visible = false;
+			this->date->Visible = false;
+			this->radioPropietariButton->Checked = false;
+			this->tipusSelected = "Clinica";
+		}
+		else {
+			this->label5->Visible = true;
+			this->date->Visible = true;
+			this->radioPropietariButton->Checked = true;
+			this->tipusSelected = "Propietari";
+		}
 	}
 	};
 }
