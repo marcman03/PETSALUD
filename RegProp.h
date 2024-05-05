@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "TxRegistraProp.h"
+#include "TxRegistraUsu.h"
 #include "MenuProp.h"
 
 namespace PetSalut {
@@ -428,10 +428,10 @@ namespace PetSalut {
 			String^ dataNaixementS = date->Text;
 			String^ descripcioS = descripcio->Text;
 
-			TxRegistraProp regS;
+			TxRegistraUsu regUsu;
 
-			regS.crear(usernameS, contrasenyaS, nomComplertS, telefonS, dataNaixementS, correuElectronicS, descripcioS);
-			regS.executar();
+			regUsu.crear(usernameS, contrasenyaS, nomComplertS, telefonS, "propietari", correuElectronicS, descripcioS, dataNaixementS);
+			regUsu.executar();
 
 			PetSalut::MenuProp^ menuProp = gcnew PetSalut::MenuProp();
 

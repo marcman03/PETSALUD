@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
-#include "PassarellaPropietari.h"
-#include "PassarellaClinica.h"
+#include "PassarellaUsuari.h"
 #include "DBConnection.h"
 
 public ref class Ordinador
@@ -10,32 +9,29 @@ public:
 
 	static Ordinador^ getInstance() {
 
-		if (instance == nullptr) 
+		if (instance == nullptr)
 			instance = gcnew Ordinador();
-		
+
 		return instance;
 
 	}
 
-	void iniciaSessioPropietari(PassarellaPropietari^ c);
-	void iniciaSessioClinica(PassarellaClinica^ c);
+	void iniciaSessio(PassarellaUsuari^ c);
 
 	void tancaSessio();
 
-	PassarellaPropietari^ obtePropietari();
-	PassarellaClinica^ obteClinica();
+	void actualitza(String^ username, String^ nom, String^ passwd, String^ tipus, String^ correu, String^ descripció, String^ telefon);
+
+	PassarellaUsuari^ obteUsuari();
 
 private:
 
 	static Ordinador^ instance;
-	PassarellaPropietari^ prop;
-	PassarellaClinica^ cli;
-	
+	PassarellaUsuari^ ord;
+
 	Ordinador::Ordinador()
 	{
-		prop = gcnew PassarellaPropietari();
-		cli = gcnew PassarellaClinica();
+		ord = gcnew PassarellaUsuari();
 	}
-
 
 };

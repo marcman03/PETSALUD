@@ -1,44 +1,44 @@
 
 #include "pch.h"
 #include "Ordinador.h"
-#include "PassarellaPropietari.h"
-#include "DBConnection.h"
 
-void Ordinador::iniciaSessioPropietari(PassarellaPropietari^ c) 
+void Ordinador::iniciaSessio(PassarellaUsuari^ c)
 {
-	prop->setUsername(c->getUsername());
-	prop->setNom(c->getNom());
-	prop->setCorreuElectronic(c->getCorreuElectronic());
-	prop->setTelefon(c->getTelefon());
-	prop->setDescripcio(c->getDescripcio());
-	prop->setContrasenya(c->getContrasenya());
+	ord->setUsername(c->getUsername());
+	ord->setNom(c->getNom());
+	ord->setContrasenya(c->getContrasenya());
+	ord->setTipus(c->getTipus());
+	ord->setTelefon(c->getTelefon());
+	ord->setCorreuElectronic(c->getCorreuElectronic());
+	ord->setDescripcio(c->getDescripcio());
 }
 
-void Ordinador::iniciaSessioClinica(PassarellaClinica^ c)
+void Ordinador::tancaSessio()
 {
-	cli = gcnew PassarellaClinica(c->Username, c->Nom, c->Correu,
-		c->Telefon, c->Descripcio, c->Contrasenya);
-}
+	ord->setUsername("");
+	ord->setNom("");
+	ord->setContrasenya("");
+	ord->setTipus("");
+	ord->setCorreuElectronic("");
+	ord->setDescripcio("");
+	ord->setTelefon("");
 
-void Ordinador::tancaSessio() 
-{
-	prop->setUsername("");
-	prop->setNom("");
-	prop->setContrasenya("");
-	prop->setDataNaixement("");
-	prop->setCorreuElectronic("");
-	prop->setDescripcio("");
-	prop->setTelefon("");
-	
 	delete instance;
 	instance = nullptr;
 }
 
-PassarellaPropietari^ Ordinador::obtePropietari()
+void Ordinador::actualitza(String^ username, String^ nom, String^ passwd, String^ tipus, String^ correu, String^ descripcio, String^ telefon)
 {
-	return prop;
+	ord->setUsername(username);
+	ord->setNom(nom);
+	ord->setContrasenya(passwd);
+	ord->setTipus(tipus);
+	ord->setCorreuElectronic(correu);
+	ord->setDescripcio(descripcio);
+	ord->setTelefon(telefon);
 }
 
-PassarellaClinica^ Ordinador::obteClinica() {
-	return cli;
+PassarellaUsuari^ Ordinador::obteUsuari()
+{
+	return ord;
 }
