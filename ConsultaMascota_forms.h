@@ -66,7 +66,7 @@ namespace PetSalut {
 		}
 	}
 	private: System::Void fillPets(System::Object^ sender, System::EventArgs^ e) {
-
+		//
 		PassarellaPropietari^ propietari = gcnew PassarellaPropietari("pepitoxx","","","","","","");
 		TxConsultarMascotes^ consultaMascotas = TxConsultarMascotes::crear(propietari);
 		vector<int> mascotas = consultaMascotas->obteResultat();

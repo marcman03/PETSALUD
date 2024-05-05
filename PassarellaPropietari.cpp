@@ -111,7 +111,7 @@ vector<int> PassarellaPropietari::obtenerMascotas()
 
     vector<int> chips;
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
-    String^ sql = "SELECT chip FROM mascotes WHERE propietari = @propietari;";
+    String^ sql = "SELECT chip FROM mascota WHERE propietari = @propietari;";
     MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
     cmd->Parameters->AddWithValue("@propietari", this->username);
 
