@@ -1,8 +1,6 @@
 ﻿#pragma once
 #include "IniProp.h"
-#include "iniCli.h"
 #include "RegProp.h"
-#include "RegCli.h"
 
 namespace CppCLRWinFormsProject {
 
@@ -43,10 +41,6 @@ namespace CppCLRWinFormsProject {
 	protected:
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ iniCliButton;
-	private: System::Windows::Forms::Button^ signUpButton;
-
-
 
 	protected:
 
@@ -66,8 +60,6 @@ namespace CppCLRWinFormsProject {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->iniCliButton = (gcnew System::Windows::Forms::Button());
-			this->signUpButton = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -75,9 +67,10 @@ namespace CppCLRWinFormsProject {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(405, 121);
+			this->label1->Location = System::Drawing::Point(540, 149);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(332, 69);
+			this->label1->Size = System::Drawing::Size(411, 85);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"PETSALUT";
 			// 
@@ -87,9 +80,10 @@ namespace CppCLRWinFormsProject {
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(193, 222);
+			this->button1->Location = System::Drawing::Point(575, 273);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(273, 107);
+			this->button1->Size = System::Drawing::Size(364, 132);
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"INICIAR SESSIÓ";
 			this->button1->UseVisualStyleBackColor = false;
@@ -101,56 +95,27 @@ namespace CppCLRWinFormsProject {
 			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(193, 379);
+			this->button2->Location = System::Drawing::Point(575, 442);
+			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(273, 107);
+			this->button2->Size = System::Drawing::Size(364, 132);
 			this->button2->TabIndex = 2;
 			this->button2->Text = L"REGISTRAR-SE";
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &Form1::button2_Click);
 			// 
-			// iniCliButton
-			// 
-			this->iniCliButton->BackColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->iniCliButton->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->iniCliButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->iniCliButton->Location = System::Drawing::Point(665, 222);
-			this->iniCliButton->Name = L"iniCliButton";
-			this->iniCliButton->Size = System::Drawing::Size(273, 107);
-			this->iniCliButton->TabIndex = 3;
-			this->iniCliButton->Text = L"Iniciar Sessió Clínica";
-			this->iniCliButton->UseVisualStyleBackColor = false;
-			this->iniCliButton->Click += gcnew System::EventHandler(this, &Form1::iniCliButton_Click);
-			// 
-			// signUpButton
-			// 
-			this->signUpButton->BackColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->signUpButton->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->signUpButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->signUpButton->Location = System::Drawing::Point(665, 379);
-			this->signUpButton->Name = L"signUpButton";
-			this->signUpButton->Size = System::Drawing::Size(273, 107);
-			this->signUpButton->TabIndex = 4;
-			this->signUpButton->Text = L"Registrase Clinica";
-			this->signUpButton->UseVisualStyleBackColor = false;
-			this->signUpButton->Click += gcnew System::EventHandler(this, &Form1::signUpButton_Click);
-			// 
 			// Form1
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->ClientSize = System::Drawing::Size(1128, 661);
-			this->Controls->Add(this->signUpButton);
-			this->Controls->Add(this->iniCliButton);
+			this->ClientSize = System::Drawing::Size(1579, 814);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Form1";
 			this->Text = L"PETSALUT";
-			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -158,47 +123,27 @@ namespace CppCLRWinFormsProject {
 #pragma endregion
 
 
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	PetSalut::IniProp^ iniProp = gcnew PetSalut::IniProp();
+		PetSalut::IniProp^ iniProp = gcnew PetSalut::IniProp();
 
-	this->Visible = false;
+		this->Visible = false;
 
-	iniProp->ShowDialog();
+		iniProp->ShowDialog();
 
-	this->Visible = true;
+		this->Visible = true;
 
-}
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	PetSalut::RegProp^ regProp = gcnew PetSalut::RegProp();
+		PetSalut::RegProp^ regProp = gcnew PetSalut::RegProp();
 
-	this->Visible = false;
+		this->Visible = false;
 
-	regProp->ShowDialog();
+		regProp->ShowDialog();
 
-	this->Visible = true;
+		this->Visible = true;
 
-}
-private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
-
-}
-
-private: System::Void iniCliButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	PetSalut::IniCli^ iniCli = gcnew PetSalut::IniCli();
-
-	this->Visible = false;
-
-	iniCli->Show();
-}
-
-private: System::Void signUpButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	PetSalut::RegCli^ regCli = gcnew PetSalut::RegCli();
-
-	this->Visible = false;
-
-	regCli->Show();
-}
-
-};
+	}
+	};
 }
