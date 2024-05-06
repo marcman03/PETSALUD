@@ -133,8 +133,6 @@
     <ClInclude Include="CercadoraClinica.h" />
     <ClInclude Include="CercadoraPropietari.h" />
     <ClInclude Include="CercadoraUsuari.h" />
-    <ClInclude Include="ClinicaAlta.h" />
-    <ClInclude Include="CliniquesClass.h" />
     <ClInclude Include="DBConnection.h" />
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
@@ -172,8 +170,6 @@
     <ClCompile Include="CercadoraClinica.cpp" />
     <ClCompile Include="CercadoraPropietari.cpp" />
     <ClCompile Include="CercadoraUsuari.cpp" />
-    <ClCompile Include="ClinicaAlta.cpp" />
-    <ClCompile Include="CliniquesClass.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="DBConnection.cpp" />
     <ClCompile Include="Form1.cpp" />

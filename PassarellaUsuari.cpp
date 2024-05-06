@@ -91,7 +91,7 @@ void PassarellaUsuari::crear()
         cmd0->ExecuteNonQuery();
     }
     catch (Exception^ ex) {
-        throw gcnew Exception("Hi ha hagut un error al registrar el propietari");
+        throw gcnew Exception("Hi ha hagut un error al registrar el usuari");
     }
     finally {
         conn->Close();
