@@ -19,8 +19,8 @@ void TxRegistraUsu::executar()
     try {
 
         PassarellaUsuari usu(username, nomComplert, contrasenya, correuElectronic, telefon, tipus, descripcio);
+        // Si tot vabé es crea usuari també
         usu.crear();
-
         if (tipus == "Propietari") {
             PassarellaPropietari prop(data, username);
             prop.crear();
@@ -29,13 +29,9 @@ void TxRegistraUsu::executar()
             PassarellaClinica cli(username);
             cli.crear();
         }
-
     }
-
     catch (Exception^ ex) {
-
         throw ex;
-
     }
 
 }

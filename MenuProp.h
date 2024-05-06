@@ -109,7 +109,7 @@ namespace PetSalut {
 			this->ConsultaButton->Name = L"ConsultaButton";
 			this->ConsultaButton->Size = System::Drawing::Size(311, 58);
 			this->ConsultaButton->TabIndex = 0;
-			this->ConsultaButton->Text = L"Consultar Informaci�";
+			this->ConsultaButton->Text = L"Consultar Informació";
 			this->ConsultaButton->UseVisualStyleBackColor = true;
 			this->ConsultaButton->Click += gcnew System::EventHandler(this, &MenuProp::Consulta_Click);
 			// 
@@ -122,7 +122,7 @@ namespace PetSalut {
 			this->ModificarButton->Name = L"ModificarButton";
 			this->ModificarButton->Size = System::Drawing::Size(311, 58);
 			this->ModificarButton->TabIndex = 1;
-			this->ModificarButton->Text = L"Modificar Informaci�";
+			this->ModificarButton->Text = L"Modificar Informació";
 			this->ModificarButton->UseVisualStyleBackColor = true;
 			this->ModificarButton->Click += gcnew System::EventHandler(this, &MenuProp::Modifica_Click);
 			// 

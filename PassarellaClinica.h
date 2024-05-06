@@ -10,7 +10,7 @@ private:
 public:
 	PassarellaClinica::PassarellaClinica() : PassarellaClinica("") {}
 
-	PassarellaClinica(String^ username);
+	PassarellaClinica(String^ _username);
 
 	PassarellaClinica^ crear();
 
