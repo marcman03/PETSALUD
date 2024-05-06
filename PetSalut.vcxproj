@@ -134,19 +134,25 @@
     <ClInclude Include="CercadoraPropietari.h" />
     <ClInclude Include="CercadoraUsuari.h" />
     <ClInclude Include="DBConnection.h" />
-    <ClInclude Include="Form1.h">
+    <ClInclude Include="PantallaPrincipal.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="InfoCli.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="InfoProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="IniProp.h">
+    <ClInclude Include="IniUsu.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MenuCli.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MenuProp.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ModCli.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="ModProp.h">
@@ -175,11 +181,13 @@
     <ClCompile Include="CercadoraUsuari.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="DBConnection.cpp" />
-    <ClCompile Include="Form1.cpp" />
+    <ClCompile Include="PantallaPrincipal.cpp" />
+    <ClCompile Include="InfoCli.cpp" />
     <ClCompile Include="InfoProp.cpp" />
-    <ClCompile Include="IniProp.cpp" />
+    <ClCompile Include="IniUsu.cpp" />
     <ClCompile Include="MenuCli.cpp" />
     <ClCompile Include="MenuProp.cpp" />
+    <ClCompile Include="ModCli.cpp" />
     <ClCompile Include="ModProp.cpp" />
     <ClCompile Include="PassarellaClinica.cpp" />
     <ClCompile Include="PassarellaUsuari.cpp" />
@@ -214,13 +222,17 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ClinicaAlta.resx" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.h</DependentUpon>
+    <EmbeddedResource Include="PantallaPrincipal.resx">
+      <DependentUpon>PantallaPrincipal.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoCli.resx">
+      <DependentUpon>InfoCli.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InfoProp.resx">
       <DependentUpon>InfoProp.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IniProp.resx" />
+    <EmbeddedResource Include="IniUsu.resx" />
+    <EmbeddedResource Include="MenuCli.resx" />
     <EmbeddedResource Include="MenuProp.resx">
       <DependentUpon>MenuProp.h</DependentUpon>
     </EmbeddedResource>

@@ -64,14 +64,11 @@ void TxModUsu::executar()
         cmd0->ExecuteNonQuery();
 
         if (_tipus == "propietari") {
-
             String^ sql3 = "UPDATE propietari SET data_naixement = @data_naixement WHERE username = @username";
             MySqlCommand^ cmd3 = gcnew MySqlCommand(sql3, conn);
             cmd3->Parameters->AddWithValue("@username", _username);
             cmd3->Parameters->AddWithValue("@data_naixement", _data);
-
             cmd3->ExecuteNonQuery();
-            
         }
 
     }

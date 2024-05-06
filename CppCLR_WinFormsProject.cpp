@@ -7,7 +7,7 @@ using namespace System;
 //    return 0;
 // }
 
-#include "Form1.h"
+#include "PantallaPrincipal.h"
 
 using namespace System::Windows::Forms;
 
@@ -16,6 +16,6 @@ int main()
 {
   Application::EnableVisualStyles();
   Application::SetCompatibleTextRenderingDefault(false);
-  Application::Run(gcnew PetSalut::Form1());
+  Application::Run(gcnew PetSalut::PantallaPrincipal());
   return 0;
 }

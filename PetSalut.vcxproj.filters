@@ -29,10 +29,10 @@
     <ClInclude Include="DBConnection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Form1.h">
+    <ClInclude Include="PantallaPrincipal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IniProp.h">
+    <ClInclude Include="IniUsu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CercadoraPropietari.h">
@@ -86,6 +86,15 @@
     <ClInclude Include="RegUsu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MenuCli.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ModCli.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InfoCli.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -100,10 +109,10 @@
     <ClCompile Include="DBConnection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Form1.cpp">
+    <ClCompile Include="PantallaPrincipal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IniProp.cpp">
+    <ClCompile Include="IniUsu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CercadoraPropietari.cpp">
@@ -157,6 +166,15 @@
     <ClCompile Include="RegUsu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MenuCli.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModCli.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InfoCli.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico">
@@ -167,7 +185,10 @@
     <EmbeddedResource Include="ClinicaAlta.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
-    <EmbeddedResource Include="IniProp.resx">
+    <EmbeddedResource Include="IniUsu.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuCli.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "TxIniciSessio.h"
 #include "MenuProp.h"
+#include "MenuCli.h"
 
 namespace PetSalut {
 
@@ -12,12 +13,12 @@ namespace PetSalut {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Resumen de IniProp
+	/// Resumen de IniUsu
 	/// </summary>
-	public ref class IniProp : public System::Windows::Forms::Form
+	public ref class IniUsu : public System::Windows::Forms::Form
 	{
 	public:
-		IniProp(void)
+		IniUsu(void)
 		{
 			InitializeComponent();
 			//
@@ -29,7 +30,7 @@ namespace PetSalut {
 		/// <summary>
 		/// Limpiar los recursos que se est�n usando.
 		/// </summary>
-		~IniProp()
+		~IniUsu()
 		{
 			if (components)
 			{
@@ -76,7 +77,7 @@ namespace PetSalut {
 			this->label1->Size = System::Drawing::Size(301, 54);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Iniciar Sessió";
-			this->label1->Click += gcnew System::EventHandler(this, &IniProp::label1_Click);
+			this->label1->Click += gcnew System::EventHandler(this, &IniUsu::label1_Click);
 			// 
 			// textBox1
 			// 
@@ -126,9 +127,9 @@ namespace PetSalut {
 			this->button1->TabIndex = 5;
 			this->button1->Text = L"Iniciar Sessió";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &IniProp::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &IniUsu::button1_Click);
 			// 
-			// IniProp
+			// IniUsu
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -140,9 +141,9 @@ namespace PetSalut {
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);
-			this->Name = L"IniProp";
+			this->Name = L"IniUsu";
 			this->Text = L"PETSALUT";
-			this->Load += gcnew System::EventHandler(this, &IniProp::IniProp_Load);
+			this->Load += gcnew System::EventHandler(this, &IniUsu::IniUsu_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -174,7 +175,13 @@ namespace PetSalut {
 				this->Visible = true;
 			}
 			else {
+				PetSalut::MenuCli^ menuCli = gcnew PetSalut::MenuCli();
 
+				this->Visible = false;
+
+				menuCli->ShowDialog();
+
+				this->Visible = true;
 			}
 
 			this->Close();
@@ -186,7 +193,7 @@ namespace PetSalut {
 		}
 
 	}
-	private: System::Void IniProp_Load(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void IniUsu_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }

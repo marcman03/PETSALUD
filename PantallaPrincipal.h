@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "IniProp.h"
+#include "IniUsu.h"
 #include "RegUsu.h"
 
 namespace PetSalut {
@@ -13,12 +13,12 @@ namespace PetSalut {
 
 	/// TEST GIT N� 1
 	/// <summary>
-	/// Summary for Form1
+	/// Summary for PantallaPrincipal
 	/// </summary>
-	public ref class Form1 : public System::Windows::Forms::Form
+	public ref class PantallaPrincipal : public System::Windows::Forms::Form
 	{
 	public:
-		Form1(void)
+		PantallaPrincipal(void)
 		{
 			InitializeComponent();
 			//
@@ -30,7 +30,7 @@ namespace PetSalut {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~Form1()
+		~PantallaPrincipal()
 		{
 			if (components)
 			{
@@ -67,10 +67,9 @@ namespace PetSalut {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(540, 149);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(405, 121);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(411, 85);
+			this->label1->Size = System::Drawing::Size(332, 69);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"PETSALUT";
 			// 
@@ -80,14 +79,13 @@ namespace PetSalut {
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(575, 273);
-			this->button1->Margin = System::Windows::Forms::Padding(4);
+			this->button1->Location = System::Drawing::Point(431, 222);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(364, 132);
+			this->button1->Size = System::Drawing::Size(273, 107);
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"INICIAR SESSIÓ";
 			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &PantallaPrincipal::button1_Click);
 			// 
 			// button2
 			// 
@@ -95,27 +93,26 @@ namespace PetSalut {
 			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(575, 442);
-			this->button2->Margin = System::Windows::Forms::Padding(4);
+			this->button2->Location = System::Drawing::Point(431, 359);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(364, 132);
+			this->button2->Size = System::Drawing::Size(273, 107);
 			this->button2->TabIndex = 2;
 			this->button2->Text = L"REGISTRAR-SE";
 			this->button2->UseVisualStyleBackColor = false;
-			this->button2->Click += gcnew System::EventHandler(this, &Form1::button2_Click);
+			this->button2->Click += gcnew System::EventHandler(this, &PantallaPrincipal::button2_Click);
 			// 
-			// Form1
+			// PantallaPrincipal
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->ClientSize = System::Drawing::Size(1579, 814);
+			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
-			this->Margin = System::Windows::Forms::Padding(4);
-			this->Name = L"Form1";
+			this->Name = L"PantallaPrincipal";
 			this->Text = L"PETSALUT";
+			this->Load += gcnew System::EventHandler(this, &PantallaPrincipal::PantallaPrincipal_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -125,11 +122,11 @@ namespace PetSalut {
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		PetSalut::IniProp^ iniProp = gcnew PetSalut::IniProp();
+		PetSalut::IniUsu^ IniUsu = gcnew PetSalut::IniUsu();
 
 		this->Visible = false;
 
-		iniProp->ShowDialog();
+		IniUsu->ShowDialog();
 
 		this->Visible = true;
 
@@ -145,5 +142,7 @@ namespace PetSalut {
 		this->Visible = true;
 
 	}
-	};
+	private: System::Void PantallaPrincipal_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }
