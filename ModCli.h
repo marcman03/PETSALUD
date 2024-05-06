@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include "TxConsultaUsu.h"
 #include "TxModUsu.h"
 #include "Ordinador.h"
@@ -15,9 +15,9 @@ namespace PetSalut {
 
 
 	/// <summary>
-	/// Resumen de ModProp
+	/// Resumen de ModCli
 	/// </summary>
-	public ref class ModProp : public System::Windows::Forms::Form
+	public ref class ModCli : public System::Windows::Forms::Form
 	{
 	public:
 
@@ -29,12 +29,12 @@ namespace PetSalut {
 		String^ iniPasswd;
 		String^ iniDesc;
 
-		ModProp(void)
+		ModCli(void)
 		{
 
 			InitializeComponent();
 			//
-			//TODO: agregar código de constructor aquí
+			//TODO: agregar cÃ³digo de constructor aquÃ­
 			//
 
 			try {
@@ -53,9 +53,6 @@ namespace PetSalut {
 
 				this->phoneLabel->Text = res.telefon;
 				iniPhone = res.telefon;
-
-				this->dateLabel->Text = res.data;
-				iniDate = res.data;
 
 				this->usernameLabel->Text = res.username;
 				iniUsername = res.username;
@@ -77,9 +74,9 @@ namespace PetSalut {
 
 	protected:
 		/// <summary>
-		/// Limpiar los recursos que se estén usando.
+		/// Limpiar los recursos que se estÃ©n usando.
 		/// </summary>
-		~ModProp()
+		~ModCli()
 		{
 			if (components)
 			{
@@ -123,14 +120,14 @@ namespace PetSalut {
 
 	private:
 		/// <summary>
-		/// Variable del diseñador necesaria.
+		/// Variable del diseÃ±ador necesaria.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Método necesario para admitir el Diseñador. No se puede modificar
-		/// el contenido de este método con el editor de código.
+		/// MÃ©todo necesario para admitir el DiseÃ±ador. No se puede modificar
+		/// el contenido de este mÃ©todo con el editor de cÃ³digo.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -212,18 +209,6 @@ namespace PetSalut {
 			this->label4->Size = System::Drawing::Size(114, 36);
 			this->label4->TabIndex = 52;
 			this->label4->Text = L"Telefon";
-			// 
-			// label5
-			// 
-			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(41, 478);
-			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(224, 36);
-			this->label5->TabIndex = 53;
-			this->label5->Text = L"Data Naixement";
 			// 
 			// label6
 			// 
@@ -335,20 +320,6 @@ namespace PetSalut {
 			this->phoneLabel->TabIndex = 63;
 			this->phoneLabel->Text = L"telefon Aqui";
 			// 
-			// dateLabel
-			// 
-			this->dateLabel->AutoSize = true;
-			this->dateLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->dateLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->dateLabel->Location = System::Drawing::Point(35, 522);
-			this->dateLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->dateLabel->Name = L"dateLabel";
-			this->dateLabel->Size = System::Drawing::Size(252, 31);
-			this->dateLabel->TabIndex = 64;
-			this->dateLabel->Text = L"datanaixement Aqui";
-			// 
 			// button2
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -360,7 +331,7 @@ namespace PetSalut {
 			this->button2->TabIndex = 65;
 			this->button2->Text = L"Tornar";
 			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &ModProp::button2_Click);
+			this->button2->Click += gcnew System::EventHandler(this, &ModCli::button2_Click);
 			// 
 			// AplicarCambis
 			// 
@@ -373,7 +344,7 @@ namespace PetSalut {
 			this->AplicarCambis->TabIndex = 66;
 			this->AplicarCambis->Text = L"Aplicar Cambis";
 			this->AplicarCambis->UseVisualStyleBackColor = true;
-			this->AplicarCambis->Click += gcnew System::EventHandler(this, &ModProp::AplicarCambis_Click);
+			this->AplicarCambis->Click += gcnew System::EventHandler(this, &ModCli::AplicarCambis_Click);
 			// 
 			// modTelf
 			// 
@@ -386,22 +357,9 @@ namespace PetSalut {
 			this->modTelf->TabIndex = 67;
 			this->modTelf->Text = L"Modificar";
 			this->modTelf->UseVisualStyleBackColor = true;
-			this->modTelf->Click += gcnew System::EventHandler(this, &ModProp::modTelf_Click);
+			this->modTelf->Click += gcnew System::EventHandler(this, &ModCli::modTelf_Click);
 			// 
-			// modDate
-			// 
-			this->modDate->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 6, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->modDate->Location = System::Drawing::Point(420, 520);
-			this->modDate->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->modDate->Name = L"modDate";
-			this->modDate->Size = System::Drawing::Size(161, 25);
-			this->modDate->TabIndex = 68;
-			this->modDate->Text = L"Modificar";
-			this->modDate->UseVisualStyleBackColor = true;
-			this->modDate->Click += gcnew System::EventHandler(this, &ModProp::modData_Click);
-			// 
-			// ModProp
+			// ModCli
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -429,9 +387,9 @@ namespace PetSalut {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Margin = System::Windows::Forms::Padding(4);
-			this->Name = L"ModProp";
-			this->Text = L"ModProp";
-			this->Load += gcnew System::EventHandler(this, &ModProp::ModProp_Load);
+			this->Name = L"ModCli";
+			this->Text = L"ModCli";
+			this->Load += gcnew System::EventHandler(this, &ModCli::ModCli_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -441,17 +399,11 @@ namespace PetSalut {
 
 		this->phoneLabel->Visible = !this->phoneLabel->Visible;
 		this->phone->Visible = !this->phone->Visible;
-		
 
-	}
-	private: System::Void modData_Click(System::Object^ sender, System::EventArgs^ e) {
-		
-		this->dateLabel->Visible = !this->dateLabel->Visible;
-		this->date->Visible = !this->date->Visible;
 
 	}
 	private: System::Void AplicarCambis_Click(System::Object^ sender, System::EventArgs^ e) {
-		
+
 		try {
 
 			if (iniPasswd != this->passwdBox->Text) iniPasswd = this->passwdBox->Text;
@@ -464,34 +416,34 @@ namespace PetSalut {
 			if (!this->phoneLabel->Visible) iniPhone = this->phone->Text;
 
 			TxModUsu modUsu;
-			modUsu.crear(iniUsername, iniPasswd, iniName, iniPhone, iniDate, iniMail, iniDesc, "propietari");
+			modUsu.crear(iniUsername, iniPasswd, iniName, iniPhone, iniDate, iniMail, iniDesc, "clinica");
 			modUsu.executar();
 
 			Ordinador^ ord = Ordinador::getInstance();
-			ord->actualitza(iniUsername, iniName, iniPasswd, "propietari", iniMail, iniDesc, iniPhone);
+			ord->actualitza(iniUsername, iniName, iniPasswd, "clinica", iniMail, iniDesc, iniPhone);
 
-			// Llamar a la función modificarPropietario con los parámetros necesarios
+			// Llamar a la funciÃ³n modificarClinica con los parÃ¡metros necesarios
 
-			// Si la modificación se realiza correctamente, puedes mostrar un mensaje de éxito
-			MessageBox::Show("La modificación se realizó con éxito.");
+			// Si la modificaciÃ³n se realiza correctamente, puedes mostrar un mensaje de Ã©xito
+			MessageBox::Show("La modificaciÃ³n se realizÃ³ con Ã©xito.");
 
 			this->Close();
 
 		}
 
 		catch (Exception^ ex) {
-			// Capturar cualquier excepción lanzada por la función modificarPropietario
+			// Capturar cualquier excepciÃ³n lanzada por la funciÃ³n modificarPropietario
 			// y mostrar un mensaje de error al usuario
 			MessageBox::Show("Error al aplicar els canvis: " + ex->Message);
 		}
 
 	}
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	this->Close();
+		this->Close();
 
-}
-private: System::Void ModProp_Load(System::Object^ sender, System::EventArgs^ e) {
-}
-};
+	}
+	private: System::Void ModCli_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+	};
 }

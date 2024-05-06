@@ -131,25 +131,35 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CercadoraMascota.h" />
+    <ClInclude Include="CercadoraClinica.h" />
     <ClInclude Include="CercadoraPropietari.h" />
     <ClInclude Include="CercadoraUsuari.h" />
     <ClInclude Include="DBConnection.h" />
     <ClInclude Include="ConsultaMascota_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Delete_Mascota_forms.h" >
+    <ClInclude Include="Delete_Mascota_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Form1.h">
+    <ClInclude Include="PantallaPrincipal.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="InfoCli.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="InfoProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="IniProp.h">
+    <ClInclude Include="IniUsu.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MenuCli.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MenuProp.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ModCli.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="ModProp.h">
@@ -157,9 +167,10 @@
     </ClInclude>
     <ClInclude Include="PassarellaMascota.h" />
     <ClInclude Include="PassarellaUsuari.h" />
-    <ClInclude Include="RegProp.h">
+    <ClInclude Include="RegUsu.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="PassarellaClinica.h" />
     <ClInclude Include="Ordinador.h" />
     <ClInclude Include="PassarellaPropietari.h" />
     <ClInclude Include="pch.h" />
@@ -176,19 +187,23 @@
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="CercadoraMascota.cpp" />
+    <ClCompile Include="CercadoraClinica.cpp" />
     <ClCompile Include="CercadoraPropietari.cpp" />
     <ClCompile Include="CercadoraUsuari.cpp" />
     <ClCompile Include="ConsultaMascota_forms.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="DBConnection.cpp" />
-    <ClCompile Include="Form1.cpp" />
+    <ClCompile Include="PantallaPrincipal.cpp" />
+    <ClCompile Include="InfoCli.cpp" />
     <ClCompile Include="InfoProp.cpp" />
-    <ClCompile Include="IniProp.cpp" />
+    <ClCompile Include="IniUsu.cpp" />
+    <ClCompile Include="MenuCli.cpp" />
     <ClCompile Include="MenuProp.cpp" />
+    <ClCompile Include="ModCli.cpp" />
     <ClCompile Include="ModProp.cpp" />
+    <ClCompile Include="PassarellaClinica.cpp" />
     <ClCompile Include="PassarellaMascota.cpp" />
     <ClCompile Include="PassarellaUsuari.cpp" />
-    <ClCompile Include="RegProp.cpp" />
     <ClCompile Include="Ordinador.cpp" />
     <ClCompile Include="PassarellaPropietari.cpp" />
     <ClCompile Include="pch.cpp">
@@ -198,6 +213,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TxConsultarMascotes.cpp" />
+    <ClCompile Include="RegUsu.cpp" />
     <ClCompile Include="TxConsultaUsu.cpp" />
     <ClCompile Include="TxEliminaMascota.cpp" />
     <ClCompile Include="TxEsborraUsu.cpp" />
@@ -223,20 +239,28 @@
     <EmbeddedResource Include="ConsultaMascota_forms.resx">
       <DependentUpon>ConsultaMascota_forms.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.h</DependentUpon>
+    <EmbeddedResource Include="ModCli.resx">
+      <DependentUpon>ModCli.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaPrincipal.resx">
+      <DependentUpon>PantallaPrincipal.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoCli.resx">
+      <DependentUpon>InfoCli.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InfoProp.resx">
       <DependentUpon>InfoProp.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IniUsu.resx" />
+    <EmbeddedResource Include="MenuCli.resx" />
     <EmbeddedResource Include="MenuProp.resx">
       <DependentUpon>MenuProp.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModProp.resx">
       <DependentUpon>ModProp.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegProp.resx">
-      <DependentUpon>RegProp.h</DependentUpon>
+    <EmbeddedResource Include="RegUsu.resx">
+      <DependentUpon>ModProp.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

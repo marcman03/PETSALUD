@@ -40,7 +40,7 @@ public:
 	void setNom(String^ nuevoNom);
 	void setUsername(String^ nuevoUsername);
 	void setContrasenya(String^ nuevaContrasenya);
-	void setTipus(String^ nuevaDataNaixement);
+	void setTipus(String^ nouTipus);
 	void setCorreuElectronic(String^ nuevoCorreuElectronic);
 	void setDescripcio(String^ nuevaDescripcion);
 	void setTelefon(String^ nuevoTelefono);

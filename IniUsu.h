@@ -1,6 +1,7 @@
-#pragma once
+ï»¿#pragma once
 #include "TxIniciSessio.h"
 #include "MenuProp.h"
+#include "MenuCli.h"
 
 namespace PetSalut {
 
@@ -12,24 +13,24 @@ namespace PetSalut {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Resumen de IniProp
+	/// Resumen de IniUsu
 	/// </summary>
-	public ref class IniProp : public System::Windows::Forms::Form
+	public ref class IniUsu : public System::Windows::Forms::Form
 	{
 	public:
-		IniProp(void)
+		IniUsu(void)
 		{
 			InitializeComponent();
 			//
-			//TODO: agregar código de constructor aquí
+			//TODO: agregar cï¿½digo de constructor aquï¿½
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Limpiar los recursos que se estén usando.
+		/// Limpiar los recursos que se estï¿½n usando.
 		/// </summary>
-		~IniProp()
+		~IniUsu()
 		{
 			if (components)
 			{
@@ -46,14 +47,14 @@ namespace PetSalut {
 
 	private:
 		/// <summary>
-		/// Variable del diseñador necesaria.
+		/// Variable del diseï¿½ador necesaria.
 		/// </summary>
 		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Método necesario para admitir el Diseñador. No se puede modificar
-		/// el contenido de este método con el editor de código.
+		/// Mï¿½todo necesario para admitir el Diseï¿½ador. No se puede modificar
+		/// el contenido de este mï¿½todo con el editor de cï¿½digo.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -68,14 +69,15 @@ namespace PetSalut {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 28.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 28.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(540, 149);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(420, 67);
+			this->label1->Size = System::Drawing::Size(301, 54);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"Iniciar Sessió";
+			this->label1->Text = L"Iniciar SessiÃ³";
+			this->label1->Click += gcnew System::EventHandler(this, &IniUsu::label1_Click);
 			// 
 			// textBox1
 			// 
@@ -94,40 +96,40 @@ namespace PetSalut {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->Location = System::Drawing::Point(627, 349);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(252, 43);
+			this->label2->Size = System::Drawing::Size(183, 36);
 			this->label2->TabIndex = 3;
 			this->label2->Text = L"Contrasenya";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->Location = System::Drawing::Point(627, 238);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(266, 43);
+			this->label3->Size = System::Drawing::Size(190, 36);
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"Nom d\'usuari";
 			// 
 			// button1
 			// 
-			this->button1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->Location = System::Drawing::Point(640, 463);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(234, 75);
 			this->button1->TabIndex = 5;
-			this->button1->Text = L"Iniciar Sessió";
+			this->button1->Text = L"Iniciar SessiÃ³";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &IniProp::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &IniUsu::button1_Click);
 			// 
-			// IniProp
+			// IniUsu
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -141,6 +143,7 @@ namespace PetSalut {
 			this->Controls->Add(this->label1);
 			this->Name = L"IniUsu";
 			this->Text = L"PETSALUT";
+			this->Load += gcnew System::EventHandler(this, &IniUsu::IniUsu_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -158,16 +161,31 @@ namespace PetSalut {
 			iniS.crear(username, contrasenya);
 			iniS.executar();
 
-			PetSalut::MenuProp^ menuProp = gcnew PetSalut::MenuProp();
+			PassarellaUsuari^ usu = CercadoraUsuari::cercaUsuari(username);
+			String^ tip = usu->getTipus();
 
-			this->Visible = false;
+			if (tip == "propietari") {
 
-			menuProp->ShowDialog();
+				PetSalut::MenuProp^ menuProp = gcnew PetSalut::MenuProp();
 
-			this->Visible = true;
+				this->Visible = false;
+
+				menuProp->ShowDialog();
+
+				this->Visible = true;
+			}
+			else {
+				PetSalut::MenuCli^ menuCli = gcnew PetSalut::MenuCli();
+
+				this->Visible = false;
+
+				menuCli->ShowDialog();
+
+				this->Visible = true;
+			}
 
 			this->Close();
-			
+
 		}
 		catch (Exception^ ex)
 		{
@@ -175,5 +193,9 @@ namespace PetSalut {
 		}
 
 	}
-	};
+	private: System::Void IniUsu_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+};
 }
