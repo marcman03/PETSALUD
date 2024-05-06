@@ -14,7 +14,7 @@ TxConsultarMascotes^ TxConsultarMascotes::crear(PassarellaPropietari^ _propietar
 vector<int> TxConsultarMascotes::obteResultat()
 {
     vector<int>mascotas = propietari->obtenerMascotas();
-    return mascotas;
+     return mascotas;
 
-
+ 
 }

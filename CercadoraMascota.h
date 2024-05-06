@@ -9,3 +9,4 @@ public:
 	static PassarellaMascota^ cercaMascota(int chip);
 
 };
+
