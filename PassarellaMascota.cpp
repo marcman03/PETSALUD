@@ -4,7 +4,7 @@
 
 using namespace System;
 using namespace MySql::Data::MySqlClient;
-using namespace System::Windows::Forms; //Per mostrar MessageBox::Show una caixa amb el missatge d'error
+using namespace System::Windows::Forms;//Per mostrar MessageBox::Show una caixa amb el missatge d'error
 PassarellaMascota^ PassarellaMascota::crear(int _chip, String^ _nom, DateTime _datanaixement, String^ _descripcio, String^ _propietari, String^ _tipus)
 {
 
@@ -78,3 +78,4 @@ PassarellaMascota::PassarellaMascota(int _chip, String^ _nom, DateTime _datanaix
     propietari = _propietari;
     tipus = _tipus;
 }
+
