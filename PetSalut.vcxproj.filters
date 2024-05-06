@@ -44,9 +44,6 @@
     <ClInclude Include="Ordinador.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RegProp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MenuProp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -68,31 +65,10 @@
     <ClInclude Include="CercadoraClinica.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IniCli.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MenuCli.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="InfoCli.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TxModProp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="PassarellaClinica.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ClinicaAlta.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CliniquesClass.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="PassarellaUsuari.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TxConsultaCli.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TxConsultaUsu.h">
@@ -107,7 +83,7 @@
     <ClInclude Include="TxRegistraUsu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RegCli.h">
+    <ClInclude Include="RegUsu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -139,9 +115,6 @@
     <ClCompile Include="Ordinador.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RegProp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="MenuProp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -163,31 +136,7 @@
     <ClCompile Include="CercadoraClinica.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IniCli.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuCli.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="PassarellaClinica.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RegCli.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="InfoCli.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TxConsultaCli.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TxModProp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ClinicaAlta.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CliniquesClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PassarellaUsuari.cpp">
@@ -205,6 +154,9 @@
     <ClCompile Include="TxRegistraUsu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RegUsu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico">
@@ -213,6 +165,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ClinicaAlta.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniProp.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

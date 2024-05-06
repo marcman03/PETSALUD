@@ -13,27 +13,26 @@ PassarellaClinica^ CercadoraClinica::cercaClinica(String^ usernameU)
 
 	cmd->Parameters->AddWithValue("@username", usernameU);
 
+	PassarellaClinica^ cli;
 	MySqlDataReader^ dataReader;
-	conn->Open();
-	dataReader = cmd->ExecuteReader();
 
-	if (dataReader->Read()) {
+	try {
 
-		String^ username = dataReader->GetString(0);
-		String^ nom = dataReader->GetString(1);
-		String^ correu = dataReader->GetString(2);
-		String^ telefon = dataReader->GetString(3);
-		String^ descripcio = dataReader->GetString(4);
-		String^ contrasenya = dataReader->GetString(5);
+		conn->Open();
+		dataReader = cmd->ExecuteReader();
+
+	}
+
+	catch (Exception^ ex) {
+
+		throw gcnew Exception("Hi ha hagut un error amb el nom d'usuari o la contrasenya");
+	}
+
+	finally {
 
 		conn->Close();
-		return gcnew PassarellaClinica(username);
-
 	}
 
-	else {
-		throw gcnew Exception("Hi ha hagut un error amb el nom d'usuari o la contrasenya");
-
-	}
+	return cli;
 
 }
