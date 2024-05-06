@@ -1,4 +1,4 @@
-#include "pch.h"
+﻿#include "pch.h"
 #include "PassarellaPropietari.h"
 #include "DBConnection.h" 
 
@@ -86,7 +86,7 @@ vector<int> PassarellaPropietari::obtenerMascotas()
         reader->Close();
     }
     catch (Exception^ ex) {
-        // Manejar la excepci�n
+        // Manejar la excepción
         Console::WriteLine(ex->Message);
     }
     finally {

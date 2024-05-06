@@ -68,9 +68,6 @@
     <ClInclude Include="InfoProp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PassarellaPropietari.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="TxConsultaUsu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -93,6 +90,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TxEsborraUsu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxConsultarMascotes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CercadoraMascota.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -121,9 +124,6 @@
     <ClCompile Include="PassarellaPropietari.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TxConsultarMascotes.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CercadoraMascota.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -148,9 +148,6 @@
     <ClCompile Include="InfoProp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PassarellaPropietari.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="TxConsultaUsu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -173,6 +170,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TxEsborraUsu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxConsultarMascotes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CercadoraMascota.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

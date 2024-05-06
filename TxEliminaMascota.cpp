@@ -11,12 +11,8 @@ TxEliminaMascota^ TxEliminaMascota::crear()
     return gcnew TxEliminaMascota();
 }
 
-void TxEliminaMascota::ejecutar()
+void TxEliminaMascota::ejecutar(int chip)
 {
-  int chip;
-  PassarellaMascota^ mascota = gcnew PassarellaMascota(chip, "", DateTime::Now, "", "", "");
-  if (mascota->GetType()->GetProperty("Chip") != nullptr) {
-      chip = mascota->Chip;// Nose si asi puedes sacar el chip correctamente.
-  }
+;
   PassarellaMascota::eliminar(chip);
 }

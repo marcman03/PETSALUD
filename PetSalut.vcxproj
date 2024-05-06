@@ -137,6 +137,9 @@
     <ClInclude Include="ConsultaMascota_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Delete_Mascota_forms.h" >
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -238,6 +241,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Delete_Mascota_forms.resx">
+      <DependentUpon>Delete_Mascota_forms.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

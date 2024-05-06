@@ -5,10 +5,11 @@ using namespace std;
 ref class TxEliminaMascota
 {
 private:
+	int chip;
 	TxEliminaMascota();
 
 public:
 	static TxEliminaMascota^ crear();
-	void ejecutar();
+	void ejecutar(int chip);
 };
 

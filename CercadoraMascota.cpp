@@ -1,4 +1,4 @@
-#include "pch.h"
+﻿#include "pch.h"
 #include "CercadoraMascota.h"
 #include "DBConnection.h" 
 
@@ -19,7 +19,7 @@ PassarellaMascota^ CercadoraMascota::cercaMascota(int chip)
         MySqlDataReader^ reader = cmd->ExecuteReader();
 
         if (reader->Read()) {
-            // Si se encontr� una mascota, crea un objeto PassarellaMascota con los datos obtenidos
+            // Si se encontró una mascota, crea un objeto PassarellaMascota con los datos obtenidos
             int _chip = Convert::ToInt32(reader["chip"]);
             String^ _nom = reader["nom"]->ToString();
             DateTime _datanaixement = Convert::ToDateTime(reader["datanaixement"]);
