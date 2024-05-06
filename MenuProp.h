@@ -402,7 +402,7 @@ namespace PetSalut {
 
 
 		//Volver a la pagina principal
-		this->Close();  // Cerrar el formulario actual (RegProp)
+		this->Close();  // Cerrar el formulario actual (RegUsu)
 
 
 	}

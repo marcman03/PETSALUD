@@ -14,10 +14,10 @@ namespace PetSalut {
 	/// <summary>
 	/// Resumen de RegU
 	/// </summary>
-	public ref class RegProp : public System::Windows::Forms::Form
+	public ref class RegUsu : public System::Windows::Forms::Form
 	{
 	public:
-		RegProp(void)
+		RegUsu(void)
 		{
 			InitializeComponent();
 			//
@@ -26,13 +26,13 @@ namespace PetSalut {
 		}
 		bool mostra1 = false;
 		String^ tipusSelected = "Propietari";
-		private: System::Windows::Forms::Label^ PassLong;
-		private: System::Windows::Forms::Label^ DiffPasswd;
-		private: System::Windows::Forms::Label^ label9;
-		private: System::Windows::Forms::TextBox^ descripcio;
-		private: System::Windows::Forms::Label^ tipusLabel;
-		private: System::Windows::Forms::RadioButton^ radioPropietariButton;
-		private: System::Windows::Forms::RadioButton^ radioClinicaButton;
+	private: System::Windows::Forms::Label^ PassLong;
+	private: System::Windows::Forms::Label^ DiffPasswd;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::TextBox^ descripcio;
+	private: System::Windows::Forms::Label^ tipusLabel;
+	private: System::Windows::Forms::RadioButton^ radioPropietariButton;
+	private: System::Windows::Forms::RadioButton^ radioClinicaButton;
 
 
 	public:
@@ -45,7 +45,7 @@ namespace PetSalut {
 		/// <summary>
 		/// Limpiar los recursos que se est�n usando.
 		/// </summary>
-		~RegProp()
+		~RegUsu()
 		{
 			if (components)
 			{
@@ -166,7 +166,7 @@ namespace PetSalut {
 			this->mail->Name = L"mail";
 			this->mail->Size = System::Drawing::Size(360, 22);
 			this->mail->TabIndex = 5;
-			this->mail->TextChanged += gcnew System::EventHandler(this, &RegProp::mail_TextChanged);
+			this->mail->TextChanged += gcnew System::EventHandler(this, &RegUsu::mail_TextChanged);
 			// 
 			// label4
 			// 
@@ -286,7 +286,7 @@ namespace PetSalut {
 			this->valid_button->TabIndex = 25;
 			this->valid_button->Text = L"VALIDAR INFORMACIO";
 			this->valid_button->UseVisualStyleBackColor = false;
-			this->valid_button->Click += gcnew System::EventHandler(this, &RegProp::valid_button_Click);
+			this->valid_button->Click += gcnew System::EventHandler(this, &RegUsu::valid_button_Click);
 			// 
 			// reg_button
 			// 
@@ -302,7 +302,7 @@ namespace PetSalut {
 			this->reg_button->Text = L"REGISTRAR-SE";
 			this->reg_button->UseVisualStyleBackColor = false;
 			this->reg_button->Visible = false;
-			this->reg_button->Click += gcnew System::EventHandler(this, &RegProp::reg_button_Click);
+			this->reg_button->Click += gcnew System::EventHandler(this, &RegUsu::reg_button_Click);
 			// 
 			// show1
 			// 
@@ -415,9 +415,9 @@ namespace PetSalut {
 			this->radioClinicaButton->TabIndex = 35;
 			this->radioClinicaButton->Text = L"Clinica";
 			this->radioClinicaButton->UseVisualStyleBackColor = true;
-			this->radioClinicaButton->CheckedChanged += gcnew System::EventHandler(this, &RegProp::radioClinicaButton_CheckedChanged);
+			this->radioClinicaButton->CheckedChanged += gcnew System::EventHandler(this, &RegUsu::radioClinicaButton_CheckedChanged);
 			// 
-			// RegProp
+			// RegUsu
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -450,9 +450,9 @@ namespace PetSalut {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Margin = System::Windows::Forms::Padding(4);
-			this->Name = L"RegProp";
+			this->Name = L"RegUsu";
 			this->Text = L"RegistrarUsuari";
-			this->Load += gcnew System::EventHandler(this, &RegProp::RegProp_Load);
+			this->Load += gcnew System::EventHandler(this, &RegUsu::RegUsu_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -534,7 +534,7 @@ namespace PetSalut {
 			this->tipusSelected = "Propietari";
 		}
 	}
-	private: System::Void RegProp_Load(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void RegUsu_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void mail_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }

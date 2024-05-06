@@ -133,11 +133,11 @@ namespace PetSalut {
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		PetSalut::RegProp^ regProp = gcnew PetSalut::RegProp();
+		PetSalut::RegUsu^ regUsu = gcnew PetSalut::RegUsu();
 
 		this->Visible = false;
 
-		regProp->ShowDialog();
+		regUsu->ShowDialog();
 
 		this->Visible = true;
 
