@@ -68,14 +68,15 @@ namespace PetSalut {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 28.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 28.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(540, 149);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(420, 67);
+			this->label1->Size = System::Drawing::Size(301, 54);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Iniciar Sessió";
+			this->label1->Click += gcnew System::EventHandler(this, &IniProp::label1_Click);
 			// 
 			// textBox1
 			// 
@@ -94,30 +95,30 @@ namespace PetSalut {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->Location = System::Drawing::Point(627, 349);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(252, 43);
+			this->label2->Size = System::Drawing::Size(183, 36);
 			this->label2->TabIndex = 3;
 			this->label2->Text = L"Contrasenya";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->Location = System::Drawing::Point(627, 238);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(266, 43);
+			this->label3->Size = System::Drawing::Size(190, 36);
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"Nom d\'usuari";
 			// 
 			// button1
 			// 
-			this->button1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->Location = System::Drawing::Point(640, 463);
 			this->button1->Name = L"button1";
@@ -139,8 +140,9 @@ namespace PetSalut {
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);
-			this->Name = L"IniUsu";
+			this->Name = L"IniProp";
 			this->Text = L"PETSALUT";
+			this->Load += gcnew System::EventHandler(this, &IniProp::IniProp_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -158,13 +160,22 @@ namespace PetSalut {
 			iniS.crear(username, contrasenya);
 			iniS.executar();
 
-			PetSalut::MenuProp^ menuProp = gcnew PetSalut::MenuProp();
+			PassarellaUsuari^ usu = CercadoraUsuari::cercaUsuari(username);
+			String^ tip = usu->getTipus();
 
-			this->Visible = false;
+			if (tip == "propietari") {
 
-			menuProp->ShowDialog();
+				PetSalut::MenuProp^ menuProp = gcnew PetSalut::MenuProp();
 
-			this->Visible = true;
+				this->Visible = false;
+
+				menuProp->ShowDialog();
+
+				this->Visible = true;
+			}
+			else {
+
+			}
 
 			this->Close();
 
@@ -175,5 +186,9 @@ namespace PetSalut {
 		}
 
 	}
-	};
+	private: System::Void IniProp_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+};
 }

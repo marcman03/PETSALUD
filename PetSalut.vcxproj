@@ -143,6 +143,9 @@
     <ClInclude Include="IniProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MenuCli.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MenuProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -175,6 +178,7 @@
     <ClCompile Include="Form1.cpp" />
     <ClCompile Include="InfoProp.cpp" />
     <ClCompile Include="IniProp.cpp" />
+    <ClCompile Include="MenuCli.cpp" />
     <ClCompile Include="MenuProp.cpp" />
     <ClCompile Include="ModProp.cpp" />
     <ClCompile Include="PassarellaClinica.cpp" />
