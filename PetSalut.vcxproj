@@ -138,7 +138,7 @@
     <ClInclude Include="ConsultaMascota_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Delete_Mascota_forms.h" >
+    <ClInclude Include="Delete_Mascota_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="PantallaPrincipal.h">
@@ -238,6 +238,9 @@
   <ItemGroup>
     <EmbeddedResource Include="ConsultaMascota_forms.resx">
       <DependentUpon>ConsultaMascota_forms.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModCli.resx">
+      <DependentUpon>ModCli.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.h</DependentUpon>

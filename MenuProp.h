@@ -102,46 +102,46 @@ namespace PetSalut {
 			// 
 			// ConsultaButton
 			// 
-			this->ConsultaButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->ConsultaButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->ConsultaButton->Location = System::Drawing::Point(575, 193);
 			this->ConsultaButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->ConsultaButton->Name = L"ConsultaButton";
 			this->ConsultaButton->Size = System::Drawing::Size(415, 71);
 			this->ConsultaButton->TabIndex = 0;
-			this->ConsultaButton->Text = L"Consultar Informació";
+			this->ConsultaButton->Text = L"Consultar Informaci�";
 			this->ConsultaButton->UseVisualStyleBackColor = true;
 			this->ConsultaButton->Click += gcnew System::EventHandler(this, &MenuProp::Consulta_Click);
 			// 
 			// ModificarButton
 			// 
-			this->ModificarButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
+			this->ModificarButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->ModificarButton->Location = System::Drawing::Point(575, 288);
 			this->ModificarButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->ModificarButton->Name = L"ModificarButton";
 			this->ModificarButton->Size = System::Drawing::Size(415, 71);
 			this->ModificarButton->TabIndex = 1;
-			this->ModificarButton->Text = L"Modificar Informació";
+			this->ModificarButton->Text = L"Modificar Informaci�";
 			this->ModificarButton->UseVisualStyleBackColor = true;
 			this->ModificarButton->Click += gcnew System::EventHandler(this, &MenuProp::Modifica_Click);
 			// 
 			// TancarButton
 			// 
-			this->TancarButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->TancarButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->TancarButton->Location = System::Drawing::Point(575, 379);
 			this->TancarButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->TancarButton->Name = L"TancarButton";
 			this->TancarButton->Size = System::Drawing::Size(415, 71);
 			this->TancarButton->TabIndex = 2;
-			this->TancarButton->Text = L"Tancar Sessió";
+			this->TancarButton->Text = L"Tancar Sessi�";
 			this->TancarButton->UseVisualStyleBackColor = true;
 			this->TancarButton->Click += gcnew System::EventHandler(this, &MenuProp::Tanca_Click);
 			// 
 			// EliminarButton
 			// 
-			this->EliminarButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->EliminarButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->EliminarButton->Location = System::Drawing::Point(575, 469);
 			this->EliminarButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -155,7 +155,7 @@ namespace PetSalut {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(491, 39);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
@@ -177,7 +177,7 @@ namespace PetSalut {
 			// 
 			// Cancela_Tanca
 			// 
-			this->Cancela_Tanca->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->Cancela_Tanca->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Cancela_Tanca->Location = System::Drawing::Point(421, 469);
 			this->Cancela_Tanca->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -191,7 +191,7 @@ namespace PetSalut {
 			// 
 			// Accepta_Tanca
 			// 
-			this->Accepta_Tanca->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->Accepta_Tanca->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Accepta_Tanca->Location = System::Drawing::Point(791, 469);
 			this->Accepta_Tanca->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -206,21 +206,21 @@ namespace PetSalut {
 			// LabelTancaSessio
 			// 
 			this->LabelTancaSessio->BackColor = System::Drawing::SystemColors::Control;
-			this->LabelTancaSessio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->LabelTancaSessio->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->LabelTancaSessio->Location = System::Drawing::Point(457, 241);
 			this->LabelTancaSessio->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->LabelTancaSessio->Name = L"LabelTancaSessio";
 			this->LabelTancaSessio->Size = System::Drawing::Size(660, 135);
 			this->LabelTancaSessio->TabIndex = 8;
-			this->LabelTancaSessio->Text = L"Estas segur de que vols tancar la sessió actual en aquest dispositu\?";
+			this->LabelTancaSessio->Text = L"Estas segur de que vols tancar la sessi� actual en aquest dispositu\?";
 			this->LabelTancaSessio->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->LabelTancaSessio->Visible = false;
 			// 
 			// labelelimina
 			// 
 			this->labelelimina->BackColor = System::Drawing::SystemColors::Control;
-			this->labelelimina->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->labelelimina->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->labelelimina->Location = System::Drawing::Point(457, 224);
 			this->labelelimina->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
@@ -233,7 +233,7 @@ namespace PetSalut {
 			// 
 			// eliminar_compte_acceptar
 			// 
-			this->eliminar_compte_acceptar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
+			this->eliminar_compte_acceptar->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->eliminar_compte_acceptar->Location = System::Drawing::Point(791, 469);
 			this->eliminar_compte_acceptar->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -247,7 +247,7 @@ namespace PetSalut {
 			// 
 			// cancelar_eliminar_compte
 			// 
-			this->cancelar_eliminar_compte->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
+			this->cancelar_eliminar_compte->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->cancelar_eliminar_compte->Location = System::Drawing::Point(421, 469);
 			this->cancelar_eliminar_compte->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -302,7 +302,6 @@ namespace PetSalut {
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"MenuProp";
 			this->Text = L"PETSALUT";
-			this->Load += gcnew System::EventHandler(this, &MenuProp::MenuProp_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->TancaSessioBox))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->boxeliminar))->EndInit();
 			this->ResumeLayout(false);
@@ -402,7 +401,7 @@ namespace PetSalut {
 
 
 		//Volver a la pagina principal
-		this->Close();  // Cerrar el formulario actual (RegUsu)
+		this->Close();  // Cerrar el formulario actual (RegProp)
 
 
 	}
@@ -415,7 +414,5 @@ namespace PetSalut {
 		this->labelelimina->Visible = false;
 
 	}
-	private: System::Void MenuProp_Load(System::Object^ sender, System::EventArgs^ e) {
-	}
-};
+	};
 }
