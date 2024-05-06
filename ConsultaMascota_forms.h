@@ -54,6 +54,7 @@ namespace PetSalut {
 
 	private: System::Windows::Forms::Button^ consultar;
 
+
 	private: System::Windows::Forms::Panel^ descriptionPannel;
 
 	
@@ -123,7 +124,9 @@ namespace PetSalut {
 		}
 	}
 	private: System::Void fillPets(System::Object^ sender, System::EventArgs^ e) {
-		//
+	
+
+		//Usar aqui la variable ordenador para obtener el passarela propietari
 		PassarellaPropietari^ propietari = gcnew PassarellaPropietari("pepitoxx","","","","","","");
 		TxConsultarMascotes^ consultaMascotas = TxConsultarMascotes::crear(propietari);
 		vector<int> mascotas = consultaMascotas->obteResultat();
@@ -142,7 +145,7 @@ namespace PetSalut {
 			String^ infoMascota = nombre + "(" + chip.ToString() + ")";
 			petsList->Items->Add(infoMascota);
 		}
-
+		
 
 
 	}
