@@ -160,7 +160,7 @@ namespace PetSalut {
 			this->label1->Location = System::Drawing::Point(491, 39);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(375, 46);
+			this->label1->Size = System::Drawing::Size(541, 56);
 			this->label1->TabIndex = 4;
 			this->label1->Text = L"Gestionar Propietari";
 			// 

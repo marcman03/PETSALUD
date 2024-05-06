@@ -29,7 +29,22 @@
     <ClInclude Include="DBConnection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PantallaPrincipal.h">
+    <ClInclude Include="TxEliminaMascota.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PassarellaMascota.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsultaMascota_forms.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PassarellaPropietari.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxConsultarMascotes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CercadoraMascota.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IniUsu.h">
@@ -50,6 +65,7 @@
     <ClInclude Include="InfoProp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TxConsultaUsu.h">
     <ClInclude Include="PassarellaPropietari.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -75,6 +91,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TxEsborraUsu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxConsultarMascotes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CercadoraMascota.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TxModUsu.h">
@@ -109,6 +131,19 @@
     <ClCompile Include="DBConnection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TxEliminaMascota.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassarellaMascota.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsultaMascota_forms.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassarellaPropietari.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CercadoraMascota.cpp">
     <ClCompile Include="PantallaPrincipal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -134,6 +169,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TxTancaSessio.cpp">
+    <ClCompile Include="TxConsultaUsu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ModProp.cpp">
@@ -155,6 +191,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TxEsborraUsu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxConsultarMascotes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CercadoraMascota.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TxModUsu.cpp">

@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "TxConsultaUsu.h"
 #include "ModProp.h"
+#include "ConsultaMascota_forms.h"
 
 namespace PetSalut {
 
@@ -318,6 +319,7 @@ namespace PetSalut {
 			this->Accepta_Tanca->TabIndex = 54;
 			this->Accepta_Tanca->Text = L"Mostrar Mascotes";
 			this->Accepta_Tanca->UseVisualStyleBackColor = true;
+			this->Accepta_Tanca->Click += gcnew System::EventHandler(this, &InfoProp::Accepta_Tanca_Click);
 			// 
 			// button1
 			// 
@@ -393,6 +395,17 @@ namespace PetSalut {
 		modProp->ShowDialog();
 
 		this->Visible = true;
+
+	}
+	private: System::Void Accepta_Tanca_Click(System::Object^ sender, System::EventArgs^ e) {
+		PetSalut::ConsultaMascota_forms^ consMasc = gcnew PetSalut::ConsultaMascota_forms();
+
+		this->Visible = false;
+
+		consMasc->ShowDialog();
+
+		this->Visible = true;
+
 
 	}
 	};

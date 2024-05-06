@@ -130,10 +130,17 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CercadoraMascota.h" />
     <ClInclude Include="CercadoraClinica.h" />
     <ClInclude Include="CercadoraPropietari.h" />
     <ClInclude Include="CercadoraUsuari.h" />
     <ClInclude Include="DBConnection.h" />
+    <ClInclude Include="ConsultaMascota_forms.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Delete_Mascota_forms.h" >
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="PantallaPrincipal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -158,16 +165,19 @@
     <ClInclude Include="ModProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="PassarellaMascota.h" />
+    <ClInclude Include="PassarellaUsuari.h" />
     <ClInclude Include="RegUsu.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="PassarellaClinica.h" />
-    <ClInclude Include="PassarellaUsuari.h" />
     <ClInclude Include="Ordinador.h" />
     <ClInclude Include="PassarellaPropietari.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="TxConsultarMascotes.h" />
     <ClInclude Include="TxConsultaUsu.h" />
+    <ClInclude Include="TxEliminaMascota.h" />
     <ClInclude Include="TxEsborraUsu.h" />
     <ClInclude Include="TxIniciSessio.h" />
     <ClInclude Include="TxModUsu.h" />
@@ -176,9 +186,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="CercadoraMascota.cpp" />
     <ClCompile Include="CercadoraClinica.cpp" />
     <ClCompile Include="CercadoraPropietari.cpp" />
     <ClCompile Include="CercadoraUsuari.cpp" />
+    <ClCompile Include="ConsultaMascota_forms.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="DBConnection.cpp" />
     <ClCompile Include="PantallaPrincipal.cpp" />
@@ -190,6 +202,7 @@
     <ClCompile Include="ModCli.cpp" />
     <ClCompile Include="ModProp.cpp" />
     <ClCompile Include="PassarellaClinica.cpp" />
+    <ClCompile Include="PassarellaMascota.cpp" />
     <ClCompile Include="PassarellaUsuari.cpp" />
     <ClCompile Include="Ordinador.cpp" />
     <ClCompile Include="PassarellaPropietari.cpp" />
@@ -199,8 +212,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TxConsultarMascotes.cpp" />
     <ClCompile Include="RegUsu.cpp" />
     <ClCompile Include="TxConsultaUsu.cpp" />
+    <ClCompile Include="TxEliminaMascota.cpp" />
     <ClCompile Include="TxEsborraUsu.cpp" />
     <ClCompile Include="TxIniciSessio.cpp" />
     <ClCompile Include="TxModUsu.cpp" />
@@ -221,7 +236,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ClinicaAlta.resx" />
+    <EmbeddedResource Include="ConsultaMascota_forms.resx">
+      <DependentUpon>ConsultaMascota_forms.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.h</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +258,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegUsu.resx">
       <DependentUpon>ModProp.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Delete_Mascota_forms.resx">
+      <DependentUpon>Delete_Mascota_forms.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
