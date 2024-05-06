@@ -7,7 +7,7 @@ using namespace System;
 //    return 0;
 // }
 
-#include "ConsultaMascota_forms.h"
+#include "Form1.h"
 
 using namespace System::Windows::Forms;
 
@@ -16,6 +16,6 @@ int main()
 {
   Application::EnableVisualStyles();
   Application::SetCompatibleTextRenderingDefault(false);
-  Application::Run(gcnew PetSalut::ConsultaMascota_forms);
+  Application::Run(gcnew PetSalut::Form1);
   return 0;
 }

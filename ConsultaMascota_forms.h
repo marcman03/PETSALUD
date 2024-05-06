@@ -5,7 +5,8 @@
 #include "TxConsultarMascotes.h"
 #include "PassarellaMascota.h"
 #include "CercadoraMascota.h"
-
+#include "Ordinador.h"
+#include "CercadoraPropietari.h"
 
 namespace PetSalut {
 	using namespace std;
@@ -127,7 +128,12 @@ namespace PetSalut {
 	
 
 		//Usar aqui la variable ordenador para obtener el passarela propietari
-		PassarellaPropietari^ propietari = gcnew PassarellaPropietari("pepitoxx","","","","","","");
+
+		Ordinador^ ord = Ordinador::getInstance();
+		PassarellaUsuari^ usuari = ord->obteUsuari();
+	
+		PassarellaPropietari^ propietari = CercadoraPropietari::cercaPropietari(usuari->getUsername());
+		
 		TxConsultarMascotes^ consultaMascotas = TxConsultarMascotes::crear(propietari);
 		vector<int> mascotas = consultaMascotas->obteResultat();
 		// Limpiar el ComboBox
