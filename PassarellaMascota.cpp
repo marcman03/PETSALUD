@@ -10,7 +10,7 @@ PassarellaMascota^ PassarellaMascota::crear(int _chip, String^ _nom, DateTime _d
 
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection(); // <-- Declaraci�
 
-    String^ sql = "INSERT INTO mascotes (chip, nom, datanaixement, descripcio, propietari, tipus) VALUES (@chip, @nom, @datanaixement, @descripcio, @propietari, @tipus)";
+    String^ sql = "INSERT INTO mascota (chip, nom, datanaixement, descripcio, propietari, tipus) VALUES (@chip, @nom, @datanaixement, @descripcio, @propietari, @tipus)";
 
     MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
 
@@ -44,7 +44,7 @@ PassarellaMascota^ PassarellaMascota::eliminar(int _chip) {
 
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection(); // <-- Declaraci�
 
-    String^ sql = "DELETE FROM mascotes WHERE chip = @chip";
+    String^ sql = "DELETE FROM mascota WHERE chip = @chip";
 
     MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
 

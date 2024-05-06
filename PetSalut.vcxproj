@@ -137,6 +137,9 @@
     <ClInclude Include="ConsultaMascota_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Delete_Mascota_forms.h" >
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Form1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -159,10 +162,10 @@
     </ClInclude>
     <ClInclude Include="Ordinador.h" />
     <ClInclude Include="PassarellaPropietari.h" />
-    <ClInclude Include="PassarellaPropietari.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="TxConsultarMascotes.h" />
+    <ClInclude Include="TxConsultaUsu.h" />
     <ClInclude Include="TxEliminaMascota.h" />
     <ClInclude Include="TxEsborraUsu.h" />
     <ClInclude Include="TxIniciSessio.h" />
@@ -188,7 +191,6 @@
     <ClCompile Include="RegProp.cpp" />
     <ClCompile Include="Ordinador.cpp" />
     <ClCompile Include="PassarellaPropietari.cpp" />
-    <ClCompile Include="PassarellaPropietari.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -197,7 +199,6 @@
     </ClCompile>
     <ClCompile Include="TxConsultarMascotes.cpp" />
     <ClCompile Include="TxConsultaUsu.cpp" />
-    <ClCompile Include="TxConsultarMascotes.cpp" />
     <ClCompile Include="TxEliminaMascota.cpp" />
     <ClCompile Include="TxEsborraUsu.cpp" />
     <ClCompile Include="TxIniciSessio.cpp" />

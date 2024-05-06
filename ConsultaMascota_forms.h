@@ -6,6 +6,7 @@
 #include "PassarellaMascota.h"
 #include "CercadoraMascota.h"
 #include "Ordinador.h"
+#include "Delete_Mascota_forms.h"
 #include "CercadoraPropietari.h"
 
 namespace PetSalut {
@@ -54,6 +55,8 @@ namespace PetSalut {
 	private: System::Windows::Forms::ComboBox^ petsList;
 
 	private: System::Windows::Forms::Button^ consultar;
+	private: System::Windows::Forms::Button^ eliminabutton;
+
 
 
 	private: System::Windows::Forms::Panel^ descriptionPannel;
@@ -148,7 +151,7 @@ namespace PetSalut {
 			String^ nombre = mascota->Nom;
 
 			// Concatenar el chip y el nombre y agregarlos a la lista
-			String^ infoMascota = nombre + "(" + chip.ToString() + ")";
+			String^ infoMascota = nombre + " (" + chip.ToString() + ")";
 			petsList->Items->Add(infoMascota);
 		}
 		
@@ -156,8 +159,18 @@ namespace PetSalut {
 
 	}
 
-	
 
+	private: System::Void eliminabutton_click(System::Object^ sender, System::EventArgs^ e) {
+		
+		PetSalut::Elimina_Mascota_forms^ elimMasc = gcnew PetSalut::Elimina_Mascota_forms();
+
+		this->Visible = false;
+
+		elimMasc -> ShowDialog();
+
+		this->Visible = true;
+
+	}
 	protected:
 
 	private:
@@ -178,6 +191,7 @@ namespace PetSalut {
 			this->petsList = (gcnew System::Windows::Forms::ComboBox());
 			this->consultar = (gcnew System::Windows::Forms::Button());
 			this->descriptionPannel = (gcnew System::Windows::Forms::Panel());
+			this->eliminabutton = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// petsaludlabel
@@ -185,9 +199,10 @@ namespace PetSalut {
 			this->petsaludlabel->AutoSize = true;
 			this->petsaludlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 30, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->petsaludlabel->Location = System::Drawing::Point(339, 9);
+			this->petsaludlabel->Location = System::Drawing::Point(254, 7);
+			this->petsaludlabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->petsaludlabel->Name = L"petsaludlabel";
-			this->petsaludlabel->Size = System::Drawing::Size(291, 58);
+			this->petsaludlabel->Size = System::Drawing::Size(235, 46);
 			this->petsaludlabel->TabIndex = 1;
 			this->petsaludlabel->Text = L"PETSALUT";
 			this->petsaludlabel->Click += gcnew System::EventHandler(this, &ConsultaMascota_forms::label1_Click);
@@ -197,26 +212,29 @@ namespace PetSalut {
 			this->mypetslabel->AutoSize = true;
 			this->mypetslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->mypetslabel->Location = System::Drawing::Point(389, 67);
+			this->mypetslabel->Location = System::Drawing::Point(292, 54);
+			this->mypetslabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->mypetslabel->Name = L"mypetslabel";
-			this->mypetslabel->Size = System::Drawing::Size(173, 48);
+			this->mypetslabel->Size = System::Drawing::Size(142, 39);
 			this->mypetslabel->TabIndex = 2;
 			this->mypetslabel->Text = L"My pets";
 			// 
 			// petsList
 			// 
 			this->petsList->FormattingEnabled = true;
-			this->petsList->Location = System::Drawing::Point(349, 168);
+			this->petsList->Location = System::Drawing::Point(262, 136);
+			this->petsList->Margin = System::Windows::Forms::Padding(2);
 			this->petsList->Name = L"petsList";
-			this->petsList->Size = System::Drawing::Size(265, 24);
+			this->petsList->Size = System::Drawing::Size(200, 21);
 			this->petsList->TabIndex = 3;
 			this->petsList->Click += gcnew System::EventHandler(this, &ConsultaMascota_forms::fillPets);
 			// 
 			// consultar
 			// 
-			this->consultar->Location = System::Drawing::Point(634, 168);
+			this->consultar->Location = System::Drawing::Point(476, 136);
+			this->consultar->Margin = System::Windows::Forms::Padding(2);
 			this->consultar->Name = L"consultar";
-			this->consultar->Size = System::Drawing::Size(75, 23);
+			this->consultar->Size = System::Drawing::Size(56, 19);
 			this->consultar->TabIndex = 4;
 			this->consultar->Text = L"consultar";
 			this->consultar->UseVisualStyleBackColor = true;
@@ -226,25 +244,39 @@ namespace PetSalut {
 			// 
 			this->descriptionPannel->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->descriptionPannel->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->descriptionPannel->Font = (gcnew System::Drawing::Font(L"Arial Narrow", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->descriptionPannel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->descriptionPannel->Location = System::Drawing::Point(287, 209);
+			this->descriptionPannel->Location = System::Drawing::Point(215, 170);
+			this->descriptionPannel->Margin = System::Windows::Forms::Padding(2);
 			this->descriptionPannel->Name = L"descriptionPannel";
-			this->descriptionPannel->Size = System::Drawing::Size(510, 242);
+			this->descriptionPannel->Size = System::Drawing::Size(384, 197);
 			this->descriptionPannel->TabIndex = 5;
 			this->descriptionPannel->Visible = false;
 			this->descriptionPannel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &ConsultaMascota_forms::panel1_Paint);
 			// 
+			// eliminabutton
+			// 
+			this->eliminabutton->BackColor = System::Drawing::Color::Red;
+			this->eliminabutton->Location = System::Drawing::Point(623, 331);
+			this->eliminabutton->Name = L"eliminabutton";
+			this->eliminabutton->Size = System::Drawing::Size(135, 35);
+			this->eliminabutton->TabIndex = 6;
+			this->eliminabutton->Text = L"ELIMINAR MASCOTA";
+			this->eliminabutton->UseVisualStyleBackColor = false;
+			this->eliminabutton->Click += gcnew System::EventHandler(this, &ConsultaMascota_forms::eliminabutton_click);
+			// 
 			// ConsultaMascota_forms
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1026, 497);
+			this->ClientSize = System::Drawing::Size(770, 404);
+			this->Controls->Add(this->eliminabutton);
 			this->Controls->Add(this->descriptionPannel);
 			this->Controls->Add(this->consultar);
 			this->Controls->Add(this->petsList);
 			this->Controls->Add(this->mypetslabel);
 			this->Controls->Add(this->petsaludlabel);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"ConsultaMascota_forms";
 			this->Text = L"ConsultaMascota_forms";
 			this->ResumeLayout(false);

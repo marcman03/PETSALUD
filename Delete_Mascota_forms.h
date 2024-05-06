@@ -7,7 +7,7 @@
 #include "TxEliminaMascota.h"
 #include "PassarellaMascota.h"
 #include "CercadoraMascota.h"
-namespace CppCLRWinFormsProject {
+namespace PetSalut {
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -17,12 +17,12 @@ namespace CppCLRWinFormsProject {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Summary for Form1
+	/// Summary for Elimina_Mascota_forms
 	/// </summary>
-	public ref class Form1 : public System::Windows::Forms::Form
+	public ref class Elimina_Mascota_forms : public System::Windows::Forms::Form
 	{
 	public:
-		Form1(void)
+		Elimina_Mascota_forms(void)
 		{
 			InitializeComponent();
 			//
@@ -34,7 +34,7 @@ namespace CppCLRWinFormsProject {
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
-		~Form1()
+		~Elimina_Mascota_forms()
 		{
 			if (components)
 			{
@@ -77,11 +77,17 @@ namespace CppCLRWinFormsProject {
 	}
 	private: System::Void deletebutton_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (petsList->SelectedItem != nullptr) {
-			String^ selectedChipString = dynamic_cast<String^>(petsList->SelectedItem);
+			/*String^ selectedChipString = dynamic_cast<String^>(petsList->SelectedItem);
 			int selectedChip = Int32::Parse(selectedChipString); // Convierte el chip de String a int
 
+			*/
+			String^ mascotaSeleccionada = petsList->SelectedItem->ToString();
+			int indiceParentesisAbierto = mascotaSeleccionada->IndexOf('(');
+			int indiceParentesisCerrado = mascotaSeleccionada->IndexOf(')');
+			String^ chipString = mascotaSeleccionada->Substring(indiceParentesisAbierto + 1, indiceParentesisCerrado - indiceParentesisAbierto - 1);
+			int chip = Int32::Parse(chipString);
 			TxEliminaMascota^ elimMascota = TxEliminaMascota::crear();
-			elimMascota->ejecutar(selectedChip);// Ahora pasamos el chip seleccionado como argumento
+			elimMascota->ejecutar(chip);// Ahora pasamos el chip seleccionado como argumento
 			panel2->Visible = true;
 			// Opcional: Actualizar la GUI si es necesario, por ejemplo, recargar la lista de mascotas
 		}
@@ -153,7 +159,7 @@ namespace CppCLRWinFormsProject {
 			this->label8->Size = System::Drawing::Size(110, 26);
 			this->label8->TabIndex = 15;
 			this->label8->Text = L"MY PETS";
-			this->label8->Click += gcnew System::EventHandler(this, &Form1::label8_Click);
+			this->label8->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::label8_Click);
 			// 
 			// label6
 			// 
@@ -211,7 +217,7 @@ namespace CppCLRWinFormsProject {
 			this->button4->TabIndex = 13;
 			this->button4->Text = L"Close";
 			this->button4->UseVisualStyleBackColor = false;
-			this->button4->Click += gcnew System::EventHandler(this, &Form1::exitbuttonconfirmation_Click);
+			this->button4->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::exitbuttonconfirmation_Click);
 			// 
 			// label2
 			// 
@@ -225,7 +231,7 @@ namespace CppCLRWinFormsProject {
 			this->label2->Size = System::Drawing::Size(203, 22);
 			this->label2->TabIndex = 11;
 			this->label2->Text = L"ELIMINAR MASCOTA";
-			this->label2->Click += gcnew System::EventHandler(this, &Form1::label2_Click);
+			this->label2->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::label2_Click);
 			// 
 			// label3
 			// 
@@ -240,7 +246,7 @@ namespace CppCLRWinFormsProject {
 			this->label3->Size = System::Drawing::Size(332, 22);
 			this->label3->TabIndex = 3;
 			this->label3->Text = L"La teva mascota s\'ha eliminat correctament.";
-			this->label3->Click += gcnew System::EventHandler(this, &Form1::label3_Click);
+			this->label3->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::label3_Click);
 			// 
 			// petsList
 			// 
@@ -249,7 +255,7 @@ namespace CppCLRWinFormsProject {
 			this->petsList->Name = L"petsList";
 			this->petsList->Size = System::Drawing::Size(204, 21);
 			this->petsList->TabIndex = 14;
-			this->petsList->Click += gcnew System::EventHandler(this, &Form1::consultar_Click);
+			this->petsList->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::consultar_Click);
 			// 
 			// button3
 			// 
@@ -261,7 +267,7 @@ namespace CppCLRWinFormsProject {
 			this->button3->TabIndex = 13;
 			this->button3->Text = L"X";
 			this->button3->UseVisualStyleBackColor = false;
-			this->button3->Click += gcnew System::EventHandler(this, &Form1::exitbutton_Click);
+			this->button3->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::exitbutton_Click);
 			// 
 			// label7
 			// 
@@ -274,7 +280,7 @@ namespace CppCLRWinFormsProject {
 			this->label7->Size = System::Drawing::Size(203, 22);
 			this->label7->TabIndex = 11;
 			this->label7->Text = L"ELIMINAR MASCOTA";
-			this->label7->Click += gcnew System::EventHandler(this, &Form1::label7_Click);
+			this->label7->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::label7_Click);
 			// 
 			// button1
 			// 
@@ -290,7 +296,7 @@ namespace CppCLRWinFormsProject {
 			this->button1->TabIndex = 10;
 			this->button1->Text = L"ELIMINAR";
 			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &Form1::deletebutton_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::deletebutton_Click);
 			// 
 			// label1
 			// 
@@ -305,7 +311,7 @@ namespace CppCLRWinFormsProject {
 			this->label1->Size = System::Drawing::Size(250, 22);
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"Quina Mascota vols ELIMINAR\?";
-			this->label1->Click += gcnew System::EventHandler(this, &Form1::label1_Click);
+			this->label1->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::label1_Click);
 			// 
 			// panelConfirmacion
 			// 
@@ -328,7 +334,7 @@ namespace CppCLRWinFormsProject {
 			this->buttonCerrarConfirmacion->Size = System::Drawing::Size(75, 23);
 			this->buttonCerrarConfirmacion->TabIndex = 0;
 			// 
-			// Form1
+			// Elimina_Mascota_forms
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -336,8 +342,8 @@ namespace CppCLRWinFormsProject {
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->panel1);
-			this->Name = L"Form1";
-			this->Text = L"Form1";
+			this->Name = L"Elimina_Mascota_forms";
+			this->Text = L"Elimina_Mascota_forms";
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			this->panel2->ResumeLayout(false);
