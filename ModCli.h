@@ -416,13 +416,13 @@ namespace PetSalut {
 			if (!this->phoneLabel->Visible) iniPhone = this->phone->Text;
 
 			TxModUsu modUsu;
-			modUsu.crear(iniUsername, iniPasswd, iniName, iniPhone, iniDate, iniMail, iniDesc, "propietari");
+			modUsu.crear(iniUsername, iniPasswd, iniName, iniPhone, iniDate, iniMail, iniDesc, "clinica");
 			modUsu.executar();
 
 			Ordinador^ ord = Ordinador::getInstance();
-			ord->actualitza(iniUsername, iniName, iniPasswd, "propietari", iniMail, iniDesc, iniPhone);
+			ord->actualitza(iniUsername, iniName, iniPasswd, "clinica", iniMail, iniDesc, iniPhone);
 
-			// Llamar a la función modificarPropietario con los parámetros necesarios
+			// Llamar a la función modificarClinica con los parámetros necesarios
 
 			// Si la modificación se realiza correctamente, puedes mostrar un mensaje de éxito
 			MessageBox::Show("La modificación se realizó con éxito.");
