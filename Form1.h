@@ -2,7 +2,7 @@
 #include "IniProp.h"
 #include "RegProp.h"
 
-namespace CppCLRWinFormsProject {
+namespace PetSalut {
 
 	using namespace System;
 	using namespace System::ComponentModel;

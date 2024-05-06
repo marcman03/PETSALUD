@@ -64,3 +64,34 @@ void PassarellaPropietari::setUsername(String^ nuevoUsername)
     username = nuevoUsername;
 }
 
+vector<int> PassarellaPropietari::obtenerMascotas()
+{
+
+
+    vector<int> chips;
+    MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
+    String^ sql = "SELECT chip FROM mascota WHERE propietari = @propietari;";
+    MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
+    cmd->Parameters->AddWithValue("@propietari", this->username);
+
+    try {
+        conn->Open();
+        MySqlDataReader^ reader = cmd->ExecuteReader();
+
+        while (reader->Read()) {
+            int chip = Convert::ToInt32(reader["chip"]);
+            chips.push_back(chip);
+        }
+
+        reader->Close();
+    }
+    catch (Exception^ ex) {
+        // Manejar la excepción
+        Console::WriteLine(ex->Message);
+    }
+    finally {
+        conn->Close();
+    }
+
+    return chips;
+}

@@ -25,7 +25,7 @@ PassarellaPropietari^ CercadoraPropietari::cercaPropietari(String^ usernameU)
 
 			String^ data = dataReader->GetString(1);
 
-			prop = gcnew PassarellaPropietari(usernameU, data);
+			prop = gcnew PassarellaPropietari(data, usernameU);
 
 		}
 
