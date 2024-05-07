@@ -7,6 +7,7 @@
 #include "CercadoraMascota.h"
 #include "Ordinador.h"
 #include "Delete_Mascota_forms.h"
+#include "Crea_Mascota_forms.h"
 #include "CercadoraPropietari.h"
 
 namespace PetSalut {
@@ -56,6 +57,8 @@ namespace PetSalut {
 
 	private: System::Windows::Forms::Button^ consultar;
 	private: System::Windows::Forms::Button^ eliminabutton;
+	private: System::Windows::Forms::Button^ registrarmascbutton;
+
 
 
 
@@ -171,6 +174,18 @@ namespace PetSalut {
 		this->Visible = true;
 
 	}
+
+	private: System::Void registrarbutton_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		PetSalut::Crea_Mascota_forms^ creaMasc = gcnew PetSalut::Crea_Mascota_forms();
+
+		this->Visible = false;
+
+		creaMasc->ShowDialog();
+
+		this->Visible = true;
+
+			}
 	protected:
 
 	private:
@@ -192,6 +207,7 @@ namespace PetSalut {
 			this->consultar = (gcnew System::Windows::Forms::Button());
 			this->descriptionPannel = (gcnew System::Windows::Forms::Panel());
 			this->eliminabutton = (gcnew System::Windows::Forms::Button());
+			this->registrarmascbutton = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// petsaludlabel
@@ -265,11 +281,24 @@ namespace PetSalut {
 			this->eliminabutton->UseVisualStyleBackColor = false;
 			this->eliminabutton->Click += gcnew System::EventHandler(this, &ConsultaMascota_forms::eliminabutton_click);
 			// 
+			// registrarmascbutton
+			// 
+			this->registrarmascbutton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->registrarmascbutton->Location = System::Drawing::Point(623, 277);
+			this->registrarmascbutton->Name = L"registrarmascbutton";
+			this->registrarmascbutton->Size = System::Drawing::Size(135, 35);
+			this->registrarmascbutton->TabIndex = 7;
+			this->registrarmascbutton->Text = L"REGISTRAR MASCOTA";
+			this->registrarmascbutton->UseVisualStyleBackColor = false;
+			this->registrarmascbutton->Click += gcnew System::EventHandler(this, &ConsultaMascota_forms::registrarbutton_Click);
+			// 
 			// ConsultaMascota_forms
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(770, 404);
+			this->Controls->Add(this->registrarmascbutton);
 			this->Controls->Add(this->eliminabutton);
 			this->Controls->Add(this->descriptionPannel);
 			this->Controls->Add(this->consultar);
@@ -290,5 +319,6 @@ namespace PetSalut {
 
 private: System::Void panel1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 }
+
 };
 }
