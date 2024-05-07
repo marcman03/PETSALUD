@@ -7,6 +7,8 @@
 #include "TxEliminaMascota.h"
 #include "PassarellaMascota.h"
 #include "CercadoraMascota.h"
+#include "CercadoraPropietari.h"
+#include "Ordinador.h"
 namespace PetSalut {
 
 	using namespace System;
@@ -94,7 +96,11 @@ namespace PetSalut {
 	}
 	private: System::Void consultar_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		PassarellaPropietari^ propietari = gcnew PassarellaPropietari("", "pepitoxx");
+
+		Ordinador^ ord = Ordinador::getInstance();
+		PassarellaUsuari^ usuari = ord->obteUsuari();
+
+		PassarellaPropietari^ propietari = CercadoraPropietari::cercaPropietari(usuari->getUsername());
 		TxConsultarMascotes^ consultaMascotas = TxConsultarMascotes::crear(propietari);
 		vector<int> mascotas = consultaMascotas->obteResultat();
 		// Limpiar el ComboBox
