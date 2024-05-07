@@ -133,11 +133,14 @@
     <ClInclude Include="CercadoraMascota.h" />
     <ClInclude Include="CercadoraPropietari.h" />
     <ClInclude Include="CercadoraUsuari.h" />
+    <ClInclude Include="Crea_Mascota_forms.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="DBConnection.h" />
     <ClInclude Include="ConsultaMascota_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Delete_Mascota_forms.h" >
+    <ClInclude Include="Delete_Mascota_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Form1.h">
@@ -166,6 +169,7 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="TxConsultarMascotes.h" />
     <ClInclude Include="TxConsultaUsu.h" />
+    <ClInclude Include="TxCrearMascota.h" />
     <ClInclude Include="TxEliminaMascota.h" />
     <ClInclude Include="TxEsborraUsu.h" />
     <ClInclude Include="TxIniciSessio.h" />
@@ -180,6 +184,7 @@
     <ClCompile Include="CercadoraUsuari.cpp" />
     <ClCompile Include="ConsultaMascota_forms.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
+    <ClCompile Include="Crea_Mascota_forms.cpp" />
     <ClCompile Include="DBConnection.cpp" />
     <ClCompile Include="Form1.cpp" />
     <ClCompile Include="InfoProp.cpp" />
@@ -199,6 +204,7 @@
     </ClCompile>
     <ClCompile Include="TxConsultarMascotes.cpp" />
     <ClCompile Include="TxConsultaUsu.cpp" />
+    <ClCompile Include="TxCrearMascota.cpp" />
     <ClCompile Include="TxEliminaMascota.cpp" />
     <ClCompile Include="TxEsborraUsu.cpp" />
     <ClCompile Include="TxIniciSessio.cpp" />
