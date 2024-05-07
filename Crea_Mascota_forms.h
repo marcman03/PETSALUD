@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "TxCrearMascota.h"
+#include "Ordinador.h"
 namespace PetSalut {
 
 	using namespace System;
@@ -134,8 +135,10 @@ namespace PetSalut {
 			this->panel2->Visible = true;
 			//guardar mascota
 			int chipValue = 0;
+			Ordinador^ ord = Ordinador::getInstance();
+			PassarellaUsuari^ usuari = ord->obteUsuari();
 			chipValue = System::Convert::ToInt64(this->chipBox->Text);
-			TxCrearMascota^ nuevaMascota = TxCrearMascota::crear(this->nameBox->Text->ToString(), this->birthdayBox->Value, chipValue, this->typeBox->Text->ToString(), "pepitoxx", this->descriptionBox->Text->ToString());
+			TxCrearMascota^ nuevaMascota = TxCrearMascota::crear(this->nameBox->Text->ToString(), this->birthdayBox->Value, chipValue, this->typeBox->Text->ToString(), usuari->getUsername(), this->descriptionBox->Text->ToString());
 			nuevaMascota->ejecutar();
 
 		}
