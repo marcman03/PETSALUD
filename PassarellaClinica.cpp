@@ -43,3 +43,34 @@ PassarellaClinica::PassarellaClinica(String^ _username) {
 PassarellaClinica::PassarellaClinica(const PassarellaClinica^ p) {
 	this->username = p->username;
 }
+
+List<int>^ PassarellaClinica::obtenirCentres()
+{
+    List<int>^ numeros_ID = gcnew List<int>();
+    MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
+    String^ sql = "SELECT numero_ID FROM centre WHERE clinica = @clinica;";
+    MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
+    cmd->Parameters->AddWithValue("@clinica", this->username);
+
+    try {
+        conn->Open();
+        MySqlDataReader^ reader = cmd->ExecuteReader();
+
+        while (reader->Read()) {
+            int numero_ID = Convert::ToInt32(reader["numero_ID"]);
+            numeros_ID->Add(numero_ID);
+        }
+
+        reader->Close();
+    }
+    catch (Exception^ ex) {
+        // Manejar la excepción
+        Console::WriteLine(ex->Message);
+    }
+    finally {
+        conn->Close();
+    }
+
+    return numeros_ID;
+}
+
