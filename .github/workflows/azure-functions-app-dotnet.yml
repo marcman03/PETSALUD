@@ -18,7 +18,7 @@ jobs:
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v2
     - name: Install MySQLConector
-      run: dotnet add package MySql.Data --version 8.4.0
+      run: NuGet\Install-Package MySql.Data -Version 8.4.0
 
     - name: Build solution
       run: msbuild /p:Configuration=Release PetSalut.sln
