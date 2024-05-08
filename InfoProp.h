@@ -405,8 +405,6 @@ namespace PetSalut {
 		consMasc->ShowDialog();
 
 		this->Visible = true;
-
-
 	}
 	};
 }

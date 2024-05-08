@@ -1,13 +1,15 @@
-#include "pch.h"
-#include "CercadoraClinica.h"
+﻿#include "pch.h"
 #include "DBConnection.h" 
+#include "PassarellaClinica.h"
+#include "CercadoraClinica.h"
+
 using namespace System;
 
 PassarellaClinica^ CercadoraClinica::cercaClinica(String^ usernameU)
 {
 	MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
 
-	String^ sql = "SELECT * FROM cliniques WHERE username = @username";
+	String^ sql = "SELECT * FROM clinica WHERE username = @username";
 
 	MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
 
@@ -20,7 +22,9 @@ PassarellaClinica^ CercadoraClinica::cercaClinica(String^ usernameU)
 
 		conn->Open();
 		dataReader = cmd->ExecuteReader();
-
+		if (dataReader->Read()) {
+			cli = gcnew PassarellaClinica(usernameU);
+		}
 	}
 
 	catch (Exception^ ex) {
@@ -34,5 +38,4 @@ PassarellaClinica^ CercadoraClinica::cercaClinica(String^ usernameU)
 	}
 
 	return cli;
-
 }

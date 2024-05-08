@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 using namespace System;
+using namespace System::Collections::Generic;
 using namespace std;
 ref class PassarellaClinica
 {
@@ -15,6 +16,8 @@ public:
 	PassarellaClinica^ crear();
 
 	PassarellaClinica(const PassarellaClinica^ p);
+
+	List<int>^ obtenirCentres();
 
 	property String^ Username {
 		String^ get() { return username; }
