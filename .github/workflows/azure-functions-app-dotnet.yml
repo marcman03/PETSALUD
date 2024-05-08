@@ -12,10 +12,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Set up MSVC
-      uses: microsoft/setup-msvc@v1
-      with:
-        msvc-version: '2022'
+    - name: Setup MSVC environment
+      uses: microsoft/setup-msbuild@main
 
-    - name: Build
+    - name: Build solution
       run: msbuild /p:Configuration=Release PetSalut.sln
