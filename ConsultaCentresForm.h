@@ -112,7 +112,7 @@ namespace PetSalut {
 			// 
 			// tornaButton
 			// 
-			this->tornaButton->Location = System::Drawing::Point(37, 496);
+			this->tornaButton->Location = System::Drawing::Point(37, 476);
 			this->tornaButton->Name = L"tornaButton";
 			this->tornaButton->Size = System::Drawing::Size(119, 41);
 			this->tornaButton->TabIndex = 0;
@@ -121,7 +121,7 @@ namespace PetSalut {
 			// 
 			// deleteButton
 			// 
-			this->deleteButton->Location = System::Drawing::Point(388, 452);
+			this->deleteButton->Location = System::Drawing::Point(585, 210);
 			this->deleteButton->Name = L"deleteButton";
 			this->deleteButton->Size = System::Drawing::Size(125, 42);
 			this->deleteButton->TabIndex = 1;
@@ -131,7 +131,7 @@ namespace PetSalut {
 			// 
 			// modificaButton
 			// 
-			this->modificaButton->Location = System::Drawing::Point(528, 452);
+			this->modificaButton->Location = System::Drawing::Point(585, 153);
 			this->modificaButton->Name = L"modificaButton";
 			this->modificaButton->Size = System::Drawing::Size(115, 42);
 			this->modificaButton->TabIndex = 2;
@@ -141,10 +141,13 @@ namespace PetSalut {
 			// 
 			// centresListBox
 			// 
+			this->centresListBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->centresListBox->FormattingEnabled = true;
+			this->centresListBox->ItemHeight = 16;
 			this->centresListBox->Location = System::Drawing::Point(37, 91);
 			this->centresListBox->Name = L"centresListBox";
-			this->centresListBox->Size = System::Drawing::Size(191, 277);
+			this->centresListBox->Size = System::Drawing::Size(191, 276);
 			this->centresListBox->TabIndex = 3;
 			this->centresListBox->SelectedIndexChanged += gcnew System::EventHandler(this, &ConsultaCentresForm::listBoxCentres_SelectedIndexChanged);
 			// 
@@ -158,81 +161,91 @@ namespace PetSalut {
 			this->group->Controls->Add(this->telefonLabel);
 			this->group->Controls->Add(this->nomLabel);
 			this->group->Controls->Add(this->idLabel);
+			this->group->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->group->Location = System::Drawing::Point(253, 94);
 			this->group->Name = L"group";
-			this->group->Size = System::Drawing::Size(390, 352);
+			this->group->Size = System::Drawing::Size(326, 232);
 			this->group->TabIndex = 4;
 			// 
 			// clinicaTextBox
 			// 
 			this->clinicaTextBox->Enabled = false;
-			this->clinicaTextBox->Location = System::Drawing::Point(189, 256);
+			this->clinicaTextBox->Location = System::Drawing::Point(161, 170);
 			this->clinicaTextBox->Name = L"clinicaTextBox";
-			this->clinicaTextBox->Size = System::Drawing::Size(99, 20);
+			this->clinicaTextBox->Size = System::Drawing::Size(99, 22);
 			this->clinicaTextBox->TabIndex = 7;
 			// 
 			// telefonTextBox
 			// 
-			this->telefonTextBox->Location = System::Drawing::Point(189, 183);
+			this->telefonTextBox->Location = System::Drawing::Point(161, 113);
 			this->telefonTextBox->Name = L"telefonTextBox";
-			this->telefonTextBox->Size = System::Drawing::Size(99, 20);
+			this->telefonTextBox->Size = System::Drawing::Size(99, 22);
 			this->telefonTextBox->TabIndex = 6;
 			// 
 			// nomTextBox
 			// 
-			this->nomTextBox->Location = System::Drawing::Point(189, 129);
+			this->nomTextBox->Location = System::Drawing::Point(161, 59);
 			this->nomTextBox->Name = L"nomTextBox";
-			this->nomTextBox->Size = System::Drawing::Size(99, 20);
+			this->nomTextBox->Size = System::Drawing::Size(99, 22);
 			this->nomTextBox->TabIndex = 5;
 			// 
 			// idTextBox
 			// 
 			this->idTextBox->AcceptsTab = true;
 			this->idTextBox->Enabled = false;
-			this->idTextBox->Location = System::Drawing::Point(189, 57);
+			this->idTextBox->Location = System::Drawing::Point(161, 10);
 			this->idTextBox->Name = L"idTextBox";
-			this->idTextBox->Size = System::Drawing::Size(99, 20);
+			this->idTextBox->Size = System::Drawing::Size(99, 22);
 			this->idTextBox->TabIndex = 4;
 			// 
 			// clinicaLabel
 			// 
 			this->clinicaLabel->AutoSize = true;
-			this->clinicaLabel->Location = System::Drawing::Point(54, 263);
+			this->clinicaLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->clinicaLabel->Location = System::Drawing::Point(79, 170);
 			this->clinicaLabel->Name = L"clinicaLabel";
-			this->clinicaLabel->Size = System::Drawing::Size(37, 13);
+			this->clinicaLabel->Size = System::Drawing::Size(52, 16);
 			this->clinicaLabel->TabIndex = 3;
 			this->clinicaLabel->Text = L"clinica";
 			// 
 			// telefonLabel
 			// 
 			this->telefonLabel->AutoSize = true;
-			this->telefonLabel->Location = System::Drawing::Point(54, 186);
+			this->telefonLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->telefonLabel->Location = System::Drawing::Point(79, 116);
 			this->telefonLabel->Name = L"telefonLabel";
-			this->telefonLabel->Size = System::Drawing::Size(39, 13);
+			this->telefonLabel->Size = System::Drawing::Size(54, 16);
 			this->telefonLabel->TabIndex = 2;
 			this->telefonLabel->Text = L"telefon";
 			// 
 			// nomLabel
 			// 
 			this->nomLabel->AutoSize = true;
-			this->nomLabel->Location = System::Drawing::Point(54, 129);
+			this->nomLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->nomLabel->Location = System::Drawing::Point(97, 59);
 			this->nomLabel->Name = L"nomLabel";
-			this->nomLabel->Size = System::Drawing::Size(27, 13);
+			this->nomLabel->Size = System::Drawing::Size(36, 16);
 			this->nomLabel->TabIndex = 1;
 			this->nomLabel->Text = L"nom";
 			// 
 			// idLabel
 			// 
 			this->idLabel->AutoSize = true;
-			this->idLabel->Location = System::Drawing::Point(54, 60);
+			this->idLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->idLabel->Location = System::Drawing::Point(52, 13);
 			this->idLabel->Name = L"idLabel";
-			this->idLabel->Size = System::Drawing::Size(59, 13);
+			this->idLabel->Size = System::Drawing::Size(81, 16);
 			this->idLabel->TabIndex = 0;
 			this->idLabel->Text = L"numero_ID";
 			// 
 			// afegeixButton
 			// 
-			this->afegeixButton->Location = System::Drawing::Point(253, 452);
+			this->afegeixButton->Location = System::Drawing::Point(585, 94);
 			this->afegeixButton->Name = L"afegeixButton";
 			this->afegeixButton->Size = System::Drawing::Size(125, 42);
 			this->afegeixButton->TabIndex = 5;
@@ -244,7 +257,8 @@ namespace PetSalut {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(712, 549);
+			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->ClientSize = System::Drawing::Size(755, 549);
 			this->Controls->Add(this->afegeixButton);
 			this->Controls->Add(this->group);
 			this->Controls->Add(this->centresListBox);
