@@ -12,6 +12,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4.1.5
 
+    - uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '4.0.x'
     - name: Setup MSVC environment
       uses: microsoft/setup-msbuild@v2
 
