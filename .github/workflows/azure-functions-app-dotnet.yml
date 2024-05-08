@@ -15,5 +15,8 @@ jobs:
     - name: Setup MSVC environment
       uses: microsoft/setup-msbuild@main
 
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.2
+
     - name: Build solution
       run: msbuild /p:Configuration=Release PetSalut.sln
