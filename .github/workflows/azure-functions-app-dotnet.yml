@@ -20,7 +20,7 @@ name: Deploy DotNet project to Azure Function App
 
 on:
   push:
-    branches: ["CRUD-Centres"]
+    branches: ["Release-Test"]
 
 env:
   AZURE_FUNCTIONAPP_NAME: 'PetSalut'   # set this to your function app name on Azure
