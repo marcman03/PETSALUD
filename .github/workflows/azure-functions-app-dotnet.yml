@@ -13,7 +13,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Setup MSVC environment
-      uses: microsoft/setup-msbuild@v1.0.0
+      uses: microsoft/setup-msbuild@main
 
     - name: Build solution
       run: msbuild /p:Configuration=Release PetSalut.sln
