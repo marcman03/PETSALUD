@@ -7,7 +7,13 @@
     </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+      <Extensions>
+      </Extensions>
+    </Filter>
+    <Filter Include="Forms">
+      <UniqueIdentifier>{e4f45b6c-b047-4efe-b33f-b5b039333565}</UniqueIdentifier>
+      <Extensions>
+      </Extensions>
     </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
@@ -26,22 +32,79 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Form1.h">
+    <ClInclude Include="CercadoraCentre.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header1.h">
+    <ClInclude Include="CercadoraMascota.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header2.h">
+    <ClInclude Include="CercadoraClinica.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CppCLR_Utils.h">
+    <ClInclude Include="CercadoraPropietari.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SimpleUnitTests.h">
+    <ClInclude Include="CercadoraUsuari.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="rk1_Utils_demo.h">
+    <ClInclude Include="DBConnection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PassarellaCentre.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PassarellaMascota.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PassarellaUsuari.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PassarellaClinica.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ordinador.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PassarellaPropietari.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxConsultarCentres.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxConsultarMascotes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxConsultaUsu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxCrearCentre.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxCrearMascota.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxEliminaCentre.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxEliminaMascota.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxEsborraUsu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxIniciSessio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxModificaCentre.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxModUsu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxRegistraUsu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxTancaSessio.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -55,7 +118,115 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Form1.cpp">
+    <ClCompile Include="CercadoraCentre.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CercadoraMascota.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CercadoraClinica.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CercadoraPropietari.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CercadoraUsuari.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsultaCentresForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsultaMascota_forms.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Crea_Mascota_forms.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DBConnection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PantallaPrincipal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InfoCli.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InfoProp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IniUsu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCli.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuProp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModCli.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModProp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassarellaCentre.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassarellaClinica.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassarellaMascota.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassarellaUsuari.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ordinador.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassarellaPropietari.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxConsultarCentres.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxConsultarMascotes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RegUsu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxConsultaUsu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxCrearCentre.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxCrearMascota.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxEliminaCentre.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxEliminaMascota.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxEsborraUsu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxIniciSessio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxModificaCentre.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxModUsu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxRegistraUsu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxTancaSessio.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -63,5 +234,61 @@
     <Image Include="app.ico">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="x64\Release\MySql.Data.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="IniUsu.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuCli.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PantallaPrincipal.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="IniUsu.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="RegUsu.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuProp.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="InfoProp.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="ModProp.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="InfoCli.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuCli.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="ModCli.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsultaCentresForm.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="Crea_Mascota_forms.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsultaMascota_forms.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="Delete_Mascota_forms.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="x64\Release\MySql.Data.dll" />
   </ItemGroup>
 </Project>
