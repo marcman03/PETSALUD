@@ -249,6 +249,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="8.4.0" />
+    <Reference Include="MySql.Data">
+      <HintPath>MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -288,6 +291,12 @@
     <EmbeddedResource Include="Delete_Mascota_forms.resx">
       <DependentUpon>Delete_Mascota_forms.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="x64\Release\MySql.Data.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="x64\Release\MySql.Data.dll" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
