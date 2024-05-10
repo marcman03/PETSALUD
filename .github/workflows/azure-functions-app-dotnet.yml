@@ -1,19 +1,14 @@
 name: CI
-
-on:
+'on':
   push:
     branches:
-      - Release-Test
-
+      - develop
 jobs:
   build:
     runs-on: windows-latest
-
     steps:
-    - uses: actions/checkout@v4.1.5
-
-    - name: Setup MSVC environment
-      uses: microsoft/setup-msbuild@v2
-
-    - name: Build solution
-      run: msbuild /p:Configuration=Release PetSalut.sln
+      - uses: actions/checkout@v4.1.5
+      - name: Setup MSVC environment
+        uses: microsoft/setup-msbuild@v2
+      - name: Build solution
+        run: msbuild /p:Configuration=Release PetSalut.sln
