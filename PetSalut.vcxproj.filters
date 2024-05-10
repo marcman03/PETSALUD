@@ -1,97 +1,67 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="AssemblyInfo.cpp" />
-    <ClCompile Include="CercadoraMascota.cpp" />
-    <ClCompile Include="CercadoraClinica.cpp" />
-    <ClCompile Include="CercadoraPropietari.cpp" />
-    <ClCompile Include="CercadoraUsuari.cpp" />
-    <ClCompile Include="ConsultaCentresForm.cpp" />
-    <ClCompile Include="ConsultaMascota_forms.cpp" />
-    <ClCompile Include="CppCLR_WinFormsProject.cpp" />
-    <ClCompile Include="Crea_Mascota_forms.cpp" />
-    <ClCompile Include="DBConnection.cpp" />
-    <ClCompile Include="PantallaPrincipal.cpp" />
-    <ClCompile Include="InfoCli.cpp" />
-    <ClCompile Include="InfoProp.cpp" />
-    <ClCompile Include="IniUsu.cpp" />
-    <ClCompile Include="MenuCli.cpp" />
-    <ClCompile Include="MenuProp.cpp" />
-    <ClCompile Include="ModCli.cpp" />
-    <ClCompile Include="ModProp.cpp" />
-    <ClCompile Include="PassarellaClinica.cpp" />
-    <ClCompile Include="PassarellaMascota.cpp" />
-    <ClCompile Include="PassarellaUsuari.cpp" />
-    <ClCompile Include="Ordinador.cpp" />
-    <ClCompile Include="PassarellaPropietari.cpp" />
-    <ClCompile Include="pch.cpp" />
-    <ClCompile Include="TxConsultarMascotes.cpp" />
-    <ClCompile Include="RegUsu.cpp" />
-    <ClCompile Include="TxConsultaUsu.cpp" />
-    <ClCompile Include="TxCrearMascota.cpp" />
-    <ClCompile Include="TxEliminaMascota.cpp" />
-    <ClCompile Include="TxEsborraUsu.cpp" />
-    <ClCompile Include="TxIniciSessio.cpp" />
-    <ClCompile Include="TxModUsu.cpp" />
-    <ClCompile Include="TxRegistraUsu.cpp" />
-    <ClCompile Include="TxTancaSessio.cpp" />
-    <ClCompile Include="CercadoraCentre.cpp" />
-    <ClCompile Include="PassarellaCentre.cpp" />
-    <ClCompile Include="TxConsultarCentres.cpp" />
-    <ClCompile Include="TxCrearCentre.cpp" />
-    <ClCompile Include="TxEliminaCentre.cpp" />
-    <ClCompile Include="TxModificaCentre.cpp" />
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CercadoraMascota.h" />
-    <ClInclude Include="CercadoraClinica.h" />
-    <ClInclude Include="CercadoraPropietari.h" />
-    <ClInclude Include="CercadoraUsuari.h" />
-    <ClInclude Include="ConsultaCentresForm.h" />
-    <ClInclude Include="Crea_Mascota_forms.h" />
-    <ClInclude Include="DBConnection.h" />
-    <ClInclude Include="ConsultaMascota_forms.h" />
-    <ClInclude Include="Delete_Mascota_forms.h" />
-    <ClInclude Include="PantallaPrincipal.h" />
-    <ClInclude Include="InfoCli.h" />
-    <ClInclude Include="InfoProp.h" />
-    <ClInclude Include="IniUsu.h" />
-    <ClInclude Include="MenuCli.h" />
-    <ClInclude Include="MenuProp.h" />
-    <ClInclude Include="ModCli.h" />
-    <ClInclude Include="ModProp.h" />
-    <ClInclude Include="PassarellaMascota.h" />
-    <ClInclude Include="PassarellaUsuari.h" />
-    <ClInclude Include="RegUsu.h" />
-    <ClInclude Include="PassarellaClinica.h" />
-    <ClInclude Include="Ordinador.h" />
-    <ClInclude Include="PassarellaPropietari.h" />
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="Resource.h" />
-    <ClInclude Include="TxConsultarMascotes.h" />
-    <ClInclude Include="TxConsultaUsu.h" />
-    <ClInclude Include="TxCrearMascota.h" />
-    <ClInclude Include="TxEliminaMascota.h" />
-    <ClInclude Include="TxEsborraUsu.h" />
-    <ClInclude Include="TxIniciSessio.h" />
-    <ClInclude Include="TxModUsu.h" />
-    <ClInclude Include="TxRegistraUsu.h" />
-    <ClInclude Include="TxTancaSessio.h" />
-    <ClInclude Include="CercadoraCentre.h" />
-    <ClInclude Include="PassarellaCentre.h" />
-    <ClInclude Include="TxConsultarCentres.h" />
-    <ClInclude Include="TxCrearCentre.h" />
-    <ClInclude Include="TxEliminaCentre.h" />
-    <ClInclude Include="TxModificaCentre.h" />
+    <ResourceCompile Include="app.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="app.rc" />
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Form1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CppCLR_Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleUnitTests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rk1_Utils_demo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="app.ico" />
+    <ClCompile Include="CppCLR_WinFormsProject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AssemblyInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Form1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="IniUsu.resx" />
-    <EmbeddedResource Include="MenuCli.resx" />
+    <Image Include="app.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
