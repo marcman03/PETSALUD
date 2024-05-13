@@ -143,6 +143,7 @@ namespace PetSalut {
 			// 
 			this->name->Location = System::Drawing::Point(37, 143);
 			this->name->Margin = System::Windows::Forms::Padding(4);
+			this->name->MaxLength = 255;
 			this->name->Name = L"name";
 			this->name->Size = System::Drawing::Size(360, 22);
 			this->name->TabIndex = 3;

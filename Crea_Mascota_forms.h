@@ -388,6 +388,7 @@ namespace PetSalut {
 			   this->chipBox->Size = System::Drawing::Size(287, 20);
 			   this->chipBox->TabIndex = 26;
 			   this->chipBox->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Crea_Mascota_forms::chipBox_KeyPress);
+			   this->chipBox->MaxLength = 9;
 			   // 
 			   // AdvertType
 			   // 
