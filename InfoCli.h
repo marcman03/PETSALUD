@@ -365,11 +365,9 @@ namespace PetSalut {
 
 		PetSalut::ModCli^ modCli = gcnew PetSalut::ModCli();
 
-		this->Visible = false;
-
 		modCli->ShowDialog();
 
-		this->Visible = true;
+		this->Close(); 
 
 	}
 	private: System::Void InfoCli_Load(System::Object^ sender, System::EventArgs^ e) {

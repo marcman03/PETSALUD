@@ -66,7 +66,7 @@ namespace PetSalut {
 
 	private: System::Void exitbutton_Click(System::Object^ sender, System::EventArgs^ e) {
 		// Oculta el panel1, lo que tambi�n oculta todos los controles dentro de �l
-		this->panel1->Visible = false;
+		this->Close();
 	}
 	private: System::Void nobutton_Click(System::Object^ sender, System::EventArgs^ e) {
 		// Oculta el panel1, lo que tambi�n oculta todos los controles dentro de �l
@@ -74,8 +74,7 @@ namespace PetSalut {
 	}
 	private: System::Void exitbuttonconfirmation_Click(System::Object^ sender, System::EventArgs^ e) {
 		// Oculta el panel1, lo que tambi�n oculta todos los controles dentro de �l
-		this->panel2->Visible = false;
-		this->panel1->Visible = false;
+		this->Close();
 	}
 	private: System::Void deletebutton_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (petsList->SelectedItem != nullptr) {

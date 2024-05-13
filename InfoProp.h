@@ -390,11 +390,9 @@ namespace PetSalut {
 
 		PetSalut::ModProp^ modProp = gcnew PetSalut::ModProp();
 
-		this->Visible = false;
-
 		modProp->ShowDialog();
 
-		this->Visible = true;
+		this->Close();
 
 	}
 	private: System::Void Accepta_Tanca_Click(System::Object^ sender, System::EventArgs^ e) {
