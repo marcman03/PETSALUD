@@ -287,7 +287,6 @@
       <Filter>Forms</Filter>
     </ClInclude>
   </ItemGroup>
-
   <ItemGroup>
     <None Include="x64\Release\MySql.Data.dll" />
   </ItemGroup>

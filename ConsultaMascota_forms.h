@@ -58,6 +58,8 @@ namespace PetSalut {
 	private: System::Windows::Forms::Button^ consultar;
 	private: System::Windows::Forms::Button^ eliminabutton;
 	private: System::Windows::Forms::Button^ registrarmascbutton;
+	private: System::Windows::Forms::Button^ visitesButton;
+
 
 
 
@@ -185,7 +187,19 @@ namespace PetSalut {
 
 		this->Visible = true;
 
-			}
+	}
+	private: System::Void visitesButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		/*
+		PetSalut::Crea_Mascota_forms^ creaMasc = gcnew PetSalut::Crea_Mascota_forms();
+
+		this->Visible = false;
+
+		creaMasc->ShowDialog();
+
+		this->Visible = true;
+		*/
+
+	}
 	protected:
 
 	private:
@@ -208,6 +222,7 @@ namespace PetSalut {
 			this->descriptionPannel = (gcnew System::Windows::Forms::Panel());
 			this->eliminabutton = (gcnew System::Windows::Forms::Button());
 			this->registrarmascbutton = (gcnew System::Windows::Forms::Button());
+			this->visitesButton = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// petsaludlabel
@@ -293,11 +308,24 @@ namespace PetSalut {
 			this->registrarmascbutton->UseVisualStyleBackColor = false;
 			this->registrarmascbutton->Click += gcnew System::EventHandler(this, &ConsultaMascota_forms::registrarbutton_Click);
 			// 
+			// visitesButton
+			// 
+			this->visitesButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->visitesButton->Location = System::Drawing::Point(12, 331);
+			this->visitesButton->Name = L"visitesButton";
+			this->visitesButton->Size = System::Drawing::Size(135, 35);
+			this->visitesButton->TabIndex = 8;
+			this->visitesButton->Text = L"VISITES";
+			this->visitesButton->UseVisualStyleBackColor = false;
+			this->visitesButton->Click += gcnew System::EventHandler(this, &ConsultaMascota_forms::visitesButton_Click);
+			// 
 			// ConsultaMascota_forms
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(770, 404);
+			this->Controls->Add(this->visitesButton);
 			this->Controls->Add(this->registrarmascbutton);
 			this->Controls->Add(this->eliminabutton);
 			this->Controls->Add(this->descriptionPannel);
