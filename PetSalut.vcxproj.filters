@@ -107,6 +107,9 @@
     <ClInclude Include="TxTancaSessio.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ConsultaVistes_forms.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -227,6 +230,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TxTancaSessio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsultaVistes_forms.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

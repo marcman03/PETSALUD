@@ -9,6 +9,7 @@
 #include "Delete_Mascota_forms.h"
 #include "Crea_Mascota_forms.h"
 #include "CercadoraPropietari.h"
+#include "ConsultaVistes_forms.h"
 
 namespace PetSalut {
 	using namespace std;
@@ -59,6 +60,7 @@ namespace PetSalut {
 	private: System::Windows::Forms::Button^ eliminabutton;
 	private: System::Windows::Forms::Button^ registrarmascbutton;
 	private: System::Windows::Forms::Button^ visitesButton;
+
 
 
 
@@ -189,15 +191,15 @@ namespace PetSalut {
 
 	}
 	private: System::Void visitesButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		/*
-		PetSalut::Crea_Mascota_forms^ creaMasc = gcnew PetSalut::Crea_Mascota_forms();
+		
+		PetSalut::ConsultaVistes_forms^ consVisites = gcnew PetSalut::ConsultaVistes_forms();
 
 		this->Visible = false;
 
-		creaMasc->ShowDialog();
+		consVisites->ShowDialog();
 
 		this->Visible = true;
-		*/
+		
 
 	}
 	protected:

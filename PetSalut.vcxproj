@@ -138,6 +138,9 @@
     <ClInclude Include="ConsultaCentresForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ConsultaVistes_forms.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Crea_Mascota_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -206,6 +209,7 @@
     <ClCompile Include="CercadoraUsuari.cpp" />
     <ClCompile Include="ConsultaCentresForm.cpp" />
     <ClCompile Include="ConsultaMascota_forms.cpp" />
+    <ClCompile Include="ConsultaVistes_forms.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="Crea_Mascota_forms.cpp" />
     <ClCompile Include="DBConnection.cpp" />
@@ -264,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaMascota_forms.resx">
       <DependentUpon>ConsultaMascota_forms.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaVistes_forms.resx">
+      <DependentUpon>ConsultaVistes_forms.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModCli.resx">
       <DependentUpon>ModCli.h</DependentUpon>
