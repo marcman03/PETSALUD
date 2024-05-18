@@ -322,7 +322,7 @@ namespace PetSalut {
 			   this->panel2->Controls->Add(this->label9);
 			   this->panel2->Controls->Add(this->button2);
 			   this->panel2->Controls->Add(this->label10);
-			   this->panel2->Location = System::Drawing::Point(3, 261);
+			   this->panel2->Location = System::Drawing::Point(7, 65);
 			   this->panel2->Name = L"panel2";
 			   this->panel2->Size = System::Drawing::Size(656, 200);
 			   this->panel2->TabIndex = 19;

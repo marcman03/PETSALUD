@@ -12,14 +12,15 @@ private:
     String^ nom;
     String^ telefon;
     String^ clinica;
+    String^ ubicacio;
 
 public:
      // Constructor
     PassarellaCentre();
-    PassarellaCentre(String^ _nom, String^ _telefon, String^ _clinica);
-    PassarellaCentre(int _numero_ID, String^ _nom, String^ _telefon, String^ _clinica);
-    static PassarellaCentre^ crear(String^ _nom, String^ _telefon, String^ _clinica);
-    static PassarellaCentre^ modificar(int numero_ID, String^ _nom, String^ _telefon, String^ _clinica);
+    PassarellaCentre(String^ _nom, String^ _telefon, String^ _clinica, String^ _ubicacio);
+    PassarellaCentre(int _numero_ID, String^ _nom, String^ _telefon, String^ _clinica, String^ _ubicacio);
+    static PassarellaCentre^ crear(String^ _nom, String^ _telefon, String^ _clinica, String^ _ubicacio);
+    static PassarellaCentre^ modificar(int numero_ID, String^ _nom, String^ _telefon, String^ _clinica, String^ _ubicacio);
     static PassarellaCentre^ eliminar(int _numero_ID);
 
     // Getters y setters
@@ -42,4 +43,9 @@ public:
         String^ get() { return clinica; }
         void set(String^ value) { clinica = value; }
     }
+    property String^ Ubicacio {
+        String^ get() { return ubicacio; }
+        void set(String^ value) { ubicacio = value; }
+    }
+
 };

@@ -39,8 +39,12 @@ namespace PetSalut {
 		//Declaració de ordinador Usuari
 		Ordinador^ ord = Ordinador::getInstance();
 		PassarellaUsuari^ usuari = ord->obteUsuari();
-		PassarellaClinica^ clinica = CercadoraClinica::cercaClinica(usuari->getUsername());
 
+
+	private: System::Windows::Forms::Label^ ubicaciolabel;
+	private: System::Windows::Forms::TextBox^ ubicaciotextBox;
+		   PassarellaClinica^ clinica = CercadoraClinica::cercaClinica(usuari->getUsername());
+	public:
 		ConsultaCentresForm(void)
 		{
 			InitializeComponent();
@@ -98,6 +102,7 @@ namespace PetSalut {
 			this->modificaButton = (gcnew System::Windows::Forms::Button());
 			this->centresListBox = (gcnew System::Windows::Forms::ListBox());
 			this->group = (gcnew System::Windows::Forms::Panel());
+			this->ubicaciolabel = (gcnew System::Windows::Forms::Label());
 			this->clinicaTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->telefonTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->nomTextBox = (gcnew System::Windows::Forms::TextBox());
@@ -107,6 +112,7 @@ namespace PetSalut {
 			this->nomLabel = (gcnew System::Windows::Forms::Label());
 			this->idLabel = (gcnew System::Windows::Forms::Label());
 			this->afegeixButton = (gcnew System::Windows::Forms::Button());
+			this->ubicaciotextBox = (gcnew System::Windows::Forms::TextBox());
 			this->group->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -153,6 +159,8 @@ namespace PetSalut {
 			// 
 			// group
 			// 
+			this->group->Controls->Add(this->ubicaciotextBox);
+			this->group->Controls->Add(this->ubicaciolabel);
 			this->group->Controls->Add(this->clinicaTextBox);
 			this->group->Controls->Add(this->telefonTextBox);
 			this->group->Controls->Add(this->nomTextBox);
@@ -165,8 +173,19 @@ namespace PetSalut {
 				static_cast<System::Byte>(0)));
 			this->group->Location = System::Drawing::Point(253, 94);
 			this->group->Name = L"group";
-			this->group->Size = System::Drawing::Size(326, 232);
+			this->group->Size = System::Drawing::Size(326, 273);
 			this->group->TabIndex = 4;
+			// 
+			// ubicaciolabel
+			// 
+			this->ubicaciolabel->AutoSize = true;
+			this->ubicaciolabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->ubicaciolabel->Location = System::Drawing::Point(67, 228);
+			this->ubicaciolabel->Name = L"ubicaciolabel";
+			this->ubicaciolabel->Size = System::Drawing::Size(66, 16);
+			this->ubicaciolabel->TabIndex = 8;
+			this->ubicaciolabel->Text = L"ubicació";
 			// 
 			// clinicaTextBox
 			// 
@@ -253,6 +272,13 @@ namespace PetSalut {
 			this->afegeixButton->UseVisualStyleBackColor = true;
 			this->afegeixButton->Click += gcnew System::EventHandler(this, &ConsultaCentresForm::afegeixButton_Click);
 			// 
+			// ubicaciotextBox
+			// 
+			this->ubicaciotextBox->Location = System::Drawing::Point(161, 222);
+			this->ubicaciotextBox->Name = L"ubicaciotextBox";
+			this->ubicaciotextBox->Size = System::Drawing::Size(99, 22);
+			this->ubicaciotextBox->TabIndex = 9;
+			// 
 			// ConsultaCentresForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -295,6 +321,7 @@ namespace PetSalut {
 			nomTextBox->Text = centre->Nom;
 			telefonTextBox->Text = centre->Telefon;
 			clinicaTextBox->Text = centre->Clinica;
+			ubicaciotextBox->Text = centre->Ubicacio;
 		}
 		else
 		{
@@ -327,7 +354,8 @@ namespace PetSalut {
 		String^ nom = nomTextBox->Text;
 		String^ telefon = telefonTextBox->Text;
 		String^ nomClinica = clinica->Username;
-		TxCrearCentre^ nouCentre = TxCrearCentre::crear(nom, telefon, nomClinica);
+		String^ ubicacio = ubicaciotextBox->Text;
+		TxCrearCentre^ nouCentre = TxCrearCentre::crear(nom, telefon, nomClinica, ubicacio);
 
 		try {
 			nouCentre->ejecutar();
@@ -372,7 +400,8 @@ namespace PetSalut {
 		String^ nom = nomTextBox->Text;
 		String^ telefon = telefonTextBox->Text;
 		String^ nomClinica = clinica->Username;
-		TxModificaCentre^ centreModificat = TxModificaCentre::prepara(numero_ID, nom, telefon, nomClinica);
+		String^ ubicacio = ubicaciotextBox->Text;
+		TxModificaCentre^ centreModificat = TxModificaCentre::prepara(numero_ID, nom, telefon, nomClinica, ubicacio);
 		try {
 			centreModificat->executa();
 		}

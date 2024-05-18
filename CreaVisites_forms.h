@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #pragma once
 #include <string>
 #include <iostream>
@@ -10,6 +10,9 @@
 #include "Delete_Mascota_forms.h"
 #include "Crea_Mascota_forms.h"
 #include "CercadoraPropietari.h"
+#include "CercadoraCentre.h"
+#include "PassarellaCentre.h"
+
 namespace PetSalut {
 
 	using namespace System;
@@ -29,13 +32,13 @@ namespace PetSalut {
 		{
 			InitializeComponent();
 			//
-			//TODO: agregar código de constructor aquí
+			//TODO: agregar cÃ³digo de constructor aquÃ­
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Limpiar los recursos que se estén usando.
+		/// Limpiar los recursos que se estÃ©n usando.
 		/// </summary>
 		~CreaVisites_forms()
 		{
@@ -86,8 +89,34 @@ namespace PetSalut {
 
 
 	private: System::Windows::Forms::ComboBox^ CentresBox;
+	private: System::Windows::Forms::Button^ guardarbutton;
 
 	private: System::Windows::Forms::TextBox^ NomBox;
+
+	private: System::Void fillCentres(System::Object^ sender, System::EventArgs^ e) {
+		// Limpiar los Ã­tems del ComboBox antes de llenarlo nuevamente
+		CentresBox->Items->Clear();
+
+		// Crear instancia de la buscadora de centros
+		CercadoraCentre^ cercadora = gcnew CercadoraCentre();
+
+		// Obtener la lista de todos los centros
+		List<PassarellaCentre^>^ totsCentres = cercadora->CercatotsCentres();
+
+		// Llenar el ComboBox con los nombres de todos los centros
+		for (int i = 0; i < totsCentres->Count; ++i) { // Usa 'Count' en lugar de 'size()'
+			PassarellaCentre^ centre = totsCentres[i]; // Acceder a elementos de la lista
+
+			int id = centre->Numero_ID; // Asumiendo que `Numero_ID` es una propiedad pÃºblica
+			String^ nombre = centre->Nom; // Asumiendo que `Nom` es una propiedad pÃºblica
+			String^ ubicacio = centre->Ubicacio; // Asumiendo que `Ubicacio` es una propiedad pÃºblica
+
+			// Concatenar el ID y el nombre y agregarlos a la lista
+			String^ infoCentre = nombre + " (" + ubicacio + ")";
+			CentresBox->Items->Add(infoCentre);
+		}
+	}
+
 
 	private: System::Void fillPets(System::Object^ sender, System::EventArgs^ e) {
 
@@ -121,7 +150,7 @@ namespace PetSalut {
 
 	private: System::Void FillTimeComboBox(System::Object^ sender, System::EventArgs^ e) {
 		System::TimeSpan startTime(9, 0, 0); // 9:00 AM
-		// Hora de finalización
+		// Hora de finalizaciÃ³n
 		System::TimeSpan endTime(21, 0, 0); // 9:00 PM
 		// Intervalo de 30 minutos
 		System::TimeSpan interval(0, 30, 0); // 30 minutos
@@ -139,16 +168,42 @@ namespace PetSalut {
 			HoursBox->SelectedIndex = 0;
 		}
 	}
+	private: System::Void guardarbutton_click(System::Object^ sender, System::EventArgs^ e) {
+	
+		// Oculta el panel1, lo que tambiï¿½n oculta todos los controles dentro de ï¿½l
+		if (String::IsNullOrWhiteSpace(this->NomBox->Text)) {
+			this->adnomlabel->Visible = true;
+		}
+		else if (String::IsNullOrWhiteSpace(this->IDBox->Text)) {
+			this->adIDlabel->Visible = true;
+		}
+		else if (String::IsNullOrWhiteSpace(this->HoursBox->Text)) {
+			this->adhoralabel->Visible = true;
+		}
+		else if (String::IsNullOrWhiteSpace(this->DiaBox->Text)) {
+			this->adIDdate->Visible = true;
+		}
+		else if (String::IsNullOrWhiteSpace(this->petsList->Text)) {
+			this->admasclabel->Visible = true;
+		}
+		else if (String::IsNullOrWhiteSpace(this->CentresBox->Text)) {
+			this->adCentrelabel->Visible = true;
+		}
+		else {
+
+
+		}
+	}
 	private:
 		/// <summary>
-		/// Variable del diseñador necesaria.
+		/// Variable del diseÃ±ador necesaria.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Método necesario para admitir el Diseñador. No se puede modificar
-		/// el contenido de este método con el editor de código.
+		/// MÃ©todo necesario para admitir el DiseÃ±ador. No se puede modificar
+		/// el contenido de este mÃ©todo con el editor de cÃ³digo.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -172,6 +227,7 @@ namespace PetSalut {
 			this->nomLabel = (gcnew System::Windows::Forms::Label());
 			this->dataLabel = (gcnew System::Windows::Forms::Label());
 			this->HoraLabel = (gcnew System::Windows::Forms::Label());
+			this->guardarbutton = (gcnew System::Windows::Forms::Button());
 			this->PanelVisita->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -182,6 +238,7 @@ namespace PetSalut {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->PanelVisita->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
 			this->PanelVisita->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->PanelVisita->Controls->Add(this->guardarbutton);
 			this->PanelVisita->Controls->Add(this->NomBox);
 			this->PanelVisita->Controls->Add(this->CentresBox);
 			this->PanelVisita->Controls->Add(this->admasclabel);
@@ -224,6 +281,7 @@ namespace PetSalut {
 			this->CentresBox->Name = L"CentresBox";
 			this->CentresBox->Size = System::Drawing::Size(286, 21);
 			this->CentresBox->TabIndex = 32;
+			this->CentresBox->Click += gcnew System::EventHandler(this, &CreaVisites_forms::fillCentres);
 			// 
 			// admasclabel
 			// 
@@ -246,6 +304,7 @@ namespace PetSalut {
 			this->petsList->Name = L"petsList";
 			this->petsList->Size = System::Drawing::Size(286, 21);
 			this->petsList->TabIndex = 30;
+			this->petsList->Click += gcnew System::EventHandler(this, &CreaVisites_forms::fillPets);
 			// 
 			// adnomlabel
 			// 
@@ -431,6 +490,16 @@ namespace PetSalut {
 			this->HoraLabel->Size = System::Drawing::Size(30, 13);
 			this->HoraLabel->TabIndex = 5;
 			this->HoraLabel->Text = L"Hora";
+			// 
+			// guardarbutton
+			// 
+			this->guardarbutton->Location = System::Drawing::Point(529, 274);
+			this->guardarbutton->Name = L"guardarbutton";
+			this->guardarbutton->Size = System::Drawing::Size(120, 46);
+			this->guardarbutton->TabIndex = 34;
+			this->guardarbutton->Text = L"Guardar";
+			this->guardarbutton->UseVisualStyleBackColor = true;
+			this->guardarbutton->Click += gcnew System::EventHandler(this, &CreaVisites_forms::guardarbutton_click);
 			// 
 			// CreaVisites_forms
 			// 
