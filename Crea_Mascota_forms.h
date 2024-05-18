@@ -322,7 +322,7 @@ namespace PetSalut {
 			   this->panel2->Controls->Add(this->label9);
 			   this->panel2->Controls->Add(this->button2);
 			   this->panel2->Controls->Add(this->label10);
-			   this->panel2->Location = System::Drawing::Point(3, 78);
+			   this->panel2->Location = System::Drawing::Point(3, 261);
 			   this->panel2->Name = L"panel2";
 			   this->panel2->Size = System::Drawing::Size(656, 200);
 			   this->panel2->TabIndex = 19;
@@ -347,7 +347,7 @@ namespace PetSalut {
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->label9->AutoSize = true;
 			   this->label9->Font = (gcnew System::Drawing::Font(L"Arial", 14, System::Drawing::FontStyle::Bold));
-			   this->label9->Location = System::Drawing::Point(260, 7);
+			   this->label9->Location = System::Drawing::Point(260, 26);
 			   this->label9->Name = L"label9";
 			   this->label9->Size = System::Drawing::Size(164, 22);
 			   this->label9->TabIndex = 11;
@@ -384,11 +384,11 @@ namespace PetSalut {
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->chipBox->Location = System::Drawing::Point(141, 111);
+			   this->chipBox->MaxLength = 9;
 			   this->chipBox->Name = L"chipBox";
 			   this->chipBox->Size = System::Drawing::Size(287, 20);
 			   this->chipBox->TabIndex = 26;
 			   this->chipBox->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Crea_Mascota_forms::chipBox_KeyPress);
-			   this->chipBox->MaxLength = 9;
 			   // 
 			   // AdvertType
 			   // 

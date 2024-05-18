@@ -110,6 +110,9 @@
     <ClInclude Include="ConsultaVistes_forms.h">
       <Filter>Forms</Filter>
     </ClInclude>
+    <ClInclude Include="CreaVisites_forms.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -233,6 +236,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ConsultaVistes_forms.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CreaVisites_forms.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

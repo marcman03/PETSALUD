@@ -10,6 +10,7 @@
 #include "Delete_Mascota_forms.h"
 #include "Crea_Mascota_forms.h"
 #include "CercadoraPropietari.h"
+#include "CreaVisites_forms.h"
 
 
 namespace PetSalut {
@@ -98,15 +99,15 @@ namespace PetSalut {
 	}
 
 	private: System::Void registrarbutton_Click(System::Object^ sender, System::EventArgs^ e) {
-/*
-		PetSalut::Crea_Mascota_forms^ creaMasc = gcnew PetSalut::Crea_Mascota_forms();
+
+		PetSalut::CreaVisites_forms^ creaVisita = gcnew PetSalut::CreaVisites_forms();
 
 		this->Visible = false;
 
-		creaMasc->ShowDialog();
+		creaVisita->ShowDialog();
 
 		this->Visible = true;
-*/
+
 	}
 
 	private:
@@ -203,11 +204,6 @@ namespace PetSalut {
 
 		}
 #pragma endregion
-	private: System::Void registrarbutton_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void eliminabutton_click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
+
 };
 }
