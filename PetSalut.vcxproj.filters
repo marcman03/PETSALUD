@@ -113,6 +113,21 @@
     <ClInclude Include="CreaVisites_forms.h">
       <Filter>Forms</Filter>
     </ClInclude>
+    <ClInclude Include="PassarellaEsdeveniments.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CercadoraEsdeveniments.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PassarellaVisites.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CercadoraVisita.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxCrearVisita.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -239,6 +254,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CreaVisites_forms.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassarellaEsdeveniments.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CercadoraEsdeveniments.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassarellaVisites.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CercadoraVisita.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxCrearVisita.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

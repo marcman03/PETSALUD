@@ -12,6 +12,9 @@
 #include "CercadoraPropietari.h"
 #include "CercadoraCentre.h"
 #include "PassarellaCentre.h"
+#include "PassarellaEsdeveniments.h"
+#include "PassarellaVisites.h"
+#include "TxCrearVisita.h"
 
 namespace PetSalut {
 
@@ -103,50 +106,34 @@ namespace PetSalut {
 		// Obtener la lista de todos los centros
 		List<PassarellaCentre^>^ totsCentres = cercadora->CercatotsCentres();
 
-		// Llenar el ComboBox con los nombres de todos los centros
-		for (int i = 0; i < totsCentres->Count; ++i) { // Usa 'Count' en lugar de 'size()'
-			PassarellaCentre^ centre = totsCentres[i]; // Acceder a elementos de la lista
-
-			int id = centre->Numero_ID; // Asumiendo que `Numero_ID` es una propiedad pública
-			String^ nombre = centre->Nom; // Asumiendo que `Nom` es una propiedad pública
-			String^ ubicacio = centre->Ubicacio; // Asumiendo que `Ubicacio` es una propiedad pública
-
-			// Concatenar el ID y el nombre y agregarlos a la lista
-			String^ infoCentre = nombre + " (" + ubicacio + ")";
-			CentresBox->Items->Add(infoCentre);
+		// Llenar el ComboBox con los objetos PassarellaCentre^
+		for (int i = 0; i < totsCentres->Count; ++i) {
+			PassarellaCentre^ centre = totsCentres[i];
+			CentresBox->Items->Add(centre);
 		}
 	}
+
 
 
 	private: System::Void fillPets(System::Object^ sender, System::EventArgs^ e) {
-
-
-		//Usar aqui la variable ordenador para obtener el passarela propietari
-
 		Ordinador^ ord = Ordinador::getInstance();
 		PassarellaUsuari^ usuari = ord->obteUsuari();
-
 		PassarellaPropietari^ propietari = CercadoraPropietari::cercaPropietari(usuari->getUsername());
-
 		TxConsultarMascotes^ consultaMascotas = TxConsultarMascotes::crear(propietari);
 		vector<int> mascotas = consultaMascotas->obteResultat();
+
 		// Limpiar el ComboBox
 		petsList->Items->Clear();
+
 		CercadoraMascota^ cercadora = gcnew CercadoraMascota();
-		// Llenar el ComboBox con los identificadores de mascotas
+
+		// Llenar el ComboBox con objetos PassarellaMascota^
 		for (int i = 0; i < mascotas.size(); ++i) {
-
 			PassarellaMascota^ mascota = cercadora->cercaMascota(mascotas[i]);
-
-			int chip = mascota->Chip;
-			String^ nombre = mascota->Nom;
-
-			// Concatenar el chip y el nombre y agregarlos a la lista
-			String^ infoMascota = nombre + " (" + chip.ToString() + ")";
-			petsList->Items->Add(infoMascota);
+			petsList->Items->Add(mascota); // Agregar el objeto mascota al ComboBox
 		}
-
 	}
+
 
 	private: System::Void FillTimeComboBox(System::Object^ sender, System::EventArgs^ e) {
 		System::TimeSpan startTime(9, 0, 0); // 9:00 AM
@@ -191,6 +178,16 @@ namespace PetSalut {
 		}
 		else {
 
+			Ordinador^ ord = Ordinador::getInstance();
+			PassarellaUsuari^ usuari = ord->obteUsuari();
+			PassarellaMascota^ mascotaSeleccionada = safe_cast<PassarellaMascota^>(petsList->SelectedItem);
+			int chipMascota = mascotaSeleccionada->Chip;
+			PassarellaCentre^ centroSeleccionado = safe_cast<PassarellaCentre^>(CentresBox->SelectedItem);
+			int numeroIDCentro = centroSeleccionado->Numero_ID;
+			//AQUI NECESITO PASAR EN PETSLIST EL CHIP DEL PET SELECTED
+			TxCrearVisita^ nuevaVisita = TxCrearVisita::crear(this->NomBox->Text->ToString(), Convert::ToInt32(this->IDBox->Text),this->DiaBox->Value , this->HoursBox->Text->ToString(), usuari->getUsername(), chipMascota, numeroIDCentro);
+			nuevaVisita->ejecutar();
+			this->Close();
 
 		}
 	}

@@ -48,4 +48,9 @@ public:
         void set(String^ value) { ubicacio = value; }
     }
 
+    virtual String^ ToString() override {
+        // Aquí defines cómo quieres que se muestre cada centro en la ComboBox
+        return Nom + " (" + Ubicacio + ")";
+    }
+
 };
