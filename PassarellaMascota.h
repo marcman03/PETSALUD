@@ -48,4 +48,9 @@ public:
         String^ get() { return tipus; }
         void set(String^ value) { tipus = value; }
     }
+
+    virtual String^ ToString() override {
+        // Aquí defines cómo quieres que se muestre cada mascota en la ComboBox
+        return Nom + " (" + Chip.ToString() + ")";
+    }
 };

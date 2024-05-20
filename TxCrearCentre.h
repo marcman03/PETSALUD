@@ -9,10 +9,11 @@ private:
     int numero_ID;
     String^ telefon;
     String^ clinica;
-    TxCrearCentre(String^ _nom, String^ _telefon, String^ _clinica);
+    String^ ubicacio;
+    TxCrearCentre(String^ _nom, String^ _telefon, String^ _clinica, String^ _ubicacio);
 public:
     // Constructor
-    static TxCrearCentre^ crear(String^ _nom, String^ _telefon, String^ _clinica);
+    static TxCrearCentre^ crear(String^ _nom, String^ _telefon, String^ _clinica, String^ _ubicacio);
 
     TxCrearCentre^ ejecutar();
 

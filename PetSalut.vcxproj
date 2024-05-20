@@ -131,11 +131,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CercadoraCentre.h" />
+    <ClInclude Include="CercadoraEsdeveniments.h" />
     <ClInclude Include="CercadoraMascota.h" />
     <ClInclude Include="CercadoraClinica.h" />
     <ClInclude Include="CercadoraPropietari.h" />
     <ClInclude Include="CercadoraUsuari.h" />
+    <ClInclude Include="CercadoraVisita.h" />
     <ClInclude Include="ConsultaCentresForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ConsultaVistes_forms.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="CreaVisites_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Crea_Mascota_forms.h">
@@ -173,8 +181,10 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="PassarellaCentre.h" />
+    <ClInclude Include="PassarellaEsdeveniments.h" />
     <ClInclude Include="PassarellaMascota.h" />
     <ClInclude Include="PassarellaUsuari.h" />
+    <ClInclude Include="PassarellaVisites.h" />
     <ClInclude Include="RegUsu.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -188,6 +198,7 @@
     <ClInclude Include="TxConsultaUsu.h" />
     <ClInclude Include="TxCrearCentre.h" />
     <ClInclude Include="TxCrearMascota.h" />
+    <ClInclude Include="TxCrearVisita.h" />
     <ClInclude Include="TxEliminaCentre.h" />
     <ClInclude Include="TxEliminaMascota.h" />
     <ClInclude Include="TxEsborraUsu.h" />
@@ -200,13 +211,17 @@
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="CercadoraCentre.cpp" />
+    <ClCompile Include="CercadoraEsdeveniments.cpp" />
     <ClCompile Include="CercadoraMascota.cpp" />
     <ClCompile Include="CercadoraClinica.cpp" />
     <ClCompile Include="CercadoraPropietari.cpp" />
     <ClCompile Include="CercadoraUsuari.cpp" />
+    <ClCompile Include="CercadoraVisita.cpp" />
     <ClCompile Include="ConsultaCentresForm.cpp" />
     <ClCompile Include="ConsultaMascota_forms.cpp" />
+    <ClCompile Include="ConsultaVistes_forms.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
+    <ClCompile Include="CreaVisites_forms.cpp" />
     <ClCompile Include="Crea_Mascota_forms.cpp" />
     <ClCompile Include="DBConnection.cpp" />
     <ClCompile Include="PantallaPrincipal.cpp" />
@@ -219,10 +234,12 @@
     <ClCompile Include="ModProp.cpp" />
     <ClCompile Include="PassarellaCentre.cpp" />
     <ClCompile Include="PassarellaClinica.cpp" />
+    <ClCompile Include="PassarellaEsdeveniments.cpp" />
     <ClCompile Include="PassarellaMascota.cpp" />
     <ClCompile Include="PassarellaUsuari.cpp" />
     <ClCompile Include="Ordinador.cpp" />
     <ClCompile Include="PassarellaPropietari.cpp" />
+    <ClCompile Include="PassarellaVisites.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -235,6 +252,7 @@
     <ClCompile Include="TxConsultaUsu.cpp" />
     <ClCompile Include="TxCrearCentre.cpp" />
     <ClCompile Include="TxCrearMascota.cpp" />
+    <ClCompile Include="TxCrearVisita.cpp" />
     <ClCompile Include="TxEliminaCentre.cpp" />
     <ClCompile Include="TxEliminaMascota.cpp" />
     <ClCompile Include="TxEsborraUsu.cpp" />
@@ -264,6 +282,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaMascota_forms.resx">
       <DependentUpon>ConsultaMascota_forms.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaVistes_forms.resx">
+      <DependentUpon>ConsultaVistes_forms.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreaVisites_forms.resx">
+      <DependentUpon>CreaVisites_forms.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crea_Mascota_forms.resx">
+      <DependentUpon>Crea_Mascota_forms.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModCli.resx">
       <DependentUpon>ModCli.h</DependentUpon>

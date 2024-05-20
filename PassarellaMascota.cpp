@@ -79,3 +79,4 @@ PassarellaMascota::PassarellaMascota(int _chip, String^ _nom, DateTime _datanaix
     tipus = _tipus;
 }
 
+

@@ -10,10 +10,11 @@ private:
     String^ nom;
     String^ telefon;
     String^ clinica;
-    TxModificaCentre(int _numero_ID, String^ _nom, String^ _telefon, String^ _clinica);
+    String^ ubicacio;
+    TxModificaCentre(int _numero_ID, String^ _nom, String^ _telefon, String^ _clinica, String^ _ubicacio);
 public:
     // Constructor
-    static TxModificaCentre^ prepara(int _numero_ID, String^ _nom, String^ _telefon, String^ _clinica);
+    static TxModificaCentre^ prepara(int _numero_ID, String^ _nom, String^ _telefon, String^ _clinica, String^ _ubicacio);
 
     TxModificaCentre^ executa();
 

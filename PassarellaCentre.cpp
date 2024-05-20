@@ -8,7 +8,7 @@ using namespace System;
 using namespace MySql::Data::MySqlClient;
 using namespace System::Windows::Forms;
 
-PassarellaCentre^ PassarellaCentre::crear(String^ _nom, String^ _telefon, String^ _clinica)
+PassarellaCentre^ PassarellaCentre::crear(String^ _nom, String^ _telefon, String^ _clinica, String^ _ubicacio)
 {
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
 
@@ -20,6 +20,7 @@ PassarellaCentre^ PassarellaCentre::crear(String^ _nom, String^ _telefon, String
     cmd->Parameters->AddWithValue("@nom", _nom);
     cmd->Parameters->AddWithValue("@telefon", _telefon);
     cmd->Parameters->AddWithValue("@clinica", _clinica);
+    cmd->Parameters->AddWithValue("@ubicacio", _ubicacio);
     int nouId = -1;
     try {
         conn->Open();
@@ -32,10 +33,10 @@ PassarellaCentre^ PassarellaCentre::crear(String^ _nom, String^ _telefon, String
     finally {
         conn->Close();
     }
-    return gcnew PassarellaCentre(nouId, _nom, _telefon, _clinica);
+    return gcnew PassarellaCentre(nouId, _nom, _telefon, _clinica, _ubicacio);
 }
 
-PassarellaCentre^ PassarellaCentre::modificar(int _numero_ID, String^ _nom, String^ _telefon, String^ _clinica)
+PassarellaCentre^ PassarellaCentre::modificar(int _numero_ID, String^ _nom, String^ _telefon, String^ _clinica, String^ _ubicacio)
 {
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
 
@@ -48,6 +49,7 @@ PassarellaCentre^ PassarellaCentre::modificar(int _numero_ID, String^ _nom, Stri
     cmd->Parameters->AddWithValue("@nom", _nom);
     cmd->Parameters->AddWithValue("@telefon", _telefon);
     cmd->Parameters->AddWithValue("@clinica", _clinica);
+    cmd->Parameters->AddWithValue("@ubicacio", _ubicacio);
 
     try {
         conn->Open();
@@ -59,7 +61,7 @@ PassarellaCentre^ PassarellaCentre::modificar(int _numero_ID, String^ _nom, Stri
     finally {
         conn->Close();
     }
-    return gcnew PassarellaCentre(_numero_ID, _nom, _telefon, _clinica);
+    return gcnew PassarellaCentre(_numero_ID, _nom, _telefon, _clinica, _ubicacio);
 }
 
 PassarellaCentre^ PassarellaCentre::eliminar(int _numero_ID) {
@@ -92,18 +94,21 @@ PassarellaCentre::PassarellaCentre() {
     nom = "";
     telefon = "";
     clinica = "";
+    ubicacio = "";
 }
-PassarellaCentre::PassarellaCentre(String^ _nom, String^ _telefon, String^ _clinica) {
+PassarellaCentre::PassarellaCentre(String^ _nom, String^ _telefon, String^ _clinica, String^ _ubicacio) {
     numero_ID = -1;
     nom = _nom;
     telefon = _telefon;
     clinica = _clinica;
+    ubicacio = _ubicacio;
 }
 
-PassarellaCentre::PassarellaCentre(int _numero_ID, String^ _nom, String^ _telefon, String^ _clinica)
+PassarellaCentre::PassarellaCentre(int _numero_ID, String^ _nom, String^ _telefon, String^ _clinica, String^ _ubicacio)
 {
     numero_ID = _numero_ID;
     nom = _nom;
     telefon = _telefon;
     clinica = _clinica;
+    ubicacio = _ubicacio;
 }
