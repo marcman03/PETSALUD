@@ -78,10 +78,7 @@ namespace PetSalut {
 	}
 	private: System::Void deletebutton_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (petsList->SelectedItem != nullptr) {
-			/*String^ selectedChipString = dynamic_cast<String^>(petsList->SelectedItem);
-			int selectedChip = Int32::Parse(selectedChipString); // Convierte el chip de String a int
 
-			*/
 			String^ mascotaSeleccionada = petsList->SelectedItem->ToString();
 			int indiceParentesisAbierto = mascotaSeleccionada->IndexOf('(');
 			int indiceParentesisCerrado = mascotaSeleccionada->IndexOf(')');

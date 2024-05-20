@@ -11,6 +11,7 @@
 #include "Crea_Mascota_forms.h"
 #include "CercadoraPropietari.h"
 #include "CreaVisites_forms.h"
+#include "EliminaVisita_forms.h"
 
 
 namespace PetSalut {
@@ -52,6 +53,11 @@ namespace PetSalut {
 	private: System::Windows::Forms::Label^ visitesLabel;
 
 	private: System::Windows::Forms::Label^ petsaludlabel;
+	private: System::Windows::Forms::Label^ mascotalabel;
+	private: System::Windows::Forms::ComboBox^ visitaList;
+	private: System::Windows::Forms::Label^ visitaLabel;
+	private: System::Windows::Forms::Panel^ descriptionPannel;
+	private: System::Windows::Forms::Button^ consultar;
 	private: System::Windows::Forms::ComboBox^ petsList;
 
 	//	private: System::Windows::Forms::Button^ consultar;
@@ -61,7 +67,7 @@ namespace PetSalut {
 
 
 		//Usar aqui la variable ordenador para obtener el passarela propietari
-
+		petsList->Items->Clear();
 		Ordinador^ ord = Ordinador::getInstance();
 		PassarellaUsuari^ usuari = ord->obteUsuari();
 
@@ -86,16 +92,53 @@ namespace PetSalut {
 		}
 
 	}
+	private: System::Void visitalist_click(System::Object^ sender, System::EventArgs^ e) {
+		visitaList->Items->Clear();
+		if (petsList->SelectedIndex == -1) return;
+
+		// Obtener el identificador de la mascota seleccionada
+		String^ selectedPet = petsList->SelectedItem->ToString();
+		int chipMascota = Int32::Parse(selectedPet->Split('(')[1]->Replace(")", "")->Trim());
+
+		// Buscar la mascota por su chip usando la CercadoraMascota
+		CercadoraMascota^ cercadora = gcnew CercadoraMascota();
+		PassarellaMascota^ mascota = cercadora->cercaMascota(chipMascota);
+
+		if (mascota == nullptr) {
+			MessageBox::Show("No se pudo encontrar la mascota seleccionada.");
+			return;
+		}
+
+		// Consultar las visitas de la mascota seleccionada
+		TxConsultarVisites^ consultaVisites = TxConsultarVisites::crear(mascota);
+		vector<int> visitesIDs = consultaVisites->obteResultat();
+		// Limpiar el ComboBox de visitas
+		visitaList->Items->Clear();
+
+		CercadoraEsdeveniments^ cercadorEsdeveniments = gcnew CercadoraEsdeveniments();
+
+		// Llenar el ComboBox de visitas y buscar nombre de eventos
+		for (int i = 0; i < visitesIDs.size(); ++i) {
+			PassarellaEsdeveniments^ esdeveniment = cercadorEsdeveniments->cercaEsdeveniment(visitesIDs[i]);
+
+			int id = esdeveniment->Numeroid;
+			String^ nomEsdeveniment = esdeveniment->Nom;
+			String^ infoVisita = nomEsdeveniment + " (" + id.ToString() + ")";
+			visitaList->Items->Add(infoVisita);
+
+		}
+	}
+
 	private: System::Void eliminabutton_click(System::Object^ sender, System::EventArgs^ e) {
-/*
-		PetSalut::Elimina_Mascota_forms^ elimMasc = gcnew PetSalut::Elimina_Mascota_forms();
+
+		PetSalut::EliminaVisita_forms^ elimVisita = gcnew PetSalut::EliminaVisita_forms();
 
 		this->Visible = false;
 
-		elimMasc->ShowDialog();
+		elimVisita->ShowDialog();
 
 		this->Visible = true;
-*/
+
 	}
 
 	private: System::Void registrarbutton_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -109,6 +152,82 @@ namespace PetSalut {
 		this->Visible = true;
 
 	}
+	private: System::Void consultar_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (visitaList->SelectedIndex != -1) {
+			// Si hay un elemento seleccionado, muestra el panel de descripción
+			descriptionPannel->Visible = true;
+			descriptionPannel->Controls->Clear();
+
+			// Obtén el evento seleccionado del ComboBox
+			String^ esdevenimentSeleccionado = visitaList->SelectedItem->ToString();
+
+			// Extrae el numero_id del evento seleccionado (asumiendo que el ID está entre paréntesis)
+			int indiceParentesisAbierto = esdevenimentSeleccionado->IndexOf('(');
+			int indiceParentesisCerrado = esdevenimentSeleccionado->IndexOf(')');
+			String^ idString = esdevenimentSeleccionado->Substring(indiceParentesisAbierto + 1, indiceParentesisCerrado - indiceParentesisAbierto - 1);
+			int numeroid = Int32::Parse(idString);
+
+			// Utiliza el numeroid para buscar y obtener más información del evento y visita
+			CercadoraEsdeveniments^ cercadora = gcnew CercadoraEsdeveniments();
+			PassarellaEsdeveniments^ esdeveniment = cercadora->cercaEsdeveniment(numeroid);
+			CercadoraVisita^ cercadorav = gcnew CercadoraVisita();
+			PassarellaVisites^ visita = cercadorav->cercaVisita(numeroid);
+			CercadoraMascota^ buscadorMascotas = gcnew CercadoraMascota();
+			PassarellaMascota^ mascota = buscadorMascotas->cercaMascota(visita->Mascota);
+
+			CercadoraCentre^ buscadorCentros = gcnew CercadoraCentre();
+			PassarellaCentre^ centre = buscadorCentros->cercaCentre(visita->Centre);
+
+			// Muestra la información del evento en el panel de descripción
+			Label^ labelNumeroID = gcnew Label();
+			labelNumeroID->Text = "Número de Visita: " + esdeveniment->Numeroid.ToString();
+			labelNumeroID->Location = Point(10, 10);
+			labelNumeroID->AutoSize = true;
+			descriptionPannel->Controls->Add(labelNumeroID);
+
+			Label^ labelNombre = gcnew Label();
+			labelNombre->Text = "Motiu: " + esdeveniment->Nom;
+			labelNombre->Location = Point(10, labelNumeroID->Bottom + 5);
+			labelNombre->AutoSize = true;
+			descriptionPannel->Controls->Add(labelNombre);
+
+			Label^ labelFecha = gcnew Label();
+			labelFecha->Text = "Data: " + esdeveniment->Data.ToString("dd/MM/yyyy");
+			labelFecha->Location = Point(10, labelNombre->Bottom + 5);
+			labelFecha->AutoSize = true;
+			descriptionPannel->Controls->Add(labelFecha);
+
+			Label^ labelHora = gcnew Label();
+			labelHora->Text = "Hora: " + esdeveniment->Hora;
+			labelHora->Location = Point(10, labelFecha->Bottom + 5);
+			labelHora->AutoSize = true;
+			descriptionPannel->Controls->Add(labelHora);
+
+			Label^ labelMascota = gcnew Label();
+			labelMascota->Text = "Mascota: " + mascota->Nom;
+			labelMascota->Location = Point(10, labelHora->Bottom + 5);
+			labelMascota->AutoSize = true;
+			descriptionPannel->Controls->Add(labelMascota);
+
+			Label^ labelCentre = gcnew Label();
+			labelCentre->Text = "Centre: " + centre->Nom;
+			labelCentre->Location = Point(10, labelMascota->Bottom + 5);
+			labelCentre->AutoSize = true;
+			descriptionPannel->Controls->Add(labelCentre);
+
+			Label^ labelUbicacio = gcnew Label();
+			labelUbicacio->Text = "Ubicació: " + centre->Ubicacio;
+			labelUbicacio->Location = Point(10, labelCentre->Bottom + 5);
+			labelUbicacio->AutoSize = true;
+			descriptionPannel->Controls->Add(labelUbicacio);
+
+		}
+		else {
+			// Si no hay elementos seleccionados, muestra un mensaje de error
+			MessageBox::Show("Por favor, selecciona un evento antes de consultar.");
+		}
+	}
+
 
 	private:
 		/// <summary>
@@ -128,6 +247,11 @@ namespace PetSalut {
 			this->petsList = (gcnew System::Windows::Forms::ComboBox());
 			this->visitesLabel = (gcnew System::Windows::Forms::Label());
 			this->petsaludlabel = (gcnew System::Windows::Forms::Label());
+			this->mascotalabel = (gcnew System::Windows::Forms::Label());
+			this->visitaList = (gcnew System::Windows::Forms::ComboBox());
+			this->visitaLabel = (gcnew System::Windows::Forms::Label());
+			this->descriptionPannel = (gcnew System::Windows::Forms::Panel());
+			this->consultar = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// registrarbutton
@@ -156,7 +280,7 @@ namespace PetSalut {
 			// petsList
 			// 
 			this->petsList->FormattingEnabled = true;
-			this->petsList->Location = System::Drawing::Point(201, 140);
+			this->petsList->Location = System::Drawing::Point(176, 121);
 			this->petsList->Margin = System::Windows::Forms::Padding(2);
 			this->petsList->Name = L"petsList";
 			this->petsList->Size = System::Drawing::Size(200, 21);
@@ -168,12 +292,13 @@ namespace PetSalut {
 			this->visitesLabel->AutoSize = true;
 			this->visitesLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->visitesLabel->Location = System::Drawing::Point(224, 79);
+			this->visitesLabel->Location = System::Drawing::Point(224, 64);
 			this->visitesLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->visitesLabel->Name = L"visitesLabel";
 			this->visitesLabel->Size = System::Drawing::Size(157, 39);
 			this->visitesLabel->TabIndex = 11;
 			this->visitesLabel->Text = L"VISITES";
+			this->visitesLabel->Click += gcnew System::EventHandler(this, &ConsultaVistes_forms::visitesLabel_Click);
 			// 
 			// petsaludlabel
 			// 
@@ -187,11 +312,78 @@ namespace PetSalut {
 			this->petsaludlabel->TabIndex = 10;
 			this->petsaludlabel->Text = L"PETSALUT";
 			// 
+			// mascotalabel
+			// 
+			this->mascotalabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->mascotalabel->AutoSize = true;
+			this->mascotalabel->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->mascotalabel->Location = System::Drawing::Point(96, 118);
+			this->mascotalabel->Name = L"mascotalabel";
+			this->mascotalabel->Size = System::Drawing::Size(75, 22);
+			this->mascotalabel->TabIndex = 17;
+			this->mascotalabel->Text = L"Mascota:";
+			// 
+			// visitaList
+			// 
+			this->visitaList->FormattingEnabled = true;
+			this->visitaList->Location = System::Drawing::Point(100, 153);
+			this->visitaList->Name = L"visitaList";
+			this->visitaList->Size = System::Drawing::Size(348, 21);
+			this->visitaList->TabIndex = 18;
+			this->visitaList->Click += gcnew System::EventHandler(this, &ConsultaVistes_forms::visitalist_click);
+			// 
+			// visitaLabel
+			// 
+			this->visitaLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->visitaLabel->AutoSize = true;
+			this->visitaLabel->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->visitaLabel->Location = System::Drawing::Point(37, 150);
+			this->visitaLabel->Name = L"visitaLabel";
+			this->visitaLabel->Size = System::Drawing::Size(57, 22);
+			this->visitaLabel->TabIndex = 19;
+			this->visitaLabel->Text = L"Visita:";
+			// 
+			// descriptionPannel
+			// 
+			this->descriptionPannel->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->descriptionPannel->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->descriptionPannel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->descriptionPannel->Location = System::Drawing::Point(32, 191);
+			this->descriptionPannel->Margin = System::Windows::Forms::Padding(2);
+			this->descriptionPannel->Name = L"descriptionPannel";
+			this->descriptionPannel->Size = System::Drawing::Size(425, 199);
+			this->descriptionPannel->TabIndex = 5;
+			this->descriptionPannel->Visible = false;
+			this->descriptionPannel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &ConsultaVistes_forms::descriptionPannel_Paint);
+			// 
+			// consultar
+			// 
+			this->consultar->Location = System::Drawing::Point(392, 121);
+			this->consultar->Margin = System::Windows::Forms::Padding(2);
+			this->consultar->Name = L"consultar";
+			this->consultar->Size = System::Drawing::Size(56, 19);
+			this->consultar->TabIndex = 5;
+			this->consultar->Text = L"consultar";
+			this->consultar->UseVisualStyleBackColor = true;
+			this->consultar->Click += gcnew System::EventHandler(this, &ConsultaVistes_forms::consultar_Click);
+			// 
 			// ConsultaVistes_forms
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(609, 402);
+			this->Controls->Add(this->consultar);
+			this->Controls->Add(this->descriptionPannel);
+			this->Controls->Add(this->visitaLabel);
+			this->Controls->Add(this->visitaList);
+			this->Controls->Add(this->mascotalabel);
 			this->Controls->Add(this->visitesLabel);
 			this->Controls->Add(this->petsaludlabel);
 			this->Controls->Add(this->petsList);
@@ -205,5 +397,9 @@ namespace PetSalut {
 		}
 #pragma endregion
 
+private: System::Void visitesLabel_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void descriptionPannel_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
 };
 }

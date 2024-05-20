@@ -2,7 +2,6 @@
 #include "TxEliminaMascota.h"
 #include "PassarellaMascota.h"
 using namespace System;
-#include "TxEliminaMascota.h"
 TxEliminaMascota::TxEliminaMascota() {
 }
 

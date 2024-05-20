@@ -205,6 +205,7 @@ namespace PetSalut {
 		void InitializeComponent(void)
 		{
 			this->PanelVisita = (gcnew System::Windows::Forms::Panel());
+			this->guardarbutton = (gcnew System::Windows::Forms::Button());
 			this->NomBox = (gcnew System::Windows::Forms::TextBox());
 			this->CentresBox = (gcnew System::Windows::Forms::ComboBox());
 			this->admasclabel = (gcnew System::Windows::Forms::Label());
@@ -224,7 +225,6 @@ namespace PetSalut {
 			this->nomLabel = (gcnew System::Windows::Forms::Label());
 			this->dataLabel = (gcnew System::Windows::Forms::Label());
 			this->HoraLabel = (gcnew System::Windows::Forms::Label());
-			this->guardarbutton = (gcnew System::Windows::Forms::Button());
 			this->PanelVisita->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -260,6 +260,16 @@ namespace PetSalut {
 			this->PanelVisita->Size = System::Drawing::Size(663, 325);
 			this->PanelVisita->TabIndex = 29;
 			this->PanelVisita->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &CreaVisites_forms::PanelVisita_Paint);
+			// 
+			// guardarbutton
+			// 
+			this->guardarbutton->Location = System::Drawing::Point(529, 274);
+			this->guardarbutton->Name = L"guardarbutton";
+			this->guardarbutton->Size = System::Drawing::Size(120, 46);
+			this->guardarbutton->TabIndex = 34;
+			this->guardarbutton->Text = L"Guardar";
+			this->guardarbutton->UseVisualStyleBackColor = true;
+			this->guardarbutton->Click += gcnew System::EventHandler(this, &CreaVisites_forms::guardarbutton_click);
 			// 
 			// NomBox
 			// 
@@ -458,11 +468,11 @@ namespace PetSalut {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->nomLabel->AutoSize = true;
-			this->nomLabel->Location = System::Drawing::Point(124, 96);
+			this->nomLabel->Location = System::Drawing::Point(117, 96);
 			this->nomLabel->Name = L"nomLabel";
-			this->nomLabel->Size = System::Drawing::Size(29, 13);
+			this->nomLabel->Size = System::Drawing::Size(33, 13);
 			this->nomLabel->TabIndex = 3;
-			this->nomLabel->Text = L"Nom";
+			this->nomLabel->Text = L"Motiu";
 			// 
 			// dataLabel
 			// 
@@ -487,16 +497,6 @@ namespace PetSalut {
 			this->HoraLabel->Size = System::Drawing::Size(30, 13);
 			this->HoraLabel->TabIndex = 5;
 			this->HoraLabel->Text = L"Hora";
-			// 
-			// guardarbutton
-			// 
-			this->guardarbutton->Location = System::Drawing::Point(529, 274);
-			this->guardarbutton->Name = L"guardarbutton";
-			this->guardarbutton->Size = System::Drawing::Size(120, 46);
-			this->guardarbutton->TabIndex = 34;
-			this->guardarbutton->Text = L"Guardar";
-			this->guardarbutton->UseVisualStyleBackColor = true;
-			this->guardarbutton->Click += gcnew System::EventHandler(this, &CreaVisites_forms::guardarbutton_click);
 			// 
 			// CreaVisites_forms
 			// 

@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 #include <iostream>
 using namespace System;
 using namespace std;
@@ -53,4 +54,6 @@ public:
         // Aquí defines cómo quieres que se muestre cada mascota en la ComboBox
         return Nom + " (" + Chip.ToString() + ")";
     }
+
+    vector<int> obtenerVisites();
 };

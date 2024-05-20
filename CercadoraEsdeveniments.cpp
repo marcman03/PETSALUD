@@ -21,7 +21,7 @@ PassarellaEsdeveniments^ CercadoraEsdeveniments::cercaEsdeveniment(int numeroid)
 		dataReader = cmd->ExecuteReader();
 
 		if (dataReader->Read()) {
-			int numeroid = dataReader->GetInt32("numero_ID");
+			int numeroid = dataReader->GetInt32("numeroid");
 			String^ nom = dataReader->GetString("nom");
 			DateTime data = dataReader->GetDateTime("data");
 			String^ hora = dataReader->GetString("hora");
