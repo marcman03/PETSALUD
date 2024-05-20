@@ -39,20 +39,28 @@ PassarellaVisites^ PassarellaVisites::eliminar(int numero_id)
 {
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
 
-    String^ sqlSelect = "SELECT * FROM privat WHERE numero_id = @numero_id";
-    String^ sqlDelete = "DELETE FROM privat WHERE numero_id = @numero_id";
+    // Consulta para seleccionar y luego eliminar la visita
+    String^ sqlSelectVisita = "SELECT * FROM privat WHERE numero_id = @numero_id";
+    String^ sqlDeleteVisita = "DELETE FROM privat WHERE numero_id = @numero_id";
 
-    MySqlCommand^ cmdSelect = gcnew MySqlCommand(sqlSelect, conn);
-    MySqlCommand^ cmdDelete = gcnew MySqlCommand(sqlDelete, conn);
+    // Consulta para eliminar el evento asociado
+    String^ sqlDeleteEsdeveniment = "DELETE FROM esdeveniment WHERE numeroid = @numero_id";
 
-    cmdSelect->Parameters->AddWithValue("@numero_id", numero_id);
-    cmdDelete->Parameters->AddWithValue("@numero_id", numero_id);
+    MySqlCommand^ cmdSelectVisita = gcnew MySqlCommand(sqlSelectVisita, conn);
+    MySqlCommand^ cmdDeleteVisita = gcnew MySqlCommand(sqlDeleteVisita, conn);
+    MySqlCommand^ cmdDeleteEsdeveniment = gcnew MySqlCommand(sqlDeleteEsdeveniment, conn);
+
+    cmdSelectVisita->Parameters->AddWithValue("@numero_id", numero_id);
+    cmdDeleteVisita->Parameters->AddWithValue("@numero_id", numero_id);
+    cmdDeleteEsdeveniment->Parameters->AddWithValue("@numero_id", numero_id);
 
     PassarellaVisites^ visitaEliminada = nullptr;
 
     try {
         conn->Open();
-        MySqlDataReader^ reader = cmdSelect->ExecuteReader();
+
+        // Ejecutar la selección de la visita
+        MySqlDataReader^ reader = cmdSelectVisita->ExecuteReader();
         if (reader->Read()) {
             int id = reader->GetInt32("numero_id");
             int mascota = reader->GetInt32("mascota");
@@ -62,10 +70,14 @@ PassarellaVisites^ PassarellaVisites::eliminar(int numero_id)
         }
         reader->Close();
 
-        cmdDelete->ExecuteNonQuery();
+        // Eliminar la visita
+        cmdDeleteVisita->ExecuteNonQuery();
+
+        // Eliminar el evento asociado
+        cmdDeleteEsdeveniment->ExecuteNonQuery();
     }
     catch (Exception^ ex) {
-        MessageBox::Show("Error al eliminar la visita de la base de datos: " + ex->Message);
+        MessageBox::Show("Error al eliminar la visita y el evento de la base de datos: " + ex->Message);
     }
     finally {
         conn->Close();
@@ -74,11 +86,6 @@ PassarellaVisites^ PassarellaVisites::eliminar(int numero_id)
     return visitaEliminada;
 }
 
-PassarellaVisites::PassarellaVisites(int _mascota, int _centre) {
-    numero_id = numero_id;
-    mascota = _mascota;
-    centre = _centre;
-}
 
 PassarellaVisites::PassarellaVisites(int _numero_id, int _mascota, int _centre) {
     numero_id = _numero_id;

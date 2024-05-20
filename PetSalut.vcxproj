@@ -156,6 +156,9 @@
     <ClInclude Include="Delete_Mascota_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="EliminaVisita_forms.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="PantallaPrincipal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -195,12 +198,14 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="TxConsultarCentres.h" />
     <ClInclude Include="TxConsultarMascotes.h" />
+    <ClInclude Include="TxConsultarVisites.h" />
     <ClInclude Include="TxConsultaUsu.h" />
     <ClInclude Include="TxCrearCentre.h" />
     <ClInclude Include="TxCrearMascota.h" />
     <ClInclude Include="TxCrearVisita.h" />
     <ClInclude Include="TxEliminaCentre.h" />
     <ClInclude Include="TxEliminaMascota.h" />
+    <ClInclude Include="TxEliminaVisita.h" />
     <ClInclude Include="TxEsborraUsu.h" />
     <ClInclude Include="TxIniciSessio.h" />
     <ClInclude Include="TxModificaCentre.h" />
@@ -224,6 +229,7 @@
     <ClCompile Include="CreaVisites_forms.cpp" />
     <ClCompile Include="Crea_Mascota_forms.cpp" />
     <ClCompile Include="DBConnection.cpp" />
+    <ClCompile Include="EliminaVisita_forms.cpp" />
     <ClCompile Include="PantallaPrincipal.cpp" />
     <ClCompile Include="InfoCli.cpp" />
     <ClCompile Include="InfoProp.cpp" />
@@ -249,12 +255,14 @@
     <ClCompile Include="TxConsultarCentres.cpp" />
     <ClCompile Include="TxConsultarMascotes.cpp" />
     <ClCompile Include="RegUsu.cpp" />
+    <ClCompile Include="TxConsultarVisites.cpp" />
     <ClCompile Include="TxConsultaUsu.cpp" />
     <ClCompile Include="TxCrearCentre.cpp" />
     <ClCompile Include="TxCrearMascota.cpp" />
     <ClCompile Include="TxCrearVisita.cpp" />
     <ClCompile Include="TxEliminaCentre.cpp" />
     <ClCompile Include="TxEliminaMascota.cpp" />
+    <ClCompile Include="TxEliminaVisita.cpp" />
     <ClCompile Include="TxEsborraUsu.cpp" />
     <ClCompile Include="TxIniciSessio.cpp" />
     <ClCompile Include="TxModificaCentre.cpp" />
@@ -291,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Crea_Mascota_forms.resx">
       <DependentUpon>Crea_Mascota_forms.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminaVisita_forms.resx">
+      <DependentUpon>EliminaVisita_forms.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModCli.resx">
       <DependentUpon>ModCli.h</DependentUpon>

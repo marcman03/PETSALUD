@@ -128,6 +128,15 @@
     <ClInclude Include="TxCrearVisita.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="EliminaVisita_forms.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="TxConsultarVisites.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxEliminaVisita.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -269,6 +278,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TxCrearVisita.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EliminaVisita_forms.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxConsultarVisites.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxEliminaVisita.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

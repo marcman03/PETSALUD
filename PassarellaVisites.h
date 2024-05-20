@@ -14,7 +14,6 @@ private:
 
 public:
     // Constructores
-    PassarellaVisites(int _mascota, int _centre);
     PassarellaVisites(int _numero_id, int _mascota, int _centre);
 
     // Métodos estáticos

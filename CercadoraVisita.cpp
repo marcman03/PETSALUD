@@ -10,7 +10,7 @@ PassarellaVisites^ CercadoraVisita::cercaVisita(int numero_id) {
     PassarellaVisites^ visitaTrobada = nullptr;
 
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
-    String^ sql = "SELECT * FROM visites WHERE numero_id = @numero_id";
+    String^ sql = "SELECT * FROM privat WHERE numero_id = @numero_id";
 
     MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
     cmd->Parameters->AddWithValue("@numero_id", numero_id);

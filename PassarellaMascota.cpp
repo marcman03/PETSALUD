@@ -80,3 +80,32 @@ PassarellaMascota::PassarellaMascota(int _chip, String^ _nom, DateTime _datanaix
 }
 
 
+vector<int> PassarellaMascota::obtenerVisites()
+{
+    vector<int> visites;
+    MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
+    String^ sql = "SELECT numero_id FROM privat WHERE mascota = @mascota;";
+    MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
+    cmd->Parameters->AddWithValue("@mascota", this->chip);
+
+    try {
+        conn->Open();
+        MySqlDataReader^ reader = cmd->ExecuteReader();
+
+        while (reader->Read()) {
+            int numero_id = Convert::ToInt32(reader["numero_id"]);
+            visites.push_back(numero_id);
+        }
+
+        reader->Close();
+    }
+    catch (Exception^ ex) {
+        // Manejar la excepción
+        Console::WriteLine(ex->Message);
+    }
+    finally {
+        conn->Close();
+    }
+
+    return visites;
+}
