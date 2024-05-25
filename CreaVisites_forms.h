@@ -15,6 +15,7 @@
 #include "PassarellaEsdeveniments.h"
 #include "PassarellaVisites.h"
 #include "TxCrearVisita.h"
+#include "TxCrearValoracio.h"
 
 namespace PetSalut {
 
@@ -187,6 +188,8 @@ namespace PetSalut {
 			//AQUI NECESITO PASAR EN PETSLIST EL CHIP DEL PET SELECTED
 			TxCrearVisita^ nuevaVisita = TxCrearVisita::crear(this->NomBox->Text->ToString(), Convert::ToInt32(this->IDBox->Text),this->DiaBox->Value , this->HoursBox->Text->ToString(), usuari->getUsername(), chipMascota, numeroIDCentro);
 			nuevaVisita->ejecutar();
+			TxCrearValoracio^ novavaloracio = TxCrearValoracio::crear(numeroIDCentro, Convert::ToInt32(this->IDBox->Text), usuari->getUsername(), 0);
+			novavaloracio->ejecutar();
 			this->Close();
 
 		}
