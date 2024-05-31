@@ -8,7 +8,7 @@ using namespace System;
 // }
 
 #include "PantallaPrincipal.h"
-#include "ConsultaCentresForm.h"
+
 using namespace System::Windows::Forms;
 
 [STAThread]
