@@ -144,6 +144,12 @@
     <ClInclude Include="TxCrearValoracio.h" />
     <ClInclude Include="TxEliminarValoracio.h" />
     <ClInclude Include="TxModificarValoracio.h" />
+    <ClInclude Include="CrearPublic.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsultarEvents.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -315,6 +321,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TxModificarValoracio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CrearPublic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsultarEvents.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

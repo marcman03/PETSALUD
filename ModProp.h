@@ -139,6 +139,7 @@ namespace PetSalut {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(ModProp::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->nameBox = (gcnew System::Windows::Forms::TextBox());
@@ -439,9 +440,9 @@ namespace PetSalut {
 			this->Controls->Add(this->nameBox);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"ModProp";
-			this->Text = L"ModProp";
+			this->Text = L"PETSALUT";
 			this->Load += gcnew System::EventHandler(this, &ModProp::ModProp_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();

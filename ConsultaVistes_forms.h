@@ -255,7 +255,9 @@ namespace PetSalut {
 
 	}
 	private: System::Void valorarButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->hiddenPanel->Visible = true;
+		
+		if(this->valorartext->Text != "")
+			this->hiddenPanel->Visible = true;
 
 	}
 	private: System::Void notaguardarButton_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -295,6 +297,7 @@ namespace PetSalut {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(ConsultaVistes_forms::typeid));
 			this->registrarbutton = (gcnew System::Windows::Forms::Button());
 			this->eliminabutton = (gcnew System::Windows::Forms::Button());
 			this->petsList = (gcnew System::Windows::Forms::ComboBox());
@@ -323,9 +326,9 @@ namespace PetSalut {
 			// 
 			this->registrarbutton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->registrarbutton->Location = System::Drawing::Point(914, 315);
+			this->registrarbutton->Location = System::Drawing::Point(925, 353);
 			this->registrarbutton->Name = L"registrarbutton";
-			this->registrarbutton->Size = System::Drawing::Size(167, 86);
+			this->registrarbutton->Size = System::Drawing::Size(194, 86);
 			this->registrarbutton->TabIndex = 8;
 			this->registrarbutton->Text = L"REGISTRAR VISITA";
 			this->registrarbutton->UseVisualStyleBackColor = false;
@@ -334,9 +337,9 @@ namespace PetSalut {
 			// eliminabutton
 			// 
 			this->eliminabutton->BackColor = System::Drawing::Color::IndianRed;
-			this->eliminabutton->Location = System::Drawing::Point(914, 407);
+			this->eliminabutton->Location = System::Drawing::Point(925, 445);
 			this->eliminabutton->Name = L"eliminabutton";
-			this->eliminabutton->Size = System::Drawing::Size(167, 86);
+			this->eliminabutton->Size = System::Drawing::Size(194, 86);
 			this->eliminabutton->TabIndex = 9;
 			this->eliminabutton->Text = L"ELIMINAR VISITA";
 			this->eliminabutton->UseVisualStyleBackColor = false;
@@ -351,6 +354,7 @@ namespace PetSalut {
 			this->petsList->Name = L"petsList";
 			this->petsList->Size = System::Drawing::Size(344, 27);
 			this->petsList->TabIndex = 3;
+			this->petsList->TextChanged += gcnew System::EventHandler(this, &ConsultaVistes_forms::petsList_TextChanged);
 			this->petsList->Click += gcnew System::EventHandler(this, &ConsultaVistes_forms::fillPets);
 			// 
 			// visitesLabel
@@ -397,6 +401,7 @@ namespace PetSalut {
 			this->visitaList->Name = L"visitaList";
 			this->visitaList->Size = System::Drawing::Size(344, 27);
 			this->visitaList->TabIndex = 18;
+			this->visitaList->TextChanged += gcnew System::EventHandler(this, &ConsultaVistes_forms::visitaList_TextChanged);
 			this->visitaList->Click += gcnew System::EventHandler(this, &ConsultaVistes_forms::visitalist_click);
 			// 
 			// visitaLabel
@@ -422,13 +427,13 @@ namespace PetSalut {
 			this->hiddenPanel->Controls->Add(this->trackBar);
 			this->hiddenPanel->Location = System::Drawing::Point(280, 177);
 			this->hiddenPanel->Name = L"hiddenPanel";
-			this->hiddenPanel->Size = System::Drawing::Size(560, 316);
+			this->hiddenPanel->Size = System::Drawing::Size(560, 343);
 			this->hiddenPanel->TabIndex = 21;
 			this->hiddenPanel->Visible = false;
 			// 
 			// notaguardarButton
 			// 
-			this->notaguardarButton->Location = System::Drawing::Point(224, 235);
+			this->notaguardarButton->Location = System::Drawing::Point(212, 294);
 			this->notaguardarButton->Name = L"notaguardarButton";
 			this->notaguardarButton->Size = System::Drawing::Size(145, 35);
 			this->notaguardarButton->TabIndex = 22;
@@ -474,7 +479,7 @@ namespace PetSalut {
 			// trackBar
 			// 
 			this->trackBar->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->trackBar->Location = System::Drawing::Point(156, 126);
+			this->trackBar->Location = System::Drawing::Point(149, 156);
 			this->trackBar->Name = L"trackBar";
 			this->trackBar->Size = System::Drawing::Size(260, 45);
 			this->trackBar->TabIndex = 1;
@@ -527,7 +532,7 @@ namespace PetSalut {
 			// button1
 			// 
 			this->button1->BackColor = System::Drawing::Color::White;
-			this->button1->Location = System::Drawing::Point(26, 412);
+			this->button1->Location = System::Drawing::Point(3, 445);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(167, 86);
 			this->button1->TabIndex = 22;
@@ -543,7 +548,7 @@ namespace PetSalut {
 			this->descriptionPannel->Location = System::Drawing::Point(280, 177);
 			this->descriptionPannel->Margin = System::Windows::Forms::Padding(2);
 			this->descriptionPannel->Name = L"descriptionPannel";
-			this->descriptionPannel->Size = System::Drawing::Size(560, 316);
+			this->descriptionPannel->Size = System::Drawing::Size(560, 343);
 			this->descriptionPannel->TabIndex = 5;
 			this->descriptionPannel->Visible = false;
 			this->descriptionPannel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &ConsultaVistes_forms::descriptionPannel_Paint);
@@ -557,8 +562,9 @@ namespace PetSalut {
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->visitesLabel);
 			this->Controls->Add(this->petsaludlabel);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"ConsultaVistes_forms";
-			this->Text = L"ConsultaVistes_forms";
+			this->Text = L"PETSALUT";
 			this->hiddenPanel->ResumeLayout(false);
 			this->hiddenPanel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trackBar))->EndInit();
@@ -579,6 +585,19 @@ private: System::Void valorartext_Click(System::Object^ sender, System::EventArg
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	this->Close();
+}
+private: System::Void petsList_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+
+	this->visitaList->Text = "";
+	this->valorarButton->Visible = false;
+
+}
+private: System::Void visitaList_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+
+	if (this->valorartext->Text != "")
+		this->valorarButton->Visible = true;
+		this->hiddenPanel->Visible = false;
+
 }
 };
 }

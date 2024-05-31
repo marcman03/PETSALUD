@@ -219,6 +219,7 @@ namespace PetSalut {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(ConsultaMascota_forms::typeid));
 			this->petsaludlabel = (gcnew System::Windows::Forms::Label());
 			this->mypetslabel = (gcnew System::Windows::Forms::Label());
 			this->petsList = (gcnew System::Windows::Forms::ComboBox());
@@ -354,9 +355,10 @@ namespace PetSalut {
 			this->Controls->Add(this->petsList);
 			this->Controls->Add(this->mypetslabel);
 			this->Controls->Add(this->petsaludlabel);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"ConsultaMascota_forms";
-			this->Text = L"ConsultaMascota_forms";
+			this->Text = L"PETSALUT";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

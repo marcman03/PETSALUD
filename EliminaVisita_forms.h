@@ -168,15 +168,16 @@ namespace PetSalut {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(EliminaVisita_forms::typeid));
 			this->panelElimina = (gcnew System::Windows::Forms::Panel());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->mascotalabel = (gcnew System::Windows::Forms::Label());
 			this->petsList = (gcnew System::Windows::Forms::ComboBox());
 			this->visitaList = (gcnew System::Windows::Forms::ComboBox());
 			this->exitbutton = (gcnew System::Windows::Forms::Button());
 			this->titlelabel = (gcnew System::Windows::Forms::Label());
 			this->eliminabutton = (gcnew System::Windows::Forms::Button());
 			this->questionlabel = (gcnew System::Windows::Forms::Label());
-			this->mascotalabel = (gcnew System::Windows::Forms::Label());
-			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panelElimina->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -199,6 +200,32 @@ namespace PetSalut {
 			this->panelElimina->Name = L"panelElimina";
 			this->panelElimina->Size = System::Drawing::Size(1028, 460);
 			this->panelElimina->TabIndex = 14;
+			// 
+			// label1
+			// 
+			this->label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
+			this->label1->Location = System::Drawing::Point(278, 232);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(59, 19);
+			this->label1->TabIndex = 17;
+			this->label1->Text = L"Visita:";
+			// 
+			// mascotalabel
+			// 
+			this->mascotalabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->mascotalabel->AutoSize = true;
+			this->mascotalabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
+			this->mascotalabel->Location = System::Drawing::Point(258, 159);
+			this->mascotalabel->Name = L"mascotalabel";
+			this->mascotalabel->Size = System::Drawing::Size(79, 19);
+			this->mascotalabel->TabIndex = 16;
+			this->mascotalabel->Text = L"Mascota:";
 			// 
 			// petsList
 			// 
@@ -274,32 +301,6 @@ namespace PetSalut {
 			this->questionlabel->Text = L"Quina Visita vols ELIMINAR\?";
 			this->questionlabel->Click += gcnew System::EventHandler(this, &EliminaVisita_forms::label1_Click);
 			// 
-			// mascotalabel
-			// 
-			this->mascotalabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->mascotalabel->AutoSize = true;
-			this->mascotalabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->mascotalabel->Location = System::Drawing::Point(258, 159);
-			this->mascotalabel->Name = L"mascotalabel";
-			this->mascotalabel->Size = System::Drawing::Size(79, 19);
-			this->mascotalabel->TabIndex = 16;
-			this->mascotalabel->Text = L"Mascota:";
-			// 
-			// label1
-			// 
-			this->label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->label1->Location = System::Drawing::Point(278, 232);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(59, 19);
-			this->label1->TabIndex = 17;
-			this->label1->Text = L"Visita:";
-			// 
 			// EliminaVisita_forms
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -307,8 +308,9 @@ namespace PetSalut {
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->panelElimina);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"EliminaVisita_forms";
-			this->Text = L"EliminaVisita_forms";
+			this->Text = L"PETSALUT";
 			this->panelElimina->ResumeLayout(false);
 			this->panelElimina->PerformLayout();
 			this->ResumeLayout(false);

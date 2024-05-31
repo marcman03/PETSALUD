@@ -347,7 +347,7 @@ namespace PetSalut {
 			this->Controls->Add(this->petsaludlabel);
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"ConsultaCentresForm";
-			this->Text = L"ConsultaCentresForm";
+			this->Text = L"PETSALUT";
 			this->Load += gcnew System::EventHandler(this, &ConsultaCentresForm::ConsultaCentresForm_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();

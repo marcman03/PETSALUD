@@ -425,7 +425,7 @@ namespace PetSalut {
 			this->Controls->Add(this->pictureBox1);
 			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"ModCli";
-			this->Text = L"ModCli";
+			this->Text = L"PETSALUT";
 			this->Load += gcnew System::EventHandler(this, &ModCli::ModCli_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
