@@ -155,10 +155,11 @@ namespace PetSalut {
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Arial", 16, System::Drawing::FontStyle::Bold));
-			this->label8->Location = System::Drawing::Point(176, 37);
+			this->label8->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label8->Location = System::Drawing::Point(504, 63);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(110, 26);
+			this->label8->Size = System::Drawing::Size(142, 33);
 			this->label8->TabIndex = 15;
 			this->label8->Text = L"MY PETS";
 			this->label8->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::label8_Click);
@@ -166,11 +167,10 @@ namespace PetSalut {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Arial", 18, System::Drawing::FontStyle::Bold));
-			this->label6->Location = System::Drawing::Point(162, 8);
-			this->label6->MaximumSize = System::Drawing::Size(255, 255);
+			this->label6->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 28));
+			this->label6->Location = System::Drawing::Point(443, 9);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(140, 29);
+			this->label6->Size = System::Drawing::Size(262, 54);
 			this->label6->TabIndex = 14;
 			this->label6->Text = L"PETSALUT";
 			// 
@@ -179,7 +179,7 @@ namespace PetSalut {
 			this->panel1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->panel1->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
+			this->panel1->BackColor = System::Drawing::SystemColors::Control;
 			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel1->Controls->Add(this->panel2);
 			this->panel1->Controls->Add(this->petsList);
@@ -187,9 +187,10 @@ namespace PetSalut {
 			this->panel1->Controls->Add(this->label7);
 			this->panel1->Controls->Add(this->button1);
 			this->panel1->Controls->Add(this->label1);
+			this->panel1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
 			this->panel1->Location = System::Drawing::Point(117, 119);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(627, 326);
+			this->panel1->Size = System::Drawing::Size(935, 391);
 			this->panel1->TabIndex = 13;
 			// 
 			// panel2
@@ -203,9 +204,9 @@ namespace PetSalut {
 			this->panel2->Controls->Add(this->button4);
 			this->panel2->Controls->Add(this->label2);
 			this->panel2->Controls->Add(this->label3);
-			this->panel2->Location = System::Drawing::Point(3, 73);
+			this->panel2->Location = System::Drawing::Point(-1, 77);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(619, 181);
+			this->panel2->Size = System::Drawing::Size(935, 246);
 			this->panel2->TabIndex = 16;
 			this->panel2->Visible = false;
 			// 
@@ -213,11 +214,12 @@ namespace PetSalut {
 			// 
 			this->button4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->button4->BackColor = System::Drawing::Color::Transparent;
-			this->button4->Location = System::Drawing::Point(551, 141);
+			this->button4->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
+			this->button4->Location = System::Drawing::Point(845, 206);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(53, 21);
+			this->button4->Size = System::Drawing::Size(85, 35);
 			this->button4->TabIndex = 13;
-			this->button4->Text = L"Close";
+			this->button4->Text = L"Tancar";
 			this->button4->UseVisualStyleBackColor = false;
 			this->button4->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::exitbuttonconfirmation_Click);
 			// 
@@ -227,10 +229,10 @@ namespace PetSalut {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Arial", 14, System::Drawing::FontStyle::Bold));
-			this->label2->Location = System::Drawing::Point(221, 21);
+			this->label2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
+			this->label2->Location = System::Drawing::Point(331, 21);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(203, 22);
+			this->label2->Size = System::Drawing::Size(252, 26);
 			this->label2->TabIndex = 11;
 			this->label2->Text = L"ELIMINAR MASCOTA";
 			this->label2->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::label2_Click);
@@ -241,31 +243,31 @@ namespace PetSalut {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(147, 90);
+			this->label3->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
+			this->label3->Location = System::Drawing::Point(202, 93);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(332, 22);
+			this->label3->Size = System::Drawing::Size(530, 26);
 			this->label3->TabIndex = 3;
 			this->label3->Text = L"La teva mascota s\'ha eliminat correctament.";
 			this->label3->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::label3_Click);
 			// 
 			// petsList
 			// 
+			this->petsList->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
 			this->petsList->FormattingEnabled = true;
-			this->petsList->Location = System::Drawing::Point(123, 164);
+			this->petsList->Location = System::Drawing::Point(298, 142);
 			this->petsList->Name = L"petsList";
-			this->petsList->Size = System::Drawing::Size(204, 21);
+			this->petsList->Size = System::Drawing::Size(328, 27);
 			this->petsList->TabIndex = 14;
 			this->petsList->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::consultar_Click);
 			// 
 			// button3
 			// 
 			this->button3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->button3->BackColor = System::Drawing::Color::Transparent;
-			this->button3->Location = System::Drawing::Point(603, 7);
+			this->button3->BackColor = System::Drawing::Color::Firebrick;
+			this->button3->Location = System::Drawing::Point(892, 7);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(19, 21);
+			this->button3->Size = System::Drawing::Size(38, 31);
 			this->button3->TabIndex = 13;
 			this->button3->Text = L"X";
 			this->button3->UseVisualStyleBackColor = false;
@@ -276,10 +278,10 @@ namespace PetSalut {
 			this->label7->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Arial", 14, System::Drawing::FontStyle::Bold));
-			this->label7->Location = System::Drawing::Point(225, 34);
+			this->label7->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
+			this->label7->Location = System::Drawing::Point(335, 35);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(203, 22);
+			this->label7->Size = System::Drawing::Size(252, 26);
 			this->label7->TabIndex = 11;
 			this->label7->Text = L"ELIMINAR MASCOTA";
 			this->label7->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::label7_Click);
@@ -290,11 +292,10 @@ namespace PetSalut {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->button1->BackColor = System::Drawing::Color::Red;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(358, 140);
+			this->button1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
+			this->button1->Location = System::Drawing::Point(298, 236);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(125, 67);
+			this->button1->Size = System::Drawing::Size(328, 73);
 			this->button1->TabIndex = 10;
 			this->button1->Text = L"ELIMINAR";
 			this->button1->UseVisualStyleBackColor = false;
@@ -306,11 +307,10 @@ namespace PetSalut {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(195, 73);
+			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 12.25F));
+			this->label1->Location = System::Drawing::Point(293, 114);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(250, 22);
+			this->label1->Size = System::Drawing::Size(333, 25);
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"Quina Mascota vols ELIMINAR\?";
 			this->label1->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::label1_Click);
@@ -340,7 +340,8 @@ namespace PetSalut {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(876, 596);
+			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->panel1);
