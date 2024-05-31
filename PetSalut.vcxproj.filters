@@ -321,7 +321,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CrearPublic.cpp">
-      <Filter>Forms</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
