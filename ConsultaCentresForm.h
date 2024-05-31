@@ -97,11 +97,13 @@ namespace PetSalut {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(ConsultaCentresForm::typeid));
 			this->tornaButton = (gcnew System::Windows::Forms::Button());
 			this->deleteButton = (gcnew System::Windows::Forms::Button());
 			this->modificaButton = (gcnew System::Windows::Forms::Button());
 			this->centresListBox = (gcnew System::Windows::Forms::ListBox());
 			this->group = (gcnew System::Windows::Forms::Panel());
+			this->ubicaciotextBox = (gcnew System::Windows::Forms::TextBox());
 			this->ubicaciolabel = (gcnew System::Windows::Forms::Label());
 			this->clinicaTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->telefonTextBox = (gcnew System::Windows::Forms::TextBox());
@@ -112,7 +114,6 @@ namespace PetSalut {
 			this->nomLabel = (gcnew System::Windows::Forms::Label());
 			this->idLabel = (gcnew System::Windows::Forms::Label());
 			this->afegeixButton = (gcnew System::Windows::Forms::Button());
-			this->ubicaciotextBox = (gcnew System::Windows::Forms::TextBox());
 			this->group->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -175,6 +176,13 @@ namespace PetSalut {
 			this->group->Name = L"group";
 			this->group->Size = System::Drawing::Size(326, 273);
 			this->group->TabIndex = 4;
+			// 
+			// ubicaciotextBox
+			// 
+			this->ubicaciotextBox->Location = System::Drawing::Point(161, 222);
+			this->ubicaciotextBox->Name = L"ubicaciotextBox";
+			this->ubicaciotextBox->Size = System::Drawing::Size(99, 22);
+			this->ubicaciotextBox->TabIndex = 9;
 			// 
 			// ubicaciolabel
 			// 
@@ -272,13 +280,6 @@ namespace PetSalut {
 			this->afegeixButton->UseVisualStyleBackColor = true;
 			this->afegeixButton->Click += gcnew System::EventHandler(this, &ConsultaCentresForm::afegeixButton_Click);
 			// 
-			// ubicaciotextBox
-			// 
-			this->ubicaciotextBox->Location = System::Drawing::Point(161, 222);
-			this->ubicaciotextBox->Name = L"ubicaciotextBox";
-			this->ubicaciotextBox->Size = System::Drawing::Size(99, 22);
-			this->ubicaciotextBox->TabIndex = 9;
-			// 
 			// ConsultaCentresForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -291,8 +292,9 @@ namespace PetSalut {
 			this->Controls->Add(this->modificaButton);
 			this->Controls->Add(this->deleteButton);
 			this->Controls->Add(this->tornaButton);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"ConsultaCentresForm";
-			this->Text = L"ConsultaCentresForm";
+			this->Text = L"PETSALUT";
 			this->Load += gcnew System::EventHandler(this, &ConsultaCentresForm::ConsultaCentresForm_Load);
 			this->group->ResumeLayout(false);
 			this->group->PerformLayout();

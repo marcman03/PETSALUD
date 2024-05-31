@@ -199,6 +199,7 @@ namespace PetSalut {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(CreaVisites_forms::typeid));
 			this->PanelVisita = (gcnew System::Windows::Forms::Panel());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->guardarbutton = (gcnew System::Windows::Forms::Button());
@@ -257,9 +258,10 @@ namespace PetSalut {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
 			this->button1->Location = System::Drawing::Point(3, 501);
 			this->button1->Name = L"button1";
+			this->button1->RightToLeft = System::Windows::Forms::RightToLeft::Yes;
 			this->button1->Size = System::Drawing::Size(177, 79);
 			this->button1->TabIndex = 35;
-			this->button1->Text = L"Sortir";
+			this->button1->Text = L"Tornar";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &CreaVisites_forms::button1_Click);
 			// 
@@ -494,8 +496,9 @@ namespace PetSalut {
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->PanelVisita);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"CreaVisites_forms";
-			this->Text = L"CreaVisites_forms";
+			this->Text = L"PETSALUT";
 			this->PanelVisita->ResumeLayout(false);
 			this->PanelVisita->PerformLayout();
 			this->ResumeLayout(false);

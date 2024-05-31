@@ -6,6 +6,7 @@
 #include "ConsultaVistes_forms.h"
 #include "ConsultaMascota_forms.h"
 #include "CrearPublic.h"
+#include "ConsultarEvents.h"
 
 namespace PetSalut {
 
@@ -371,6 +372,7 @@ namespace PetSalut {
 			this->anteriorButton->TabIndex = 30;
 			this->anteriorButton->Text = L"Anterior";
 			this->anteriorButton->UseVisualStyleBackColor = true;
+			this->anteriorButton->Click += gcnew System::EventHandler(this, &MenuProp::anteriorButton_Click);
 			// 
 			// contrasenyaelimina
 			// 
@@ -419,6 +421,7 @@ namespace PetSalut {
 			this->seguentButton->TabIndex = 29;
 			this->seguentButton->Text = L"Seguent";
 			this->seguentButton->UseVisualStyleBackColor = true;
+			this->seguentButton->Click += gcnew System::EventHandler(this, &MenuProp::seguentButton_Click);
 			// 
 			// boxeliminar
 			// 
@@ -582,6 +585,7 @@ namespace PetSalut {
 			this->button1->TabIndex = 21;
 			this->button1->Text = L"Consultar Events";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MenuProp::button1_Click);
 			// 
 			// MenuProp
 			// 
@@ -603,9 +607,11 @@ namespace PetSalut {
 			this->Controls->Add(this->TancarButton);
 			this->Controls->Add(this->ModificarButton);
 			this->Controls->Add(this->ConsultaButton);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"MenuProp";
 			this->Text = L"PETSALUT";
+			this->Load += gcnew System::EventHandler(this, &MenuProp::MenuProp_Load);
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->boxeliminar))->EndInit();
@@ -761,6 +767,34 @@ private: System::Void ConsultaVisitesButton_Click(System::Object^ sender, System
 	conVisi->ShowDialog();
 
 	this->Visible = true;
+
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	PetSalut::ConsultarEvents^ conEvents = gcnew PetSalut::ConsultarEvents();
+
+	this->Visible = false;
+
+	conEvents->ShowDialog();
+
+	this->Visible = true;
+
+}
+private: System::Void MenuProp_Load(System::Object^ sender, System::EventArgs^ e) {
+
+	//AQUI PONER HACER EL CONSULTA PUBLIC Y HACER UN SELECT ONE
+	// Y ACTUALIZAR LAS LABELS
+
+}
+private: System::Void seguentButton_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	//AQUI ACTUALIZAR LAS LABELS PARA MOSTRAR EL SIGUIETNE
+
+}
+private: System::Void anteriorButton_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	//AQUI ACTUALIZAR LAS LABELS PARA MOSTRAR EL ANTERIOR
+	//SI NO HAY ANTERIORES MOSTRAR EL ULTIMO DE LA LISTA
 
 }
 };

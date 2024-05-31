@@ -404,6 +404,7 @@ namespace PetSalut {
 			// 
 			// RegUsu
 			// 
+			this->AccessibleName = L"";
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
@@ -436,8 +437,10 @@ namespace PetSalut {
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"RegUsu";
-			this->Text = L"RegistrarUsuari";
+			this->Text = L"PETSALUT";
+			this->Load += gcnew System::EventHandler(this, &RegUsu::RegUsu_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -528,6 +531,8 @@ private: System::Void show1_Click(System::Object^ sender, System::EventArgs^ e) 
 
 	this->passwd1->UseSystemPasswordChar = !this->passwd1->UseSystemPasswordChar;
 
+}
+private: System::Void RegUsu_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

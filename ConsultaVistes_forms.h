@@ -297,6 +297,7 @@ namespace PetSalut {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(ConsultaVistes_forms::typeid));
 			this->registrarbutton = (gcnew System::Windows::Forms::Button());
 			this->eliminabutton = (gcnew System::Windows::Forms::Button());
 			this->petsList = (gcnew System::Windows::Forms::ComboBox());
@@ -561,8 +562,9 @@ namespace PetSalut {
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->visitesLabel);
 			this->Controls->Add(this->petsaludlabel);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"ConsultaVistes_forms";
-			this->Text = L"ConsultaVistes_forms";
+			this->Text = L"PETSALUT";
 			this->hiddenPanel->ResumeLayout(false);
 			this->hiddenPanel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trackBar))->EndInit();

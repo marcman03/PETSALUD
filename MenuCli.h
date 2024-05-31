@@ -82,6 +82,7 @@ namespace PetSalut {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MenuCli::typeid));
 			this->ConsultaButton = (gcnew System::Windows::Forms::Button());
 			this->ModificarButton = (gcnew System::Windows::Forms::Button());
 			this->TancarButton = (gcnew System::Windows::Forms::Button());
@@ -104,7 +105,7 @@ namespace PetSalut {
 			// 
 			this->ConsultaButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
 			this->ConsultaButton->Location = System::Drawing::Point(431, 157);
-			this->ConsultaButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->ConsultaButton->Margin = System::Windows::Forms::Padding(2);
 			this->ConsultaButton->Name = L"ConsultaButton";
 			this->ConsultaButton->Size = System::Drawing::Size(311, 58);
 			this->ConsultaButton->TabIndex = 0;
@@ -116,7 +117,7 @@ namespace PetSalut {
 			// 
 			this->ModificarButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
 			this->ModificarButton->Location = System::Drawing::Point(431, 234);
-			this->ModificarButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->ModificarButton->Margin = System::Windows::Forms::Padding(2);
 			this->ModificarButton->Name = L"ModificarButton";
 			this->ModificarButton->Size = System::Drawing::Size(311, 58);
 			this->ModificarButton->TabIndex = 1;
@@ -128,7 +129,7 @@ namespace PetSalut {
 			// 
 			this->TancarButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
 			this->TancarButton->Location = System::Drawing::Point(431, 308);
-			this->TancarButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->TancarButton->Margin = System::Windows::Forms::Padding(2);
 			this->TancarButton->Name = L"TancarButton";
 			this->TancarButton->Size = System::Drawing::Size(311, 58);
 			this->TancarButton->TabIndex = 2;
@@ -140,7 +141,7 @@ namespace PetSalut {
 			// 
 			this->EliminarButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
 			this->EliminarButton->Location = System::Drawing::Point(431, 381);
-			this->EliminarButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->EliminarButton->Margin = System::Windows::Forms::Padding(2);
 			this->EliminarButton->Name = L"EliminarButton";
 			this->EliminarButton->Size = System::Drawing::Size(311, 58);
 			this->EliminarButton->TabIndex = 3;
@@ -172,7 +173,7 @@ namespace PetSalut {
 			// 
 			this->Cancela_Tanca->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14));
 			this->Cancela_Tanca->Location = System::Drawing::Point(326, 375);
-			this->Cancela_Tanca->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Cancela_Tanca->Margin = System::Windows::Forms::Padding(2);
 			this->Cancela_Tanca->Name = L"Cancela_Tanca";
 			this->Cancela_Tanca->Size = System::Drawing::Size(273, 58);
 			this->Cancela_Tanca->TabIndex = 6;
@@ -185,7 +186,7 @@ namespace PetSalut {
 			// 
 			this->Accepta_Tanca->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14));
 			this->Accepta_Tanca->Location = System::Drawing::Point(603, 375);
-			this->Accepta_Tanca->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Accepta_Tanca->Margin = System::Windows::Forms::Padding(2);
 			this->Accepta_Tanca->Name = L"Accepta_Tanca";
 			this->Accepta_Tanca->Size = System::Drawing::Size(280, 58);
 			this->Accepta_Tanca->TabIndex = 7;
@@ -222,7 +223,7 @@ namespace PetSalut {
 			// 
 			this->eliminar_compte_acceptar->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14));
 			this->eliminar_compte_acceptar->Location = System::Drawing::Point(603, 375);
-			this->eliminar_compte_acceptar->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->eliminar_compte_acceptar->Margin = System::Windows::Forms::Padding(2);
 			this->eliminar_compte_acceptar->Name = L"eliminar_compte_acceptar";
 			this->eliminar_compte_acceptar->Size = System::Drawing::Size(280, 58);
 			this->eliminar_compte_acceptar->TabIndex = 11;
@@ -235,7 +236,7 @@ namespace PetSalut {
 			// 
 			this->cancelar_eliminar_compte->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14));
 			this->cancelar_eliminar_compte->Location = System::Drawing::Point(326, 375);
-			this->cancelar_eliminar_compte->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->cancelar_eliminar_compte->Margin = System::Windows::Forms::Padding(2);
 			this->cancelar_eliminar_compte->Name = L"cancelar_eliminar_compte";
 			this->cancelar_eliminar_compte->Size = System::Drawing::Size(273, 58);
 			this->cancelar_eliminar_compte->TabIndex = 10;
@@ -283,7 +284,8 @@ namespace PetSalut {
 			this->Controls->Add(this->TancarButton);
 			this->Controls->Add(this->ModificarButton);
 			this->Controls->Add(this->ConsultaButton);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"MenuCli";
 			this->Text = L"PETSALUT";
 			this->Load += gcnew System::EventHandler(this, &MenuCli::MenuCli_Load);
