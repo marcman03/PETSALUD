@@ -137,6 +137,16 @@
     <ClInclude Include="TxEliminaVisita.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CercadoraTipus.h" />
+    <ClInclude Include="CercadoraValoracio.h" />
+    <ClInclude Include="PassarellaTipus.h" />
+    <ClInclude Include="PassarellaValoracio.h" />
+    <ClInclude Include="TxCrearValoracio.h" />
+    <ClInclude Include="TxEliminarValoracio.h" />
+    <ClInclude Include="TxModificarValoracio.h" />
+    <ClInclude Include="Consulta_Centres_bn.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -288,6 +298,30 @@
     </ClCompile>
     <ClCompile Include="TxEliminaVisita.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CercadoraTipus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CercadoraValoracio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassarellaTipus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassarellaValoracio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxCrearValoracio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxEliminarValoracio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxModificarValoracio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Consulta_Centres_bn.cpp">
+      <Filter>Forms</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -28,6 +28,9 @@ namespace PetSalut {
 		String^ iniDate;
 		String^ iniPasswd;
 	private: System::Windows::Forms::Button^ showPasswd;
+	private: System::Windows::Forms::Label^ dateLabel;
+	private: System::Windows::Forms::Label^ phoneLabel;
+
 	public:
 		String^ iniDesc;
 
@@ -111,8 +114,8 @@ namespace PetSalut {
 
 
 	private: System::Windows::Forms::Label^ usernameLabel;
-	private: System::Windows::Forms::Label^ phoneLabel;
-	private: System::Windows::Forms::Label^ dateLabel;
+
+
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ AplicarCambis;
 
@@ -151,146 +154,160 @@ namespace PetSalut {
 			this->phone = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->date = (gcnew System::Windows::Forms::MaskedTextBox());
 			this->usernameLabel = (gcnew System::Windows::Forms::Label());
-			this->phoneLabel = (gcnew System::Windows::Forms::Label());
-			this->dateLabel = (gcnew System::Windows::Forms::Label());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->AplicarCambis = (gcnew System::Windows::Forms::Button());
 			this->modTelf = (gcnew System::Windows::Forms::Button());
 			this->modDate = (gcnew System::Windows::Forms::Button());
 			this->showPasswd = (gcnew System::Windows::Forms::Button());
+			this->dateLabel = (gcnew System::Windows::Forms::Label());
+			this->phoneLabel = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 12));
-			this->label1->Location = System::Drawing::Point(33, 24);
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+			this->label1->Location = System::Drawing::Point(44, 30);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(223, 23);
+			this->label1->Size = System::Drawing::Size(186, 25);
 			this->label1->TabIndex = 34;
 			this->label1->Text = L"Modificar Informacio";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->label2->Location = System::Drawing::Point(33, 88);
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->label2->Location = System::Drawing::Point(44, 108);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(123, 19);
+			this->label2->Size = System::Drawing::Size(117, 20);
 			this->label2->TabIndex = 48;
 			this->label2->Text = L"Nom Complert";
 			// 
 			// nameBox
 			// 
-			this->nameBox->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->nameBox->Location = System::Drawing::Point(37, 124);
+			this->nameBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->nameBox->Location = System::Drawing::Point(49, 153);
+			this->nameBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->nameBox->Name = L"nameBox";
-			this->nameBox->Size = System::Drawing::Size(273, 24);
+			this->nameBox->Size = System::Drawing::Size(363, 26);
 			this->nameBox->TabIndex = 49;
 			// 
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->label9->Location = System::Drawing::Point(660, 288);
+			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->label9->Location = System::Drawing::Point(880, 354);
+			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(93, 19);
+			this->label9->Size = System::Drawing::Size(90, 20);
 			this->label9->TabIndex = 56;
 			this->label9->Text = L"Descripcio";
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->label4->Location = System::Drawing::Point(33, 288);
+			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->label4->Location = System::Drawing::Point(44, 354);
+			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(67, 19);
+			this->label4->Size = System::Drawing::Size(64, 20);
 			this->label4->TabIndex = 52;
 			this->label4->Text = L"Telefon";
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->label5->Location = System::Drawing::Point(33, 388);
+			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->label5->Location = System::Drawing::Point(44, 478);
+			this->label5->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(136, 19);
+			this->label5->Size = System::Drawing::Size(129, 20);
 			this->label5->TabIndex = 53;
 			this->label5->Text = L"Data Naixement";
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->label6->Location = System::Drawing::Point(660, 88);
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->label6->Location = System::Drawing::Point(880, 108);
+			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(114, 19);
+			this->label6->Size = System::Drawing::Size(108, 20);
 			this->label6->TabIndex = 54;
 			this->label6->Text = L"Nom d\'usuari";
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->label7->Location = System::Drawing::Point(660, 188);
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->label7->Location = System::Drawing::Point(880, 231);
+			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(109, 19);
+			this->label7->Size = System::Drawing::Size(103, 20);
 			this->label7->TabIndex = 55;
 			this->label7->Text = L"Contrasenya";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->label3->Location = System::Drawing::Point(33, 188);
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->label3->Location = System::Drawing::Point(44, 231);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(150, 19);
+			this->label3->Size = System::Drawing::Size(140, 20);
 			this->label3->TabIndex = 51;
 			this->label3->Text = L"Correu Electronic";
 			// 
 			// mailBox
 			// 
-			this->mailBox->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->mailBox->Location = System::Drawing::Point(37, 224);
+			this->mailBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->mailBox->Location = System::Drawing::Point(49, 276);
+			this->mailBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->mailBox->Name = L"mailBox";
-			this->mailBox->Size = System::Drawing::Size(273, 24);
+			this->mailBox->Size = System::Drawing::Size(363, 26);
 			this->mailBox->TabIndex = 57;
 			// 
 			// passwdBox
 			// 
-			this->passwdBox->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->passwdBox->Location = System::Drawing::Point(664, 224);
+			this->passwdBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->passwdBox->Location = System::Drawing::Point(885, 276);
+			this->passwdBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->passwdBox->Name = L"passwdBox";
-			this->passwdBox->Size = System::Drawing::Size(369, 24);
+			this->passwdBox->Size = System::Drawing::Size(491, 26);
 			this->passwdBox->TabIndex = 58;
 			this->passwdBox->UseSystemPasswordChar = true;
 			// 
 			// descBox
 			// 
-			this->descBox->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->descBox->Location = System::Drawing::Point(664, 324);
+			this->descBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->descBox->Location = System::Drawing::Point(885, 399);
+			this->descBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->descBox->Multiline = true;
 			this->descBox->Name = L"descBox";
-			this->descBox->Size = System::Drawing::Size(369, 20);
+			this->descBox->Size = System::Drawing::Size(491, 24);
 			this->descBox->TabIndex = 59;
 			// 
 			// phone
 			// 
-			this->phone->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->phone->Location = System::Drawing::Point(37, 324);
+			this->phone->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->phone->Location = System::Drawing::Point(49, 399);
+			this->phone->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->phone->Mask = L"+00 000 000 000";
 			this->phone->Name = L"phone";
-			this->phone->Size = System::Drawing::Size(273, 24);
+			this->phone->Size = System::Drawing::Size(363, 26);
 			this->phone->TabIndex = 60;
 			this->phone->Visible = false;
 			// 
 			// date
 			// 
-			this->date->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->date->Location = System::Drawing::Point(37, 424);
+			this->date->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->date->Location = System::Drawing::Point(49, 522);
+			this->date->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->date->Mask = L"00/00/0000";
 			this->date->Name = L"date";
-			this->date->Size = System::Drawing::Size(273, 24);
+			this->date->Size = System::Drawing::Size(363, 26);
 			this->date->TabIndex = 61;
 			this->date->ValidatingType = System::DateTime::typeid;
 			this->date->Visible = false;
@@ -298,46 +315,23 @@ namespace PetSalut {
 			// usernameLabel
 			// 
 			this->usernameLabel->AutoSize = true;
-			this->usernameLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
+			this->usernameLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
 			this->usernameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->usernameLabel->Location = System::Drawing::Point(660, 127);
+			this->usernameLabel->Location = System::Drawing::Point(880, 156);
+			this->usernameLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->usernameLabel->Name = L"usernameLabel";
-			this->usernameLabel->Size = System::Drawing::Size(130, 19);
+			this->usernameLabel->Size = System::Drawing::Size(121, 20);
 			this->usernameLabel->TabIndex = 62;
 			this->usernameLabel->Text = L"username Aqui";
 			// 
-			// phoneLabel
-			// 
-			this->phoneLabel->AutoSize = true;
-			this->phoneLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->phoneLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->phoneLabel->Location = System::Drawing::Point(33, 326);
-			this->phoneLabel->Name = L"phoneLabel";
-			this->phoneLabel->Size = System::Drawing::Size(107, 19);
-			this->phoneLabel->TabIndex = 63;
-			this->phoneLabel->Text = L"telefon Aqui";
-			// 
-			// dateLabel
-			// 
-			this->dateLabel->AutoSize = true;
-			this->dateLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->dateLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->dateLabel->Location = System::Drawing::Point(33, 426);
-			this->dateLabel->Name = L"dateLabel";
-			this->dateLabel->Size = System::Drawing::Size(171, 19);
-			this->dateLabel->TabIndex = 64;
-			this->dateLabel->Text = L"datanaixement Aqui";
-			// 
 			// button2
 			// 
-			this->button2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->button2->Location = System::Drawing::Point(37, 548);
-			this->button2->Margin = System::Windows::Forms::Padding(2);
+			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->button2->Location = System::Drawing::Point(49, 674);
+			this->button2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(215, 79);
+			this->button2->Size = System::Drawing::Size(287, 97);
 			this->button2->TabIndex = 65;
 			this->button2->Text = L"Tornar";
 			this->button2->UseVisualStyleBackColor = true;
@@ -345,11 +339,11 @@ namespace PetSalut {
 			// 
 			// AplicarCambis
 			// 
-			this->AplicarCambis->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->AplicarCambis->Location = System::Drawing::Point(664, 548);
-			this->AplicarCambis->Margin = System::Windows::Forms::Padding(2);
+			this->AplicarCambis->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->AplicarCambis->Location = System::Drawing::Point(885, 674);
+			this->AplicarCambis->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->AplicarCambis->Name = L"AplicarCambis";
-			this->AplicarCambis->Size = System::Drawing::Size(369, 79);
+			this->AplicarCambis->Size = System::Drawing::Size(492, 97);
 			this->AplicarCambis->TabIndex = 66;
 			this->AplicarCambis->Text = L"Aplicar Cambis";
 			this->AplicarCambis->UseVisualStyleBackColor = true;
@@ -357,11 +351,11 @@ namespace PetSalut {
 			// 
 			// modTelf
 			// 
-			this->modTelf->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->modTelf->Location = System::Drawing::Point(315, 323);
-			this->modTelf->Margin = System::Windows::Forms::Padding(2);
+			this->modTelf->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->modTelf->Location = System::Drawing::Point(420, 398);
+			this->modTelf->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->modTelf->Name = L"modTelf";
-			this->modTelf->Size = System::Drawing::Size(121, 25);
+			this->modTelf->Size = System::Drawing::Size(161, 31);
 			this->modTelf->TabIndex = 67;
 			this->modTelf->Text = L"Modificar";
 			this->modTelf->UseVisualStyleBackColor = true;
@@ -369,11 +363,11 @@ namespace PetSalut {
 			// 
 			// modDate
 			// 
-			this->modDate->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->modDate->Location = System::Drawing::Point(315, 422);
-			this->modDate->Margin = System::Windows::Forms::Padding(2);
+			this->modDate->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->modDate->Location = System::Drawing::Point(420, 519);
+			this->modDate->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->modDate->Name = L"modDate";
-			this->modDate->Size = System::Drawing::Size(121, 26);
+			this->modDate->Size = System::Drawing::Size(161, 32);
 			this->modDate->TabIndex = 68;
 			this->modDate->Text = L"Modificar";
 			this->modDate->UseVisualStyleBackColor = true;
@@ -381,22 +375,48 @@ namespace PetSalut {
 			// 
 			// showPasswd
 			// 
-			this->showPasswd->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->showPasswd->Location = System::Drawing::Point(1038, 224);
-			this->showPasswd->Margin = System::Windows::Forms::Padding(2);
+			this->showPasswd->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->showPasswd->Location = System::Drawing::Point(1384, 276);
+			this->showPasswd->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->showPasswd->Name = L"showPasswd";
-			this->showPasswd->Size = System::Drawing::Size(121, 25);
+			this->showPasswd->Size = System::Drawing::Size(161, 31);
 			this->showPasswd->TabIndex = 69;
 			this->showPasswd->Text = L"Mostrar";
 			this->showPasswd->UseVisualStyleBackColor = true;
 			this->showPasswd->Click += gcnew System::EventHandler(this, &ModProp::showPasswd_Click);
 			// 
+			// dateLabel
+			// 
+			this->dateLabel->AutoSize = true;
+			this->dateLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->dateLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->dateLabel->Location = System::Drawing::Point(44, 524);
+			this->dateLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->dateLabel->Name = L"dateLabel";
+			this->dateLabel->Size = System::Drawing::Size(155, 20);
+			this->dateLabel->TabIndex = 64;
+			this->dateLabel->Text = L"datanaixement Aqui";
+			// 
+			// phoneLabel
+			// 
+			this->phoneLabel->AutoSize = true;
+			this->phoneLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->phoneLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->phoneLabel->Location = System::Drawing::Point(44, 401);
+			this->phoneLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->phoneLabel->Name = L"phoneLabel";
+			this->phoneLabel->Size = System::Drawing::Size(97, 20);
+			this->phoneLabel->TabIndex = 63;
+			this->phoneLabel->Text = L"telefon Aqui";
+			// 
 			// ModProp
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->ClientSize = System::Drawing::Size(1184, 661);
+			this->ClientSize = System::Drawing::Size(1579, 814);
 			this->Controls->Add(this->showPasswd);
 			this->Controls->Add(this->modDate);
 			this->Controls->Add(this->modTelf);
@@ -419,6 +439,7 @@ namespace PetSalut {
 			this->Controls->Add(this->nameBox);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"ModProp";
 			this->Text = L"ModProp";
 			this->Load += gcnew System::EventHandler(this, &ModProp::ModProp_Load);
