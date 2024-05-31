@@ -7,8 +7,8 @@ using namespace System;
 //    return 0;
 // }
 
-#include "PantallaPrincipal.h"
-
+//#include "PantallaPrincipal.h"
+#include "ConsultaCentresForm.h"
 using namespace System::Windows::Forms;
 
 [STAThread]
@@ -16,6 +16,6 @@ int main()
 {
   Application::EnableVisualStyles();
   Application::SetCompatibleTextRenderingDefault(false);
-  Application::Run(gcnew PetSalut::PantallaPrincipal());
+  Application::Run(gcnew PetSalut::ConsultaCentresForm());
   return 0;
 }
