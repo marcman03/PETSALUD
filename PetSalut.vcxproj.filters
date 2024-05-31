@@ -150,6 +150,12 @@
     <ClInclude Include="ConsultarEvents.h">
       <Filter>Forms</Filter>
     </ClInclude>
+    <ClInclude Include="CreaCentreForms.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="EliminaCentresForm.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -327,6 +333,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ConsultarEvents.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CreaCentreForms.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EliminaCentresForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

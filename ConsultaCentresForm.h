@@ -6,8 +6,8 @@
 #include "PassarellaCentre.h"
 #include "CercadoraCentre.h"
 #include "Ordinador.h"
-#include "Delete_Mascota_forms.h"
-#include "Crea_Mascota_forms.h"
+#include "EliminaCentresForm.h"
+#include "CreaCentreForms.h"
 #include "CercadoraClinica.h"
 #include "ConsultaVistes_forms.h"
 
@@ -162,11 +162,11 @@ namespace PetSalut {
 
 	private: System::Void eliminabutton_click(System::Object^ sender, System::EventArgs^ e) {
 
-		PetSalut::Elimina_Mascota_forms^ elimMasc = gcnew PetSalut::Elimina_Mascota_forms();
+		PetSalut::EliminaCentresForm^ eliminaCentre = gcnew PetSalut::EliminaCentresForm();
 
 		this->Visible = false;
 
-		elimMasc->ShowDialog();
+		eliminaCentre->ShowDialog();
 
 		this->Visible = true;
 
@@ -174,7 +174,7 @@ namespace PetSalut {
 
 	private: System::Void registrarbutton_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		PetSalut::Crea_Mascota_forms^ creaMasc = gcnew PetSalut::Crea_Mascota_forms();
+		PetSalut::CreaCentreForms^ creaMasc = gcnew PetSalut::CreaCentreForms();
 
 		this->Visible = false;
 
@@ -210,6 +210,7 @@ namespace PetSalut {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(ConsultaCentresForm::typeid));
 			this->petsaludlabel = (gcnew System::Windows::Forms::Label());
 			this->mypetslabel = (gcnew System::Windows::Forms::Label());
 			this->centresList = (gcnew System::Windows::Forms::ComboBox());
@@ -224,6 +225,7 @@ namespace PetSalut {
 			// petsaludlabel
 			// 
 			this->petsaludlabel->AutoSize = true;
+			this->petsaludlabel->BackColor = System::Drawing::Color::Transparent;
 			this->petsaludlabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 28.25F));
 			this->petsaludlabel->Location = System::Drawing::Point(455, 9);
 			this->petsaludlabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
@@ -236,6 +238,7 @@ namespace PetSalut {
 			// mypetslabel
 			// 
 			this->mypetslabel->AutoSize = true;
+			this->mypetslabel->BackColor = System::Drawing::Color::Transparent;
 			this->mypetslabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 20));
 			this->mypetslabel->Location = System::Drawing::Point(432, 54);
 			this->mypetslabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
@@ -288,7 +291,7 @@ namespace PetSalut {
 			this->eliminabutton->Name = L"eliminabutton";
 			this->eliminabutton->Size = System::Drawing::Size(182, 88);
 			this->eliminabutton->TabIndex = 6;
-			this->eliminabutton->Text = L"ELIMINAR MASCOTA";
+			this->eliminabutton->Text = L"ELIMINAR CENTRE";
 			this->eliminabutton->UseVisualStyleBackColor = false;
 			this->eliminabutton->Click += gcnew System::EventHandler(this, &ConsultaCentresForm::eliminabutton_click);
 			// 
@@ -301,7 +304,7 @@ namespace PetSalut {
 			this->registrarmascbutton->Name = L"registrarmascbutton";
 			this->registrarmascbutton->Size = System::Drawing::Size(182, 88);
 			this->registrarmascbutton->TabIndex = 7;
-			this->registrarmascbutton->Text = L"REGISTRAR MASCOTA";
+			this->registrarmascbutton->Text = L"REGISTRAR CENTRE";
 			this->registrarmascbutton->UseVisualStyleBackColor = false;
 			this->registrarmascbutton->Click += gcnew System::EventHandler(this, &ConsultaCentresForm::registrarbutton_Click);
 			// 
@@ -335,6 +338,7 @@ namespace PetSalut {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->visitesButton);
