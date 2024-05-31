@@ -57,7 +57,7 @@ namespace PetSalut {
 	private: System::Windows::Forms::Label^ mascotalabel;
 	private: System::Windows::Forms::ComboBox^ visitaList;
 	private: System::Windows::Forms::Label^ visitaLabel;
-	private: System::Windows::Forms::Panel^ descriptionPannel;
+
 	private: System::Windows::Forms::Button^ consultar;
 	private: System::Windows::Forms::Button^ valorarButton;
 	private: System::Windows::Forms::ComboBox^ petsList;
@@ -66,6 +66,9 @@ namespace PetSalut {
 	private: System::Windows::Forms::Label^ trackBarLabel;
 	private: System::Windows::Forms::Label^ valorartext;
 	private: System::Windows::Forms::Button^ notaguardarButton;
+	private: System::Windows::Forms::Panel^ panel1;
+	private: System::Windows::Forms::Panel^ descriptionPannel;
+	private: System::Windows::Forms::Button^ button1;
 
 
 	private: System::Windows::Forms::TrackBar^ trackBar;
@@ -190,44 +193,44 @@ namespace PetSalut {
 
 			// Muestra la información del evento en el panel de descripción
 			Label^ labelNumeroID = gcnew Label();
-			labelNumeroID->Text = "Número de Visita: " + esdeveniment->Numeroid.ToString();
+			labelNumeroID->Text = "Número de Visita: \n" + esdeveniment->Numeroid.ToString();
 			labelNumeroID->Location = Point(10, 10);
 			labelNumeroID->AutoSize = true;
 			descriptionPannel->Controls->Add(labelNumeroID);
 
 			Label^ labelNombre = gcnew Label();
-			labelNombre->Text = "Motiu: " + esdeveniment->Nom;
-			labelNombre->Location = Point(10, labelNumeroID->Bottom + 5);
+			labelNombre->Text = "Motiu: \n" + esdeveniment->Nom;
+			labelNombre->Location = Point(10, labelNumeroID->Bottom + 8);
 			labelNombre->AutoSize = true;
 			descriptionPannel->Controls->Add(labelNombre);
 
 			Label^ labelFecha = gcnew Label();
-			labelFecha->Text = "Data: " + esdeveniment->Data.ToString("dd/MM/yyyy");
-			labelFecha->Location = Point(10, labelNombre->Bottom + 5);
+			labelFecha->Text = "Data: \n" + esdeveniment->Data.ToString("dd/MM/yyyy");
+			labelFecha->Location = Point(10, labelNombre->Bottom + 8);
 			labelFecha->AutoSize = true;
 			descriptionPannel->Controls->Add(labelFecha);
 
 			Label^ labelHora = gcnew Label();
-			labelHora->Text = "Hora: " + esdeveniment->Hora;
-			labelHora->Location = Point(10, labelFecha->Bottom + 5);
+			labelHora->Text = "Hora: \n" + esdeveniment->Hora;
+			labelHora->Location = Point(10, labelFecha->Bottom + 8);
 			labelHora->AutoSize = true;
 			descriptionPannel->Controls->Add(labelHora);
 
 			Label^ labelMascota = gcnew Label();
-			labelMascota->Text = "Mascota: " + mascota->Nom;
-			labelMascota->Location = Point(10, labelHora->Bottom + 5);
+			labelMascota->Text = "Mascota: \n" + mascota->Nom;
+			labelMascota->Location = Point(10, labelHora->Bottom + 8);
 			labelMascota->AutoSize = true;
 			descriptionPannel->Controls->Add(labelMascota);
 
 			Label^ labelCentre = gcnew Label();
-			labelCentre->Text = "Centre: " + centre->Nom;
-			labelCentre->Location = Point(10, labelMascota->Bottom + 5);
+			labelCentre->Text = "Centre: \n" + centre->Nom;
+			labelCentre->Location = Point(10, labelMascota->Bottom + 8);
 			labelCentre->AutoSize = true;
 			descriptionPannel->Controls->Add(labelCentre);
 
 			Label^ labelUbicacio = gcnew Label();
-			labelUbicacio->Text = "Ubicació: " + centre->Ubicacio;
-			labelUbicacio->Location = Point(10, labelCentre->Bottom + 5);
+			labelUbicacio->Text = "Ubicació: \n" + centre->Ubicacio;
+			labelUbicacio->Location = Point(10, labelCentre->Bottom + 8);
 			labelUbicacio->AutoSize = true;
 			descriptionPannel->Controls->Add(labelUbicacio);
 
@@ -300,26 +303,29 @@ namespace PetSalut {
 			this->mascotalabel = (gcnew System::Windows::Forms::Label());
 			this->visitaList = (gcnew System::Windows::Forms::ComboBox());
 			this->visitaLabel = (gcnew System::Windows::Forms::Label());
-			this->descriptionPannel = (gcnew System::Windows::Forms::Panel());
 			this->hiddenPanel = (gcnew System::Windows::Forms::Panel());
+			this->notaguardarButton = (gcnew System::Windows::Forms::Button());
 			this->valorartext = (gcnew System::Windows::Forms::Label());
 			this->trackBarLabel = (gcnew System::Windows::Forms::Label());
 			this->showHideButton = (gcnew System::Windows::Forms::Button());
 			this->trackBar = (gcnew System::Windows::Forms::TrackBar());
 			this->consultar = (gcnew System::Windows::Forms::Button());
 			this->valorarButton = (gcnew System::Windows::Forms::Button());
-			this->notaguardarButton = (gcnew System::Windows::Forms::Button());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->descriptionPannel = (gcnew System::Windows::Forms::Panel());
 			this->hiddenPanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trackBar))->BeginInit();
+			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// registrarbutton
 			// 
-			this->registrarbutton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+			this->registrarbutton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->registrarbutton->Location = System::Drawing::Point(462, 297);
+			this->registrarbutton->Location = System::Drawing::Point(914, 315);
 			this->registrarbutton->Name = L"registrarbutton";
-			this->registrarbutton->Size = System::Drawing::Size(135, 35);
+			this->registrarbutton->Size = System::Drawing::Size(167, 86);
 			this->registrarbutton->TabIndex = 8;
 			this->registrarbutton->Text = L"REGISTRAR VISITA";
 			this->registrarbutton->UseVisualStyleBackColor = false;
@@ -327,10 +333,10 @@ namespace PetSalut {
 			// 
 			// eliminabutton
 			// 
-			this->eliminabutton->BackColor = System::Drawing::Color::Red;
-			this->eliminabutton->Location = System::Drawing::Point(462, 355);
+			this->eliminabutton->BackColor = System::Drawing::Color::IndianRed;
+			this->eliminabutton->Location = System::Drawing::Point(914, 407);
 			this->eliminabutton->Name = L"eliminabutton";
-			this->eliminabutton->Size = System::Drawing::Size(135, 35);
+			this->eliminabutton->Size = System::Drawing::Size(167, 86);
 			this->eliminabutton->TabIndex = 9;
 			this->eliminabutton->Text = L"ELIMINAR VISITA";
 			this->eliminabutton->UseVisualStyleBackColor = false;
@@ -338,23 +344,23 @@ namespace PetSalut {
 			// 
 			// petsList
 			// 
+			this->petsList->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
 			this->petsList->FormattingEnabled = true;
-			this->petsList->Location = System::Drawing::Point(176, 121);
+			this->petsList->Location = System::Drawing::Point(368, 51);
 			this->petsList->Margin = System::Windows::Forms::Padding(2);
 			this->petsList->Name = L"petsList";
-			this->petsList->Size = System::Drawing::Size(200, 21);
+			this->petsList->Size = System::Drawing::Size(344, 27);
 			this->petsList->TabIndex = 3;
 			this->petsList->Click += gcnew System::EventHandler(this, &ConsultaVistes_forms::fillPets);
 			// 
 			// visitesLabel
 			// 
 			this->visitesLabel->AutoSize = true;
-			this->visitesLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 25.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->visitesLabel->Location = System::Drawing::Point(224, 64);
+			this->visitesLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 20));
+			this->visitesLabel->Location = System::Drawing::Point(512, 63);
 			this->visitesLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->visitesLabel->Name = L"visitesLabel";
-			this->visitesLabel->Size = System::Drawing::Size(157, 39);
+			this->visitesLabel->Size = System::Drawing::Size(144, 39);
 			this->visitesLabel->TabIndex = 11;
 			this->visitesLabel->Text = L"VISITES";
 			this->visitesLabel->Click += gcnew System::EventHandler(this, &ConsultaVistes_forms::visitesLabel_Click);
@@ -362,12 +368,11 @@ namespace PetSalut {
 			// petsaludlabel
 			// 
 			this->petsaludlabel->AutoSize = true;
-			this->petsaludlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 30, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->petsaludlabel->Location = System::Drawing::Point(193, 9);
+			this->petsaludlabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 28));
+			this->petsaludlabel->Location = System::Drawing::Point(454, 9);
 			this->petsaludlabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->petsaludlabel->Name = L"petsaludlabel";
-			this->petsaludlabel->Size = System::Drawing::Size(235, 46);
+			this->petsaludlabel->Size = System::Drawing::Size(262, 54);
 			this->petsaludlabel->TabIndex = 10;
 			this->petsaludlabel->Text = L"PETSALUT";
 			// 
@@ -377,20 +382,20 @@ namespace PetSalut {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->mascotalabel->AutoSize = true;
-			this->mascotalabel->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->mascotalabel->Location = System::Drawing::Point(96, 118);
+			this->mascotalabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
+			this->mascotalabel->Location = System::Drawing::Point(249, 55);
 			this->mascotalabel->Name = L"mascotalabel";
-			this->mascotalabel->Size = System::Drawing::Size(75, 22);
+			this->mascotalabel->Size = System::Drawing::Size(114, 26);
 			this->mascotalabel->TabIndex = 17;
 			this->mascotalabel->Text = L"Mascota:";
 			// 
 			// visitaList
 			// 
+			this->visitaList->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
 			this->visitaList->FormattingEnabled = true;
-			this->visitaList->Location = System::Drawing::Point(100, 153);
+			this->visitaList->Location = System::Drawing::Point(368, 102);
 			this->visitaList->Name = L"visitaList";
-			this->visitaList->Size = System::Drawing::Size(348, 21);
+			this->visitaList->Size = System::Drawing::Size(344, 27);
 			this->visitaList->TabIndex = 18;
 			this->visitaList->Click += gcnew System::EventHandler(this, &ConsultaVistes_forms::visitalist_click);
 			// 
@@ -400,41 +405,36 @@ namespace PetSalut {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->visitaLabel->AutoSize = true;
-			this->visitaLabel->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->visitaLabel->Location = System::Drawing::Point(37, 150);
+			this->visitaLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
+			this->visitaLabel->Location = System::Drawing::Point(275, 106);
 			this->visitaLabel->Name = L"visitaLabel";
-			this->visitaLabel->Size = System::Drawing::Size(57, 22);
+			this->visitaLabel->Size = System::Drawing::Size(87, 26);
 			this->visitaLabel->TabIndex = 19;
 			this->visitaLabel->Text = L"Visita:";
 			// 
-			// descriptionPannel
-			// 
-			this->descriptionPannel->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			this->descriptionPannel->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->descriptionPannel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->descriptionPannel->Location = System::Drawing::Point(32, 191);
-			this->descriptionPannel->Margin = System::Windows::Forms::Padding(2);
-			this->descriptionPannel->Name = L"descriptionPannel";
-			this->descriptionPannel->Size = System::Drawing::Size(425, 199);
-			this->descriptionPannel->TabIndex = 5;
-			this->descriptionPannel->Visible = false;
-			this->descriptionPannel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &ConsultaVistes_forms::descriptionPannel_Paint);
-			// 
 			// hiddenPanel
 			// 
-			this->hiddenPanel->BackColor = System::Drawing::Color::Gray;
+			this->hiddenPanel->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->hiddenPanel->Controls->Add(this->notaguardarButton);
 			this->hiddenPanel->Controls->Add(this->valorartext);
 			this->hiddenPanel->Controls->Add(this->trackBarLabel);
 			this->hiddenPanel->Controls->Add(this->showHideButton);
 			this->hiddenPanel->Controls->Add(this->trackBar);
-			this->hiddenPanel->Location = System::Drawing::Point(32, 191);
+			this->hiddenPanel->Location = System::Drawing::Point(280, 177);
 			this->hiddenPanel->Name = L"hiddenPanel";
-			this->hiddenPanel->Size = System::Drawing::Size(424, 199);
+			this->hiddenPanel->Size = System::Drawing::Size(560, 316);
 			this->hiddenPanel->TabIndex = 21;
 			this->hiddenPanel->Visible = false;
+			// 
+			// notaguardarButton
+			// 
+			this->notaguardarButton->Location = System::Drawing::Point(224, 235);
+			this->notaguardarButton->Name = L"notaguardarButton";
+			this->notaguardarButton->Size = System::Drawing::Size(145, 35);
+			this->notaguardarButton->TabIndex = 22;
+			this->notaguardarButton->Text = L"VALORAR";
+			this->notaguardarButton->UseVisualStyleBackColor = true;
+			this->notaguardarButton->Click += gcnew System::EventHandler(this, &ConsultaVistes_forms::notaguardarButton_Click);
 			// 
 			// valorartext
 			// 
@@ -442,31 +442,30 @@ namespace PetSalut {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->valorartext->AutoSize = true;
-			this->valorartext->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->valorartext->Location = System::Drawing::Point(127, 13);
+			this->valorartext->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
+			this->valorartext->Location = System::Drawing::Point(144, 12);
 			this->valorartext->Name = L"valorartext";
-			this->valorartext->Size = System::Drawing::Size(171, 22);
+			this->valorartext->Size = System::Drawing::Size(265, 26);
 			this->valorartext->TabIndex = 21;
 			this->valorartext->Text = L"Com valores la visita\?";
+			this->valorartext->Click += gcnew System::EventHandler(this, &ConsultaVistes_forms::valorartext_Click);
 			// 
 			// trackBarLabel
 			// 
 			this->trackBarLabel->AutoSize = true;
-			this->trackBarLabel->Font = (gcnew System::Drawing::Font(L"Palatino Linotype", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->trackBarLabel->Location = System::Drawing::Point(72, 62);
+			this->trackBarLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
+			this->trackBarLabel->Location = System::Drawing::Point(237, 47);
 			this->trackBarLabel->Name = L"trackBarLabel";
-			this->trackBarLabel->Size = System::Drawing::Size(62, 22);
+			this->trackBarLabel->Size = System::Drawing::Size(97, 26);
 			this->trackBarLabel->TabIndex = 0;
 			this->trackBarLabel->Text = L"Nota: 0";
 			// 
 			// showHideButton
 			// 
-			this->showHideButton->BackColor = System::Drawing::Color::Transparent;
-			this->showHideButton->Location = System::Drawing::Point(389, 9);
+			this->showHideButton->BackColor = System::Drawing::Color::Firebrick;
+			this->showHideButton->Location = System::Drawing::Point(511, 9);
 			this->showHideButton->Name = L"showHideButton";
-			this->showHideButton->Size = System::Drawing::Size(27, 26);
+			this->showHideButton->Size = System::Drawing::Size(33, 33);
 			this->showHideButton->TabIndex = 22;
 			this->showHideButton->Text = L"X";
 			this->showHideButton->UseVisualStyleBackColor = false;
@@ -474,66 +473,97 @@ namespace PetSalut {
 			// 
 			// trackBar
 			// 
-			this->trackBar->Location = System::Drawing::Point(112, 76);
+			this->trackBar->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->trackBar->Location = System::Drawing::Point(156, 126);
 			this->trackBar->Name = L"trackBar";
-			this->trackBar->Size = System::Drawing::Size(198, 45);
+			this->trackBar->Size = System::Drawing::Size(260, 45);
 			this->trackBar->TabIndex = 1;
 			this->trackBar->Scroll += gcnew System::EventHandler(this, &ConsultaVistes_forms::trackBar_Scroll);
 			// 
 			// consultar
 			// 
-			this->consultar->Location = System::Drawing::Point(392, 121);
+			this->consultar->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
+			this->consultar->Location = System::Drawing::Point(718, 51);
 			this->consultar->Margin = System::Windows::Forms::Padding(2);
 			this->consultar->Name = L"consultar";
-			this->consultar->Size = System::Drawing::Size(56, 19);
+			this->consultar->Size = System::Drawing::Size(166, 27);
 			this->consultar->TabIndex = 5;
-			this->consultar->Text = L"consultar";
+			this->consultar->Text = L"CONSULTAR";
 			this->consultar->UseVisualStyleBackColor = true;
 			this->consultar->Click += gcnew System::EventHandler(this, &ConsultaVistes_forms::consultar_Click);
 			// 
 			// valorarButton
 			// 
-			this->valorarButton->Location = System::Drawing::Point(462, 153);
+			this->valorarButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
+			this->valorarButton->Location = System::Drawing::Point(718, 102);
 			this->valorarButton->Name = L"valorarButton";
-			this->valorarButton->Size = System::Drawing::Size(135, 23);
+			this->valorarButton->Size = System::Drawing::Size(166, 27);
 			this->valorarButton->TabIndex = 20;
 			this->valorarButton->Text = L"VALORAR VISITA";
 			this->valorarButton->UseVisualStyleBackColor = true;
 			this->valorarButton->Visible = false;
 			this->valorarButton->Click += gcnew System::EventHandler(this, &ConsultaVistes_forms::valorarButton_Click);
 			// 
-			// notaguardarButton
+			// panel1
 			// 
-			this->notaguardarButton->Location = System::Drawing::Point(271, 152);
-			this->notaguardarButton->Name = L"notaguardarButton";
-			this->notaguardarButton->Size = System::Drawing::Size(145, 35);
-			this->notaguardarButton->TabIndex = 22;
-			this->notaguardarButton->Text = L"GUARDAR";
-			this->notaguardarButton->UseVisualStyleBackColor = true;
-			this->notaguardarButton->Click += gcnew System::EventHandler(this, &ConsultaVistes_forms::notaguardarButton_Click);
+			this->panel1->BackColor = System::Drawing::SystemColors::Control;
+			this->panel1->Controls->Add(this->button1);
+			this->panel1->Controls->Add(this->hiddenPanel);
+			this->panel1->Controls->Add(this->petsList);
+			this->panel1->Controls->Add(this->descriptionPannel);
+			this->panel1->Controls->Add(this->registrarbutton);
+			this->panel1->Controls->Add(this->valorarButton);
+			this->panel1->Controls->Add(this->eliminabutton);
+			this->panel1->Controls->Add(this->consultar);
+			this->panel1->Controls->Add(this->mascotalabel);
+			this->panel1->Controls->Add(this->visitaList);
+			this->panel1->Controls->Add(this->visitaLabel);
+			this->panel1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
+			this->panel1->Location = System::Drawing::Point(27, 105);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(1122, 534);
+			this->panel1->TabIndex = 22;
+			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::White;
+			this->button1->Location = System::Drawing::Point(26, 412);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(167, 86);
+			this->button1->TabIndex = 22;
+			this->button1->Text = L"Tornar";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &ConsultaVistes_forms::button1_Click);
+			// 
+			// descriptionPannel
+			// 
+			this->descriptionPannel->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->descriptionPannel->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->descriptionPannel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9));
+			this->descriptionPannel->Location = System::Drawing::Point(280, 177);
+			this->descriptionPannel->Margin = System::Windows::Forms::Padding(2);
+			this->descriptionPannel->Name = L"descriptionPannel";
+			this->descriptionPannel->Size = System::Drawing::Size(560, 316);
+			this->descriptionPannel->TabIndex = 5;
+			this->descriptionPannel->Visible = false;
+			this->descriptionPannel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &ConsultaVistes_forms::descriptionPannel_Paint);
 			// 
 			// ConsultaVistes_forms
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(609, 409);
-			this->Controls->Add(this->hiddenPanel);
-			this->Controls->Add(this->valorarButton);
-			this->Controls->Add(this->consultar);
-			this->Controls->Add(this->descriptionPannel);
-			this->Controls->Add(this->visitaLabel);
-			this->Controls->Add(this->visitaList);
-			this->Controls->Add(this->mascotalabel);
+			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->ClientSize = System::Drawing::Size(1184, 661);
+			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->visitesLabel);
 			this->Controls->Add(this->petsaludlabel);
-			this->Controls->Add(this->petsList);
-			this->Controls->Add(this->eliminabutton);
-			this->Controls->Add(this->registrarbutton);
 			this->Name = L"ConsultaVistes_forms";
 			this->Text = L"ConsultaVistes_forms";
 			this->hiddenPanel->ResumeLayout(false);
 			this->hiddenPanel->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trackBar))->EndInit();
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -543,6 +573,12 @@ namespace PetSalut {
 private: System::Void visitesLabel_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void descriptionPannel_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+private: System::Void valorartext_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	this->Close();
 }
 };
 }

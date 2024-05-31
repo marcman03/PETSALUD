@@ -390,6 +390,8 @@ namespace PetSalut {
 
 		PetSalut::ModProp^ modProp = gcnew PetSalut::ModProp();
 
+		this->Visible = false;
+
 		modProp->ShowDialog();
 
 		this->Close();
