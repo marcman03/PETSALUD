@@ -12,7 +12,7 @@ PassarellaCentre^ PassarellaCentre::crear(String^ _nom, String^ _telefon, String
 {
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
 
-    String^ sql = "INSERT INTO centre (nom, telefon, clinica) VALUES (@nom, @telefon, @clinica)";
+    String^ sql = "INSERT INTO centre (nom, telefon, clinica, ubicacio) VALUES (@nom, @telefon, @clinica, @ubicacio)";
 
     MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
 
@@ -40,7 +40,7 @@ PassarellaCentre^ PassarellaCentre::modificar(int _numero_ID, String^ _nom, Stri
 {
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
 
-    String^ sql = "UPDATE centre SET nom = @nom, telefon = @telefon, clinica = @clinica WHERE numero_ID = @numero_ID";
+    String^ sql = "UPDATE centre SET nom = @nom, telefon = @telefon, clinica = @clinica, ubicacio = @ubicacio WHERE numero_ID = @numero_ID";
 
     MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
 
