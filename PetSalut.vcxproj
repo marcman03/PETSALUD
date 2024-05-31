@@ -145,9 +145,6 @@
     <ClInclude Include="ConsultaVistes_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Consulta_Centres_bn.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="CreaVisites_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -237,7 +234,6 @@
     <ClCompile Include="ConsultaCentresForm.cpp" />
     <ClCompile Include="ConsultaMascota_forms.cpp" />
     <ClCompile Include="ConsultaVistes_forms.cpp" />
-    <ClCompile Include="Consulta_Centres_bn.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="CreaVisites_forms.cpp" />
     <ClCompile Include="Crea_Mascota_forms.cpp" />
