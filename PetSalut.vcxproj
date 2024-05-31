@@ -145,6 +145,9 @@
     <ClInclude Include="ConsultaVistes_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="CrearPublic.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="CreaVisites_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -235,6 +238,7 @@
     <ClCompile Include="ConsultaMascota_forms.cpp" />
     <ClCompile Include="ConsultaVistes_forms.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
+    <ClCompile Include="CrearPublic.cpp" />
     <ClCompile Include="CreaVisites_forms.cpp" />
     <ClCompile Include="Crea_Mascota_forms.cpp" />
     <ClCompile Include="DBConnection.cpp" />
@@ -307,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaVistes_forms.resx">
       <DependentUpon>ConsultaVistes_forms.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearPublic.resx">
+      <DependentUpon>CrearPublic.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreaVisites_forms.resx">
       <DependentUpon>CreaVisites_forms.h</DependentUpon>

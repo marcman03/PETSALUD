@@ -87,6 +87,7 @@ namespace PetSalut {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(RegUsu::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->name = (gcnew System::Windows::Forms::TextBox());
@@ -118,6 +119,7 @@ namespace PetSalut {
 			// label1
 			// 
 			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 12));
 			this->label1->Location = System::Drawing::Point(24, 22);
 			this->label1->Name = L"label1";
@@ -128,6 +130,7 @@ namespace PetSalut {
 			// label2
 			// 
 			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
 			this->label2->Location = System::Drawing::Point(24, 80);
 			this->label2->Name = L"label2";
@@ -147,6 +150,7 @@ namespace PetSalut {
 			// label3
 			// 
 			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Transparent;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
 			this->label3->Location = System::Drawing::Point(24, 180);
 			this->label3->Name = L"label3";
@@ -161,11 +165,11 @@ namespace PetSalut {
 			this->mail->Name = L"mail";
 			this->mail->Size = System::Drawing::Size(271, 24);
 			this->mail->TabIndex = 5;
-			this->mail->TextChanged += gcnew System::EventHandler(this, &RegUsu::mail_TextChanged);
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
+			this->label4->BackColor = System::Drawing::Color::Transparent;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
 			this->label4->Location = System::Drawing::Point(24, 280);
 			this->label4->Name = L"label4";
@@ -176,6 +180,7 @@ namespace PetSalut {
 			// label5
 			// 
 			this->label5->AutoSize = true;
+			this->label5->BackColor = System::Drawing::Color::Transparent;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
 			this->label5->Location = System::Drawing::Point(24, 437);
 			this->label5->Name = L"label5";
@@ -186,6 +191,7 @@ namespace PetSalut {
 			// label6
 			// 
 			this->label6->AutoSize = true;
+			this->label6->BackColor = System::Drawing::Color::Transparent;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
 			this->label6->Location = System::Drawing::Point(702, 80);
 			this->label6->Name = L"label6";
@@ -196,6 +202,7 @@ namespace PetSalut {
 			// label7
 			// 
 			this->label7->AutoSize = true;
+			this->label7->BackColor = System::Drawing::Color::Transparent;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
 			this->label7->Location = System::Drawing::Point(702, 180);
 			this->label7->Name = L"label7";
@@ -206,6 +213,7 @@ namespace PetSalut {
 			// label8
 			// 
 			this->label8->AutoSize = true;
+			this->label8->BackColor = System::Drawing::Color::Transparent;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
 			this->label8->Location = System::Drawing::Point(702, 280);
 			this->label8->Name = L"label8";
@@ -314,6 +322,7 @@ namespace PetSalut {
 			// PassLong
 			// 
 			this->PassLong->AutoSize = true;
+			this->PassLong->BackColor = System::Drawing::Color::Transparent;
 			this->PassLong->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
 			this->PassLong->ForeColor = System::Drawing::Color::Red;
 			this->PassLong->Location = System::Drawing::Point(702, 550);
@@ -326,6 +335,7 @@ namespace PetSalut {
 			// DiffPasswd
 			// 
 			this->DiffPasswd->AutoSize = true;
+			this->DiffPasswd->BackColor = System::Drawing::Color::Transparent;
 			this->DiffPasswd->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
 			this->DiffPasswd->ForeColor = System::Drawing::Color::Red;
 			this->DiffPasswd->Location = System::Drawing::Point(747, 550);
@@ -338,6 +348,7 @@ namespace PetSalut {
 			// label9
 			// 
 			this->label9->AutoSize = true;
+			this->label9->BackColor = System::Drawing::Color::Transparent;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
 			this->label9->Location = System::Drawing::Point(702, 380);
 			this->label9->Name = L"label9";
@@ -356,6 +367,7 @@ namespace PetSalut {
 			// tipusLabel
 			// 
 			this->tipusLabel->AutoSize = true;
+			this->tipusLabel->BackColor = System::Drawing::Color::Transparent;
 			this->tipusLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
 			this->tipusLabel->Location = System::Drawing::Point(24, 359);
 			this->tipusLabel->Name = L"tipusLabel";
@@ -366,6 +378,7 @@ namespace PetSalut {
 			// radioPropietariButton
 			// 
 			this->radioPropietariButton->AutoSize = true;
+			this->radioPropietariButton->BackColor = System::Drawing::Color::Transparent;
 			this->radioPropietariButton->Checked = true;
 			this->radioPropietariButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
 			this->radioPropietariButton->Location = System::Drawing::Point(28, 396);
@@ -374,18 +387,19 @@ namespace PetSalut {
 			this->radioPropietariButton->TabIndex = 34;
 			this->radioPropietariButton->TabStop = true;
 			this->radioPropietariButton->Text = L"Propietari";
-			this->radioPropietariButton->UseVisualStyleBackColor = true;
+			this->radioPropietariButton->UseVisualStyleBackColor = false;
 			// 
 			// radioClinicaButton
 			// 
 			this->radioClinicaButton->AutoSize = true;
+			this->radioClinicaButton->BackColor = System::Drawing::Color::Transparent;
 			this->radioClinicaButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
 			this->radioClinicaButton->Location = System::Drawing::Point(141, 396);
 			this->radioClinicaButton->Name = L"radioClinicaButton";
 			this->radioClinicaButton->Size = System::Drawing::Size(80, 23);
 			this->radioClinicaButton->TabIndex = 35;
 			this->radioClinicaButton->Text = L"Clinica";
-			this->radioClinicaButton->UseVisualStyleBackColor = true;
+			this->radioClinicaButton->UseVisualStyleBackColor = false;
 			this->radioClinicaButton->CheckedChanged += gcnew System::EventHandler(this, &RegUsu::radioClinicaButton_CheckedChanged);
 			// 
 			// RegUsu
@@ -393,6 +407,8 @@ namespace PetSalut {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->radioClinicaButton);
 			this->Controls->Add(this->radioPropietariButton);
@@ -422,7 +438,6 @@ namespace PetSalut {
 			this->Controls->Add(this->label1);
 			this->Name = L"RegUsu";
 			this->Text = L"RegistrarUsuari";
-			this->Load += gcnew System::EventHandler(this, &RegUsu::RegUsu_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -504,10 +519,6 @@ namespace PetSalut {
 			this->tipusSelected = "Propietari";
 		}
 	}
-	private: System::Void RegUsu_Load(System::Object^ sender, System::EventArgs^ e) {
-	}
-private: System::Void mail_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
 private: System::Void show2_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	this->passwd2->UseSystemPasswordChar = !this->passwd2->UseSystemPasswordChar;
