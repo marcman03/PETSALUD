@@ -226,11 +226,10 @@ namespace PetSalut {
 			// 
 			this->petsaludlabel->AutoSize = true;
 			this->petsaludlabel->BackColor = System::Drawing::Color::Transparent;
-			this->petsaludlabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 28.25F));
-			this->petsaludlabel->Location = System::Drawing::Point(455, 9);
-			this->petsaludlabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->petsaludlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 28.25F));
+			this->petsaludlabel->Location = System::Drawing::Point(424, 32);
 			this->petsaludlabel->Name = L"petsaludlabel";
-			this->petsaludlabel->Size = System::Drawing::Size(262, 54);
+			this->petsaludlabel->Size = System::Drawing::Size(272, 55);
 			this->petsaludlabel->TabIndex = 1;
 			this->petsaludlabel->Text = L"PETSALUT";
 			this->petsaludlabel->Click += gcnew System::EventHandler(this, &ConsultaCentresForm::label1_Click);
@@ -239,32 +238,31 @@ namespace PetSalut {
 			// 
 			this->mypetslabel->AutoSize = true;
 			this->mypetslabel->BackColor = System::Drawing::Color::Transparent;
-			this->mypetslabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 20));
-			this->mypetslabel->Location = System::Drawing::Point(432, 54);
-			this->mypetslabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->mypetslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20));
+			this->mypetslabel->Location = System::Drawing::Point(372, 100);
 			this->mypetslabel->Name = L"mypetslabel";
-			this->mypetslabel->Size = System::Drawing::Size(329, 39);
+			this->mypetslabel->Size = System::Drawing::Size(364, 39);
 			this->mypetslabel->TabIndex = 2;
 			this->mypetslabel->Text = L"ELS MEUS CENTRES";
 			// 
 			// centresList
 			// 
-			this->centresList->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 11));
+			this->centresList->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
 			this->centresList->FormattingEnabled = true;
-			this->centresList->Location = System::Drawing::Point(199, 136);
-			this->centresList->Margin = System::Windows::Forms::Padding(2);
+			this->centresList->Location = System::Drawing::Point(265, 167);
+			this->centresList->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->centresList->Name = L"centresList";
-			this->centresList->Size = System::Drawing::Size(590, 28);
+			this->centresList->Size = System::Drawing::Size(530, 30);
 			this->centresList->TabIndex = 3;
 			this->centresList->Click += gcnew System::EventHandler(this, &ConsultaCentresForm::fillPets);
 			// 
 			// consultar
 			// 
-			this->consultar->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 11));
-			this->consultar->Location = System::Drawing::Point(793, 135);
-			this->consultar->Margin = System::Windows::Forms::Padding(2);
+			this->consultar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
+			this->consultar->Location = System::Drawing::Point(801, 161);
+			this->consultar->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->consultar->Name = L"consultar";
-			this->consultar->Size = System::Drawing::Size(179, 29);
+			this->consultar->Size = System::Drawing::Size(239, 36);
 			this->consultar->TabIndex = 4;
 			this->consultar->Text = L"CONSULTAR";
 			this->consultar->UseVisualStyleBackColor = true;
@@ -274,11 +272,11 @@ namespace PetSalut {
 			// 
 			this->descriptionPannel->BackColor = System::Drawing::SystemColors::Control;
 			this->descriptionPannel->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->descriptionPannel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 11));
-			this->descriptionPannel->Location = System::Drawing::Point(199, 169);
-			this->descriptionPannel->Margin = System::Windows::Forms::Padding(2);
+			this->descriptionPannel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
+			this->descriptionPannel->Location = System::Drawing::Point(222, 218);
+			this->descriptionPannel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->descriptionPannel->Name = L"descriptionPannel";
-			this->descriptionPannel->Size = System::Drawing::Size(773, 480);
+			this->descriptionPannel->Size = System::Drawing::Size(657, 296);
 			this->descriptionPannel->TabIndex = 5;
 			this->descriptionPannel->Visible = false;
 			this->descriptionPannel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &ConsultaCentresForm::panel1_Paint);
@@ -286,10 +284,11 @@ namespace PetSalut {
 			// eliminabutton
 			// 
 			this->eliminabutton->BackColor = System::Drawing::Color::IndianRed;
-			this->eliminabutton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
-			this->eliminabutton->Location = System::Drawing::Point(990, 561);
+			this->eliminabutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			this->eliminabutton->Location = System::Drawing::Point(912, 553);
+			this->eliminabutton->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->eliminabutton->Name = L"eliminabutton";
-			this->eliminabutton->Size = System::Drawing::Size(182, 88);
+			this->eliminabutton->Size = System::Drawing::Size(243, 108);
 			this->eliminabutton->TabIndex = 6;
 			this->eliminabutton->Text = L"ELIMINAR CENTRE";
 			this->eliminabutton->UseVisualStyleBackColor = false;
@@ -299,10 +298,11 @@ namespace PetSalut {
 			// 
 			this->registrarmascbutton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->registrarmascbutton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
-			this->registrarmascbutton->Location = System::Drawing::Point(990, 467);
+			this->registrarmascbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			this->registrarmascbutton->Location = System::Drawing::Point(926, 426);
+			this->registrarmascbutton->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->registrarmascbutton->Name = L"registrarmascbutton";
-			this->registrarmascbutton->Size = System::Drawing::Size(182, 88);
+			this->registrarmascbutton->Size = System::Drawing::Size(243, 108);
 			this->registrarmascbutton->TabIndex = 7;
 			this->registrarmascbutton->Text = L"REGISTRAR CENTRE";
 			this->registrarmascbutton->UseVisualStyleBackColor = false;
@@ -312,10 +312,11 @@ namespace PetSalut {
 			// 
 			this->visitesButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->visitesButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
-			this->visitesButton->Location = System::Drawing::Point(990, 373);
+			this->visitesButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			this->visitesButton->Location = System::Drawing::Point(912, 301);
+			this->visitesButton->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->visitesButton->Name = L"visitesButton";
-			this->visitesButton->Size = System::Drawing::Size(182, 88);
+			this->visitesButton->Size = System::Drawing::Size(243, 108);
 			this->visitesButton->TabIndex = 8;
 			this->visitesButton->Text = L"VISITES";
 			this->visitesButton->UseVisualStyleBackColor = false;
@@ -324,10 +325,11 @@ namespace PetSalut {
 			// button1
 			// 
 			this->button1->BackColor = System::Drawing::Color::Transparent;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
-			this->button1->Location = System::Drawing::Point(12, 561);
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			this->button1->Location = System::Drawing::Point(13, 533);
+			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(182, 88);
+			this->button1->Size = System::Drawing::Size(243, 108);
 			this->button1->TabIndex = 9;
 			this->button1->Text = L"TORNAR";
 			this->button1->UseVisualStyleBackColor = false;
@@ -335,11 +337,11 @@ namespace PetSalut {
 			// 
 			// ConsultaCentresForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(1184, 661);
+			this->ClientSize = System::Drawing::Size(1182, 653);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->visitesButton);
 			this->Controls->Add(this->registrarmascbutton);
@@ -349,7 +351,7 @@ namespace PetSalut {
 			this->Controls->Add(this->centresList);
 			this->Controls->Add(this->mypetslabel);
 			this->Controls->Add(this->petsaludlabel);
-			this->Margin = System::Windows::Forms::Padding(2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"ConsultaCentresForm";
 			this->Text = L"PETSALUT";
 			this->Load += gcnew System::EventHandler(this, &ConsultaCentresForm::ConsultaCentresForm_Load);
