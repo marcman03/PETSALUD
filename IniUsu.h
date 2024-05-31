@@ -59,6 +59,7 @@ namespace PetSalut {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(IniUsu::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
@@ -71,6 +72,7 @@ namespace PetSalut {
 			// label1
 			// 
 			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 24));
 			this->label1->Location = System::Drawing::Point(427, 113);
 			this->label1->Name = L"label1";
@@ -101,6 +103,7 @@ namespace PetSalut {
 			// label2
 			// 
 			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
 			this->label2->Location = System::Drawing::Point(483, 280);
 			this->label2->Name = L"label2";
@@ -111,6 +114,7 @@ namespace PetSalut {
 			// label3
 			// 
 			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Transparent;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
 			this->label3->Location = System::Drawing::Point(483, 189);
 			this->label3->Name = L"label3";
@@ -120,6 +124,7 @@ namespace PetSalut {
 			// 
 			// button1
 			// 
+			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18));
 			this->button1->Location = System::Drawing::Point(414, 394);
 			this->button1->Margin = System::Windows::Forms::Padding(2);
@@ -132,6 +137,7 @@ namespace PetSalut {
 			// 
 			// button2
 			// 
+			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 12));
 			this->button2->Location = System::Drawing::Point(725, 325);
 			this->button2->Margin = System::Windows::Forms::Padding(2);
@@ -147,6 +153,8 @@ namespace PetSalut {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
@@ -155,6 +163,7 @@ namespace PetSalut {
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"IniUsu";
 			this->Text = L"PETSALUT";

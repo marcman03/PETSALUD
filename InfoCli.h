@@ -93,6 +93,7 @@ namespace PetSalut {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(InfoCli::typeid));
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
@@ -274,7 +275,7 @@ namespace PetSalut {
 			// 
 			this->mostraCentresButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
 			this->mostraCentresButton->Location = System::Drawing::Point(714, 543);
-			this->mostraCentresButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->mostraCentresButton->Margin = System::Windows::Forms::Padding(2);
 			this->mostraCentresButton->Name = L"mostraCentresButton";
 			this->mostraCentresButton->Size = System::Drawing::Size(209, 79);
 			this->mostraCentresButton->TabIndex = 54;
@@ -286,7 +287,7 @@ namespace PetSalut {
 			// 
 			this->modificarButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
 			this->modificarButton->Location = System::Drawing::Point(927, 543);
-			this->modificarButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->modificarButton->Margin = System::Windows::Forms::Padding(2);
 			this->modificarButton->Name = L"modificarButton";
 			this->modificarButton->Size = System::Drawing::Size(209, 79);
 			this->modificarButton->TabIndex = 55;
@@ -298,7 +299,7 @@ namespace PetSalut {
 			// 
 			this->tornaButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
 			this->tornaButton->Location = System::Drawing::Point(34, 543);
-			this->tornaButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->tornaButton->Margin = System::Windows::Forms::Padding(2);
 			this->tornaButton->Name = L"tornaButton";
 			this->tornaButton->Size = System::Drawing::Size(215, 79);
 			this->tornaButton->TabIndex = 56;
@@ -330,8 +331,9 @@ namespace PetSalut {
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"InfoCli";
-			this->Text = L"InfoCli";
+			this->Text = L"PETSALUT";
 			this->Load += gcnew System::EventHandler(this, &InfoCli::InfoCli_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
