@@ -32,3 +32,29 @@ PassarellaPublic^ CercadoraPublic::cercaPublic(int index)
 
     return esdvPu;
 }
+
+int CercadoraPublic::maxIndex()
+{
+    MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
+    String^ sql = "SELECT `index` FROM public ORDER BY `index` DESC LIMIT 1"; // Consulta para obtener el índice mayor
+    MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
+    int maxIndexValue = 1; // Valor por defecto en caso de que no haya resultados
+    MySqlDataReader^ dataReader;
+
+    try {
+        conn->Open();
+        dataReader = cmd->ExecuteReader();
+
+        if (dataReader->Read()) {
+            maxIndexValue = dataReader->GetInt32("index");
+        }
+    }
+    catch (Exception^ ex) {
+        throw gcnew Exception("Hi ha hagut un error al obtenir el índex màxim");
+    }
+    finally {
+        conn->Close();
+    }
+
+    return maxIndexValue;
+}

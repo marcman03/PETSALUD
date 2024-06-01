@@ -6,5 +6,6 @@ ref class CercadoraPublic
 {
 public:
 	static PassarellaPublic^ cercaPublic(int index);
+	static int maxIndex();
 };
 
