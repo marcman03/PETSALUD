@@ -134,7 +134,9 @@
     <ClInclude Include="CercadoraEsdeveniments.h" />
     <ClInclude Include="CercadoraMascota.h" />
     <ClInclude Include="CercadoraClinica.h" />
+    <ClInclude Include="CercadoraParticipa.h" />
     <ClInclude Include="CercadoraPropietari.h" />
+    <ClInclude Include="CercadoraPublic.h" />
     <ClInclude Include="CercadoraTipus.h" />
     <ClInclude Include="CercadoraUsuari.h" />
     <ClInclude Include="CercadoraValoracio.h" />
@@ -200,6 +202,7 @@
     <ClInclude Include="PassarellaCentre.h" />
     <ClInclude Include="PassarellaEsdeveniments.h" />
     <ClInclude Include="PassarellaMascota.h" />
+    <ClInclude Include="PassarellaParticipa.h" />
     <ClInclude Include="PassarellaPublic.h" />
     <ClInclude Include="PassarellaTipus.h" />
     <ClInclude Include="PassarellaUsuari.h" />
@@ -239,7 +242,9 @@
     <ClCompile Include="CercadoraEsdeveniments.cpp" />
     <ClCompile Include="CercadoraMascota.cpp" />
     <ClCompile Include="CercadoraClinica.cpp" />
+    <ClCompile Include="CercadoraParticipa.cpp" />
     <ClCompile Include="CercadoraPropietari.cpp" />
+    <ClCompile Include="CercadoraPublic.cpp" />
     <ClCompile Include="CercadoraTipus.cpp" />
     <ClCompile Include="CercadoraUsuari.cpp" />
     <ClCompile Include="CercadoraValoracio.cpp" />
@@ -268,6 +273,7 @@
     <ClCompile Include="PassarellaClinica.cpp" />
     <ClCompile Include="PassarellaEsdeveniments.cpp" />
     <ClCompile Include="PassarellaMascota.cpp" />
+    <ClCompile Include="PassarellaParticipa.cpp" />
     <ClCompile Include="PassarellaPublic.cpp" />
     <ClCompile Include="PassarellaTipus.cpp" />
     <ClCompile Include="PassarellaUsuari.cpp" />
