@@ -26,15 +26,25 @@ void PassarellaPublic::crear()
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
 
     try {
-        String^ sql0 = "INSERT INTO public VALUES (@numeroid, @tipus);";
+        // Especificar las columnas numeroid y tipus explícitamente
+        String^ sql0 = "INSERT INTO public (numeroid, tipus) VALUES (@numeroid, @tipus);";
         MySqlCommand^ cmd0 = gcnew MySqlCommand(sql0, conn);
         cmd0->Parameters->AddWithValue("@numeroid", numeroid);
         cmd0->Parameters->AddWithValue("@tipus", tipus);
         conn->Open();
         cmd0->ExecuteNonQuery();
+
+        // Obtener el ID generado automáticamente
+        MySqlCommand^ cmd1 = gcnew MySqlCommand("SELECT `index` FROM public WHERE numeroid = @numeroid;", conn);
+        cmd1->Parameters->AddWithValue("@numeroid", numeroid);
+        MySqlDataReader^ reader = cmd1->ExecuteReader();
+        if (reader->Read()) {
+            int generatedIndex = reader->GetInt32(0); // Guardar el ID autoincremental generado
+            // Puedes usar generatedIndex si necesitas realizar alguna operación adicional
+        }
+        reader->Close();
     }
     catch (Exception^ ex) {
-        //throw gcnew Exception("Hi ha hagut un error al registrar el propietari");
         throw ex;
     }
     finally {
