@@ -9,6 +9,7 @@
 #include "EliminaCentresForm.h"
 #include "CreaCentreForms.h"
 #include "CercadoraClinica.h"
+#include "CercadoraAten.h"
 #include "ConsultaVistes_forms.h"
 
 namespace PetSalut {
@@ -88,6 +89,9 @@ namespace PetSalut {
 			// Utiliza el numero_ID para buscar y obtener más información de el centro
 			CercadoraCentre^ cercadora = gcnew CercadoraCentre();
 			PassarellaCentre^ centre = cercadora->cercaCentre(numero_ID);
+
+			CercadoraAten^ cercadora2 = gcnew CercadoraAten();
+			PassarellaAten^ aten = cercadora2->cerca_per_id_Aten(numero_ID);
 
 			// Muestra la información de el centro en el panel de descripción
 			// Por ejemplo, podrías mostrar el numero_ID, el nombre, etc.
@@ -273,10 +277,10 @@ namespace PetSalut {
 			this->descriptionPannel->BackColor = System::Drawing::SystemColors::Control;
 			this->descriptionPannel->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->descriptionPannel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
-			this->descriptionPannel->Location = System::Drawing::Point(193, 220);
+			this->descriptionPannel->Location = System::Drawing::Point(161, 0);
 			this->descriptionPannel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->descriptionPannel->Name = L"descriptionPannel";
-			this->descriptionPannel->Size = System::Drawing::Size(657, 296);
+			this->descriptionPannel->Size = System::Drawing::Size(664, 642);
 			this->descriptionPannel->TabIndex = 5;
 			this->descriptionPannel->Visible = false;
 			this->descriptionPannel->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &ConsultaCentresForm::panel1_Paint);

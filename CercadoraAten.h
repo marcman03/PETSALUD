@@ -6,6 +6,6 @@ ref class CercadoraAten
 {
 public:
 
-	static PassarellaAten^ cercaAten(int^ idcnetre);
+	static PassarellaAten^ cerca_per_id_Aten(int idcnetre);
 
 };

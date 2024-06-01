@@ -3,13 +3,13 @@
 #include "PassarellaAten.h"
 #include "DBConnection.h" 
 
-PassarellaAten^ CercadoraAten::cercaAten(int^ _idcentre)
+PassarellaAten^ CercadoraAten::cerca_per_id_Aten(int _idcentre)
 {
     PassarellaAten^ AtenEncontrada = nullptr;
 
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
 
-    String^ sql = "SELECT * FROM aten WHERE idcentre = @numeroid_centre";
+    String^ sql = "SELECT * FROM aten WHERE _idcentre = @numeroid_centre";
 
     MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
 
@@ -20,15 +20,16 @@ PassarellaAten^ CercadoraAten::cercaAten(int^ _idcentre)
         MySqlDataReader^ reader = cmd->ExecuteReader();
 
         if (reader->Read()) {
-            // Si se encontró una mascota, crea un objeto PassarellaMascota con los datos obtenidos
+
             String^ _tipus = reader["nom_tipus"]->ToString();
-            AtenEncontrada = gcnew PassarellaAten(_tipus, _idcentre);
+            int _numeroid_centre = Convert::ToInt32(reader["numeroid_centre"]);
+            AtenEncontrada = gcnew PassarellaAten(_tipus, _numeroid_centre);
         }
 
         reader->Close();
     }
     catch (Exception^ ex) {
-        throw gcnew Exception("Hi ha hagut un error amb el chip");
+        throw gcnew Exception("Hi ha hagut un error amb el aten" + ex->Message);
     }
     finally {
         conn->Close();

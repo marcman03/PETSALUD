@@ -130,6 +130,7 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CercadoraAten.h" />
     <ClInclude Include="CercadoraCentre.h" />
     <ClInclude Include="CercadoraEsdeveniments.h" />
     <ClInclude Include="CercadoraMascota.h" />
@@ -236,6 +237,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="CercadoraAten.cpp" />
     <ClCompile Include="CercadoraCentre.cpp" />
     <ClCompile Include="CercadoraEsdeveniments.cpp" />
     <ClCompile Include="CercadoraMascota.cpp" />

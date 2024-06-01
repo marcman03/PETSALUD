@@ -158,6 +158,7 @@
     </ClInclude>
     <ClInclude Include="PassarellaAten.h" />
     <ClInclude Include="TxCrearAten.h" />
+    <ClInclude Include="CercadoraAten.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -347,6 +348,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TxCrearAten.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CercadoraAten.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
