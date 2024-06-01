@@ -25,7 +25,6 @@ namespace PetSalut {
 			//TODO: agregar c�digo de constructor aqu�
 			//
 		}
-
 	protected:
 		/// <summary>
 		/// Limpiar los recursos que se est�n usando.
@@ -37,6 +36,51 @@ namespace PetSalut {
 				delete components;
 			}
 		}
+
+		void loginFunction() {
+			try {
+				String^ username = textBox1->Text;
+				String^ contrasenya = textBox2->Text;
+
+				TxIniciSessio iniS;
+
+				iniS.crear(username, contrasenya);
+				iniS.executar();
+
+				PassarellaUsuari^ usu = CercadoraUsuari::cercaUsuari(username);
+				String^ tip = usu->getTipus();
+
+				if (tip == "propietari") {
+
+					PetSalut::MenuProp^ menuProp = gcnew PetSalut::MenuProp();
+
+					this->Visible = false;
+
+					menuProp->ShowDialog();
+
+					this->Visible = true;
+				}
+				else {
+					PetSalut::MenuCli^ menuCli = gcnew PetSalut::MenuCli();
+
+					this->Visible = false;
+
+					menuCli->ShowDialog();
+
+					this->Visible = true;
+				}
+
+				this->Close();
+
+			}
+			catch (Exception^ ex)
+			{
+				MessageBox::Show("Error: " + ex->Message);
+			}
+		}
+
+
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::TextBox^ textBox2;
@@ -99,6 +143,7 @@ namespace PetSalut {
 			this->textBox2->Size = System::Drawing::Size(307, 26);
 			this->textBox2->TabIndex = 2;
 			this->textBox2->UseSystemPasswordChar = true;
+			this->textBox2->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &IniUsu::textBox2_KeyDown);
 			// 
 			// label2
 			// 
@@ -174,58 +219,26 @@ namespace PetSalut {
 		}
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-
-		try {
-
-			String^ username = textBox1->Text;
-			String^ contrasenya = textBox2->Text;
-
-			TxIniciSessio iniS;
-
-			iniS.crear(username, contrasenya);
-			iniS.executar();
-
-			PassarellaUsuari^ usu = CercadoraUsuari::cercaUsuari(username);
-			String^ tip = usu->getTipus();
-
-			if (tip == "propietari") {
-
-				PetSalut::MenuProp^ menuProp = gcnew PetSalut::MenuProp();
-
-				this->Visible = false;
-
-				menuProp->ShowDialog();
-
-				this->Visible = true;
-			}
-			else {
-				PetSalut::MenuCli^ menuCli = gcnew PetSalut::MenuCli();
-
-				this->Visible = false;
-
-				menuCli->ShowDialog();
-
-				this->Visible = true;
-			}
-
-			this->Close();
-
-		}
-		catch (Exception^ ex)
-		{
-			MessageBox::Show("Error: " + ex->Message);
-		}
-
+		this->loginFunction();
 	}
 	private: System::Void IniUsu_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	this->textBox2->UseSystemPasswordChar = !this->textBox2->UseSystemPasswordChar;
+		this->textBox2->UseSystemPasswordChar = !this->textBox2->UseSystemPasswordChar;
 
 
-}
+	}
+	private: System::Void button1_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+		
+	}
+	private: System::Void textBox2_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+		if (e->KeyCode == Keys::Enter) {
+			this->loginFunction();
+		}
+
+	}
 };
 }

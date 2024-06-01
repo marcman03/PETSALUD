@@ -148,6 +148,9 @@
     <ClInclude Include="ConsultaVistes_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="CreaCentreForms.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="CrearPublic.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -162,6 +165,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Elimina_Mascota_forms.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="EliminaCentresForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="EliminaVisita_forms.h">
@@ -243,10 +249,12 @@
     <ClCompile Include="ConsultarEvents.cpp" />
     <ClCompile Include="ConsultaVistes_forms.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
+    <ClCompile Include="CreaCentreForms.cpp" />
     <ClCompile Include="CrearPublic.cpp" />
     <ClCompile Include="CreaVisites_forms.cpp" />
     <ClCompile Include="Crea_Mascota_forms.cpp" />
     <ClCompile Include="DBConnection.cpp" />
+    <ClCompile Include="EliminaCentresForm.cpp" />
     <ClCompile Include="EliminaVisita_forms.cpp" />
     <ClCompile Include="PantallaPrincipal.cpp" />
     <ClCompile Include="InfoCli.cpp" />
@@ -311,6 +319,7 @@
   <ItemGroup>
     <EmbeddedResource Include="ConsultaCentresForm.resx">
       <DependentUpon>ConsultaCentresForm.h</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaMascota_forms.resx">
       <DependentUpon>ConsultaMascota_forms.h</DependentUpon>
@@ -321,6 +330,9 @@
     <EmbeddedResource Include="ConsultaVistes_forms.resx">
       <DependentUpon>ConsultaVistes_forms.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreaCentreForms.resx">
+      <DependentUpon>CreaCentreForms.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrearPublic.resx">
       <DependentUpon>CrearPublic.h</DependentUpon>
     </EmbeddedResource>
@@ -330,6 +342,9 @@
     <EmbeddedResource Include="Crea_Mascota_forms.resx">
       <DependentUpon>Crea_Mascota_forms.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EliminaCentresForm.resx">
+      <DependentUpon>EliminaCentresForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EliminaVisita_forms.resx">
       <DependentUpon>EliminaVisita_forms.h</DependentUpon>
     </EmbeddedResource>
@@ -338,6 +353,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.h</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="InfoCli.resx">
       <DependentUpon>InfoCli.h</DependentUpon>
@@ -346,7 +362,9 @@
       <DependentUpon>InfoProp.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IniUsu.resx" />
-    <EmbeddedResource Include="MenuCli.resx" />
+    <EmbeddedResource Include="MenuCli.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuProp.resx">
       <DependentUpon>MenuProp.h</DependentUpon>
     </EmbeddedResource>
@@ -355,6 +373,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegUsu.resx">
       <DependentUpon>ModProp.h</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Elimina_Mascota_forms.resx">
       <DependentUpon>Elimina_Mascota_forms.h</DependentUpon>

@@ -143,6 +143,7 @@
     <ClInclude Include="ConsultarEvents.h">
       <Filter>Forms</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="PassarellaTipus.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -166,6 +167,13 @@
     </ClInclude>
     <ClInclude Include="PassarellaPublic.h">
       <Filter>Header Files</Filter>
+=======
+    <ClInclude Include="CreaCentreForms.h">
+      <Filter>Forms</Filter>
+    </ClInclude>
+    <ClInclude Include="EliminaCentresForm.h">
+      <Filter>Forms</Filter>
+>>>>>>> 70361ab5adf578b8e9e4c9e1104819a93cded616
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -346,7 +354,14 @@
     <ClCompile Include="ConsultarEvents.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="PassarellaPublic.cpp">
+=======
+    <ClCompile Include="CreaCentreForms.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EliminaCentresForm.cpp">
+>>>>>>> 70361ab5adf578b8e9e4c9e1104819a93cded616
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
