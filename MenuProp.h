@@ -214,7 +214,7 @@ namespace PetSalut {
 			this->EliminarButton->Name = L"EliminarButton";
 			this->EliminarButton->Size = System::Drawing::Size(202, 61);
 			this->EliminarButton->TabIndex = 3;
-			this->EliminarButton->Text = L"Eliminar Propietari";
+			this->EliminarButton->Text = L"Elimina el teu Perfil";
 			this->EliminarButton->UseVisualStyleBackColor = true;
 			this->EliminarButton->Click += gcnew System::EventHandler(this, &MenuProp::Elimina_Click);
 			// 
@@ -237,7 +237,7 @@ namespace PetSalut {
 			this->ConsultarMascotesButton->Name = L"ConsultarMascotesButton";
 			this->ConsultarMascotesButton->Size = System::Drawing::Size(202, 61);
 			this->ConsultarMascotesButton->TabIndex = 14;
-			this->ConsultarMascotesButton->Text = L"Consultar Mascotes";
+			this->ConsultarMascotesButton->Text = L"Les  meves Mascotes";
 			this->ConsultarMascotesButton->UseVisualStyleBackColor = true;
 			this->ConsultarMascotesButton->Click += gcnew System::EventHandler(this, &MenuProp::ConsultarMascotesButton_Click);
 			// 
@@ -250,7 +250,7 @@ namespace PetSalut {
 			this->ConsultaVisitesButton->Name = L"ConsultaVisitesButton";
 			this->ConsultaVisitesButton->Size = System::Drawing::Size(202, 61);
 			this->ConsultaVisitesButton->TabIndex = 15;
-			this->ConsultaVisitesButton->Text = L"Consultar Visites";
+			this->ConsultaVisitesButton->Text = L"Historial Visites";
 			this->ConsultaVisitesButton->UseVisualStyleBackColor = true;
 			this->ConsultaVisitesButton->Click += gcnew System::EventHandler(this, &MenuProp::ConsultaVisitesButton_Click);
 			// 

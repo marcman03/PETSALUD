@@ -10,7 +10,7 @@ PassarellaValoracio^ PassarellaValoracio::crear(int _numeroid_centre, int _numer
 {
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection(); // Declaración
 
-    String^ sql = "INSERT INTO valoracio (numeroid_centre, numeroid_privat, propietari, valor) VALUES (@numeroid_centre, @numeroid_privat, @propietari, @valor)";
+    String^ sql = "INSERT INTO valoracio (numeroid_privat, numeroid_centre, propietari, valor) VALUES (@numeroid_privat, @numeroid_centre, @propietari, @valor)";
 
     MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
 

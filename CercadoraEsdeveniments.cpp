@@ -26,8 +26,9 @@ PassarellaEsdeveniments^ CercadoraEsdeveniments::cercaEsdeveniment(int numeroid)
 			DateTime data = dataReader->GetDateTime("data");
 			String^ hora = dataReader->GetString("hora");
 			String^ propietari = dataReader->GetString("propietari");
+			String^ tipus = dataReader->GetString("tipus");
 
-			esdv = gcnew PassarellaEsdeveniments(numeroid, nom, data, hora, propietari);
+			esdv = gcnew PassarellaEsdeveniments(numeroid, nom, data, hora, propietari, tipus);
 		}
 
 	}

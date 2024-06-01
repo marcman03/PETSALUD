@@ -6,7 +6,7 @@
 #include "PassarellaMascota.h"
 #include "CercadoraMascota.h"
 #include "Ordinador.h"
-#include "Delete_Mascota_forms.h"
+#include "Elimina_Mascota_forms.h"
 #include "Crea_Mascota_forms.h"
 #include "CercadoraPropietari.h"
 #include "ConsultaVistes_forms.h"

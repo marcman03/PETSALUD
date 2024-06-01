@@ -16,13 +16,15 @@ private:
 	DateTime data;
 	String^ hora;
 	String^ propietari;
+    String^ tipus;
 
 public:
 
-	PassarellaEsdeveniments(int _numeroid, String^ _nom, DateTime _data, String^ _hora, String^ _propietari);
+	PassarellaEsdeveniments(int _numeroid, String^ _nom, DateTime _data, String^ _hora, String^ _propietari, String^ _tipus);
 
-	static PassarellaEsdeveniments^ crear(int _numeroid, String^ _nom, DateTime _data, String^ _hora, String^ _propietari);
-	static PassarellaEsdeveniments^ eliminar(int _numeroid);
+	void crear();
+
+	void eliminar();
 
     property int Numeroid {
         int get() { return numeroid; }

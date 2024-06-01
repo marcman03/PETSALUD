@@ -423,7 +423,6 @@ namespace PetSalut {
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"ModProp";
 			this->Text = L"PETSALUT";
-			this->Load += gcnew System::EventHandler(this, &ModProp::ModProp_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -483,8 +482,7 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	this->Close();
 
 }
-private: System::Void ModProp_Load(System::Object^ sender, System::EventArgs^ e) {
-}
+
 private: System::Void showPasswd_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	this->passwdBox->UseSystemPasswordChar = !this->passwdBox->UseSystemPasswordChar;
