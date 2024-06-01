@@ -135,6 +135,7 @@
     <ClInclude Include="CercadoraMascota.h" />
     <ClInclude Include="CercadoraClinica.h" />
     <ClInclude Include="CercadoraPropietari.h" />
+    <ClInclude Include="CercadoraPublic.h" />
     <ClInclude Include="CercadoraTipus.h" />
     <ClInclude Include="CercadoraUsuari.h" />
     <ClInclude Include="CercadoraValoracio.h" />
@@ -240,6 +241,7 @@
     <ClCompile Include="CercadoraMascota.cpp" />
     <ClCompile Include="CercadoraClinica.cpp" />
     <ClCompile Include="CercadoraPropietari.cpp" />
+    <ClCompile Include="CercadoraPublic.cpp" />
     <ClCompile Include="CercadoraTipus.cpp" />
     <ClCompile Include="CercadoraUsuari.cpp" />
     <ClCompile Include="CercadoraValoracio.cpp" />

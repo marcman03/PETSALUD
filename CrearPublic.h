@@ -486,7 +486,7 @@ namespace PetSalut {
 
 				TxCrearEsdeveniment creaEsde;
 
-				creaEsde.crear(this->titolBox->Text->ToString(), id_mascota, this->dataBox->Value, this->horaBox->Text->ToString(), usuari->getUsername(), 0, 0, "Public", this->tipusBox->Text->ToString());
+				creaEsde.crearPublic(this->titolBox->Text->ToString(), id_mascota, this->dataBox->Value, this->horaBox->Text->ToString(), usuari->getUsername(), this->ubicacioBox->Text->ToString(), "Public", this->tipusBox->Text->ToString(),this->descripcioBox->Text->ToString());
 				creaEsde.executar();
 
 			}

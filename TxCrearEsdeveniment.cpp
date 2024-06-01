@@ -22,6 +22,20 @@ void TxCrearEsdeveniment::crear(String^ _nom, int _numeroid, DateTime _data, Str
 
 }
 
+void TxCrearEsdeveniment::crearPublic(String^ _nom, int _numeroid, DateTime _data, String^ _hora, String^ _propietari, String^ _ubicacio, String^ _tipus, String^ _tipus_public, String^ _descripcio)
+{
+
+    nom = _nom;
+    data = _data;
+    hora = _hora;
+    propietari = _propietari;
+    ubicacio = _ubicacio;
+    tipus = _tipus;
+    tipus_public = _tipus_public;
+    descripcio = _descripcio;
+    numeroid = _numeroid;
+}
+
 void TxCrearEsdeveniment::executar() {
 
     try {
@@ -30,7 +44,7 @@ void TxCrearEsdeveniment::executar() {
         esde.crear();
 
         if (tipus == "Public") {
-            PassarellaPublic prop(tipus_public, numeroid);
+            PassarellaPublic prop(tipus_public, numeroid,descripcio,ubicacio);
             prop.crear();
         }
         else if (tipus == "Privat") {

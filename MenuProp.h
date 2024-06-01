@@ -7,6 +7,9 @@
 #include "ConsultaMascota_forms.h"
 #include "CrearPublic.h"
 #include "ConsultarEvents.h"
+#include "CercadoraPublic.h"
+#include "PassarellaPublic.h"
+#include "CercadoraEsdeveniments.h"
 
 namespace PetSalut {
 
@@ -781,20 +784,42 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 
 }
 private: System::Void MenuProp_Load(System::Object^ sender, System::EventArgs^ e) {
+	CercadoraPublic^ cpub = gcnew CercadoraPublic();
+	int searchIndex = 1; // Reemplaza esto con el valor adecuado que deseas buscar
 
-	//AQUI PONER HACER EL CONSULTA PUBLIC Y HACER UN SELECT ONE
-	// Y ACTUALIZAR LAS LABELS
+	try {
+		PassarellaPublic^ ppub = cpub->cercaPublic(searchIndex);
+
+		if (ppub != nullptr) {
+			// Actualizar las etiquetas con los valores obtenidos
+			tipusLabel->Text = ppub->Tipus;
+			CercadoraEsdeveniments^ cesd = gcnew CercadoraEsdeveniments();
+			PassarellaEsdeveniments^ pesd = cesd->cercaEsdeveniment(ppub->Numeroid);
+			tituloLabel->Text = pesd->Nom;
+			dataLabel->Text = pesd->Data.ToString();
+		}
+		else {
+			MessageBox::Show("No s'ha trobat l'esdeveniment amb l'índex especificat.");
+		}
+	}
+	catch (Exception^ ex) {
+		MessageBox::Show(ex->Message, "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
 
 }
 private: System::Void seguentButton_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	//AQUI ACTUALIZAR LAS LABELS PARA MOSTRAR EL SIGUIETNE
 
+	MenuProp_Load(sender, e);
+
 }
 private: System::Void anteriorButton_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	//AQUI ACTUALIZAR LAS LABELS PARA MOSTRAR EL ANTERIOR
 	//SI NO HAY ANTERIORES MOSTRAR EL ULTIMO DE LA LISTA
+
+	MenuProp_Load(sender, e);
 
 }
 };
