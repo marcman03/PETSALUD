@@ -156,6 +156,8 @@
     <ClInclude Include="EliminaCentresForm.h">
       <Filter>Forms</Filter>
     </ClInclude>
+    <ClInclude Include="PassarellaAten.h" />
+    <ClInclude Include="TxCrearAten.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -339,6 +341,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="EliminaCentresForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassarellaAten.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxCrearAten.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

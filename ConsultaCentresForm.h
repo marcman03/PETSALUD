@@ -138,9 +138,9 @@ namespace PetSalut {
 		Ordinador^ ord = Ordinador::getInstance();
 		PassarellaUsuari^ usuari = ord->obteUsuari();
 
-		PassarellaClinica^ propietari = CercadoraClinica::cercaClinica("clinica");
+		PassarellaClinica^ clinica = CercadoraClinica::cercaClinica(usuari->getUsername());
 
-		TxConsultarCentres^ consultaCentres = TxConsultarCentres::crear(propietari);
+		TxConsultarCentres^ consultaCentres = TxConsultarCentres::crear(clinica);
 		List<int>^ centres = consultaCentres->ObtenirResultat();
 		// Limpiar el ComboBox
 		centresList->Items->Clear();
@@ -273,7 +273,7 @@ namespace PetSalut {
 			this->descriptionPannel->BackColor = System::Drawing::SystemColors::Control;
 			this->descriptionPannel->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->descriptionPannel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
-			this->descriptionPannel->Location = System::Drawing::Point(222, 218);
+			this->descriptionPannel->Location = System::Drawing::Point(193, 220);
 			this->descriptionPannel->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->descriptionPannel->Name = L"descriptionPannel";
 			this->descriptionPannel->Size = System::Drawing::Size(657, 296);
@@ -286,7 +286,7 @@ namespace PetSalut {
 			this->eliminabutton->BackColor = System::Drawing::Color::IndianRed;
 			this->eliminabutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
 			this->eliminabutton->Location = System::Drawing::Point(912, 553);
-			this->eliminabutton->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->eliminabutton->Margin = System::Windows::Forms::Padding(4);
 			this->eliminabutton->Name = L"eliminabutton";
 			this->eliminabutton->Size = System::Drawing::Size(243, 108);
 			this->eliminabutton->TabIndex = 6;
@@ -300,7 +300,7 @@ namespace PetSalut {
 				static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
 			this->registrarmascbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
 			this->registrarmascbutton->Location = System::Drawing::Point(926, 426);
-			this->registrarmascbutton->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->registrarmascbutton->Margin = System::Windows::Forms::Padding(4);
 			this->registrarmascbutton->Name = L"registrarmascbutton";
 			this->registrarmascbutton->Size = System::Drawing::Size(243, 108);
 			this->registrarmascbutton->TabIndex = 7;
@@ -314,7 +314,7 @@ namespace PetSalut {
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
 			this->visitesButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
 			this->visitesButton->Location = System::Drawing::Point(912, 301);
-			this->visitesButton->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->visitesButton->Margin = System::Windows::Forms::Padding(4);
 			this->visitesButton->Name = L"visitesButton";
 			this->visitesButton->Size = System::Drawing::Size(243, 108);
 			this->visitesButton->TabIndex = 8;
@@ -327,7 +327,7 @@ namespace PetSalut {
 			this->button1->BackColor = System::Drawing::Color::Transparent;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
 			this->button1->Location = System::Drawing::Point(13, 533);
-			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(243, 108);
 			this->button1->TabIndex = 9;
