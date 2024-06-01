@@ -11,7 +11,7 @@
 #include "PassarellaPublic.h"
 #include "CercadoraEsdeveniments.h"
 #include "Ordinador.h"
-
+#include "PassarellaParticipa.h"
 namespace PetSalut {
 
 	using namespace System;
@@ -504,6 +504,7 @@ namespace PetSalut {
 			this->apuntarseButton->TabIndex = 22;
 			this->apuntarseButton->Text = L"Apuntam!!";
 			this->apuntarseButton->UseVisualStyleBackColor = false;
+			this->apuntarseButton->Click += gcnew System::EventHandler(this, &MenuProp::apuntarseButton_Click);
 			// 
 			// TancaSessioBox
 			// 
@@ -921,6 +922,18 @@ private: System::Void anteriorButton_Click(System::Object^ sender, System::Event
 
 }
 private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void apuntarseButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	Ordinador^ ord = Ordinador::getInstance();
+	PassarellaUsuari^ pus = ord->obteUsuari();
+	String^ username = pus->getUsername();
+	int index = ord->Index;
+	CercadoraPublic^ cpub = gcnew CercadoraPublic();
+	PassarellaPublic^ ppub = cpub->cercaPublic(index);
+	int numeroid = ppub->Numeroid;
+
+	PassarellaParticipa^ ppart = gcnew PassarellaParticipa(numeroid, username);
+	ppart->crear();
 }
 };
 }

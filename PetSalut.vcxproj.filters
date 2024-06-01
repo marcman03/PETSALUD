@@ -64,6 +64,7 @@
     <ClCompile Include="TxRegistraUsu.cpp" />
     <ClCompile Include="TxTancaSessio.cpp" />
     <ClCompile Include="CercadoraPublic.cpp" />
+    <ClCompile Include="PassarellaParticipa.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CercadoraCentre.h" />
@@ -129,6 +130,7 @@
     <ClInclude Include="TxRegistraUsu.h" />
     <ClInclude Include="TxTancaSessio.h" />
     <ClInclude Include="CercadoraPublic.h" />
+    <ClInclude Include="PassarellaParticipa.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />

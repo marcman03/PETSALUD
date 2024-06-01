@@ -201,6 +201,7 @@
     <ClInclude Include="PassarellaCentre.h" />
     <ClInclude Include="PassarellaEsdeveniments.h" />
     <ClInclude Include="PassarellaMascota.h" />
+    <ClInclude Include="PassarellaParticipa.h" />
     <ClInclude Include="PassarellaPublic.h" />
     <ClInclude Include="PassarellaTipus.h" />
     <ClInclude Include="PassarellaUsuari.h" />
@@ -270,6 +271,7 @@
     <ClCompile Include="PassarellaClinica.cpp" />
     <ClCompile Include="PassarellaEsdeveniments.cpp" />
     <ClCompile Include="PassarellaMascota.cpp" />
+    <ClCompile Include="PassarellaParticipa.cpp" />
     <ClCompile Include="PassarellaPublic.cpp" />
     <ClCompile Include="PassarellaTipus.cpp" />
     <ClCompile Include="PassarellaUsuari.cpp" />
