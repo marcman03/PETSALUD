@@ -45,7 +45,7 @@ namespace PetSalut {
 
 				TxIniciSessio iniS;
 
-				iniS.crear(username, PasswordEncrypt::Decrypt(contrasenya));
+				iniS.crear(username, contrasenya);
 				iniS.executar();
 
 				PassarellaUsuari^ usu = CercadoraUsuari::cercaUsuari(username);
