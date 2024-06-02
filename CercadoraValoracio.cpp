@@ -40,3 +40,48 @@ PassarellaValoracio^ CercadoraValoracio::cercaValoracio(int numeroid_centre, int
 
     return valoracioEncontrada;
 }
+
+
+int^ CercadoraValoracio::cercaValMitja(int idcentre)
+{
+    int total = 0;
+    int count = 0;
+    bool existe = false;
+
+    MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
+
+    String^ sql = "SELECT * FROM valoracio WHERE numeroid_centre = @numeroid_centre";
+
+    MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
+
+    cmd->Parameters->AddWithValue("@numeroid_centre", idcentre);
+
+    if (sql != nullptr) {
+        try {
+            conn->Open();
+            MySqlDataReader^ reader = cmd->ExecuteReader();
+
+            while (reader->Read()) {
+                int val = Convert::ToInt32(reader["valor"]);
+                if (val != 0) {
+                    total += val;
+                    count += 1;
+                    existe = true;
+                }
+            }
+            if (existe) {
+                total = total / count;
+            }
+
+            reader->Close();
+        }
+        catch (Exception^ ex) {
+            throw gcnew Exception("Hi ha hagut un error amb la cerca de la valoració: " + ex->Message);
+        }
+        finally {
+            conn->Close();
+        }
+    }
+
+    return total;
+}
