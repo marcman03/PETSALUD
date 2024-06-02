@@ -1,71 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="AssemblyInfo.cpp" />
-    <ClCompile Include="CercadoraCentre.cpp" />
-    <ClCompile Include="CercadoraEsdeveniments.cpp" />
-    <ClCompile Include="CercadoraMascota.cpp" />
-    <ClCompile Include="CercadoraClinica.cpp" />
-    <ClCompile Include="CercadoraPropietari.cpp" />
-    <ClCompile Include="CercadoraTipus.cpp" />
-    <ClCompile Include="CercadoraUsuari.cpp" />
-    <ClCompile Include="CercadoraValoracio.cpp" />
-    <ClCompile Include="CercadoraVisita.cpp" />
-    <ClCompile Include="ConsultaCentresForm.cpp" />
-    <ClCompile Include="ConsultaMascota_forms.cpp" />
-    <ClCompile Include="ConsultarEvents.cpp" />
-    <ClCompile Include="ConsultaVistes_forms.cpp" />
-    <ClCompile Include="CppCLR_WinFormsProject.cpp" />
-    <ClCompile Include="CreaCentreForms.cpp" />
-    <ClCompile Include="CrearPublic.cpp" />
-    <ClCompile Include="CreaVisites_forms.cpp" />
-    <ClCompile Include="Crea_Mascota_forms.cpp" />
-    <ClCompile Include="DBConnection.cpp" />
-    <ClCompile Include="EliminaCentresForm.cpp" />
-    <ClCompile Include="EliminaVisita_forms.cpp" />
-    <ClCompile Include="PantallaPrincipal.cpp" />
-    <ClCompile Include="InfoCli.cpp" />
-    <ClCompile Include="InfoProp.cpp" />
-    <ClCompile Include="IniUsu.cpp" />
-    <ClCompile Include="MenuCli.cpp" />
-    <ClCompile Include="MenuProp.cpp" />
-    <ClCompile Include="ModCli.cpp" />
-    <ClCompile Include="ModProp.cpp" />
-    <ClCompile Include="PassarellaCentre.cpp" />
-    <ClCompile Include="PassarellaClinica.cpp" />
-    <ClCompile Include="PassarellaEsdeveniments.cpp" />
-    <ClCompile Include="PassarellaMascota.cpp" />
-    <ClCompile Include="PassarellaPublic.cpp" />
-    <ClCompile Include="PassarellaTipus.cpp" />
-    <ClCompile Include="PassarellaUsuari.cpp" />
-    <ClCompile Include="Ordinador.cpp" />
-    <ClCompile Include="PassarellaPropietari.cpp" />
-    <ClCompile Include="PassarellaValoracio.cpp" />
-    <ClCompile Include="PassarellaVisites.cpp" />
-    <ClCompile Include="pch.cpp" />
-    <ClCompile Include="TxConsultarCentres.cpp" />
-    <ClCompile Include="TxConsultarMascotes.cpp" />
-    <ClCompile Include="RegUsu.cpp" />
-    <ClCompile Include="TxConsultarVisites.cpp" />
-    <ClCompile Include="TxConsultaUsu.cpp" />
-    <ClCompile Include="TxCrearCentre.cpp" />
-    <ClCompile Include="TxCrearMascota.cpp" />
-    <ClCompile Include="TxCrearValoracio.cpp" />
-    <ClCompile Include="TxCrearEsdeveniment.cpp" />
-    <ClCompile Include="TxEliminaCentre.cpp" />
-    <ClCompile Include="TxEliminaMascota.cpp" />
-    <ClCompile Include="TxEliminarValoracio.cpp" />
-    <ClCompile Include="TxEliminaVisita.cpp" />
-    <ClCompile Include="TxEsborraUsu.cpp" />
-    <ClCompile Include="TxIniciSessio.cpp" />
-    <ClCompile Include="TxModificaCentre.cpp" />
-    <ClCompile Include="TxModificarValoracio.cpp" />
-    <ClCompile Include="TxModUsu.cpp" />
-    <ClCompile Include="TxRegistraUsu.cpp" />
-    <ClCompile Include="TxTancaSessio.cpp" />
-    <ClCompile Include="CercadoraPublic.cpp" />
-    <ClCompile Include="PassarellaParticipa.cpp" />
-    <ClCompile Include="CercadoraParticipa.cpp" />
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>
+      </Extensions>
+    </Filter>
+    <Filter Include="Forms">
+      <UniqueIdentifier>{e4f45b6c-b047-4efe-b33f-b5b039333565}</UniqueIdentifier>
+      <Extensions>
+      </Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -184,21 +137,7 @@
     <ClInclude Include="CercadoraTipus.h" />
     <ClInclude Include="CercadoraValoracio.h" />
     <ClInclude Include="PassarellaTipus.h" />
-    <ClInclude Include="PassarellaUsuari.h" />
     <ClInclude Include="PassarellaValoracio.h" />
-    <ClInclude Include="PassarellaVisites.h" />
-    <ClInclude Include="RegUsu.h" />
-    <ClInclude Include="PassarellaClinica.h" />
-    <ClInclude Include="Ordinador.h" />
-    <ClInclude Include="PassarellaPropietari.h" />
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="Resource.h" />
-    <ClInclude Include="TxConsultarCentres.h" />
-    <ClInclude Include="TxConsultarMascotes.h" />
-    <ClInclude Include="TxConsultarVisites.h" />
-    <ClInclude Include="TxConsultaUsu.h" />
-    <ClInclude Include="TxCrearCentre.h" />
-    <ClInclude Include="TxCrearMascota.h" />
     <ClInclude Include="TxCrearValoracio.h" />
     <ClInclude Include="TxEliminarValoracio.h" />
     <ClInclude Include="TxModificarValoracio.h" />
