@@ -66,6 +66,8 @@
     <ClCompile Include="CercadoraPublic.cpp" />
     <ClCompile Include="PassarellaParticipa.cpp" />
     <ClCompile Include="CercadoraParticipa.cpp" />
+    <ClCompile Include="TxEsborraParticipa.cpp" />
+    <ClCompile Include="TxCrearParticipa.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CercadoraCentre.h" />
@@ -133,6 +135,8 @@
     <ClInclude Include="CercadoraPublic.h" />
     <ClInclude Include="PassarellaParticipa.h" />
     <ClInclude Include="CercadoraParticipa.h" />
+    <ClInclude Include="TxEsborraParticipa.h" />
+    <ClInclude Include="TxCrearParticipa.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />

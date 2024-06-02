@@ -13,6 +13,8 @@
 #include "Ordinador.h"
 #include "PassarellaParticipa.h"
 #include "CercadoraParticipa.h"
+#include "TxEsborraParticipa.h"
+#include "TxCrearParticipa.h"
 namespace PetSalut {
 
 	using namespace System;
@@ -86,7 +88,7 @@ namespace PetSalut {
 
 
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Button^ button1;
+
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Button^ apuntarseButton;
 
@@ -176,7 +178,6 @@ namespace PetSalut {
 			this->tituloLabel = (gcnew System::Windows::Forms::Label());
 			this->nombreLabel = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->panel2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->boxeliminar))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->TancaSessioBox))->BeginInit();
@@ -186,7 +187,7 @@ namespace PetSalut {
 			// 
 			this->ConsultaButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ConsultaButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->ConsultaButton->Location = System::Drawing::Point(15, 90);
+			this->ConsultaButton->Location = System::Drawing::Point(15, 120);
 			this->ConsultaButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->ConsultaButton->Name = L"ConsultaButton";
 			this->ConsultaButton->Size = System::Drawing::Size(269, 75);
@@ -199,7 +200,7 @@ namespace PetSalut {
 			// 
 			this->ModificarButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ModificarButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->ModificarButton->Location = System::Drawing::Point(15, 170);
+			this->ModificarButton->Location = System::Drawing::Point(15, 199);
 			this->ModificarButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->ModificarButton->Name = L"ModificarButton";
 			this->ModificarButton->Size = System::Drawing::Size(269, 75);
@@ -212,7 +213,7 @@ namespace PetSalut {
 			// 
 			this->TancarButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->TancarButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->TancarButton->Location = System::Drawing::Point(15, 645);
+			this->TancarButton->Location = System::Drawing::Point(15, 604);
 			this->TancarButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->TancarButton->Name = L"TancarButton";
 			this->TancarButton->Size = System::Drawing::Size(269, 75);
@@ -225,7 +226,7 @@ namespace PetSalut {
 			// 
 			this->EliminarButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->EliminarButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->EliminarButton->Location = System::Drawing::Point(15, 725);
+			this->EliminarButton->Location = System::Drawing::Point(15, 683);
 			this->EliminarButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->EliminarButton->Name = L"EliminarButton";
 			this->EliminarButton->Size = System::Drawing::Size(269, 75);
@@ -249,7 +250,7 @@ namespace PetSalut {
 			// 
 			this->ConsultarMascotesButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ConsultarMascotesButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->ConsultarMascotesButton->Location = System::Drawing::Point(15, 405);
+			this->ConsultarMascotesButton->Location = System::Drawing::Point(15, 361);
 			this->ConsultarMascotesButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->ConsultarMascotesButton->Name = L"ConsultarMascotesButton";
 			this->ConsultarMascotesButton->Size = System::Drawing::Size(269, 75);
@@ -262,7 +263,7 @@ namespace PetSalut {
 			// 
 			this->ConsultaVisitesButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ConsultaVisitesButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->ConsultaVisitesButton->Location = System::Drawing::Point(15, 565);
+			this->ConsultaVisitesButton->Location = System::Drawing::Point(15, 525);
 			this->ConsultaVisitesButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->ConsultaVisitesButton->Name = L"ConsultaVisitesButton";
 			this->ConsultaVisitesButton->Size = System::Drawing::Size(269, 75);
@@ -275,7 +276,7 @@ namespace PetSalut {
 			// 
 			this->ProgramarVisitesButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ProgramarVisitesButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->ProgramarVisitesButton->Location = System::Drawing::Point(15, 485);
+			this->ProgramarVisitesButton->Location = System::Drawing::Point(15, 444);
 			this->ProgramarVisitesButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->ProgramarVisitesButton->Name = L"ProgramarVisitesButton";
 			this->ProgramarVisitesButton->Size = System::Drawing::Size(269, 75);
@@ -288,7 +289,7 @@ namespace PetSalut {
 			// 
 			this->PublicarEventButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->PublicarEventButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->PublicarEventButton->Location = System::Drawing::Point(15, 250);
+			this->PublicarEventButton->Location = System::Drawing::Point(15, 278);
 			this->PublicarEventButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->PublicarEventButton->Name = L"PublicarEventButton";
 			this->PublicarEventButton->Size = System::Drawing::Size(269, 75);
@@ -353,8 +354,9 @@ namespace PetSalut {
 			this->apuntatButton->Name = L"apuntatButton";
 			this->apuntatButton->Size = System::Drawing::Size(269, 75);
 			this->apuntatButton->TabIndex = 35;
-			this->apuntatButton->Text = L"Apuntat";
+			this->apuntatButton->Text = L"DESAPUNTAT";
 			this->apuntatButton->UseVisualStyleBackColor = false;
+			this->apuntatButton->Click += gcnew System::EventHandler(this, &MenuProp::apuntatButton_Click);
 			// 
 			// participantsLabel
 			// 
@@ -673,19 +675,6 @@ namespace PetSalut {
 			this->label2->TabIndex = 20;
 			this->label2->Text = L"Events Publics";
 			// 
-			// button1
-			// 
-			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->button1->Location = System::Drawing::Point(15, 327);
-			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(269, 75);
-			this->button1->TabIndex = 21;
-			this->button1->Text = L"Consultar Events";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MenuProp::button1_Click);
-			// 
 			// MenuProp
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -693,7 +682,6 @@ namespace PetSalut {
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1540, 814);
-			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
@@ -967,20 +955,17 @@ private: System::Void anteriorButton_Click(System::Object^ sender, System::Event
 private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void apuntarseButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	Ordinador^ ord = Ordinador::getInstance();
-	PassarellaUsuari^ pus = ord->obteUsuari();
-	String^ username = pus->getUsername();
-	int index = ord->Index;
-	CercadoraPublic^ cpub = gcnew CercadoraPublic();
-	PassarellaPublic^ ppub = cpub->cercaPublic(index);
-	int numeroid = ppub->Numeroid;
+	TxCrearParticipa^ txCrear= gcnew TxCrearParticipa();
+	txCrear->executar();
 
-	PassarellaParticipa^ ppart = gcnew PassarellaParticipa(numeroid, username);
-	ppart->crear();
-	//se cierra apuntarseButton
-	apuntarseButton->Visible = false;
-	//se abre apuntatButton
-	apuntatButton->Visible = true;
+	
+	MenuProp_Load(sender, e);
+}
+private: System::Void apuntatButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	TxEsborraParticipa^ txEsborra = gcnew TxEsborraParticipa();
+
+	// Llamar al método executar en la instancia creada
+	txEsborra->executar();
 	MenuProp_Load(sender, e);
 }
 };
