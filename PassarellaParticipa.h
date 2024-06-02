@@ -12,6 +12,7 @@ public:
     PassarellaParticipa(int _numeroid, String^ _username);
     PassarellaParticipa(const PassarellaParticipa^ p);
     void crear();
+    void eliminar();
     property int Numeroid {
         int get() { return numeroid; }
         void set(int value) { numeroid = value; }

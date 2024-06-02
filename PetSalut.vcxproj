@@ -225,6 +225,7 @@
     <ClInclude Include="TxCrearAten.h" />
     <ClInclude Include="TxCrearCentre.h" />
     <ClInclude Include="TxCrearMascota.h" />
+    <ClInclude Include="TxCrearParticipa.h" />
     <ClInclude Include="TxCrearValoracio.h" />
     <ClInclude Include="TxCrearEsdeveniment.h" />
     <ClInclude Include="TxEliminaCentre.h" />
@@ -232,6 +233,7 @@
     <ClInclude Include="TxEliminarValoracio.h" />
     <ClInclude Include="TxEliminaVisita.h" />
     <ClInclude Include="TxEsborraUsu.h" />
+    <ClInclude Include="TxEsborraParticipa.h" />
     <ClInclude Include="TxIniciSessio.h" />
     <ClInclude Include="TxModificaCentre.h" />
     <ClInclude Include="TxModificarValoracio.h" />
@@ -300,6 +302,7 @@
     <ClCompile Include="TxCrearAten.cpp" />
     <ClCompile Include="TxCrearCentre.cpp" />
     <ClCompile Include="TxCrearMascota.cpp" />
+    <ClCompile Include="TxCrearParticipa.cpp" />
     <ClCompile Include="TxCrearValoracio.cpp" />
     <ClCompile Include="TxCrearEsdeveniment.cpp" />
     <ClCompile Include="TxEliminaCentre.cpp" />
@@ -307,6 +310,7 @@
     <ClCompile Include="TxEliminarValoracio.cpp" />
     <ClCompile Include="TxEliminaVisita.cpp" />
     <ClCompile Include="TxEsborraUsu.cpp" />
+    <ClCompile Include="TxEsborraParticipa.cpp" />
     <ClCompile Include="TxIniciSessio.cpp" />
     <ClCompile Include="TxModificaCentre.cpp" />
     <ClCompile Include="TxModificarValoracio.cpp" />
