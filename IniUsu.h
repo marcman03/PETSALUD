@@ -2,6 +2,7 @@
 #include "TxIniciSessio.h"
 #include "MenuProp.h"
 #include "MenuCli.h"
+#include "PasswordEncrypt.h"
 
 namespace PetSalut {
 
@@ -44,7 +45,7 @@ namespace PetSalut {
 
 				TxIniciSessio iniS;
 
-				iniS.crear(username, contrasenya);
+				iniS.crear(username, PasswordEncrypt::Decrypt(contrasenya));
 				iniS.executar();
 
 				PassarellaUsuari^ usu = CercadoraUsuari::cercaUsuari(username);
