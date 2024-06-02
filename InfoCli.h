@@ -117,12 +117,12 @@ namespace PetSalut {
 			// 
 			this->label9->AutoSize = true;
 			this->label9->BackColor = System::Drawing::Color::Transparent;
-			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label9->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label9->Location = System::Drawing::Point(631, 135);
+			this->label9->Location = System::Drawing::Point(610, 135);
 			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(147, 32);
+			this->label9->Size = System::Drawing::Size(125, 30);
 			this->label9->TabIndex = 46;
 			this->label9->Text = L"Descripció";
 			this->label9->Click += gcnew System::EventHandler(this, &InfoCli::label9_Click);
@@ -131,12 +131,12 @@ namespace PetSalut {
 			// 
 			this->label3->AutoSize = true;
 			this->label3->BackColor = System::Drawing::Color::Transparent;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->Location = System::Drawing::Point(37, 254);
 			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(233, 32);
+			this->label3->Size = System::Drawing::Size(196, 30);
 			this->label3->TabIndex = 36;
 			this->label3->Text = L"Correu Electronic";
 			// 
@@ -144,12 +144,12 @@ namespace PetSalut {
 			// 
 			this->label7->AutoSize = true;
 			this->label7->BackColor = System::Drawing::Color::Transparent;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label7->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(365, 254);
+			this->label7->Location = System::Drawing::Point(336, 254);
 			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(175, 32);
+			this->label7->Size = System::Drawing::Size(146, 30);
 			this->label7->TabIndex = 41;
 			this->label7->Text = L"Contrasenya";
 			// 
@@ -157,12 +157,12 @@ namespace PetSalut {
 			// 
 			this->label6->AutoSize = true;
 			this->label6->BackColor = System::Drawing::Color::Transparent;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label6->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(363, 135);
+			this->label6->Location = System::Drawing::Point(336, 135);
 			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(179, 32);
+			this->label6->Size = System::Drawing::Size(153, 30);
 			this->label6->TabIndex = 40;
 			this->label6->Text = L"Nom d\'usuari";
 			// 
@@ -170,12 +170,12 @@ namespace PetSalut {
 			// 
 			this->label4->AutoSize = true;
 			this->label4->BackColor = System::Drawing::Color::Transparent;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label4->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label4->Location = System::Drawing::Point(37, 377);
 			this->label4->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(110, 32);
+			this->label4->Size = System::Drawing::Size(91, 30);
 			this->label4->TabIndex = 38;
 			this->label4->Text = L"Telefon";
 			// 
@@ -183,12 +183,12 @@ namespace PetSalut {
 			// 
 			this->label2->AutoSize = true;
 			this->label2->BackColor = System::Drawing::Color::Transparent;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->Location = System::Drawing::Point(37, 135);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(195, 32);
+			this->label2->Size = System::Drawing::Size(167, 30);
 			this->label2->TabIndex = 34;
 			this->label2->Text = L"Nom Complert";
 			this->label2->Click += gcnew System::EventHandler(this, &InfoCli::label2_Click);
@@ -197,11 +197,12 @@ namespace PetSalut {
 			// 
 			this->label1->AutoSize = true;
 			this->label1->BackColor = System::Drawing::Color::Transparent;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20));
+			this->label1->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(37, 30);
 			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(284, 39);
+			this->label1->Size = System::Drawing::Size(348, 51);
 			this->label1->TabIndex = 33;
 			this->label1->Text = L"Informacio Usuari";
 			this->label1->Click += gcnew System::EventHandler(this, &InfoCli::label1_Click);
@@ -210,76 +211,76 @@ namespace PetSalut {
 			// 
 			this->nameLabel->AutoSize = true;
 			this->nameLabel->BackColor = System::Drawing::Color::Transparent;
-			this->nameLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->nameLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->nameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->nameLabel->Location = System::Drawing::Point(37, 183);
+			this->nameLabel->Location = System::Drawing::Point(43, 186);
 			this->nameLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->nameLabel->Name = L"nameLabel";
-			this->nameLabel->Size = System::Drawing::Size(123, 25);
+			this->nameLabel->Size = System::Drawing::Size(44, 20);
 			this->nameLabel->TabIndex = 47;
-			this->nameLabel->Text = L"Nombre aqui";
+			this->nameLabel->Text = L"Nom";
 			// 
 			// mailLabel
 			// 
 			this->mailLabel->AutoSize = true;
 			this->mailLabel->BackColor = System::Drawing::Color::Transparent;
-			this->mailLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->mailLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->mailLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->mailLabel->Location = System::Drawing::Point(37, 294);
 			this->mailLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->mailLabel->Name = L"mailLabel";
-			this->mailLabel->Size = System::Drawing::Size(117, 25);
+			this->mailLabel->Size = System::Drawing::Size(60, 20);
 			this->mailLabel->TabIndex = 48;
-			this->mailLabel->Text = L"Correo Aqui";
+			this->mailLabel->Text = L"Correu";
 			// 
 			// phoneLabel
 			// 
 			this->phoneLabel->AutoSize = true;
 			this->phoneLabel->BackColor = System::Drawing::Color::Transparent;
-			this->phoneLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->phoneLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->phoneLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->phoneLabel->Location = System::Drawing::Point(37, 422);
+			this->phoneLabel->Location = System::Drawing::Point(37, 417);
 			this->phoneLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->phoneLabel->Name = L"phoneLabel";
-			this->phoneLabel->Size = System::Drawing::Size(112, 25);
+			this->phoneLabel->Size = System::Drawing::Size(64, 20);
 			this->phoneLabel->TabIndex = 49;
-			this->phoneLabel->Text = L"phone Aqui";
+			this->phoneLabel->Text = L"Telefon";
 			// 
 			// usernameLabel
 			// 
 			this->usernameLabel->AutoSize = true;
 			this->usernameLabel->BackColor = System::Drawing::Color::Transparent;
-			this->usernameLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->usernameLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->usernameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->usernameLabel->Location = System::Drawing::Point(363, 183);
+			this->usernameLabel->Location = System::Drawing::Point(336, 179);
 			this->usernameLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->usernameLabel->Name = L"usernameLabel";
-			this->usernameLabel->Size = System::Drawing::Size(144, 25);
+			this->usernameLabel->Size = System::Drawing::Size(86, 20);
 			this->usernameLabel->TabIndex = 51;
-			this->usernameLabel->Text = L"username Aqui";
+			this->usernameLabel->Text = L"Username";
 			// 
 			// passwordLabel
 			// 
 			this->passwordLabel->AutoSize = true;
 			this->passwordLabel->BackColor = System::Drawing::Color::Transparent;
-			this->passwordLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->passwordLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->passwordLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->passwordLabel->Location = System::Drawing::Point(367, 294);
+			this->passwordLabel->Location = System::Drawing::Point(336, 294);
 			this->passwordLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->passwordLabel->Name = L"passwordLabel";
-			this->passwordLabel->Size = System::Drawing::Size(164, 25);
+			this->passwordLabel->Size = System::Drawing::Size(103, 20);
 			this->passwordLabel->TabIndex = 52;
-			this->passwordLabel->Text = L"contrasenya Aqui";
+			this->passwordLabel->Text = L"Contrasenya";
 			// 
 			// descripcio
 			// 
@@ -287,22 +288,22 @@ namespace PetSalut {
 			this->descripcio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
 			this->descripcio->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->descripcio->Location = System::Drawing::Point(633, 183);
+			this->descripcio->Location = System::Drawing::Point(611, 183);
 			this->descripcio->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->descripcio->Name = L"descripcio";
-			this->descripcio->Size = System::Drawing::Size(481, 246);
+			this->descripcio->Size = System::Drawing::Size(473, 246);
 			this->descripcio->TabIndex = 53;
-			this->descripcio->Text = L"descripcio Aqui";
+			this->descripcio->Text = L"Descripcio";
 			this->descripcio->Click += gcnew System::EventHandler(this, &InfoCli::descripcio_Click);
 			// 
 			// mostraCentresButton
 			// 
-			this->mostraCentresButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->mostraCentresButton->Location = System::Drawing::Point(741, 575);
+			this->mostraCentresButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->mostraCentresButton->Location = System::Drawing::Point(615, 574);
 			this->mostraCentresButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->mostraCentresButton->Name = L"mostraCentresButton";
-			this->mostraCentresButton->Size = System::Drawing::Size(204, 67);
+			this->mostraCentresButton->Size = System::Drawing::Size(228, 48);
 			this->mostraCentresButton->TabIndex = 54;
 			this->mostraCentresButton->Text = L"Mostrar Centres";
 			this->mostraCentresButton->UseVisualStyleBackColor = true;
@@ -310,12 +311,12 @@ namespace PetSalut {
 			// 
 			// modificarButton
 			// 
-			this->modificarButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->modificarButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->modificarButton->Location = System::Drawing::Point(966, 575);
+			this->modificarButton->Location = System::Drawing::Point(905, 574);
 			this->modificarButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->modificarButton->Name = L"modificarButton";
-			this->modificarButton->Size = System::Drawing::Size(204, 67);
+			this->modificarButton->Size = System::Drawing::Size(228, 48);
 			this->modificarButton->TabIndex = 55;
 			this->modificarButton->Text = L"Modificar Informacio";
 			this->modificarButton->UseVisualStyleBackColor = true;
@@ -323,12 +324,12 @@ namespace PetSalut {
 			// 
 			// tornaButton
 			// 
-			this->tornaButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tornaButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->tornaButton->Location = System::Drawing::Point(12, 575);
+			this->tornaButton->Location = System::Drawing::Point(42, 574);
 			this->tornaButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tornaButton->Name = L"tornaButton";
-			this->tornaButton->Size = System::Drawing::Size(204, 67);
+			this->tornaButton->Size = System::Drawing::Size(228, 47);
 			this->tornaButton->TabIndex = 56;
 			this->tornaButton->Text = L"Tornar";
 			this->tornaButton->UseVisualStyleBackColor = true;
@@ -357,8 +358,9 @@ namespace PetSalut {
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"InfoCli";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"InfoCli";
 			this->Load += gcnew System::EventHandler(this, &InfoCli::InfoCli_Load);
 			this->ResumeLayout(false);
@@ -405,5 +407,10 @@ namespace PetSalut {
 	}
 private: System::Void descripcio_Click(System::Object^ sender, System::EventArgs^ e) {
 }
+
+
+
+
+
 };
 }
