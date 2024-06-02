@@ -3,27 +3,27 @@
 #include "PassarellaAten.h"
 #include "DBConnection.h" 
 
-PassarellaAten^ CercadoraAten::cerca_per_id_Aten(int _idcentre)
+
+
+List<String^>^ CercadoraAten::cercaTipusAten(int id)
 {
-    PassarellaAten^ AtenEncontrada = nullptr;
+    List<String^>^ tipusList = gcnew List<String^>();
 
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
 
-    String^ sql = "SELECT * FROM aten WHERE _idcentre = @numeroid_centre";
+    String^ sql = "SELECT * FROM aten WHERE numeroid_centre = @numeroid_centre;";
 
     MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
 
-    cmd->Parameters->AddWithValue("@numeroid_cnetre", _idcentre);
+    cmd->Parameters->AddWithValue("@numeroid_centre", id);
 
     try {
         conn->Open();
         MySqlDataReader^ reader = cmd->ExecuteReader();
 
-        if (reader->Read()) {
-
-            String^ _tipus = reader["nom_tipus"]->ToString();
-            int _numeroid_centre = Convert::ToInt32(reader["numeroid_centre"]);
-            AtenEncontrada = gcnew PassarellaAten(_tipus, _numeroid_centre);
+        while (reader->Read()) {
+            String^ tipus = reader["nom_tipus"]->ToString();
+            tipusList->Add(tipus);
         }
 
         reader->Close();
@@ -35,5 +35,5 @@ PassarellaAten^ CercadoraAten::cerca_per_id_Aten(int _idcentre)
         conn->Close();
     }
 
-    return AtenEncontrada;
+    return tipusList;
 }

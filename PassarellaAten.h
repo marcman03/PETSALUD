@@ -11,6 +11,7 @@ private:
 public:
 	PassarellaAten(String^ _tipus, int^ _idcentre);
 	static PassarellaAten^ crear(String^ _tipus, int^ _idcentre);
+
 	property String^ Tipus {
 		String^ get() { return tipus; }
 		void set(String^ value) { tipus = value; }

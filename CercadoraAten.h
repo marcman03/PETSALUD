@@ -2,10 +2,9 @@
 #include "PassarellaAten.h"
 
 using namespace System;
+using namespace System::Collections::Generic;
 ref class CercadoraAten
 {
-public:
-
-	static PassarellaAten^ cerca_per_id_Aten(int idcnetre);
-
+	public:
+		List<String^>^ cercaTipusAten(int id);
 };
