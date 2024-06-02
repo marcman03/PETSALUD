@@ -148,6 +148,9 @@
     <ClInclude Include="ConsultarEvents.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ConsultaVisitesCentreForms.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="ConsultaVistes_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -259,6 +262,7 @@
     <ClCompile Include="ConsultaCentresForm.cpp" />
     <ClCompile Include="ConsultaMascota_forms.cpp" />
     <ClCompile Include="ConsultarEvents.cpp" />
+    <ClCompile Include="ConsultaVisitesCentreForms.cpp" />
     <ClCompile Include="ConsultaVistes_forms.cpp" />
     <ClCompile Include="CppCLR_WinFormsProject.cpp" />
     <ClCompile Include="CreaCentreForms.cpp" />
@@ -344,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarEvents.resx">
       <DependentUpon>ConsultarEvents.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaVisitesCentreForms.resx">
+      <DependentUpon>ConsultaVisitesCentreForms.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaVistes_forms.resx">
       <DependentUpon>ConsultaVistes_forms.h</DependentUpon>

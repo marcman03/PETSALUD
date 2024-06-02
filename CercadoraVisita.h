@@ -7,5 +7,5 @@ ref class CercadoraVisita
 {
 public:
 	static PassarellaVisites^ cercaVisita(int numero_id);
+	static List<PassarellaVisites^>^ cercaVisites(int numero_id);
 };
-
