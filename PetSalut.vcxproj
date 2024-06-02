@@ -130,6 +130,7 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CercadoraAten.h" />
     <ClInclude Include="CercadoraCentre.h" />
     <ClInclude Include="CercadoraEsdeveniments.h" />
     <ClInclude Include="CercadoraMascota.h" />
@@ -199,6 +200,7 @@
     <ClInclude Include="ModProp.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="PassarellaAten.h" />
     <ClInclude Include="PassarellaCentre.h" />
     <ClInclude Include="PassarellaEsdeveniments.h" />
     <ClInclude Include="PassarellaMascota.h" />
@@ -220,6 +222,7 @@
     <ClInclude Include="TxConsultarMascotes.h" />
     <ClInclude Include="TxConsultarVisites.h" />
     <ClInclude Include="TxConsultaUsu.h" />
+    <ClInclude Include="TxCrearAten.h" />
     <ClInclude Include="TxCrearCentre.h" />
     <ClInclude Include="TxCrearMascota.h" />
     <ClInclude Include="TxCrearValoracio.h" />
@@ -238,6 +241,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="CercadoraAten.cpp" />
     <ClCompile Include="CercadoraCentre.cpp" />
     <ClCompile Include="CercadoraEsdeveniments.cpp" />
     <ClCompile Include="CercadoraMascota.cpp" />
@@ -269,6 +273,7 @@
     <ClCompile Include="MenuProp.cpp" />
     <ClCompile Include="ModCli.cpp" />
     <ClCompile Include="ModProp.cpp" />
+    <ClCompile Include="PassarellaAten.cpp" />
     <ClCompile Include="PassarellaCentre.cpp" />
     <ClCompile Include="PassarellaClinica.cpp" />
     <ClCompile Include="PassarellaEsdeveniments.cpp" />
@@ -292,6 +297,7 @@
     <ClCompile Include="RegUsu.cpp" />
     <ClCompile Include="TxConsultarVisites.cpp" />
     <ClCompile Include="TxConsultaUsu.cpp" />
+    <ClCompile Include="TxCrearAten.cpp" />
     <ClCompile Include="TxCrearCentre.cpp" />
     <ClCompile Include="TxCrearMascota.cpp" />
     <ClCompile Include="TxCrearValoracio.cpp" />

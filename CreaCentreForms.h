@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "TxCrearCentre.h"
+#include "TxCrearAten.h"
 #include "Ordinador.h"
 #include "CercadoraTipus.h"
 
@@ -110,6 +111,12 @@ namespace PetSalut {
 	private: System::Windows::Forms::TextBox^ telefonBox;
 
 	private: System::Windows::Forms::Label^ telefonLabel;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::ErrorProvider^ errorProvider1;
+	private: System::Windows::Forms::CheckedListBox^ tipuscentre;
+
+
+
 
 
 
@@ -156,6 +163,16 @@ namespace PetSalut {
 			PassarellaUsuari^ usuari = ord->obteUsuari();
 			TxCrearCentre^ nouCentre = TxCrearCentre::crear(this->nameBox->Text,this->telefonBox->Text, usuari->getUsername(), this->descriptionBox->Text);
 			nouCentre->ejecutar();
+			int id = nouCentre->Numero_ID;
+			for (int i = 0; i < this->tipuscentre->Items->Count; i++)
+			{
+				System::String^ item = this->tipuscentre->Items[i]->ToString();
+				bool isChecked = this->tipuscentre->GetItemChecked(i);
+				if (isChecked) {
+					TxCrearAten^ nouAten = TxCrearAten::crear(item, id);
+					nouAten->ejecutar();
+				}
+			}
 		}
 	}
 #pragma region Windows Form Designer generated code
@@ -165,16 +182,14 @@ namespace PetSalut {
 		   /// </summary>
 		   void InitializeComponent(void)
 		   {
+			   this->components = (gcnew System::ComponentModel::Container());
 			   this->nameBox = (gcnew System::Windows::Forms::TextBox());
 			   this->nomLabel = (gcnew System::Windows::Forms::Label());
 			   this->descripcioLabel = (gcnew System::Windows::Forms::Label());
 			   this->fontDialog1 = (gcnew System::Windows::Forms::FontDialog());
 			   this->panel1 = (gcnew System::Windows::Forms::Panel());
-			   this->panel2 = (gcnew System::Windows::Forms::Panel());
-			   this->button4 = (gcnew System::Windows::Forms::Button());
-			   this->label9 = (gcnew System::Windows::Forms::Label());
-			   this->button2 = (gcnew System::Windows::Forms::Button());
-			   this->label10 = (gcnew System::Windows::Forms::Label());
+			   this->tipuscentre = (gcnew System::Windows::Forms::CheckedListBox());
+			   this->label1 = (gcnew System::Windows::Forms::Label());
 			   this->advertTelefon = (gcnew System::Windows::Forms::Label());
 			   this->telefonBox = (gcnew System::Windows::Forms::TextBox());
 			   this->telefonLabel = (gcnew System::Windows::Forms::Label());
@@ -184,10 +199,17 @@ namespace PetSalut {
 			   this->descriptionBox = (gcnew System::Windows::Forms::TextBox());
 			   this->label7 = (gcnew System::Windows::Forms::Label());
 			   this->button1 = (gcnew System::Windows::Forms::Button());
+			   this->panel2 = (gcnew System::Windows::Forms::Panel());
+			   this->button4 = (gcnew System::Windows::Forms::Button());
+			   this->label9 = (gcnew System::Windows::Forms::Label());
+			   this->button2 = (gcnew System::Windows::Forms::Button());
+			   this->label10 = (gcnew System::Windows::Forms::Label());
 			   this->label6 = (gcnew System::Windows::Forms::Label());
 			   this->label8 = (gcnew System::Windows::Forms::Label());
+			   this->errorProvider1 = (gcnew System::Windows::Forms::ErrorProvider(this->components));
 			   this->panel1->SuspendLayout();
 			   this->panel2->SuspendLayout();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->errorProvider1))->BeginInit();
 			   this->SuspendLayout();
 			   // 
 			   // nameBox
@@ -195,9 +217,10 @@ namespace PetSalut {
 			   this->nameBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->nameBox->Location = System::Drawing::Point(146, 135);
+			   this->nameBox->Location = System::Drawing::Point(182, 169);
+			   this->nameBox->Margin = System::Windows::Forms::Padding(4);
 			   this->nameBox->Name = L"nameBox";
-			   this->nameBox->Size = System::Drawing::Size(676, 24);
+			   this->nameBox->Size = System::Drawing::Size(844, 26);
 			   this->nameBox->TabIndex = 1;
 			   // 
 			   // nomLabel
@@ -206,10 +229,11 @@ namespace PetSalut {
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->nomLabel->AutoSize = true;
-			   this->nomLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 12));
-			   this->nomLabel->Location = System::Drawing::Point(78, 136);
+			   this->nomLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+			   this->nomLabel->Location = System::Drawing::Point(98, 170);
+			   this->nomLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			   this->nomLabel->Name = L"nomLabel";
-			   this->nomLabel->Size = System::Drawing::Size(62, 23);
+			   this->nomLabel->Size = System::Drawing::Size(59, 25);
 			   this->nomLabel->TabIndex = 3;
 			   this->nomLabel->Text = L"Nom:";
 			   // 
@@ -219,10 +243,11 @@ namespace PetSalut {
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->descripcioLabel->AutoSize = true;
-			   this->descripcioLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 12));
-			   this->descripcioLabel->Location = System::Drawing::Point(78, 245);
+			   this->descripcioLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+			   this->descripcioLabel->Location = System::Drawing::Point(48, 305);
+			   this->descripcioLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			   this->descripcioLabel->Name = L"descripcioLabel";
-			   this->descripcioLabel->Size = System::Drawing::Size(122, 23);
+			   this->descripcioLabel->Size = System::Drawing::Size(109, 25);
 			   this->descripcioLabel->TabIndex = 9;
 			   this->descripcioLabel->Text = L"Descripció:";
 			   // 
@@ -233,6 +258,9 @@ namespace PetSalut {
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->panel1->BackColor = System::Drawing::SystemColors::Control;
 			   this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			   this->panel1->Controls->Add(this->panel2);
+			   this->panel1->Controls->Add(this->tipuscentre);
+			   this->panel1->Controls->Add(this->label1);
 			   this->panel1->Controls->Add(this->advertTelefon);
 			   this->panel1->Controls->Add(this->telefonBox);
 			   this->panel1->Controls->Add(this->telefonLabel);
@@ -245,11 +273,152 @@ namespace PetSalut {
 			   this->panel1->Controls->Add(this->descripcioLabel);
 			   this->panel1->Controls->Add(this->nameBox);
 			   this->panel1->Controls->Add(this->nomLabel);
-			   this->panel1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			   this->panel1->Location = System::Drawing::Point(80, 85);
+			   this->panel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			   this->panel1->Location = System::Drawing::Point(25, 75);
+			   this->panel1->Margin = System::Windows::Forms::Padding(4);
 			   this->panel1->Name = L"panel1";
-			   this->panel1->Size = System::Drawing::Size(1032, 549);
+			   this->panel1->Size = System::Drawing::Size(1290, 686);
 			   this->panel1->TabIndex = 10;
+			   // 
+			   // tipuscentre
+			   // 
+			   this->tipuscentre->FormattingEnabled = true;
+			   this->tipuscentre->Items->AddRange(gcnew cli::array< System::Object^  >(8) {
+				   L"gat", L"canari", L"conill", L"gos", L"hamster",
+					   L"lloro", L"pony", L"porc"
+			   });
+			   this->tipuscentre->Location = System::Drawing::Point(182, 365);
+			   this->tipuscentre->Name = L"tipuscentre";
+			   this->tipuscentre->Size = System::Drawing::Size(427, 88);
+			   this->tipuscentre->TabIndex = 32;
+			   // 
+			   // label1
+			   // 
+			   this->label1->AutoSize = true;
+			   this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				   static_cast<System::Byte>(0)));
+			   this->label1->Location = System::Drawing::Point(90, 365);
+			   this->label1->Name = L"label1";
+			   this->label1->Size = System::Drawing::Size(67, 25);
+			   this->label1->TabIndex = 31;
+			   this->label1->Text = L"Tipus:";
+			   // 
+			   // advertTelefon
+			   // 
+			   this->advertTelefon->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->advertTelefon->AutoSize = true;
+			   this->advertTelefon->ForeColor = System::Drawing::Color::Brown;
+			   this->advertTelefon->Location = System::Drawing::Point(1035, 244);
+			   this->advertTelefon->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			   this->advertTelefon->Name = L"advertTelefon";
+			   this->advertTelefon->Size = System::Drawing::Size(128, 20);
+			   this->advertTelefon->TabIndex = 30;
+			   this->advertTelefon->Text = L"Required Field *";
+			   this->advertTelefon->Visible = false;
+			   // 
+			   // telefonBox
+			   // 
+			   this->telefonBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->telefonBox->Location = System::Drawing::Point(182, 239);
+			   this->telefonBox->Margin = System::Windows::Forms::Padding(4);
+			   this->telefonBox->Name = L"telefonBox";
+			   this->telefonBox->Size = System::Drawing::Size(844, 26);
+			   this->telefonBox->TabIndex = 28;
+			   // 
+			   // telefonLabel
+			   // 
+			   this->telefonLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->telefonLabel->AutoSize = true;
+			   this->telefonLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
+			   this->telefonLabel->Location = System::Drawing::Point(73, 239);
+			   this->telefonLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			   this->telefonLabel->Name = L"telefonLabel";
+			   this->telefonLabel->Size = System::Drawing::Size(84, 25);
+			   this->telefonLabel->TabIndex = 29;
+			   this->telefonLabel->Text = L"Telefon:";
+			   // 
+			   // button3
+			   // 
+			   this->button3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			   this->button3->Location = System::Drawing::Point(828, 576);
+			   this->button3->Margin = System::Windows::Forms::Padding(4);
+			   this->button3->Name = L"button3";
+			   this->button3->Size = System::Drawing::Size(212, 84);
+			   this->button3->TabIndex = 27;
+			   this->button3->Text = L"Sortir";
+			   this->button3->UseVisualStyleBackColor = true;
+			   // 
+			   // AdvertName
+			   // 
+			   this->AdvertName->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->AdvertName->AutoSize = true;
+			   this->AdvertName->ForeColor = System::Drawing::Color::Brown;
+			   this->AdvertName->Location = System::Drawing::Point(1035, 172);
+			   this->AdvertName->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			   this->AdvertName->Name = L"AdvertName";
+			   this->AdvertName->Size = System::Drawing::Size(128, 20);
+			   this->AdvertName->TabIndex = 22;
+			   this->AdvertName->Text = L"Required Field *";
+			   this->AdvertName->Visible = false;
+			   // 
+			   // label11
+			   // 
+			   this->label11->Location = System::Drawing::Point(0, 0);
+			   this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			   this->label11->Name = L"label11";
+			   this->label11->Size = System::Drawing::Size(125, 29);
+			   this->label11->TabIndex = 21;
+			   // 
+			   // descriptionBox
+			   // 
+			   this->descriptionBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->descriptionBox->Location = System::Drawing::Point(182, 306);
+			   this->descriptionBox->Margin = System::Windows::Forms::Padding(4);
+			   this->descriptionBox->Name = L"descriptionBox";
+			   this->descriptionBox->Size = System::Drawing::Size(844, 26);
+			   this->descriptionBox->TabIndex = 12;
+			   // 
+			   // label7
+			   // 
+			   this->label7->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->label7->AutoSize = true;
+			   this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16));
+			   this->label7->Location = System::Drawing::Point(515, 36);
+			   this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			   this->label7->Name = L"label7";
+			   this->label7->Size = System::Drawing::Size(195, 31);
+			   this->label7->TabIndex = 11;
+			   this->label7->Text = L"NOU CENTRE";
+			   // 
+			   // button1
+			   // 
+			   this->button1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			   this->button1->Location = System::Drawing::Point(1048, 576);
+			   this->button1->Margin = System::Windows::Forms::Padding(4);
+			   this->button1->Name = L"button1";
+			   this->button1->Size = System::Drawing::Size(212, 84);
+			   this->button1->TabIndex = 10;
+			   this->button1->Text = L"Registrar";
+			   this->button1->UseVisualStyleBackColor = true;
+			   this->button1->Click += gcnew System::EventHandler(this, &CreaCentreForms::savebutton_Click);
 			   // 
 			   // panel2
 			   // 
@@ -263,9 +432,10 @@ namespace PetSalut {
 			   this->panel2->Controls->Add(this->label9);
 			   this->panel2->Controls->Add(this->button2);
 			   this->panel2->Controls->Add(this->label10);
-			   this->panel2->Location = System::Drawing::Point(80, 176);
+			   this->panel2->Location = System::Drawing::Point(30, 172);
+			   this->panel2->Margin = System::Windows::Forms::Padding(4);
 			   this->panel2->Name = L"panel2";
-			   this->panel2->Size = System::Drawing::Size(1032, 354);
+			   this->panel2->Size = System::Drawing::Size(1290, 442);
 			   this->panel2->TabIndex = 19;
 			   this->panel2->Visible = false;
 			   // 
@@ -273,10 +443,11 @@ namespace PetSalut {
 			   // 
 			   this->button4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			   this->button4->BackColor = System::Drawing::Color::Transparent;
-			   this->button4->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
-			   this->button4->Location = System::Drawing::Point(900, 285);
+			   this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			   this->button4->Location = System::Drawing::Point(1125, 356);
+			   this->button4->Margin = System::Windows::Forms::Padding(4);
 			   this->button4->Name = L"button4";
-			   this->button4->Size = System::Drawing::Size(127, 64);
+			   this->button4->Size = System::Drawing::Size(159, 80);
 			   this->button4->TabIndex = 13;
 			   this->button4->Text = L"Sortir";
 			   this->button4->UseVisualStyleBackColor = false;
@@ -288,20 +459,22 @@ namespace PetSalut {
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->label9->AutoSize = true;
-			   this->label9->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
-			   this->label9->Location = System::Drawing::Point(417, 26);
+			   this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			   this->label9->Location = System::Drawing::Point(521, 32);
+			   this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			   this->label9->Name = L"label9";
-			   this->label9->Size = System::Drawing::Size(157, 26);
+			   this->label9->Size = System::Drawing::Size(173, 29);
 			   this->label9->TabIndex = 11;
 			   this->label9->Text = L"NOU CENTRE";
 			   // 
 			   // button2
 			   // 
 			   this->button2->BackColor = System::Drawing::Color::Firebrick;
-			   this->button2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
-			   this->button2->Location = System::Drawing::Point(993, 3);
+			   this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			   this->button2->Location = System::Drawing::Point(1241, 4);
+			   this->button2->Margin = System::Windows::Forms::Padding(4);
 			   this->button2->Name = L"button2";
-			   this->button2->Size = System::Drawing::Size(34, 34);
+			   this->button2->Size = System::Drawing::Size(42, 42);
 			   this->button2->TabIndex = 13;
 			   this->button2->Text = L"X";
 			   this->button2->UseVisualStyleBackColor = false;
@@ -313,164 +486,62 @@ namespace PetSalut {
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->label10->AutoSize = true;
-			   this->label10->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
-			   this->label10->Location = System::Drawing::Point(136, 142);
+			   this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			   this->label10->Location = System::Drawing::Point(170, 178);
+			   this->label10->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			   this->label10->Name = L"label10";
-			   this->label10->Size = System::Drawing::Size(757, 26);
+			   this->label10->Size = System::Drawing::Size(684, 29);
 			   this->label10->TabIndex = 3;
 			   this->label10->Text = L"El teu centre s\'ha afegit a la teva secció \"ELS MEUS CENTRE\".";
-			   // 
-			   // advertTelefon
-			   // 
-			   this->advertTelefon->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				   | System::Windows::Forms::AnchorStyles::Left)
-				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->advertTelefon->AutoSize = true;
-			   this->advertTelefon->ForeColor = System::Drawing::Color::Brown;
-			   this->advertTelefon->Location = System::Drawing::Point(828, 195);
-			   this->advertTelefon->Name = L"advertTelefon";
-			   this->advertTelefon->Size = System::Drawing::Size(138, 19);
-			   this->advertTelefon->TabIndex = 30;
-			   this->advertTelefon->Text = L"Required Field *";
-			   this->advertTelefon->Visible = false;
-			   // 
-			   // telefonBox
-			   // 
-			   this->telefonBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				   | System::Windows::Forms::AnchorStyles::Left)
-				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->telefonBox->Location = System::Drawing::Point(174, 192);
-			   this->telefonBox->Name = L"telefonBox";
-			   this->telefonBox->Size = System::Drawing::Size(648, 24);
-			   this->telefonBox->TabIndex = 28;
-			   // 
-			   // telefonLabel
-			   // 
-			   this->telefonLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				   | System::Windows::Forms::AnchorStyles::Left)
-				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->telefonLabel->AutoSize = true;
-			   this->telefonLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 12));
-			   this->telefonLabel->Location = System::Drawing::Point(78, 193);
-			   this->telefonLabel->Name = L"telefonLabel";
-			   this->telefonLabel->Size = System::Drawing::Size(90, 23);
-			   this->telefonLabel->TabIndex = 29;
-			   this->telefonLabel->Text = L"Telefon:";
-			   // 
-			   // button3
-			   // 
-			   this->button3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				   | System::Windows::Forms::AnchorStyles::Left)
-				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->button3->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
-			   this->button3->Location = System::Drawing::Point(662, 461);
-			   this->button3->Name = L"button3";
-			   this->button3->Size = System::Drawing::Size(170, 67);
-			   this->button3->TabIndex = 27;
-			   this->button3->Text = L"Sortir";
-			   this->button3->UseVisualStyleBackColor = true;
-			   // 
-			   // AdvertName
-			   // 
-			   this->AdvertName->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				   | System::Windows::Forms::AnchorStyles::Left)
-				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->AdvertName->AutoSize = true;
-			   this->AdvertName->ForeColor = System::Drawing::Color::Brown;
-			   this->AdvertName->Location = System::Drawing::Point(828, 138);
-			   this->AdvertName->Name = L"AdvertName";
-			   this->AdvertName->Size = System::Drawing::Size(138, 19);
-			   this->AdvertName->TabIndex = 22;
-			   this->AdvertName->Text = L"Required Field *";
-			   this->AdvertName->Visible = false;
-			   // 
-			   // label11
-			   // 
-			   this->label11->Location = System::Drawing::Point(0, 0);
-			   this->label11->Name = L"label11";
-			   this->label11->Size = System::Drawing::Size(100, 23);
-			   this->label11->TabIndex = 21;
-			   // 
-			   // descriptionBox
-			   // 
-			   this->descriptionBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				   | System::Windows::Forms::AnchorStyles::Left)
-				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->descriptionBox->Location = System::Drawing::Point(206, 245);
-			   this->descriptionBox->Name = L"descriptionBox";
-			   this->descriptionBox->Size = System::Drawing::Size(665, 24);
-			   this->descriptionBox->TabIndex = 12;
-			   // 
-			   // label7
-			   // 
-			   this->label7->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				   | System::Windows::Forms::AnchorStyles::Left)
-				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->label7->AutoSize = true;
-			   this->label7->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 16));
-			   this->label7->Location = System::Drawing::Point(412, 29);
-			   this->label7->Name = L"label7";
-			   this->label7->Size = System::Drawing::Size(181, 31);
-			   this->label7->TabIndex = 11;
-			   this->label7->Text = L"NOU CENTRE";
-			   // 
-			   // button1
-			   // 
-			   this->button1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				   | System::Windows::Forms::AnchorStyles::Left)
-				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->button1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
-			   this->button1->Location = System::Drawing::Point(838, 461);
-			   this->button1->Name = L"button1";
-			   this->button1->Size = System::Drawing::Size(170, 67);
-			   this->button1->TabIndex = 10;
-			   this->button1->Text = L"Registrar";
-			   this->button1->UseVisualStyleBackColor = true;
-			   this->button1->Click += gcnew System::EventHandler(this, &CreaCentreForms::savebutton_Click);
 			   // 
 			   // label6
 			   // 
 			   this->label6->AutoSize = true;
-			   this->label6->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18));
-			   this->label6->Location = System::Drawing::Point(515, 9);
-			   this->label6->MaximumSize = System::Drawing::Size(255, 255);
+			   this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18));
+			   this->label6->Location = System::Drawing::Point(644, 11);
+			   this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			   this->label6->MaximumSize = System::Drawing::Size(319, 319);
 			   this->label6->Name = L"label6";
-			   this->label6->Size = System::Drawing::Size(166, 33);
+			   this->label6->Size = System::Drawing::Size(171, 36);
 			   this->label6->TabIndex = 11;
 			   this->label6->Text = L"PETSALUT";
 			   // 
 			   // label8
 			   // 
 			   this->label8->AutoSize = true;
-			   this->label8->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 16));
-			   this->label8->Location = System::Drawing::Point(535, 32);
+			   this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16));
+			   this->label8->Location = System::Drawing::Point(669, 40);
+			   this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			   this->label8->Name = L"label8";
-			   this->label8->Size = System::Drawing::Size(120, 31);
+			   this->label8->Size = System::Drawing::Size(110, 31);
 			   this->label8->TabIndex = 12;
 			   this->label8->Text = L"Centres";
 			   // 
+			   // errorProvider1
+			   // 
+			   this->errorProvider1->ContainerControl = this;
+			   // 
 			   // CreaCentreForms
 			   // 
-			   this->AutoScaleDimensions = System::Drawing::SizeF(96, 96);
+			   this->AutoScaleDimensions = System::Drawing::SizeF(120, 120);
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Dpi;
 			   this->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			   this->ClientSize = System::Drawing::Size(1184, 661);
-			   this->Controls->Add(this->panel2);
+			   this->ClientSize = System::Drawing::Size(1480, 826);
 			   this->Controls->Add(this->label8);
 			   this->Controls->Add(this->label6);
 			   this->Controls->Add(this->panel1);
+			   this->Margin = System::Windows::Forms::Padding(4);
 			   this->Name = L"CreaCentreForms";
 			   this->Text = L"PETSALUT";
 			   this->panel1->ResumeLayout(false);
 			   this->panel1->PerformLayout();
 			   this->panel2->ResumeLayout(false);
 			   this->panel2->PerformLayout();
+			   (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->errorProvider1))->EndInit();
 			   this->ResumeLayout(false);
 			   this->PerformLayout();
 
 		   }
 #pragma endregion
-	private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	};
+};
 }
