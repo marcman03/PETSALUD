@@ -10,6 +10,7 @@
 #include "CreaCentreForms.h"
 #include "CercadoraClinica.h"
 #include "CercadoraAten.h"
+#include "ConsultaVisitesCentreForms.h"
 #include "CercadoraValoracio.h"
 #include "ConsultaVistes_forms.h"
 
@@ -38,10 +39,9 @@ namespace PetSalut {
 
 	public:
 
-	public:
-
-	public:
 		BindingSource^ bs = gcnew BindingSource();
+		int centreSeleccionatId = -1;
+
 		ConsultaCentresForm(void)
 		{
 			InitializeComponent();
@@ -295,7 +295,7 @@ namespace PetSalut {
 			int indiceParentesisCerrado = centreSeleccionat->IndexOf(')');
 			String^ id = centreSeleccionat->Substring(indiceParentesisAbierto + 1, indiceParentesisCerrado - indiceParentesisAbierto - 1);
 			int numero_ID = Int32::Parse(id);
-
+			centreSeleccionatId = numero_ID;
 			// Utiliza el numero_ID para buscar y obtener más información de el centro
 			CercadoraCentre^ cercadora = gcnew CercadoraCentre();
 			PassarellaCentre^ centre = cercadora->cercaCentre(numero_ID);
@@ -406,7 +406,7 @@ namespace PetSalut {
 	private: System::Void registrarbutton_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		PetSalut::CreaCentreForms^ creaMasc = gcnew PetSalut::CreaCentreForms();
-		
+
 		// Set the size and position of IniUsu to match PantallaPrincipal
 		creaMasc->Size = this->Size;
 		creaMasc->Location = this->Location;
@@ -420,8 +420,12 @@ namespace PetSalut {
 	}
 	private: System::Void visitesButton_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		PetSalut::ConsultaVistes_forms^ consVisites = gcnew PetSalut::ConsultaVistes_forms();
+		PetSalut::ConsultaVisitesCentreForms^ consVisites = gcnew PetSalut::ConsultaVisitesCentreForms();
 		
+
+		consVisites->CentreId = centreSeleccionatId;
+
+
 		// Set the size and position of IniUsu to match PantallaPrincipal
 		consVisites->Size = this->Size;
 		consVisites->Location = this->Location;

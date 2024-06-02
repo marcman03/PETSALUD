@@ -13,6 +13,8 @@
 #include "Ordinador.h"
 #include "PassarellaParticipa.h"
 #include "CercadoraParticipa.h"
+#include "TxEsborraParticipa.h"
+#include "TxCrearParticipa.h"
 namespace PetSalut {
 
 	using namespace System;
@@ -73,7 +75,7 @@ namespace PetSalut {
 
 
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Button^ button1;
+
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Button^ apuntarseButton;
 
@@ -162,7 +164,6 @@ namespace PetSalut {
 			this->tituloLabel = (gcnew System::Windows::Forms::Label());
 			this->nombreLabel = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->panel2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->boxeliminar))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->TancaSessioBox))->BeginInit();
@@ -173,10 +174,10 @@ namespace PetSalut {
 			this->ConsultaButton->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->ConsultaButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ConsultaButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->ConsultaButton->Location = System::Drawing::Point(26, 73);
-			this->ConsultaButton->Margin = System::Windows::Forms::Padding(2);
+			this->ConsultaButton->Location = System::Drawing::Point(10, 129);
+			this->ConsultaButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->ConsultaButton->Name = L"ConsultaButton";
-			this->ConsultaButton->Size = System::Drawing::Size(202, 61);
+			this->ConsultaButton->Size = System::Drawing::Size(253, 48);
 			this->ConsultaButton->TabIndex = 0;
 			this->ConsultaButton->Text = L"Consultar Informacio";
 			this->ConsultaButton->UseVisualStyleBackColor = true;
@@ -187,10 +188,10 @@ namespace PetSalut {
 			this->ModificarButton->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->ModificarButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ModificarButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->ModificarButton->Location = System::Drawing::Point(26, 138);
-			this->ModificarButton->Margin = System::Windows::Forms::Padding(2);
+			this->ModificarButton->Location = System::Drawing::Point(10, 181);
+			this->ModificarButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->ModificarButton->Name = L"ModificarButton";
-			this->ModificarButton->Size = System::Drawing::Size(202, 61);
+			this->ModificarButton->Size = System::Drawing::Size(253, 48);
 			this->ModificarButton->TabIndex = 1;
 			this->ModificarButton->Text = L"Modificar Informacio";
 			this->ModificarButton->UseVisualStyleBackColor = true;
@@ -201,10 +202,10 @@ namespace PetSalut {
 			this->TancarButton->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->TancarButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->TancarButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->TancarButton->Location = System::Drawing::Point(26, 524);
-			this->TancarButton->Margin = System::Windows::Forms::Padding(2);
+			this->TancarButton->Location = System::Drawing::Point(10, 446);
+			this->TancarButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->TancarButton->Name = L"TancarButton";
-			this->TancarButton->Size = System::Drawing::Size(202, 61);
+			this->TancarButton->Size = System::Drawing::Size(253, 48);
 			this->TancarButton->TabIndex = 2;
 			this->TancarButton->Text = L"Tancar Sessio";
 			this->TancarButton->UseVisualStyleBackColor = true;
@@ -215,10 +216,10 @@ namespace PetSalut {
 			this->EliminarButton->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->EliminarButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->EliminarButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->EliminarButton->Location = System::Drawing::Point(26, 589);
-			this->EliminarButton->Margin = System::Windows::Forms::Padding(2);
+			this->EliminarButton->Location = System::Drawing::Point(10, 506);
+			this->EliminarButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->EliminarButton->Name = L"EliminarButton";
-			this->EliminarButton->Size = System::Drawing::Size(202, 61);
+			this->EliminarButton->Size = System::Drawing::Size(253, 42);
 			this->EliminarButton->TabIndex = 3;
 			this->EliminarButton->Text = L"Elimina el teu Perfil";
 			this->EliminarButton->UseVisualStyleBackColor = true;
@@ -228,22 +229,24 @@ namespace PetSalut {
 			// 
 			this->label1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label1->BackColor = System::Drawing::Color::Transparent;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14));
-			this->label1->Location = System::Drawing::Point(56, 9);
+			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(4, 47);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(142, 62);
+			this->label1->Size = System::Drawing::Size(269, 49);
 			this->label1->TabIndex = 4;
-			this->label1->Text = L"Opcions de propietari";
+			this->label1->Text = L"MENU PROPIETARI";
 			// 
 			// ConsultarMascotesButton
 			// 
 			this->ConsultarMascotesButton->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->ConsultarMascotesButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ConsultarMascotesButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->ConsultarMascotesButton->Location = System::Drawing::Point(26, 329);
-			this->ConsultarMascotesButton->Margin = System::Windows::Forms::Padding(2);
+			this->ConsultarMascotesButton->Location = System::Drawing::Point(10, 286);
+			this->ConsultarMascotesButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->ConsultarMascotesButton->Name = L"ConsultarMascotesButton";
-			this->ConsultarMascotesButton->Size = System::Drawing::Size(202, 61);
+			this->ConsultarMascotesButton->Size = System::Drawing::Size(253, 48);
 			this->ConsultarMascotesButton->TabIndex = 14;
 			this->ConsultarMascotesButton->Text = L"Les  meves Mascotes";
 			this->ConsultarMascotesButton->UseVisualStyleBackColor = true;
@@ -254,10 +257,10 @@ namespace PetSalut {
 			this->ConsultaVisitesButton->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->ConsultaVisitesButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ConsultaVisitesButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->ConsultaVisitesButton->Location = System::Drawing::Point(26, 459);
-			this->ConsultaVisitesButton->Margin = System::Windows::Forms::Padding(2);
+			this->ConsultaVisitesButton->Location = System::Drawing::Point(10, 390);
+			this->ConsultaVisitesButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->ConsultaVisitesButton->Name = L"ConsultaVisitesButton";
-			this->ConsultaVisitesButton->Size = System::Drawing::Size(202, 61);
+			this->ConsultaVisitesButton->Size = System::Drawing::Size(253, 48);
 			this->ConsultaVisitesButton->TabIndex = 15;
 			this->ConsultaVisitesButton->Text = L"Historial Visites";
 			this->ConsultaVisitesButton->UseVisualStyleBackColor = true;
@@ -268,10 +271,10 @@ namespace PetSalut {
 			this->ProgramarVisitesButton->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->ProgramarVisitesButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->ProgramarVisitesButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->ProgramarVisitesButton->Location = System::Drawing::Point(26, 394);
-			this->ProgramarVisitesButton->Margin = System::Windows::Forms::Padding(2);
+			this->ProgramarVisitesButton->Location = System::Drawing::Point(10, 338);
+			this->ProgramarVisitesButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->ProgramarVisitesButton->Name = L"ProgramarVisitesButton";
-			this->ProgramarVisitesButton->Size = System::Drawing::Size(202, 61);
+			this->ProgramarVisitesButton->Size = System::Drawing::Size(253, 48);
 			this->ProgramarVisitesButton->TabIndex = 16;
 			this->ProgramarVisitesButton->Text = L"Programar Visita";
 			this->ProgramarVisitesButton->UseVisualStyleBackColor = true;
@@ -282,10 +285,10 @@ namespace PetSalut {
 			this->PublicarEventButton->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->PublicarEventButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->PublicarEventButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->PublicarEventButton->Location = System::Drawing::Point(26, 203);
-			this->PublicarEventButton->Margin = System::Windows::Forms::Padding(2);
+			this->PublicarEventButton->Location = System::Drawing::Point(10, 233);
+			this->PublicarEventButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->PublicarEventButton->Name = L"PublicarEventButton";
-			this->PublicarEventButton->Size = System::Drawing::Size(202, 61);
+			this->PublicarEventButton->Size = System::Drawing::Size(253, 48);
 			this->PublicarEventButton->TabIndex = 17;
 			this->PublicarEventButton->Text = L"Publicar Event";
 			this->PublicarEventButton->UseVisualStyleBackColor = true;
@@ -295,9 +298,10 @@ namespace PetSalut {
 			// 
 			this->panel1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->panel1->BackColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->panel1->Location = System::Drawing::Point(243, -5);
+			this->panel1->Location = System::Drawing::Point(276, -76);
+			this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(10, 677);
+			this->panel1->Size = System::Drawing::Size(10, 684);
 			this->panel1->TabIndex = 18;
 			// 
 			// panel2
@@ -331,9 +335,9 @@ namespace PetSalut {
 			this->panel2->Controls->Add(this->label5);
 			this->panel2->Controls->Add(this->tituloLabel);
 			this->panel2->Controls->Add(this->nombreLabel);
-			this->panel2->Location = System::Drawing::Point(278, 93);
+			this->panel2->Location = System::Drawing::Point(316, 75);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(892, 541);
+			this->panel2->Size = System::Drawing::Size(856, 523);
 			this->panel2->TabIndex = 19;
 			// 
 			// apuntatButton
@@ -343,12 +347,13 @@ namespace PetSalut {
 			this->apuntatButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->apuntatButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->apuntatButton->Location = System::Drawing::Point(344, 452);
-			this->apuntatButton->Margin = System::Windows::Forms::Padding(2);
+			this->apuntatButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->apuntatButton->Name = L"apuntatButton";
 			this->apuntatButton->Size = System::Drawing::Size(202, 61);
 			this->apuntatButton->TabIndex = 35;
-			this->apuntatButton->Text = L"Apuntat";
+			this->apuntatButton->Text = L"DESAPUNTAT";
 			this->apuntatButton->UseVisualStyleBackColor = false;
+			this->apuntatButton->Click += gcnew System::EventHandler(this, &MenuProp::apuntatButton_Click);
 			// 
 			// participantsLabel
 			// 
@@ -378,7 +383,7 @@ namespace PetSalut {
 			this->paginasLabel->AutoSize = true;
 			this->paginasLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->paginasLabel->Location = System::Drawing::Point(771, 454);
+			this->paginasLabel->Location = System::Drawing::Point(753, 453);
 			this->paginasLabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->paginasLabel->Name = L"paginasLabel";
 			this->paginasLabel->Size = System::Drawing::Size(78, 18);
@@ -402,7 +407,7 @@ namespace PetSalut {
 			this->eliminar_compte_acceptar->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->eliminar_compte_acceptar->Location = System::Drawing::Point(428, 252);
-			this->eliminar_compte_acceptar->Margin = System::Windows::Forms::Padding(2);
+			this->eliminar_compte_acceptar->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->eliminar_compte_acceptar->Name = L"eliminar_compte_acceptar";
 			this->eliminar_compte_acceptar->Size = System::Drawing::Size(280, 68);
 			this->eliminar_compte_acceptar->TabIndex = 24;
@@ -417,7 +422,7 @@ namespace PetSalut {
 			this->Accepta_Tanca->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Accepta_Tanca->Location = System::Drawing::Point(428, 261);
-			this->Accepta_Tanca->Margin = System::Windows::Forms::Padding(2);
+			this->Accepta_Tanca->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Accepta_Tanca->Name = L"Accepta_Tanca";
 			this->Accepta_Tanca->Size = System::Drawing::Size(280, 53);
 			this->Accepta_Tanca->TabIndex = 29;
@@ -431,7 +436,7 @@ namespace PetSalut {
 			this->cancelar_eliminar_compte->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->cancelar_eliminar_compte->Location = System::Drawing::Point(151, 252);
-			this->cancelar_eliminar_compte->Margin = System::Windows::Forms::Padding(2);
+			this->cancelar_eliminar_compte->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->cancelar_eliminar_compte->Name = L"cancelar_eliminar_compte";
 			this->cancelar_eliminar_compte->Size = System::Drawing::Size(273, 68);
 			this->cancelar_eliminar_compte->TabIndex = 23;
@@ -445,7 +450,7 @@ namespace PetSalut {
 			this->anteriorButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->anteriorButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->anteriorButton->Location = System::Drawing::Point(24, 473);
-			this->anteriorButton->Margin = System::Windows::Forms::Padding(2);
+			this->anteriorButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->anteriorButton->Name = L"anteriorButton";
 			this->anteriorButton->Size = System::Drawing::Size(123, 40);
 			this->anteriorButton->TabIndex = 30;
@@ -467,7 +472,7 @@ namespace PetSalut {
 			this->Cancela_Tanca->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Cancela_Tanca->Location = System::Drawing::Point(151, 261);
-			this->Cancela_Tanca->Margin = System::Windows::Forms::Padding(2);
+			this->Cancela_Tanca->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Cancela_Tanca->Name = L"Cancela_Tanca";
 			this->Cancela_Tanca->Size = System::Drawing::Size(273, 53);
 			this->Cancela_Tanca->TabIndex = 28;
@@ -493,8 +498,8 @@ namespace PetSalut {
 			// 
 			this->seguentButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->seguentButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->seguentButton->Location = System::Drawing::Point(745, 473);
-			this->seguentButton->Margin = System::Windows::Forms::Padding(2);
+			this->seguentButton->Location = System::Drawing::Point(726, 473);
+			this->seguentButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->seguentButton->Name = L"seguentButton";
 			this->seguentButton->Size = System::Drawing::Size(123, 40);
 			this->seguentButton->TabIndex = 29;
@@ -532,7 +537,7 @@ namespace PetSalut {
 			this->apuntarseButton->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->apuntarseButton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->apuntarseButton->Location = System::Drawing::Point(344, 452);
-			this->apuntarseButton->Margin = System::Windows::Forms::Padding(2);
+			this->apuntarseButton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->apuntarseButton->Name = L"apuntarseButton";
 			this->apuntarseButton->Size = System::Drawing::Size(202, 61);
 			this->apuntarseButton->TabIndex = 22;
@@ -650,25 +655,11 @@ namespace PetSalut {
 			this->label2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 28));
-			this->label2->Location = System::Drawing::Point(539, 17);
+			this->label2->Location = System::Drawing::Point(577, 10);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(380, 43);
+			this->label2->Size = System::Drawing::Size(364, 43);
 			this->label2->TabIndex = 20;
 			this->label2->Text = L"Events Publics";
-			// 
-			// button1
-			// 
-			this->button1->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
-			this->button1->Location = System::Drawing::Point(26, 266);
-			this->button1->Margin = System::Windows::Forms::Padding(2);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(202, 61);
-			this->button1->TabIndex = 21;
-			this->button1->Text = L"Consultar Events";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MenuProp::button1_Click);
 			// 
 			// MenuProp
 			// 
@@ -677,7 +668,6 @@ namespace PetSalut {
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1184, 661);
-			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
@@ -690,7 +680,7 @@ namespace PetSalut {
 			this->Controls->Add(this->TancarButton);
 			this->Controls->Add(this->ModificarButton);
 			this->Controls->Add(this->ConsultaButton);
-			this->Margin = System::Windows::Forms::Padding(2);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"MenuProp";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
 			this->Text = L"PETSALUT";
@@ -743,6 +733,8 @@ namespace PetSalut {
 		//Redirigir al form de infoProp
 
 		PetSalut::InfoProp^ infoProp = gcnew PetSalut::InfoProp();
+		infoProp->Size = this->Size; 
+		infoProp->Location = this->Location; 
 
 		this->Visible = false;
 
@@ -968,25 +960,22 @@ namespace PetSalut {
 
 		MenuProp_Load(sender, e);
 
-	}
-	private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void apuntarseButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		Ordinador^ ord = Ordinador::getInstance();
-		PassarellaUsuari^ pus = ord->obteUsuari();
-		String^ username = pus->getUsername();
-		int index = ord->Index;
-		CercadoraPublic^ cpub = gcnew CercadoraPublic();
-		PassarellaPublic^ ppub = cpub->cercaPublic(index);
-		int numeroid = ppub->Numeroid;
+}
+private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void apuntarseButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	TxCrearParticipa^ txCrear= gcnew TxCrearParticipa();
+	txCrear->executar();
 
-		PassarellaParticipa^ ppart = gcnew PassarellaParticipa(numeroid, username);
-		ppart->crear();
-		//se cierra apuntarseButton
-		apuntarseButton->Visible = false;
-		//se abre apuntatButton
-		apuntatButton->Visible = true;
-		MenuProp_Load(sender, e);
-	}
-	};
+	
+	MenuProp_Load(sender, e);
+}
+private: System::Void apuntatButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	TxEsborraParticipa^ txEsborra = gcnew TxEsborraParticipa();
+
+	// Llamar al método executar en la instancia creada
+	txEsborra->executar();
+	MenuProp_Load(sender, e);
+}
+};
 }

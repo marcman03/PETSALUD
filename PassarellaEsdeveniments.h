@@ -50,4 +50,8 @@ public:
         String^ get() { return propietari; }
         void set(String^ value) { propietari = value; }
     }
+    property String^ Tipus {
+        String^ get() { return tipus; }
+        void set(String^ value) { tipus = value; }
+    }
 };

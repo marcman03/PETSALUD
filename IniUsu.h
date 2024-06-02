@@ -2,6 +2,7 @@
 #include "TxIniciSessio.h"
 #include "MenuProp.h"
 #include "MenuCli.h"
+#include "PasswordEncrypt.h"
 
 namespace PetSalut {
 

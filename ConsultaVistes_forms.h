@@ -145,7 +145,8 @@ namespace PetSalut {
 	private: System::Void eliminabutton_click(System::Object^ sender, System::EventArgs^ e) {
 
 		PetSalut::EliminaVisita_forms^ elimVisita = gcnew PetSalut::EliminaVisita_forms();
-
+		elimVisita->Size = this->Size; 
+		elimVisita->Location = this->Location; 
 		this->Visible = false;
 
 		elimVisita->ShowDialog();

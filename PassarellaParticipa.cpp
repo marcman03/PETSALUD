@@ -40,3 +40,31 @@ void PassarellaParticipa::crear()
         conn->Close();
     }
 }
+
+void PassarellaParticipa::eliminar()
+{
+    MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
+
+    try {
+        // Definir la consulta SQL para eliminar la fila
+        String^ sql = "DELETE FROM participa WHERE numeroid = @numeroid AND username = @username;";
+
+        // Crear y configurar el comando SQL
+        MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
+        cmd->Parameters->AddWithValue("@numeroid", numeroid);
+        cmd->Parameters->AddWithValue("@username", username);
+
+        // Abrir la conexión y ejecutar el comando
+        conn->Open();
+        cmd->ExecuteNonQuery();
+    }
+    catch (Exception^ ex) {
+        // Manejar cualquier excepción lanzada y relanzarla
+        throw ex;
+    }
+    finally {
+        // Asegurarse de que la conexión se cierre, independientemente de si ocurre una excepción o no
+        conn->Close();
+    }
+}
+
