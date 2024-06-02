@@ -17,6 +17,7 @@
 #include "PassarellaVisites.h"
 #include "TxCrearEsdeveniment.h"
 #include "TxCrearValoracio.h"
+#include "CercadoraAten.h"
 
 namespace PetSalut {
 
@@ -103,16 +104,27 @@ namespace PetSalut {
 		// Limpiar los ítems del ComboBox antes de llenarlo nuevamente
 		CentresBox->Items->Clear();
 
-		// Crear instancia de la buscadora de centros
-		CercadoraCentre^ cercadora = gcnew CercadoraCentre();
+		CentresBox->Items->Clear();
 
-		// Obtener la lista de todos los centros
-		List<PassarellaCentre^>^ totsCentres = cercadora->CercatotsCentres();
+		// Obtener la mascota seleccionada en el ComboBox
+		PassarellaMascota^ selectedMascota = dynamic_cast<PassarellaMascota^>(petsList->SelectedItem);
 
-		// Llenar el ComboBox con los objetos PassarellaCentre^
-		for (int i = 0; i < totsCentres->Count; ++i) {
-			PassarellaCentre^ centre = totsCentres[i];
-			CentresBox->Items->Add(centre);
+		if (selectedMascota == nullptr) {
+			MessageBox::Show("Por favor, seleccione una mascota primero.");
+			return;
+		}
+
+		// Obtener el tipus de la mascota seleccionada
+		String^ tipus = selectedMascota->Tipus;
+		List<int>^ centreIds = CercadoraAten::cercaCentreIdsPerTipus(tipus);
+
+		// Llenar el ComboBox con los centre_id obtenidos
+		for each (int centreId in centreIds) {
+			PassarellaCentre^ centre = CercadoraCentre::cercaCentre(centreId);
+			if (centre != nullptr) {
+				// Llenar el ComboBox con los nombres y ubicaciones de los centros
+				CentresBox->Items->Add(centre->Nom + "  ( " + centre->Ubicacio + " )");
+			}
 		}
 	}
 
@@ -228,9 +240,8 @@ namespace PetSalut {
 			// 
 			// PanelVisita
 			// 
-			this->PanelVisita->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->PanelVisita->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->PanelVisita->AutoSize = true;
 			this->PanelVisita->BackColor = System::Drawing::SystemColors::Control;
 			this->PanelVisita->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->PanelVisita->Controls->Add(this->button1);
@@ -259,6 +270,7 @@ namespace PetSalut {
 			// 
 			// button1
 			// 
+			this->button1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
 			this->button1->Location = System::Drawing::Point(3, 501);
 			this->button1->Name = L"button1";
@@ -271,6 +283,7 @@ namespace PetSalut {
 			// 
 			// guardarbutton
 			// 
+			this->guardarbutton->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->guardarbutton->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
 			this->guardarbutton->Location = System::Drawing::Point(927, 501);
 			this->guardarbutton->Name = L"guardarbutton";
@@ -282,9 +295,7 @@ namespace PetSalut {
 			// 
 			// NomBox
 			// 
-			this->NomBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->NomBox->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->NomBox->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->NomBox->Location = System::Drawing::Point(160, 93);
 			this->NomBox->Name = L"NomBox";
@@ -293,6 +304,7 @@ namespace PetSalut {
 			// 
 			// CentresBox
 			// 
+			this->CentresBox->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->CentresBox->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->CentresBox->FormattingEnabled = true;
 			this->CentresBox->Location = System::Drawing::Point(160, 397);
@@ -303,9 +315,7 @@ namespace PetSalut {
 			// 
 			// admasclabel
 			// 
-			this->admasclabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->admasclabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->admasclabel->AutoSize = true;
 			this->admasclabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->admasclabel->ForeColor = System::Drawing::Color::Brown;
@@ -318,6 +328,7 @@ namespace PetSalut {
 			// 
 			// petsList
 			// 
+			this->petsList->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->petsList->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->petsList->FormattingEnabled = true;
 			this->petsList->Location = System::Drawing::Point(160, 326);
@@ -328,9 +339,7 @@ namespace PetSalut {
 			// 
 			// adnomlabel
 			// 
-			this->adnomlabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->adnomlabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->adnomlabel->AutoSize = true;
 			this->adnomlabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->adnomlabel->ForeColor = System::Drawing::Color::Brown;
@@ -343,9 +352,7 @@ namespace PetSalut {
 			// 
 			// MascotaLabel
 			// 
-			this->MascotaLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->MascotaLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->MascotaLabel->AutoSize = true;
 			this->MascotaLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->MascotaLabel->Location = System::Drawing::Point(74, 329);
@@ -356,6 +363,7 @@ namespace PetSalut {
 			// 
 			// HoursBox
 			// 
+			this->HoursBox->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->HoursBox->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->HoursBox->FormattingEnabled = true;
 			this->HoursBox->Items->AddRange(gcnew cli::array< System::Object^  >(26) {
@@ -372,9 +380,7 @@ namespace PetSalut {
 			// 
 			// adhoralabel
 			// 
-			this->adhoralabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->adhoralabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->adhoralabel->AutoSize = true;
 			this->adhoralabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->adhoralabel->ForeColor = System::Drawing::Color::Brown;
@@ -388,9 +394,7 @@ namespace PetSalut {
 			// 
 			// adCentrelabel
 			// 
-			this->adCentrelabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->adCentrelabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->adCentrelabel->AutoSize = true;
 			this->adCentrelabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->adCentrelabel->ForeColor = System::Drawing::Color::Brown;
@@ -403,9 +407,7 @@ namespace PetSalut {
 			// 
 			// adIDdate
 			// 
-			this->adIDdate->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->adIDdate->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->adIDdate->AutoSize = true;
 			this->adIDdate->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->adIDdate->ForeColor = System::Drawing::Color::Brown;
@@ -418,9 +420,7 @@ namespace PetSalut {
 			// 
 			// titlelabel
 			// 
-			this->titlelabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->titlelabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->titlelabel->AutoSize = true;
 			this->titlelabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18.25F));
 			this->titlelabel->Location = System::Drawing::Point(449, 28);
@@ -431,9 +431,7 @@ namespace PetSalut {
 			// 
 			// CentreLabel
 			// 
-			this->CentreLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->CentreLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->CentreLabel->AutoSize = true;
 			this->CentreLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->CentreLabel->Location = System::Drawing::Point(86, 402);
@@ -444,9 +442,7 @@ namespace PetSalut {
 			// 
 			// DiaBox
 			// 
-			this->DiaBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->DiaBox->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->DiaBox->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->DiaBox->Location = System::Drawing::Point(160, 166);
 			this->DiaBox->Name = L"DiaBox";
@@ -455,9 +451,7 @@ namespace PetSalut {
 			// 
 			// nomLabel
 			// 
-			this->nomLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->nomLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->nomLabel->AutoSize = true;
 			this->nomLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->nomLabel->Location = System::Drawing::Point(96, 96);
@@ -468,9 +462,7 @@ namespace PetSalut {
 			// 
 			// dataLabel
 			// 
-			this->dataLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->dataLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->dataLabel->AutoSize = true;
 			this->dataLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->dataLabel->Location = System::Drawing::Point(105, 166);
@@ -481,9 +473,7 @@ namespace PetSalut {
 			// 
 			// HoraLabel
 			// 
-			this->HoraLabel->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->HoraLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->HoraLabel->AutoSize = true;
 			this->HoraLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->HoraLabel->Location = System::Drawing::Point(102, 252);
@@ -502,10 +492,13 @@ namespace PetSalut {
 			this->Controls->Add(this->PanelVisita);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"CreaVisites_forms";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
 			this->Text = L"PETSALUT";
+			this->Load += gcnew System::EventHandler(this, &CreaVisites_forms::CreaVisites_forms_Load);
 			this->PanelVisita->ResumeLayout(false);
 			this->PanelVisita->PerformLayout();
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 
@@ -530,6 +523,8 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 
 	this->Close();
 
+}
+private: System::Void CreaVisites_forms_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

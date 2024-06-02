@@ -306,6 +306,7 @@ namespace PetSalut {
 			this->Controls->Add(this->label1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"ConsultarEvents";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
 			this->Text = L"PETSALUT";
 			this->Load += gcnew System::EventHandler(this, &ConsultarEvents::ConsultarEvents_Load);
 			this->panel1->ResumeLayout(false);
