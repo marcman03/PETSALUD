@@ -398,7 +398,8 @@ namespace PetSalut {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		PetSalut::ModProp^ modProp = gcnew PetSalut::ModProp();
-
+		modProp->Size = this->Size;
+		modProp->Location = this->Location;
 		this->Visible = false;
 
 		modProp->ShowDialog();

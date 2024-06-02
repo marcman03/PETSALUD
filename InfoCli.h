@@ -160,7 +160,7 @@ namespace PetSalut {
 			this->label6->BackColor = System::Drawing::Color::Transparent;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(443, 171);
+			this->label6->Location = System::Drawing::Point(106, 168);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(128, 25);
 			this->label6->TabIndex = 40;
@@ -186,7 +186,7 @@ namespace PetSalut {
 			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(104, 171);
+			this->label2->Location = System::Drawing::Point(443, 168);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(139, 25);
 			this->label2->TabIndex = 34;
@@ -202,9 +202,9 @@ namespace PetSalut {
 				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(104, 85);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(282, 42);
+			this->label1->Size = System::Drawing::Size(285, 42);
 			this->label1->TabIndex = 33;
-			this->label1->Text = L"Informacio Usuari";
+			this->label1->Text = L"Informacio Clinica";
 			this->label1->Click += gcnew System::EventHandler(this, &InfoCli::label1_Click);
 			// 
 			// nameLabel
@@ -216,7 +216,7 @@ namespace PetSalut {
 				static_cast<System::Byte>(0)));
 			this->nameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->nameLabel->Location = System::Drawing::Point(108, 212);
+			this->nameLabel->Location = System::Drawing::Point(445, 207);
 			this->nameLabel->Name = L"nameLabel";
 			this->nameLabel->Size = System::Drawing::Size(37, 17);
 			this->nameLabel->TabIndex = 47;
@@ -261,7 +261,7 @@ namespace PetSalut {
 				static_cast<System::Byte>(0)));
 			this->usernameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->usernameLabel->Location = System::Drawing::Point(443, 206);
+			this->usernameLabel->Location = System::Drawing::Point(109, 206);
 			this->usernameLabel->Name = L"usernameLabel";
 			this->usernameLabel->Size = System::Drawing::Size(73, 17);
 			this->usernameLabel->TabIndex = 51;
@@ -362,7 +362,7 @@ namespace PetSalut {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Name = L"InfoCli";
-			this->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"InfoCli";
 			this->Load += gcnew System::EventHandler(this, &InfoCli::InfoCli_Load);
 			this->ResumeLayout(false);

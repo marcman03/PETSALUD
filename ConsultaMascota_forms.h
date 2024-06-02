@@ -244,6 +244,7 @@ namespace PetSalut {
 			// 
 			// petsaludlabel
 			// 
+			this->petsaludlabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->petsaludlabel->AutoSize = true;
 			this->petsaludlabel->BackColor = System::Drawing::Color::Transparent;
 			this->petsaludlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 28.25F));
@@ -257,6 +258,7 @@ namespace PetSalut {
 			// 
 			// mypetslabel
 			// 
+			this->mypetslabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->mypetslabel->AutoSize = true;
 			this->mypetslabel->BackColor = System::Drawing::Color::Transparent;
 			this->mypetslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20));
@@ -269,6 +271,7 @@ namespace PetSalut {
 			// 
 			// petsList
 			// 
+			this->petsList->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->petsList->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
 			this->petsList->FormattingEnabled = true;
 			this->petsList->Location = System::Drawing::Point(199, 136);
@@ -280,6 +283,7 @@ namespace PetSalut {
 			// 
 			// consultar
 			// 
+			this->consultar->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->consultar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
 			this->consultar->Location = System::Drawing::Point(793, 135);
 			this->consultar->Margin = System::Windows::Forms::Padding(2);
@@ -292,6 +296,7 @@ namespace PetSalut {
 			// 
 			// descriptionPannel
 			// 
+			this->descriptionPannel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->descriptionPannel->BackColor = System::Drawing::SystemColors::Control;
 			this->descriptionPannel->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->descriptionPannel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
@@ -305,6 +310,7 @@ namespace PetSalut {
 			// 
 			// eliminabutton
 			// 
+			this->eliminabutton->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->eliminabutton->BackColor = System::Drawing::Color::IndianRed;
 			this->eliminabutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
 			this->eliminabutton->Location = System::Drawing::Point(990, 561);
@@ -317,6 +323,7 @@ namespace PetSalut {
 			// 
 			// registrarmascbutton
 			// 
+			this->registrarmascbutton->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->registrarmascbutton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(255)));
 			this->registrarmascbutton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
@@ -330,6 +337,7 @@ namespace PetSalut {
 			// 
 			// visitesButton
 			// 
+			this->visitesButton->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->visitesButton->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
 			this->visitesButton->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
@@ -343,6 +351,7 @@ namespace PetSalut {
 			// 
 			// button1
 			// 
+			this->button1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->button1->BackColor = System::Drawing::Color::Transparent;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
 			this->button1->Location = System::Drawing::Point(12, 561);
@@ -372,6 +381,7 @@ namespace PetSalut {
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"ConsultaMascota_forms";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
 			this->Text = L"PETSALUT";
 			this->ResumeLayout(false);
 			this->PerformLayout();
