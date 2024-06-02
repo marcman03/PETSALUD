@@ -69,7 +69,6 @@ namespace PetSalut {
 				this->usernameLabel->Text = res.username;
 				iniUsername = res.username;
 
-				this->passwdBox->Text = res.contrasenya;
 				iniPasswd = res.contrasenya;
 
 				this->descBox->Text = res.descripcio;

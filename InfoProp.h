@@ -38,7 +38,6 @@ namespace PetSalut {
 				this->phoneLabel->Text = res.telefon;
 				this->DateLabel->Text = res.data;
 				this->usernameLabel->Text = res.username;
-				this->passwordLabel->Text = res.contrasenya;
 				this->descripcio->Text = res.descripcio;
 
 			}
@@ -64,7 +63,7 @@ namespace PetSalut {
 	private: System::Windows::Forms::Label^ label9;
 	protected:
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ label7;
+
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Label^ label4;
@@ -75,7 +74,7 @@ namespace PetSalut {
 	private: System::Windows::Forms::Label^ phoneLabel;
 	private: System::Windows::Forms::Label^ DateLabel;
 	private: System::Windows::Forms::Label^ usernameLabel;
-	private: System::Windows::Forms::Label^ passwordLabel;
+
 	private: System::Windows::Forms::Label^ descripcio;
 	private: System::Windows::Forms::Button^ Accepta_Tanca;
 	private: System::Windows::Forms::Button^ button1;
@@ -98,7 +97,6 @@ namespace PetSalut {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(InfoProp::typeid));
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
@@ -109,7 +107,6 @@ namespace PetSalut {
 			this->phoneLabel = (gcnew System::Windows::Forms::Label());
 			this->DateLabel = (gcnew System::Windows::Forms::Label());
 			this->usernameLabel = (gcnew System::Windows::Forms::Label());
-			this->passwordLabel = (gcnew System::Windows::Forms::Label());
 			this->descripcio = (gcnew System::Windows::Forms::Label());
 			this->Accepta_Tanca = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -120,9 +117,10 @@ namespace PetSalut {
 			// 
 			this->label9->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label9->AutoSize = true;
+			this->label9->BackColor = System::Drawing::Color::Transparent;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label9->Location = System::Drawing::Point(708, 284);
+			this->label9->Location = System::Drawing::Point(708, 184);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(172, 33);
 			this->label9->TabIndex = 46;
@@ -132,6 +130,7 @@ namespace PetSalut {
 			// 
 			this->label3->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Transparent;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->Location = System::Drawing::Point(28, 184);
@@ -140,22 +139,11 @@ namespace PetSalut {
 			this->label3->TabIndex = 36;
 			this->label3->Text = L"Correu Electronic";
 			// 
-			// label7
-			// 
-			this->label7->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(708, 184);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(203, 33);
-			this->label7->TabIndex = 41;
-			this->label7->Text = L"Contrasenya";
-			// 
 			// label6
 			// 
 			this->label6->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label6->AutoSize = true;
+			this->label6->BackColor = System::Drawing::Color::Transparent;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label6->Location = System::Drawing::Point(708, 84);
@@ -168,6 +156,7 @@ namespace PetSalut {
 			// 
 			this->label5->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label5->AutoSize = true;
+			this->label5->BackColor = System::Drawing::Color::Transparent;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label5->Location = System::Drawing::Point(28, 384);
@@ -180,6 +169,7 @@ namespace PetSalut {
 			// 
 			this->label4->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label4->AutoSize = true;
+			this->label4->BackColor = System::Drawing::Color::Transparent;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label4->Location = System::Drawing::Point(28, 284);
@@ -192,6 +182,7 @@ namespace PetSalut {
 			// 
 			this->label2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->Location = System::Drawing::Point(28, 84);
@@ -204,6 +195,7 @@ namespace PetSalut {
 			// 
 			this->label1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 27.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(28, 24);
@@ -216,6 +208,7 @@ namespace PetSalut {
 			// 
 			this->nameLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->nameLabel->AutoSize = true;
+			this->nameLabel->BackColor = System::Drawing::Color::Transparent;
 			this->nameLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->nameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
@@ -230,6 +223,7 @@ namespace PetSalut {
 			// 
 			this->mailLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->mailLabel->AutoSize = true;
+			this->mailLabel->BackColor = System::Drawing::Color::Transparent;
 			this->mailLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->mailLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
@@ -244,6 +238,7 @@ namespace PetSalut {
 			// 
 			this->phoneLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->phoneLabel->AutoSize = true;
+			this->phoneLabel->BackColor = System::Drawing::Color::Transparent;
 			this->phoneLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->phoneLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
@@ -258,6 +253,7 @@ namespace PetSalut {
 			// 
 			this->DateLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->DateLabel->AutoSize = true;
+			this->DateLabel->BackColor = System::Drawing::Color::Transparent;
 			this->DateLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->DateLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
@@ -272,6 +268,7 @@ namespace PetSalut {
 			// 
 			this->usernameLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->usernameLabel->AutoSize = true;
+			this->usernameLabel->BackColor = System::Drawing::Color::Transparent;
 			this->usernameLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->usernameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
@@ -282,29 +279,16 @@ namespace PetSalut {
 			this->usernameLabel->TabIndex = 51;
 			this->usernameLabel->Text = L"username Aqui";
 			// 
-			// passwordLabel
-			// 
-			this->passwordLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->passwordLabel->AutoSize = true;
-			this->passwordLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->passwordLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->passwordLabel->Location = System::Drawing::Point(709, 217);
-			this->passwordLabel->Name = L"passwordLabel";
-			this->passwordLabel->Size = System::Drawing::Size(246, 30);
-			this->passwordLabel->TabIndex = 52;
-			this->passwordLabel->Text = L"contrasenya Aqui";
-			// 
 			// descripcio
 			// 
 			this->descripcio->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->descripcio->AutoSize = true;
+			this->descripcio->BackColor = System::Drawing::Color::Transparent;
 			this->descripcio->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->descripcio->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->descripcio->Location = System::Drawing::Point(709, 317);
+			this->descripcio->Location = System::Drawing::Point(709, 217);
 			this->descripcio->Name = L"descripcio";
 			this->descripcio->Size = System::Drawing::Size(196, 26);
 			this->descripcio->TabIndex = 53;
@@ -360,12 +344,12 @@ namespace PetSalut {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->Accepta_Tanca);
 			this->Controls->Add(this->descripcio);
-			this->Controls->Add(this->passwordLabel);
 			this->Controls->Add(this->usernameLabel);
 			this->Controls->Add(this->DateLabel);
 			this->Controls->Add(this->phoneLabel);
@@ -373,7 +357,6 @@ namespace PetSalut {
 			this->Controls->Add(this->nameLabel);
 			this->Controls->Add(this->label9);
 			this->Controls->Add(this->label3);
-			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);

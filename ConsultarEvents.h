@@ -97,6 +97,7 @@ namespace PetSalut {
 			// label2
 			// 
 			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 28));
 			this->label2->Location = System::Drawing::Point(455, 22);
 			this->label2->Name = L"label2";
@@ -107,6 +108,7 @@ namespace PetSalut {
 			// label1
 			// 
 			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 20));
 			this->label1->Location = System::Drawing::Point(372, 76);
 			this->label1->Name = L"label1";
@@ -297,6 +299,7 @@ namespace PetSalut {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->eliminarAsistencia);
 			this->Controls->Add(this->panel1);

@@ -123,6 +123,7 @@ namespace PetSalut {
 			// 
 			this->label1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 20));
 			this->label1->Location = System::Drawing::Point(412, 73);
 			this->label1->Name = L"label1";
@@ -134,6 +135,7 @@ namespace PetSalut {
 			// 
 			this->label2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 28));
 			this->label2->Location = System::Drawing::Point(440, 19);
 			this->label2->Name = L"label2";
@@ -373,6 +375,7 @@ namespace PetSalut {
 			// 
 			this->descripcioBox->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 10));
 			this->descripcioBox->Location = System::Drawing::Point(18, 173);
+			this->descripcioBox->MaxLength = 254;
 			this->descripcioBox->Multiline = true;
 			this->descripcioBox->Name = L"descripcioBox";
 			this->descripcioBox->Size = System::Drawing::Size(440, 246);
@@ -411,6 +414,7 @@ namespace PetSalut {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->label2);
