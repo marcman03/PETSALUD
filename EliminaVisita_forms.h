@@ -183,9 +183,7 @@ namespace PetSalut {
 			// 
 			// panelElimina
 			// 
-			this->panelElimina->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->panelElimina->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->panelElimina->BackColor = System::Drawing::SystemColors::Control;
 			this->panelElimina->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panelElimina->Controls->Add(this->label1);
@@ -310,6 +308,7 @@ namespace PetSalut {
 			this->Controls->Add(this->panelElimina);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"EliminaVisita_forms";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
 			this->Text = L"PETSALUT";
 			this->panelElimina->ResumeLayout(false);
 			this->panelElimina->PerformLayout();

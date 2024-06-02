@@ -236,7 +236,7 @@ namespace PetSalut {
 			this->Controls->Add(this->mypetslabel);
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"ConsultaCentresForm";
-			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
+			this->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
 			this->Text = L"PETSALUT";
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -339,6 +339,10 @@ namespace PetSalut {
 
 		PetSalut::EliminaCentresForm^ eliminaCentre = gcnew PetSalut::EliminaCentresForm();
 
+		// Set the size and position of IniUsu to match PantallaPrincipal
+		eliminaCentre->Size = this->Size;
+		eliminaCentre->Location = this->Location;
+
 		this->Visible = false;
 
 		eliminaCentre->ShowDialog();
@@ -350,6 +354,10 @@ namespace PetSalut {
 	private: System::Void registrarbutton_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		PetSalut::CreaCentreForms^ creaMasc = gcnew PetSalut::CreaCentreForms();
+		
+		// Set the size and position of IniUsu to match PantallaPrincipal
+		creaMasc->Size = this->Size;
+		creaMasc->Location = this->Location;
 
 		this->Visible = false;
 
@@ -361,7 +369,11 @@ namespace PetSalut {
 	private: System::Void visitesButton_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		PetSalut::ConsultaVistes_forms^ consVisites = gcnew PetSalut::ConsultaVistes_forms();
-
+		
+		// Set the size and position of IniUsu to match PantallaPrincipal
+		consVisites->Size = this->Size;
+		consVisites->Location = this->Location;
+		
 		this->Visible = false;
 
 		consVisites->ShowDialog();

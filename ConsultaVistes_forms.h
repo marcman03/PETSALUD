@@ -160,6 +160,10 @@ namespace PetSalut {
 	private: System::Void registrarbutton_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		PetSalut::CreaVisites_forms^ creaVisita = gcnew PetSalut::CreaVisites_forms();
+		
+		// Set the size and position of IniUsu to match PantallaPrincipal
+		creaVisita->Size = this->Size;
+		creaVisita->Location = this->Location;
 
 		this->Visible = false;
 
@@ -362,6 +366,7 @@ namespace PetSalut {
 			// 
 			// visitesLabel
 			// 
+			this->visitesLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->visitesLabel->AutoSize = true;
 			this->visitesLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 20));
 			this->visitesLabel->Location = System::Drawing::Point(512, 63);
@@ -374,6 +379,7 @@ namespace PetSalut {
 			// 
 			// petsaludlabel
 			// 
+			this->petsaludlabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->petsaludlabel->AutoSize = true;
 			this->petsaludlabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 28));
 			this->petsaludlabel->Location = System::Drawing::Point(454, 9);
@@ -514,6 +520,8 @@ namespace PetSalut {
 			// 
 			// panel1
 			// 
+			this->panel1->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->panel1->AutoSize = true;
 			this->panel1->BackColor = System::Drawing::SystemColors::Control;
 			this->panel1->Controls->Add(this->button1);
 			this->panel1->Controls->Add(this->hiddenPanel);
@@ -567,6 +575,7 @@ namespace PetSalut {
 			this->Controls->Add(this->petsaludlabel);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"ConsultaVistes_forms";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
 			this->Text = L"PETSALUT";
 			this->hiddenPanel->ResumeLayout(false);
 			this->hiddenPanel->PerformLayout();
