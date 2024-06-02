@@ -128,6 +128,7 @@ namespace PetSalut {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(EliminaCentresForm::typeid));
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
@@ -149,30 +150,34 @@ namespace PetSalut {
 			// 
 			// label8
 			// 
+			this->label8->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label8->AutoSize = true;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label8->BackColor = System::Drawing::Color::Transparent;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label8->Location = System::Drawing::Point(426, 63);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(295, 33);
+			this->label8->Size = System::Drawing::Size(338, 37);
 			this->label8->TabIndex = 15;
 			this->label8->Text = L"ELS MEUS CENTRES";
 			// 
 			// label6
 			// 
+			this->label6->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 28));
-			this->label6->Location = System::Drawing::Point(443, 9);
+			this->label6->BackColor = System::Drawing::Color::Transparent;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label6->Location = System::Drawing::Point(497, 9);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(262, 54);
+			this->label6->Size = System::Drawing::Size(183, 37);
 			this->label6->TabIndex = 14;
 			this->label6->Text = L"PETSALUT";
 			// 
 			// panel1
 			// 
-			this->panel1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->panel1->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->panel1->AutoSize = true;
 			this->panel1->BackColor = System::Drawing::SystemColors::Control;
 			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panel1->Controls->Add(this->panel2);
@@ -208,7 +213,8 @@ namespace PetSalut {
 			// 
 			this->button4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			this->button4->BackColor = System::Drawing::Color::Transparent;
-			this->button4->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
+			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->button4->Location = System::Drawing::Point(845, 206);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(85, 35);
@@ -223,12 +229,13 @@ namespace PetSalut {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
-			this->label2->Location = System::Drawing::Point(331, 21);
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(362, 21);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(252, 26);
+			this->label2->Size = System::Drawing::Size(180, 24);
 			this->label2->TabIndex = 11;
-			this->label2->Text = L"ELIMINAR MASCOTA";
+			this->label2->Text = L"ELIMINAR CENTRE";
 			// 
 			// label3
 			// 
@@ -236,10 +243,11 @@ namespace PetSalut {
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
-			this->label3->Location = System::Drawing::Point(202, 93);
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->Location = System::Drawing::Point(275, 92);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(530, 26);
+			this->label3->Size = System::Drawing::Size(372, 24);
 			this->label3->TabIndex = 3;
 			this->label3->Text = L"La teva mascota s\'ha eliminat correctament.";
 			// 
@@ -270,10 +278,11 @@ namespace PetSalut {
 			this->label7->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
-			this->label7->Location = System::Drawing::Point(335, 35);
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label7->Location = System::Drawing::Point(362, 38);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(226, 26);
+			this->label7->Size = System::Drawing::Size(180, 24);
 			this->label7->TabIndex = 11;
 			this->label7->Text = L"ELIMINAR CENTRE";
 			// 
@@ -331,6 +340,7 @@ namespace PetSalut {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label6);

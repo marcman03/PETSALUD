@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include "TxConsultaUsu.h"
 #include "TxModUsu.h"
 #include "Ordinador.h"
@@ -184,7 +184,7 @@ namespace PetSalut {
 			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(41, 142);
+			this->label2->Location = System::Drawing::Point(435, 142);
 			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(167, 30);
@@ -195,10 +195,10 @@ namespace PetSalut {
 			// 
 			this->nameBox->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->nameBox->Location = System::Drawing::Point(44, 186);
+			this->nameBox->Location = System::Drawing::Point(438, 186);
 			this->nameBox->Margin = System::Windows::Forms::Padding(4);
 			this->nameBox->Name = L"nameBox";
-			this->nameBox->Size = System::Drawing::Size(311, 27);
+			this->nameBox->Size = System::Drawing::Size(231, 27);
 			this->nameBox->TabIndex = 49;
 			// 
 			// label9
@@ -233,7 +233,7 @@ namespace PetSalut {
 			this->label6->BackColor = System::Drawing::Color::Transparent;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(436, 142);
+			this->label6->Location = System::Drawing::Point(46, 142);
 			this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(153, 30);
@@ -306,7 +306,7 @@ namespace PetSalut {
 				static_cast<System::Byte>(0)));
 			this->usernameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->usernameLabel->Location = System::Drawing::Point(436, 186);
+			this->usernameLabel->Location = System::Drawing::Point(47, 186);
 			this->usernameLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->usernameLabel->Name = L"usernameLabel";
 			this->usernameLabel->Size = System::Drawing::Size(86, 20);
