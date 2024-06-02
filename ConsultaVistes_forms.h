@@ -486,7 +486,7 @@ namespace PetSalut {
 			this->trackBarLabel->Name = L"trackBarLabel";
 			this->trackBarLabel->Size = System::Drawing::Size(88, 25);
 			this->trackBarLabel->TabIndex = 0;
-			this->trackBarLabel->Text = L"Nota: 0";
+			this->trackBarLabel->Text = L"No valorat";
 			// 
 			// showHideButton
 			// 
@@ -506,6 +506,8 @@ namespace PetSalut {
 			this->trackBar->Name = L"trackBar";
 			this->trackBar->Size = System::Drawing::Size(260, 45);
 			this->trackBar->TabIndex = 1;
+			this->trackBar->Minimum = 1;
+			this->trackBar->Minimum = 10;
 			this->trackBar->Scroll += gcnew System::EventHandler(this, &ConsultaVistes_forms::trackBar_Scroll);
 			// 
 			// consultar

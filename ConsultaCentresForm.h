@@ -10,6 +10,7 @@
 #include "CreaCentreForms.h"
 #include "CercadoraClinica.h"
 #include "CercadoraAten.h"
+#include "CercadoraValoracio.h"
 #include "ConsultaVistes_forms.h"
 
 namespace PetSalut {
@@ -31,6 +32,10 @@ namespace PetSalut {
 		//Declaració del BindingSource
 		List<String^>^ tipusList = gcnew List<String^>();
 	private: System::Windows::Forms::ListBox^ tipusListBox;
+	private: System::Windows::Forms::Label^ label1;
+
+
+
 	public:
 
 	public:
@@ -98,6 +103,7 @@ namespace PetSalut {
 			this->visitesButton = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->tipusListBox = (gcnew System::Windows::Forms::ListBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// mypetslabel
@@ -132,10 +138,10 @@ namespace PetSalut {
 			this->consultar->BackColor = System::Drawing::Color::White;
 			this->consultar->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->consultar->Location = System::Drawing::Point(730, 154);
+			this->consultar->Location = System::Drawing::Point(731, 154);
 			this->consultar->Margin = System::Windows::Forms::Padding(2);
 			this->consultar->Name = L"consultar";
-			this->consultar->Size = System::Drawing::Size(228, 29);
+			this->consultar->Size = System::Drawing::Size(238, 29);
 			this->consultar->TabIndex = 4;
 			this->consultar->Text = L"Consultar";
 			this->consultar->UseVisualStyleBackColor = false;
@@ -151,7 +157,7 @@ namespace PetSalut {
 			this->descriptionPannel->Location = System::Drawing::Point(229, 191);
 			this->descriptionPannel->Margin = System::Windows::Forms::Padding(2);
 			this->descriptionPannel->Name = L"descriptionPannel";
-			this->descriptionPannel->Size = System::Drawing::Size(497, 261);
+			this->descriptionPannel->Size = System::Drawing::Size(497, 336);
 			this->descriptionPannel->TabIndex = 5;
 			this->descriptionPannel->Visible = false;
 			// 
@@ -223,15 +229,28 @@ namespace PetSalut {
 			this->tipusListBox->FormattingEnabled = true;
 			this->tipusListBox->IntegralHeight = false;
 			this->tipusListBox->ItemHeight = 20;
-			this->tipusListBox->Location = System::Drawing::Point(731, 191);
+			this->tipusListBox->Location = System::Drawing::Point(731, 208);
 			this->tipusListBox->Name = L"tipusListBox";
 			this->tipusListBox->ScrollAlwaysVisible = true;
 			this->tipusListBox->SelectionMode = System::Windows::Forms::SelectionMode::None;
-			this->tipusListBox->Size = System::Drawing::Size(227, 261);
+			this->tipusListBox->Size = System::Drawing::Size(238, 319);
 			this->tipusListBox->TabIndex = 10;
 			this->tipusListBox->TabStop = false;
 			this->tipusListBox->UseTabStops = false;
 			this->tipusListBox->Visible = false;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Transparent;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(748, 185);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(210, 20);
+			this->label1->TabIndex = 11;
+			this->label1->Text = L"Tipus d\'animals que s\'atenen";
+			this->label1->Visible = false;
 			// 
 			// ConsultaCentresForm
 			// 
@@ -240,6 +259,7 @@ namespace PetSalut {
 			this->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1184, 661);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->tipusListBox);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->visitesButton);
@@ -261,6 +281,7 @@ namespace PetSalut {
 	private: System::Void consultar_Click(System::Object^ sender, System::EventArgs^ e) {
 		// Verifica si hay al menos un elemento seleccionado en el ComboBox
 		if (centresList->SelectedIndex != -1) {
+			this->label1->Visible = true;
 			tipusListBox->Items->Clear();
 			// Si hay un elemento seleccionado, muestra el panel de descripción
 			tipusListBox->Visible = true;
@@ -283,34 +304,50 @@ namespace PetSalut {
 			// Por ejemplo, podrías mostrar el numero_ID, el nombre, etc.
 			// Aquí se muestra el numero_ID, nombre, descripción, clinica y tipo
 			Label^ labelNumero_ID = gcnew Label();
-			labelNumero_ID->Text = "Numero_ID: \n" + centre->Numero_ID;
+			labelNumero_ID->Text = "Id centre: " + centre->Numero_ID;
 			labelNumero_ID->Location = Point(10, 10); // Establece la posición del label dentro del panel
 			labelNumero_ID->AutoSize = true;
 			descriptionPannel->Controls->Add(labelNumero_ID);
 
 			Label^ label_Nom = gcnew Label();
-			label_Nom->Text = "Nombre: \n" + centre->Nom;
+			label_Nom->Text = "Nombre: " + centre->Nom;
 			label_Nom->Location = Point(10, labelNumero_ID->Bottom + 25);
 			label_Nom->AutoSize = true;
 			descriptionPannel->Controls->Add(label_Nom);
 
 			Label^ label_Telefon = gcnew Label();
-			label_Telefon->Text = "Telefon: \n" + centre->Telefon;
+			label_Telefon->Text = "Telefon: " + centre->Telefon;
 			label_Telefon->Location = Point(10, label_Nom->Bottom + 25);
 			label_Telefon->AutoSize = true;
 			descriptionPannel->Controls->Add(label_Telefon);
 
 			Label^ label_Clinica = gcnew Label();
-			label_Clinica->Text = "Clinica: \n" + centre->Clinica;
+			label_Clinica->Text = "Clinica: " + centre->Clinica;
 			label_Clinica->Location = Point(10, label_Telefon->Bottom + 25);
 			label_Clinica->AutoSize = true;
 			descriptionPannel->Controls->Add(label_Clinica);
 
 			Label^ label_Ubicacio = gcnew Label();
-			label_Ubicacio->Text = "Ubicacio: \n" + centre->Ubicacio;
+			label_Ubicacio->Text = "Ubicacio: " + centre->Ubicacio;
 			label_Ubicacio->Location = Point(10, label_Clinica->Bottom + 25);
 			label_Ubicacio->AutoSize = true;
 			descriptionPannel->Controls->Add(label_Ubicacio);
+
+			CercadoraValoracio^ cercadoraValoracio = gcnew CercadoraValoracio();
+			int^ val = cercadoraValoracio->cercaValMitja(numero_ID);
+			String^ valor;
+			if (val == 0) {
+				valor = "No hi ha valoracions";
+			}
+			else {
+				valor = val->ToString();
+			}
+			Label^ label_Valoracio = gcnew Label();
+			label_Valoracio->Text = "Valoracio mitja: " + valor;
+			label_Valoracio->Location = Point(10, label_Ubicacio->Bottom + 25);
+			label_Valoracio->AutoSize = true;
+			descriptionPannel->Controls->Add(label_Valoracio);
+
 
 			// Llista de tipus de mascotes ateses pel centre
 			CercadoraAten^ cercadoraAten = gcnew CercadoraAten();

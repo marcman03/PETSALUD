@@ -125,9 +125,6 @@
     <ClInclude Include="CercadoraVisita.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TxCrearVisita.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="EliminaVisita_forms.h">
       <Filter>Forms</Filter>
     </ClInclude>
@@ -137,11 +134,7 @@
     <ClInclude Include="TxEliminaVisita.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CercadoraTipus.h" />
-    <ClInclude Include="CercadoraValoracio.h" />
-    <ClInclude Include="PassarellaTipus.h" />
     <ClInclude Include="PassarellaUsuari.h" />
-    <ClInclude Include="PassarellaValoracio.h" />
     <ClInclude Include="PassarellaVisites.h" />
     <ClInclude Include="RegUsu.h" />
     <ClInclude Include="PassarellaClinica.h" />
@@ -155,9 +148,6 @@
     <ClInclude Include="TxConsultaUsu.h" />
     <ClInclude Include="TxCrearCentre.h" />
     <ClInclude Include="TxCrearMascota.h" />
-    <ClInclude Include="TxCrearValoracio.h" />
-    <ClInclude Include="TxEliminarValoracio.h" />
-    <ClInclude Include="TxModificarValoracio.h" />
     <ClInclude Include="CrearPublic.h">
       <Filter>Forms</Filter>
     </ClInclude>
@@ -170,9 +160,52 @@
     <ClInclude Include="EliminaCentresForm.h">
       <Filter>Forms</Filter>
     </ClInclude>
-    <ClInclude Include="PassarellaAten.h" />
-    <ClInclude Include="TxCrearAten.h" />
-    <ClInclude Include="CercadoraAten.h" />
+    <ClInclude Include="Elimina_Mascota_forms.h" />
+    <ClInclude Include="PassarellaAten.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CercadoraAten.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CercadoraParticipa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CercadoraPublic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CercadoraTipus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CercadoraValoracio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PassarellaParticipa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PassarellaPublic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxCrearAten.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxCrearEsdeveniment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxCrearValoracio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PassarellaValoracio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PassarellaTipus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxEliminarValoracio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TxModificarValoracio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinFormsProject.cpp">
@@ -313,9 +346,6 @@
     <ClCompile Include="CercadoraVisita.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TxCrearVisita.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="EliminaVisita_forms.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -365,6 +395,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CercadoraAten.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CercadoraParticipa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CercadoraPublic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassarellaParticipa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassarellaPublic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TxCrearEsdeveniment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -419,9 +464,6 @@
       <Filter>Forms</Filter>
     </ClInclude>
     <ClInclude Include="ConsultaMascota_forms.h">
-      <Filter>Forms</Filter>
-    </ClInclude>
-    <ClInclude Include="Delete_Mascota_forms.h">
       <Filter>Forms</Filter>
     </ClInclude>
   </ItemGroup>
