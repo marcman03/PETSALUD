@@ -176,6 +176,11 @@ namespace PetSalut {
 			   this->descripcioLabel = (gcnew System::Windows::Forms::Label());
 			   this->fontDialog1 = (gcnew System::Windows::Forms::FontDialog());
 			   this->panel1 = (gcnew System::Windows::Forms::Panel());
+			   this->panel2 = (gcnew System::Windows::Forms::Panel());
+			   this->button4 = (gcnew System::Windows::Forms::Button());
+			   this->label9 = (gcnew System::Windows::Forms::Label());
+			   this->button2 = (gcnew System::Windows::Forms::Button());
+			   this->label10 = (gcnew System::Windows::Forms::Label());
 			   this->button3 = (gcnew System::Windows::Forms::Button());
 			   this->chipBox = (gcnew System::Windows::Forms::TextBox());
 			   this->AdvertType = (gcnew System::Windows::Forms::Label());
@@ -186,11 +191,6 @@ namespace PetSalut {
 			   this->descriptionBox = (gcnew System::Windows::Forms::TextBox());
 			   this->label7 = (gcnew System::Windows::Forms::Label());
 			   this->button1 = (gcnew System::Windows::Forms::Button());
-			   this->panel2 = (gcnew System::Windows::Forms::Panel());
-			   this->button4 = (gcnew System::Windows::Forms::Button());
-			   this->label9 = (gcnew System::Windows::Forms::Label());
-			   this->button2 = (gcnew System::Windows::Forms::Button());
-			   this->label10 = (gcnew System::Windows::Forms::Label());
 			   this->label6 = (gcnew System::Windows::Forms::Label());
 			   this->label8 = (gcnew System::Windows::Forms::Label());
 			   this->panel1->SuspendLayout();
@@ -202,10 +202,9 @@ namespace PetSalut {
 			   this->nameBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->nameBox->Location = System::Drawing::Point(176, 98);
-			   this->nameBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			   this->nameBox->Location = System::Drawing::Point(141, 78);
 			   this->nameBox->Name = L"nameBox";
-			   this->nameBox->Size = System::Drawing::Size(844, 26);
+			   this->nameBox->Size = System::Drawing::Size(676, 22);
 			   this->nameBox->TabIndex = 1;
 			   // 
 			   // birthdayBox
@@ -213,11 +212,11 @@ namespace PetSalut {
 			   this->birthdayBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				   | System::Windows::Forms::AnchorStyles::Left)
 				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->birthdayBox->Location = System::Drawing::Point(176, 270);
-			   this->birthdayBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			   this->birthdayBox->Location = System::Drawing::Point(141, 216);
 			   this->birthdayBox->Name = L"birthdayBox";
-			   this->birthdayBox->Size = System::Drawing::Size(844, 26);
+			   this->birthdayBox->Size = System::Drawing::Size(676, 22);
 			   this->birthdayBox->TabIndex = 2;
+			   this->birthdayBox->MaxDate = DateTime::Now;
 			   // 
 			   // nomLabel
 			   // 
@@ -226,10 +225,9 @@ namespace PetSalut {
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->nomLabel->AutoSize = true;
 			   this->nomLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-			   this->nomLabel->Location = System::Drawing::Point(91, 99);
-			   this->nomLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			   this->nomLabel->Location = System::Drawing::Point(73, 79);
 			   this->nomLabel->Name = L"nomLabel";
-			   this->nomLabel->Size = System::Drawing::Size(59, 25);
+			   this->nomLabel->Size = System::Drawing::Size(46, 20);
 			   this->nomLabel->TabIndex = 3;
 			   this->nomLabel->Text = L"Nom:";
 			   this->nomLabel->Click += gcnew System::EventHandler(this, &Crea_Mascota_forms::label1_Click);
@@ -241,13 +239,13 @@ namespace PetSalut {
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->cumpleLabel->AutoSize = true;
 			   this->cumpleLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-			   this->cumpleLabel->Location = System::Drawing::Point(16, 271);
-			   this->cumpleLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			   this->cumpleLabel->Location = System::Drawing::Point(34, 217);
 			   this->cumpleLabel->Name = L"cumpleLabel";
-			   this->cumpleLabel->Size = System::Drawing::Size(105, 25);
+			   this->cumpleLabel->Size = System::Drawing::Size(82, 20);
 			   this->cumpleLabel->TabIndex = 4;
 			   this->cumpleLabel->Text = L"Aniversari:";
 			   this->cumpleLabel->Click += gcnew System::EventHandler(this, &Crea_Mascota_forms::label2_Click);
+
 			   // 
 			   // tipusLabel
 			   // 
@@ -256,10 +254,9 @@ namespace PetSalut {
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->tipusLabel->AutoSize = true;
 			   this->tipusLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-			   this->tipusLabel->Location = System::Drawing::Point(81, 361);
-			   this->tipusLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			   this->tipusLabel->Location = System::Drawing::Point(65, 289);
 			   this->tipusLabel->Name = L"tipusLabel";
-			   this->tipusLabel->Size = System::Drawing::Size(67, 25);
+			   this->tipusLabel->Size = System::Drawing::Size(51, 20);
 			   this->tipusLabel->TabIndex = 5;
 			   this->tipusLabel->Text = L"Tipus:";
 			   // 
@@ -274,10 +271,9 @@ namespace PetSalut {
 				   L"canari", L"conill", L"gat", L"gos", L"hamster",
 					   L"lloro", L"pony", L"porc"
 			   });
-			   this->typeBox->Location = System::Drawing::Point(176, 360);
-			   this->typeBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			   this->typeBox->Location = System::Drawing::Point(141, 288);
 			   this->typeBox->Name = L"typeBox";
-			   this->typeBox->Size = System::Drawing::Size(844, 28);
+			   this->typeBox->Size = System::Drawing::Size(676, 24);
 			   this->typeBox->TabIndex = 6;
 			   // 
 			   // chipLabel
@@ -287,10 +283,9 @@ namespace PetSalut {
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->chipLabel->AutoSize = true;
 			   this->chipLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-			   this->chipLabel->Location = System::Drawing::Point(91, 180);
-			   this->chipLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			   this->chipLabel->Location = System::Drawing::Point(73, 144);
 			   this->chipLabel->Name = L"chipLabel";
-			   this->chipLabel->Size = System::Drawing::Size(59, 25);
+			   this->chipLabel->Size = System::Drawing::Size(45, 20);
 			   this->chipLabel->TabIndex = 7;
 			   this->chipLabel->Text = L"Chip:";
 			   this->chipLabel->Click += gcnew System::EventHandler(this, &Crea_Mascota_forms::label4_Click);
@@ -302,10 +297,9 @@ namespace PetSalut {
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->descripcioLabel->AutoSize = true;
 			   this->descripcioLabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-			   this->descripcioLabel->Location = System::Drawing::Point(16, 455);
-			   this->descripcioLabel->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			   this->descripcioLabel->Location = System::Drawing::Point(13, 364);
 			   this->descripcioLabel->Name = L"descripcioLabel";
-			   this->descripcioLabel->Size = System::Drawing::Size(109, 25);
+			   this->descripcioLabel->Size = System::Drawing::Size(87, 20);
 			   this->descripcioLabel->TabIndex = 9;
 			   this->descripcioLabel->Text = L"Descripció:";
 			   // 
@@ -340,151 +334,11 @@ namespace PetSalut {
 			   this->panel1->Controls->Add(this->cumpleLabel);
 			   this->panel1->Controls->Add(this->tipusLabel);
 			   this->panel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
-			   this->panel1->Location = System::Drawing::Point(100, 106);
-			   this->panel1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			   this->panel1->Location = System::Drawing::Point(80, 85);
 			   this->panel1->Name = L"panel1";
-			   this->panel1->Size = System::Drawing::Size(1290, 686);
+			   this->panel1->Size = System::Drawing::Size(1032, 549);
 			   this->panel1->TabIndex = 10;
 			   this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Crea_Mascota_forms::panel1_Paint);
-			   // 
-			   // button3
-			   // 
-			   this->button3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				   | System::Windows::Forms::AnchorStyles::Left)
-				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
-			   this->button3->Location = System::Drawing::Point(828, 576);
-			   this->button3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			   this->button3->Name = L"button3";
-			   this->button3->Size = System::Drawing::Size(212, 84);
-			   this->button3->TabIndex = 27;
-			   this->button3->Text = L"Sortir";
-			   this->button3->UseVisualStyleBackColor = true;
-			   // 
-			   // chipBox
-			   // 
-			   this->chipBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				   | System::Windows::Forms::AnchorStyles::Left)
-				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->chipBox->Location = System::Drawing::Point(176, 180);
-			   this->chipBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			   this->chipBox->MaxLength = 9;
-			   this->chipBox->Name = L"chipBox";
-			   this->chipBox->Size = System::Drawing::Size(844, 26);
-			   this->chipBox->TabIndex = 26;
-			   this->chipBox->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Crea_Mascota_forms::chipBox_KeyPress);
-			   // 
-			   // AdvertType
-			   // 
-			   this->AdvertType->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				   | System::Windows::Forms::AnchorStyles::Left)
-				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->AdvertType->AutoSize = true;
-			   this->AdvertType->ForeColor = System::Drawing::Color::Brown;
-			   this->AdvertType->Location = System::Drawing::Point(1029, 364);
-			   this->AdvertType->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			   this->AdvertType->Name = L"AdvertType";
-			   this->AdvertType->Size = System::Drawing::Size(128, 20);
-			   this->AdvertType->TabIndex = 25;
-			   this->AdvertType->Text = L"Required Field *";
-			   this->AdvertType->Visible = false;
-			   // 
-			   // AdvertBirthay
-			   // 
-			   this->AdvertBirthay->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				   | System::Windows::Forms::AnchorStyles::Left)
-				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->AdvertBirthay->AutoSize = true;
-			   this->AdvertBirthay->ForeColor = System::Drawing::Color::Brown;
-			   this->AdvertBirthay->Location = System::Drawing::Point(1029, 276);
-			   this->AdvertBirthay->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			   this->AdvertBirthay->Name = L"AdvertBirthay";
-			   this->AdvertBirthay->Size = System::Drawing::Size(128, 20);
-			   this->AdvertBirthay->TabIndex = 24;
-			   this->AdvertBirthay->Text = L"Required Field *";
-			   this->AdvertBirthay->Visible = false;
-			   this->AdvertBirthay->Click += gcnew System::EventHandler(this, &Crea_Mascota_forms::label14_Click);
-			   // 
-			   // AdvertChip
-			   // 
-			   this->AdvertChip->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				   | System::Windows::Forms::AnchorStyles::Left)
-				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->AdvertChip->AutoSize = true;
-			   this->AdvertChip->ForeColor = System::Drawing::Color::Brown;
-			   this->AdvertChip->Location = System::Drawing::Point(1029, 186);
-			   this->AdvertChip->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			   this->AdvertChip->Name = L"AdvertChip";
-			   this->AdvertChip->Size = System::Drawing::Size(128, 20);
-			   this->AdvertChip->TabIndex = 23;
-			   this->AdvertChip->Text = L"Required Field *";
-			   this->AdvertChip->Visible = false;
-			   // 
-			   // AdvertName
-			   // 
-			   this->AdvertName->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				   | System::Windows::Forms::AnchorStyles::Left)
-				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->AdvertName->AutoSize = true;
-			   this->AdvertName->ForeColor = System::Drawing::Color::Brown;
-			   this->AdvertName->Location = System::Drawing::Point(1029, 101);
-			   this->AdvertName->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			   this->AdvertName->Name = L"AdvertName";
-			   this->AdvertName->Size = System::Drawing::Size(128, 20);
-			   this->AdvertName->TabIndex = 22;
-			   this->AdvertName->Text = L"Required Field *";
-			   this->AdvertName->Visible = false;
-			   this->AdvertName->Click += gcnew System::EventHandler(this, &Crea_Mascota_forms::label12_Click);
-			   // 
-			   // label11
-			   // 
-			   this->label11->Location = System::Drawing::Point(0, 0);
-			   this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			   this->label11->Name = L"label11";
-			   this->label11->Size = System::Drawing::Size(125, 29);
-			   this->label11->TabIndex = 21;
-			   // 
-			   // descriptionBox
-			   // 
-			   this->descriptionBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				   | System::Windows::Forms::AnchorStyles::Left)
-				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->descriptionBox->Location = System::Drawing::Point(176, 455);
-			   this->descriptionBox->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			   this->descriptionBox->Name = L"descriptionBox";
-			   this->descriptionBox->Size = System::Drawing::Size(844, 26);
-			   this->descriptionBox->TabIndex = 12;
-			   this->descriptionBox->TextChanged += gcnew System::EventHandler(this, &Crea_Mascota_forms::textBox2_TextChanged);
-			   // 
-			   // label7
-			   // 
-			   this->label7->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				   | System::Windows::Forms::AnchorStyles::Left)
-				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->label7->AutoSize = true;
-			   this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16));
-			   this->label7->Location = System::Drawing::Point(515, 36);
-			   this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			   this->label7->Name = L"label7";
-			   this->label7->Size = System::Drawing::Size(232, 31);
-			   this->label7->TabIndex = 11;
-			   this->label7->Text = L"NOVA MASCOTA";
-			   this->label7->Click += gcnew System::EventHandler(this, &Crea_Mascota_forms::label7_Click);
-			   // 
-			   // button1
-			   // 
-			   this->button1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				   | System::Windows::Forms::AnchorStyles::Left)
-				   | System::Windows::Forms::AnchorStyles::Right));
-			   this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
-			   this->button1->Location = System::Drawing::Point(1048, 576);
-			   this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			   this->button1->Name = L"button1";
-			   this->button1->Size = System::Drawing::Size(212, 84);
-			   this->button1->TabIndex = 10;
-			   this->button1->Text = L"Registrar";
-			   this->button1->UseVisualStyleBackColor = true;
-			   this->button1->Click += gcnew System::EventHandler(this, &Crea_Mascota_forms::savebutton_Click);
 			   // 
 			   // panel2
 			   // 
@@ -498,10 +352,9 @@ namespace PetSalut {
 			   this->panel2->Controls->Add(this->label9);
 			   this->panel2->Controls->Add(this->button2);
 			   this->panel2->Controls->Add(this->label10);
-			   this->panel2->Location = System::Drawing::Point(21, 500);
-			   this->panel2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			   this->panel2->Location = System::Drawing::Point(17, 400);
 			   this->panel2->Name = L"panel2";
-			   this->panel2->Size = System::Drawing::Size(1290, 442);
+			   this->panel2->Size = System::Drawing::Size(1032, 354);
 			   this->panel2->TabIndex = 19;
 			   this->panel2->Visible = false;
 			   // 
@@ -510,10 +363,9 @@ namespace PetSalut {
 			   this->button4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			   this->button4->BackColor = System::Drawing::Color::Transparent;
 			   this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
-			   this->button4->Location = System::Drawing::Point(1125, 356);
-			   this->button4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			   this->button4->Location = System::Drawing::Point(900, 285);
 			   this->button4->Name = L"button4";
-			   this->button4->Size = System::Drawing::Size(159, 80);
+			   this->button4->Size = System::Drawing::Size(127, 64);
 			   this->button4->TabIndex = 13;
 			   this->button4->Text = L"Sortir";
 			   this->button4->UseVisualStyleBackColor = false;
@@ -526,10 +378,9 @@ namespace PetSalut {
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->label9->AutoSize = true;
 			   this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
-			   this->label9->Location = System::Drawing::Point(498, 30);
-			   this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			   this->label9->Location = System::Drawing::Point(398, 24);
 			   this->label9->Name = L"label9";
-			   this->label9->Size = System::Drawing::Size(204, 29);
+			   this->label9->Size = System::Drawing::Size(164, 24);
 			   this->label9->TabIndex = 11;
 			   this->label9->Text = L"NOVA MASCOTA";
 			   this->label9->Click += gcnew System::EventHandler(this, &Crea_Mascota_forms::label9_Click);
@@ -538,10 +389,9 @@ namespace PetSalut {
 			   // 
 			   this->button2->BackColor = System::Drawing::Color::Firebrick;
 			   this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
-			   this->button2->Location = System::Drawing::Point(1241, 4);
-			   this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			   this->button2->Location = System::Drawing::Point(993, 3);
 			   this->button2->Name = L"button2";
-			   this->button2->Size = System::Drawing::Size(42, 42);
+			   this->button2->Size = System::Drawing::Size(34, 34);
 			   this->button2->TabIndex = 13;
 			   this->button2->Text = L"X";
 			   this->button2->UseVisualStyleBackColor = false;
@@ -554,23 +404,150 @@ namespace PetSalut {
 				   | System::Windows::Forms::AnchorStyles::Right));
 			   this->label10->AutoSize = true;
 			   this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
-			   this->label10->Location = System::Drawing::Point(119, 191);
-			   this->label10->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			   this->label10->Location = System::Drawing::Point(95, 153);
 			   this->label10->Name = L"label10";
-			   this->label10->Size = System::Drawing::Size(771, 29);
+			   this->label10->Size = System::Drawing::Size(607, 24);
 			   this->label10->TabIndex = 3;
 			   this->label10->Text = L"La teva mascota s\'ha afegit a la teva secció \"LES MEVES MASCOTES\".";
 			   this->label10->Click += gcnew System::EventHandler(this, &Crea_Mascota_forms::label10_Click);
+			   // 
+			   // button3
+			   // 
+			   this->button3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			   this->button3->Location = System::Drawing::Point(662, 461);
+			   this->button3->Name = L"button3";
+			   this->button3->Size = System::Drawing::Size(170, 67);
+			   this->button3->TabIndex = 27;
+			   this->button3->Text = L"Sortir";
+			   this->button3->UseVisualStyleBackColor = true;
+			   // 
+			   // chipBox
+			   // 
+			   this->chipBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->chipBox->Location = System::Drawing::Point(141, 144);
+			   this->chipBox->MaxLength = 9;
+			   this->chipBox->Name = L"chipBox";
+			   this->chipBox->Size = System::Drawing::Size(676, 22);
+			   this->chipBox->TabIndex = 26;
+			   this->chipBox->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Crea_Mascota_forms::chipBox_KeyPress);
+			   // 
+			   // AdvertType
+			   // 
+			   this->AdvertType->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->AdvertType->AutoSize = true;
+			   this->AdvertType->ForeColor = System::Drawing::Color::Brown;
+			   this->AdvertType->Location = System::Drawing::Point(823, 291);
+			   this->AdvertType->Name = L"AdvertType";
+			   this->AdvertType->Size = System::Drawing::Size(104, 16);
+			   this->AdvertType->TabIndex = 25;
+			   this->AdvertType->Text = L"Required Field *";
+			   this->AdvertType->Visible = false;
+			   // 
+			   // AdvertBirthay
+			   // 
+			   this->AdvertBirthay->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->AdvertBirthay->AutoSize = true;
+			   this->AdvertBirthay->ForeColor = System::Drawing::Color::Brown;
+			   this->AdvertBirthay->Location = System::Drawing::Point(823, 221);
+			   this->AdvertBirthay->Name = L"AdvertBirthay";
+			   this->AdvertBirthay->Size = System::Drawing::Size(104, 16);
+			   this->AdvertBirthay->TabIndex = 24;
+			   this->AdvertBirthay->Text = L"Required Field *";
+			   this->AdvertBirthay->Visible = false;
+			   this->AdvertBirthay->Click += gcnew System::EventHandler(this, &Crea_Mascota_forms::label14_Click);
+			   // 
+			   // AdvertChip
+			   // 
+			   this->AdvertChip->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->AdvertChip->AutoSize = true;
+			   this->AdvertChip->ForeColor = System::Drawing::Color::Brown;
+			   this->AdvertChip->Location = System::Drawing::Point(823, 149);
+			   this->AdvertChip->Name = L"AdvertChip";
+			   this->AdvertChip->Size = System::Drawing::Size(104, 16);
+			   this->AdvertChip->TabIndex = 23;
+			   this->AdvertChip->Text = L"Required Field *";
+			   this->AdvertChip->Visible = false;
+			   // 
+			   // AdvertName
+			   // 
+			   this->AdvertName->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->AdvertName->AutoSize = true;
+			   this->AdvertName->ForeColor = System::Drawing::Color::Brown;
+			   this->AdvertName->Location = System::Drawing::Point(823, 81);
+			   this->AdvertName->Name = L"AdvertName";
+			   this->AdvertName->Size = System::Drawing::Size(104, 16);
+			   this->AdvertName->TabIndex = 22;
+			   this->AdvertName->Text = L"Required Field *";
+			   this->AdvertName->Visible = false;
+			   this->AdvertName->Click += gcnew System::EventHandler(this, &Crea_Mascota_forms::label12_Click);
+			   // 
+			   // label11
+			   // 
+			   this->label11->Location = System::Drawing::Point(0, 0);
+			   this->label11->Name = L"label11";
+			   this->label11->Size = System::Drawing::Size(100, 23);
+			   this->label11->TabIndex = 21;
+			   // 
+			   // descriptionBox
+			   // 
+			   this->descriptionBox->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->descriptionBox->Location = System::Drawing::Point(141, 364);
+			   this->descriptionBox->Name = L"descriptionBox";
+			   this->descriptionBox->Size = System::Drawing::Size(676, 22);
+			   this->descriptionBox->TabIndex = 12;
+			   this->descriptionBox->TextChanged += gcnew System::EventHandler(this, &Crea_Mascota_forms::textBox2_TextChanged);
+			   // 
+			   // label7
+			   // 
+			   this->label7->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->label7->AutoSize = true;
+			   this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16));
+			   this->label7->Location = System::Drawing::Point(412, 29);
+			   this->label7->Name = L"label7";
+			   this->label7->Size = System::Drawing::Size(189, 26);
+			   this->label7->TabIndex = 11;
+			   this->label7->Text = L"NOVA MASCOTA";
+			   this->label7->Click += gcnew System::EventHandler(this, &Crea_Mascota_forms::label7_Click);
+			   // 
+			   // button1
+			   // 
+			   this->button1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				   | System::Windows::Forms::AnchorStyles::Left)
+				   | System::Windows::Forms::AnchorStyles::Right));
+			   this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			   this->button1->Location = System::Drawing::Point(838, 461);
+			   this->button1->Name = L"button1";
+			   this->button1->Size = System::Drawing::Size(170, 67);
+			   this->button1->TabIndex = 10;
+			   this->button1->Text = L"Registrar";
+			   this->button1->UseVisualStyleBackColor = true;
+			   this->button1->Click += gcnew System::EventHandler(this, &Crea_Mascota_forms::savebutton_Click);
 			   // 
 			   // label6
 			   // 
 			   this->label6->AutoSize = true;
 			   this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18));
-			   this->label6->Location = System::Drawing::Point(644, 11);
-			   this->label6->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			   this->label6->MaximumSize = System::Drawing::Size(319, 319);
+			   this->label6->Location = System::Drawing::Point(515, 9);
+			   this->label6->MaximumSize = System::Drawing::Size(255, 255);
 			   this->label6->Name = L"label6";
-			   this->label6->Size = System::Drawing::Size(171, 36);
+			   this->label6->Size = System::Drawing::Size(138, 29);
 			   this->label6->TabIndex = 11;
 			   this->label6->Text = L"PETSALUT";
 			   this->label6->Click += gcnew System::EventHandler(this, &Crea_Mascota_forms::label6_Click);
@@ -579,24 +556,22 @@ namespace PetSalut {
 			   // 
 			   this->label8->AutoSize = true;
 			   this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16));
-			   this->label8->Location = System::Drawing::Point(678, 48);
-			   this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			   this->label8->Location = System::Drawing::Point(542, 38);
 			   this->label8->Name = L"label8";
-			   this->label8->Size = System::Drawing::Size(132, 31);
+			   this->label8->Size = System::Drawing::Size(109, 26);
 			   this->label8->TabIndex = 12;
 			   this->label8->Text = L"MY PETS";
 			   // 
 			   // Crea_Mascota_forms
 			   // 
-			   this->AutoScaleDimensions = System::Drawing::SizeF(120, 120);
+			   this->AutoScaleDimensions = System::Drawing::SizeF(96, 96);
 			   this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Dpi;
 			   this->BackColor = System::Drawing::SystemColors::ActiveCaption;
-			   this->ClientSize = System::Drawing::Size(1480, 826);
+			   this->ClientSize = System::Drawing::Size(1184, 661);
 			   this->Controls->Add(this->label8);
 			   this->Controls->Add(this->label6);
 			   this->Controls->Add(this->panel1);
 			   this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			   this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			   this->Name = L"Crea_Mascota_forms";
 			   this->Text = L"PETSALUT";
 			   this->panel1->ResumeLayout(false);
