@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include "TxConsultaUsu.h"
 #include "TxModUsu.h"
 #include "Ordinador.h"

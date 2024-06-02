@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 #include "TxRegistraUsu.h"
 #include "CercadoraUsuari.h"
 #include "CercadoraClinica.h"

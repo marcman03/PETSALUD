@@ -118,6 +118,7 @@ namespace PetSalut {
 			// 
 			// label9
 			// 
+			this->label9->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label9->AutoSize = true;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -129,6 +130,7 @@ namespace PetSalut {
 			// 
 			// label3
 			// 
+			this->label3->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -140,6 +142,7 @@ namespace PetSalut {
 			// 
 			// label7
 			// 
+			this->label7->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -151,6 +154,7 @@ namespace PetSalut {
 			// 
 			// label6
 			// 
+			this->label6->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -162,6 +166,7 @@ namespace PetSalut {
 			// 
 			// label5
 			// 
+			this->label5->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -173,6 +178,7 @@ namespace PetSalut {
 			// 
 			// label4
 			// 
+			this->label4->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -184,6 +190,7 @@ namespace PetSalut {
 			// 
 			// label2
 			// 
+			this->label2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -195,6 +202,7 @@ namespace PetSalut {
 			// 
 			// label1
 			// 
+			this->label1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 27.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -206,6 +214,7 @@ namespace PetSalut {
 			// 
 			// nameLabel
 			// 
+			this->nameLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->nameLabel->AutoSize = true;
 			this->nameLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -219,6 +228,7 @@ namespace PetSalut {
 			// 
 			// mailLabel
 			// 
+			this->mailLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->mailLabel->AutoSize = true;
 			this->mailLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -232,6 +242,7 @@ namespace PetSalut {
 			// 
 			// phoneLabel
 			// 
+			this->phoneLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->phoneLabel->AutoSize = true;
 			this->phoneLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -245,6 +256,7 @@ namespace PetSalut {
 			// 
 			// DateLabel
 			// 
+			this->DateLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->DateLabel->AutoSize = true;
 			this->DateLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -258,6 +270,7 @@ namespace PetSalut {
 			// 
 			// usernameLabel
 			// 
+			this->usernameLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->usernameLabel->AutoSize = true;
 			this->usernameLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -271,6 +284,7 @@ namespace PetSalut {
 			// 
 			// passwordLabel
 			// 
+			this->passwordLabel->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->passwordLabel->AutoSize = true;
 			this->passwordLabel->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -284,22 +298,26 @@ namespace PetSalut {
 			// 
 			// descripcio
 			// 
+			this->descripcio->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->descripcio->AutoSize = true;
 			this->descripcio->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->descripcio->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
 			this->descripcio->Location = System::Drawing::Point(709, 317);
 			this->descripcio->Name = L"descripcio";
-			this->descripcio->Size = System::Drawing::Size(449, 130);
+			this->descripcio->Size = System::Drawing::Size(196, 26);
 			this->descripcio->TabIndex = 53;
 			this->descripcio->Text = L"descripcio Aqui";
 			// 
 			// Accepta_Tanca
 			// 
+			this->Accepta_Tanca->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->Accepta_Tanca->AutoSize = true;
 			this->Accepta_Tanca->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Accepta_Tanca->Location = System::Drawing::Point(714, 543);
-			this->Accepta_Tanca->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Accepta_Tanca->Margin = System::Windows::Forms::Padding(2);
 			this->Accepta_Tanca->Name = L"Accepta_Tanca";
 			this->Accepta_Tanca->Size = System::Drawing::Size(209, 79);
 			this->Accepta_Tanca->TabIndex = 54;
@@ -309,10 +327,12 @@ namespace PetSalut {
 			// 
 			// button1
 			// 
+			this->button1->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->button1->AutoSize = true;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->Location = System::Drawing::Point(927, 543);
-			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button1->Margin = System::Windows::Forms::Padding(2);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(209, 79);
 			this->button1->TabIndex = 55;
@@ -322,10 +342,12 @@ namespace PetSalut {
 			// 
 			// button2
 			// 
+			this->button2->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->button2->AutoSize = true;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button2->Location = System::Drawing::Point(34, 543);
-			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button2->Margin = System::Windows::Forms::Padding(2);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(215, 79);
 			this->button2->TabIndex = 56;
@@ -359,6 +381,7 @@ namespace PetSalut {
 			this->Controls->Add(this->label1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"InfoProp";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
 			this->Text = L"PETSALUT";
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -385,6 +408,10 @@ namespace PetSalut {
 	}
 	private: System::Void Accepta_Tanca_Click(System::Object^ sender, System::EventArgs^ e) {
 		PetSalut::ConsultaMascota_forms^ consMasc = gcnew PetSalut::ConsultaMascota_forms();
+
+		// Set the size and position of IniUsu to match PantallaPrincipal
+		consMasc->Size = this->Size;
+		consMasc->Location = this->Location;
 
 		this->Visible = false;
 

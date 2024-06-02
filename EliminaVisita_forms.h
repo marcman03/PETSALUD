@@ -183,9 +183,7 @@ namespace PetSalut {
 			// 
 			// panelElimina
 			// 
-			this->panelElimina->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
+			this->panelElimina->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->panelElimina->BackColor = System::Drawing::SystemColors::Control;
 			this->panelElimina->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->panelElimina->Controls->Add(this->label1);
@@ -306,10 +304,12 @@ namespace PetSalut {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->panelElimina);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"EliminaVisita_forms";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::Manual;
 			this->Text = L"PETSALUT";
 			this->panelElimina->ResumeLayout(false);
 			this->panelElimina->PerformLayout();
