@@ -45,21 +45,39 @@ namespace PetSalut {
 		}
 	private: System::Windows::Forms::Label^ label8;
 	protected:
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::Panel^ panel1;
 
-	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Label^ label1;
 
-	private: System::Windows::Forms::Button^ button3;
+
+
+
+
+
+
 	private: System::Windows::Forms::Panel^ panelConfirmacion;
 	private: System::Windows::Forms::Label^ labelConfirmacion;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::ComboBox^ centresList;
 	private: System::Windows::Forms::Panel^ panel2;
 	private: System::Windows::Forms::Button^ button4;
-	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::ComboBox^ centresList;
+	private: System::Windows::Forms::Panel^ panel1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	private: System::Windows::Forms::Button^ buttonCerrarConfirmacion;
@@ -130,22 +148,18 @@ namespace PetSalut {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(EliminaCentresForm::typeid));
 			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->panel2 = (gcnew System::Windows::Forms::Panel());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->centresList = (gcnew System::Windows::Forms::ComboBox());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panelConfirmacion = (gcnew System::Windows::Forms::Panel());
 			this->labelConfirmacion = (gcnew System::Windows::Forms::Label());
 			this->buttonCerrarConfirmacion = (gcnew System::Windows::Forms::Button());
-			this->panel1->SuspendLayout();
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->centresList = (gcnew System::Windows::Forms::ComboBox());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->panel2->SuspendLayout();
+			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// label8
@@ -153,166 +167,14 @@ namespace PetSalut {
 			this->label8->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label8->AutoSize = true;
 			this->label8->BackColor = System::Drawing::Color::Transparent;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label8->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label8->Location = System::Drawing::Point(426, 63);
+			this->label8->Location = System::Drawing::Point(446, 51);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(338, 37);
+			this->label8->Size = System::Drawing::Size(248, 42);
 			this->label8->TabIndex = 15;
-			this->label8->Text = L"ELS MEUS CENTRES";
-			// 
-			// label6
-			// 
-			this->label6->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->label6->AutoSize = true;
-			this->label6->BackColor = System::Drawing::Color::Transparent;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(497, 9);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(183, 37);
-			this->label6->TabIndex = 14;
-			this->label6->Text = L"PETSALUT";
-			// 
-			// panel1
-			// 
-			this->panel1->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->panel1->AutoSize = true;
-			this->panel1->BackColor = System::Drawing::SystemColors::Control;
-			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel1->Controls->Add(this->panel2);
-			this->panel1->Controls->Add(this->centresList);
-			this->panel1->Controls->Add(this->button3);
-			this->panel1->Controls->Add(this->label7);
-			this->panel1->Controls->Add(this->button1);
-			this->panel1->Controls->Add(this->label1);
-			this->panel1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
-			this->panel1->Location = System::Drawing::Point(117, 119);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(935, 391);
-			this->panel1->TabIndex = 13;
-			// 
-			// panel2
-			// 
-			this->panel2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->panel2->AutoScroll = true;
-			this->panel2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->panel2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->panel2->Controls->Add(this->button4);
-			this->panel2->Controls->Add(this->label2);
-			this->panel2->Controls->Add(this->label3);
-			this->panel2->Location = System::Drawing::Point(-1, 79);
-			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(935, 246);
-			this->panel2->TabIndex = 16;
-			this->panel2->Visible = false;
-			// 
-			// button4
-			// 
-			this->button4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-			this->button4->BackColor = System::Drawing::Color::Transparent;
-			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(845, 206);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(85, 35);
-			this->button4->TabIndex = 13;
-			this->button4->Text = L"Tancar";
-			this->button4->UseVisualStyleBackColor = false;
-			this->button4->Click += gcnew System::EventHandler(this, &EliminaCentresForm::exitbuttonconfirmation_Click);
-			// 
-			// label2
-			// 
-			this->label2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(362, 21);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(180, 24);
-			this->label2->TabIndex = 11;
-			this->label2->Text = L"ELIMINAR CENTRE";
-			// 
-			// label3
-			// 
-			this->label3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(275, 92);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(372, 24);
-			this->label3->TabIndex = 3;
-			this->label3->Text = L"La teva mascota s\'ha eliminat correctament.";
-			// 
-			// centresList
-			// 
-			this->centresList->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 9.75F));
-			this->centresList->FormattingEnabled = true;
-			this->centresList->Location = System::Drawing::Point(298, 142);
-			this->centresList->Name = L"centresList";
-			this->centresList->Size = System::Drawing::Size(328, 27);
-			this->centresList->TabIndex = 14;
-			this->centresList->Click += gcnew System::EventHandler(this, &EliminaCentresForm::consultar_Click);
-			// 
-			// button3
-			// 
-			this->button3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-			this->button3->BackColor = System::Drawing::Color::Firebrick;
-			this->button3->Location = System::Drawing::Point(892, 7);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(38, 31);
-			this->button3->TabIndex = 13;
-			this->button3->Text = L"X";
-			this->button3->UseVisualStyleBackColor = false;
-			this->button3->Click += gcnew System::EventHandler(this, &EliminaCentresForm::exitbutton_Click);
-			// 
-			// label7
-			// 
-			this->label7->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(362, 38);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(180, 24);
-			this->label7->TabIndex = 11;
-			this->label7->Text = L"ELIMINAR CENTRE";
-			// 
-			// button1
-			// 
-			this->button1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->button1->BackColor = System::Drawing::Color::Red;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
-			this->button1->Location = System::Drawing::Point(298, 236);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(328, 73);
-			this->button1->TabIndex = 10;
-			this->button1->Text = L"ELIMINAR";
-			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &EliminaCentresForm::deletebutton_Click);
-			// 
-			// label1
-			// 
-			this->label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 12.25F));
-			this->label1->Location = System::Drawing::Point(309, 114);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(306, 25);
-			this->label1->TabIndex = 3;
-			this->label1->Text = L"Quin centre vols ELIMINAR\?";
+			this->label8->Text = L"Eliminar Centre";
+			this->label8->Click += gcnew System::EventHandler(this, &EliminaCentresForm::label8_Click);
 			// 
 			// panelConfirmacion
 			// 
@@ -335,6 +197,108 @@ namespace PetSalut {
 			this->buttonCerrarConfirmacion->Size = System::Drawing::Size(75, 23);
 			this->buttonCerrarConfirmacion->TabIndex = 0;
 			// 
+			// label1
+			// 
+			this->label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(368, 103);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(187, 20);
+			this->label1->TabIndex = 3;
+			this->label1->Text = L"Quin centre vols eliminar\?";
+			this->label1->Click += gcnew System::EventHandler(this, &EliminaCentresForm::label1_Click);
+			// 
+			// button1
+			// 
+			this->button1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->button1->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button1->Location = System::Drawing::Point(690, 464);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(214, 45);
+			this->button1->TabIndex = 10;
+			this->button1->Text = L"Eliminar";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &EliminaCentresForm::deletebutton_Click);
+			// 
+			// centresList
+			// 
+			this->centresList->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
+			this->centresList->FormattingEnabled = true;
+			this->centresList->Location = System::Drawing::Point(298, 142);
+			this->centresList->Name = L"centresList";
+			this->centresList->Size = System::Drawing::Size(328, 24);
+			this->centresList->TabIndex = 14;
+			this->centresList->Click += gcnew System::EventHandler(this, &EliminaCentresForm::consultar_Click);
+			// 
+			// panel2
+			// 
+			this->panel2->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->panel2->AutoScroll = true;
+			this->panel2->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->panel2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel2->Controls->Add(this->button4);
+			this->panel2->Controls->Add(this->label3);
+			this->panel2->Location = System::Drawing::Point(-3, 103);
+			this->panel2->Name = L"panel2";
+			this->panel2->Size = System::Drawing::Size(941, 246);
+			this->panel2->TabIndex = 16;
+			this->panel2->Visible = false;
+			// 
+			// label3
+			// 
+			this->label3->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->Location = System::Drawing::Point(348, 98);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(247, 25);
+			this->label3->TabIndex = 3;
+			this->label3->Text = L"El teu centre s\'ha eliminat.\r\n";
+			// 
+			// button4
+			// 
+			this->button4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->button4->BackColor = System::Drawing::Color::Transparent;
+			this->button4->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button4->Location = System::Drawing::Point(388, 194);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(170, 35);
+			this->button4->TabIndex = 13;
+			this->button4->Text = L"Tancar";
+			this->button4->UseVisualStyleBackColor = false;
+			this->button4->Click += gcnew System::EventHandler(this, &EliminaCentresForm::exitbuttonconfirmation_Click);
+			// 
+			// panel1
+			// 
+			this->panel1->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->panel1->AutoSize = true;
+			this->panel1->BackColor = System::Drawing::Color::White;
+			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel1->Controls->Add(this->panel2);
+			this->panel1->Controls->Add(this->centresList);
+			this->panel1->Controls->Add(this->button1);
+			this->panel1->Controls->Add(this->label1);
+			this->panel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
+			this->panel1->Location = System::Drawing::Point(131, 124);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(935, 1171);
+			this->panel1->TabIndex = 13;
+			// 
 			// EliminaCentresForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -343,18 +307,25 @@ namespace PetSalut {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->label8);
-			this->Controls->Add(this->label6);
 			this->Controls->Add(this->panel1);
 			this->Name = L"EliminaCentresForm";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"PETSALUT";
-			this->panel1->ResumeLayout(false);
-			this->panel1->PerformLayout();
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
+private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+
 };
 }
