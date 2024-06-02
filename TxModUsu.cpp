@@ -1,11 +1,14 @@
 #include "pch.h"
 #include "TxModUsu.h"
+#include "PasswordEncrypt.h"
 
 void TxModUsu::crear(String^ usernameS, String^ contrasenyaS, String^ nomComplertS, String^ telefonS, String^ dataS, String^ correuElectronicS, String^ descripcioS, String^ tipusS)
 {
     
     _username = usernameS;
-    _contrasenya = contrasenyaS;
+
+    _contrasenya =  PasswordEncrypt::Encrypt(contrasenyaS);
+
     _nomComplert = nomComplertS;
     _telefon = telefonS;
     _data = dataS;
