@@ -32,6 +32,10 @@ namespace PetSalut {
 		List<String^>^ tipusList = gcnew List<String^>();
 	private: System::Windows::Forms::ListBox^ tipusListBox;
 	public:
+
+	public:
+
+	public:
 		BindingSource^ bs = gcnew BindingSource();
 		ConsultaCentresForm(void)
 		{
