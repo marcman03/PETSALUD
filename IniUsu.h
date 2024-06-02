@@ -115,79 +115,94 @@ namespace PetSalut {
 			// 
 			// label1
 			// 
+			this->label1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label1->AutoSize = true;
 			this->label1->BackColor = System::Drawing::Color::Transparent;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 24));
-			this->label1->Location = System::Drawing::Point(427, 113);
+			this->label1->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(468, 45);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(283, 44);
+			this->label1->Size = System::Drawing::Size(265, 51);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Iniciar Sessio";
 			this->label1->Click += gcnew System::EventHandler(this, &IniUsu::label1_Click);
 			// 
 			// textBox1
 			// 
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 11));
-			this->textBox1->Location = System::Drawing::Point(414, 235);
-			this->textBox1->Margin = System::Windows::Forms::Padding(2);
+			this->textBox1->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
+			this->textBox1->Location = System::Drawing::Point(396, 233);
+			this->textBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(307, 26);
+			this->textBox1->Size = System::Drawing::Size(408, 28);
 			this->textBox1->TabIndex = 1;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 11));
-			this->textBox2->Location = System::Drawing::Point(414, 325);
-			this->textBox2->Margin = System::Windows::Forms::Padding(2);
+			this->textBox2->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
+			this->textBox2->Location = System::Drawing::Point(396, 372);
+			this->textBox2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(307, 26);
+			this->textBox2->Size = System::Drawing::Size(408, 28);
 			this->textBox2->TabIndex = 2;
 			this->textBox2->UseSystemPasswordChar = true;
 			this->textBox2->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &IniUsu::textBox2_KeyDown);
 			// 
 			// label2
 			// 
+			this->label2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label2->AutoSize = true;
 			this->label2->BackColor = System::Drawing::Color::Transparent;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
-			this->label2->Location = System::Drawing::Point(483, 280);
+			this->label2->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(523, 319);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(159, 26);
+			this->label2->Size = System::Drawing::Size(146, 30);
 			this->label2->TabIndex = 3;
 			this->label2->Text = L"Contrasenya";
 			// 
 			// label3
 			// 
+			this->label3->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label3->AutoSize = true;
 			this->label3->BackColor = System::Drawing::Color::Transparent;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 14.25F));
-			this->label3->Location = System::Drawing::Point(483, 189);
+			this->label3->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->Location = System::Drawing::Point(523, 183);
+			this->label3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(167, 26);
+			this->label3->Size = System::Drawing::Size(153, 30);
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"Nom d\'usuari";
 			// 
 			// button1
 			// 
+			this->button1->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 18));
-			this->button1->Location = System::Drawing::Point(414, 394);
-			this->button1->Margin = System::Windows::Forms::Padding(2);
+			this->button1->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button1->Location = System::Drawing::Point(435, 466);
+			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(307, 81);
+			this->button1->Size = System::Drawing::Size(330, 42);
 			this->button1->TabIndex = 5;
-			this->button1->Text = L"Iniciar Sessio";
+			this->button1->Text = L"INICIAR ";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &IniUsu::button1_Click);
 			// 
 			// button2
 			// 
+			this->button2->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button2->Font = (gcnew System::Drawing::Font(L"Gill Sans Ultra Bold", 12));
-			this->button2->Location = System::Drawing::Point(725, 325);
-			this->button2->Margin = System::Windows::Forms::Padding(2);
+			this->button2->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button2->Location = System::Drawing::Point(810, 372);
+			this->button2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(99, 26);
+			this->button2->Size = System::Drawing::Size(109, 28);
 			this->button2->TabIndex = 6;
 			this->button2->Text = L"Mostrar";
 			this->button2->UseVisualStyleBackColor = true;
@@ -195,12 +210,12 @@ namespace PetSalut {
 			// 
 			// IniUsu
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(1184, 661);
+			this->ClientSize = System::Drawing::Size(1182, 653);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label3);
@@ -209,8 +224,9 @@ namespace PetSalut {
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			this->Margin = System::Windows::Forms::Padding(2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"IniUsu";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"PETSALUT";
 			this->Load += gcnew System::EventHandler(this, &IniUsu::IniUsu_Load);
 			this->ResumeLayout(false);

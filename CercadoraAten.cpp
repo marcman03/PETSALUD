@@ -59,7 +59,7 @@ List<int>^ CercadoraAten::cercaCentreIdsPerTipus(String^ tipus) {
         reader->Close();
     }
     catch (Exception^ ex) {
-        throw gcnew Exception("Error en la búsqueda de centres: " + ex->Message);
+        throw gcnew Exception("Error en la bÃºsqueda de centres: " + ex->Message);
     }
     finally {
         conn->Close();
