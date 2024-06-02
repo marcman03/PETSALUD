@@ -8,14 +8,14 @@
 #include "PassarellaMascota.h"
 #include "CercadoraMascota.h"
 #include "Ordinador.h"
-#include "Delete_Mascota_forms.h"
+#include "Elimina_Mascota_forms.h"
 #include "Crea_Mascota_forms.h"
 #include "CercadoraPropietari.h"
 #include "CercadoraCentre.h"
 #include "PassarellaCentre.h"
 #include "PassarellaEsdeveniments.h"
 #include "PassarellaVisites.h"
-#include "TxCrearVisita.h"
+#include "TxCrearEsdeveniment.h"
 #include "TxCrearValoracio.h"
 
 namespace PetSalut {
@@ -177,9 +177,13 @@ namespace PetSalut {
 			mt19937 gen(rd());
 			uniform_int_distribution<> distrib(200, 500000);
 			int id_mascota = distrib(gen);
+
 			//AQUI NECESITO PASAR EN PETSLIST EL CHIP DEL PET SELECTED
-			TxCrearVisita^ nuevaVisita = TxCrearVisita::crear(this->NomBox->Text->ToString(), id_mascota,this->DiaBox->Value , this->HoursBox->Text->ToString(), usuari->getUsername(), chipMascota, numeroIDCentro);
-			nuevaVisita->ejecutar();
+			TxCrearEsdeveniment creaEsde;
+
+			creaEsde.crear(this->NomBox->Text->ToString(), id_mascota, this->DiaBox->Value, this->HoursBox->Text->ToString(), usuari->getUsername(), chipMascota, numeroIDCentro, "Privat", "");
+			creaEsde.executar();
+
 			TxCrearValoracio^ novavaloracio = TxCrearValoracio::crear(numeroIDCentro, id_mascota, usuari->getUsername(), 0);
 			novavaloracio->ejecutar();
 			this->Close();

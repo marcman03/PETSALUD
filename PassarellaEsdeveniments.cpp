@@ -7,19 +7,20 @@ using namespace MySql::Data::MySqlClient;
 using namespace System::Windows::Forms;
 
 
-PassarellaEsdeveniments^ PassarellaEsdeveniments::crear(int _numeroid, String^ _nom, DateTime _data, String^ _hora, String^ _propietari) {
+void PassarellaEsdeveniments::crear() {
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
 
-    String^ sql = "INSERT INTO esdeveniment (numeroid, nom, data, hora, propietari) VALUES (@numeroid, @nom, @data, @hora, @propietari)";
+    String^ sql = "INSERT INTO esdeveniment (numeroid, nom, data, hora, propietari, tipus) VALUES (@numeroid, @nom, @data, @hora, @propietari, @tipus)";
 
     MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
 
     // Establecer los parámetros de la consulta con los valores proporcionados
-    cmd->Parameters->AddWithValue("@numeroid", _numeroid);
-    cmd->Parameters->AddWithValue("@nom", _nom);
-    cmd->Parameters->AddWithValue("@data", _data);
-    cmd->Parameters->AddWithValue("@hora", _hora);
-    cmd->Parameters->AddWithValue("@propietari", _propietari);
+    cmd->Parameters->AddWithValue("@numeroid", numeroid);
+    cmd->Parameters->AddWithValue("@nom", nom);
+    cmd->Parameters->AddWithValue("@data", data);
+    cmd->Parameters->AddWithValue("@hora", hora);
+    cmd->Parameters->AddWithValue("@propietari", propietari);
+    cmd->Parameters->AddWithValue("@tipus", tipus);
 
 
     try {
@@ -32,12 +33,11 @@ PassarellaEsdeveniments^ PassarellaEsdeveniments::crear(int _numeroid, String^ _
     finally {
         conn->Close();
     }
-    return gcnew PassarellaEsdeveniments(_numeroid, _nom, _data, _hora, _propietari);
 }
 
 
 
-PassarellaEsdeveniments^ PassarellaEsdeveniments::eliminar(int _numeroid) {
+void PassarellaEsdeveniments::eliminar() {
 
     MySqlConnection^ conn = (gcnew DBConnection())->getConnection(); // <-- Declaraci�
 
@@ -46,7 +46,7 @@ PassarellaEsdeveniments^ PassarellaEsdeveniments::eliminar(int _numeroid) {
     MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
 
     // Establecer el parámetro de la consulta con el valor proporcionado
-    cmd->Parameters->AddWithValue("@numeroid", _numeroid);
+    cmd->Parameters->AddWithValue("@numeroid", numeroid);
 
     try {
         conn->Open();
@@ -59,13 +59,13 @@ PassarellaEsdeveniments^ PassarellaEsdeveniments::eliminar(int _numeroid) {
         conn->Close();
     }
 
-    return nullptr;
 }
-PassarellaEsdeveniments::PassarellaEsdeveniments(int _numeroid, String^ _nom, DateTime _data, String^ _hora, String^ _propietari) {
+PassarellaEsdeveniments::PassarellaEsdeveniments(int _numeroid, String^ _nom, DateTime _data, String^ _hora, String^ _propietari, String^ _tipus) {
 
     numeroid = _numeroid;
     nom = _nom;
     data = _data;
     hora = _hora;
     propietari = _propietari;
+    tipus = _tipus;
 }

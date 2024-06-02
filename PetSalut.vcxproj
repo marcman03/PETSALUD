@@ -135,7 +135,9 @@
     <ClInclude Include="CercadoraEsdeveniments.h" />
     <ClInclude Include="CercadoraMascota.h" />
     <ClInclude Include="CercadoraClinica.h" />
+    <ClInclude Include="CercadoraParticipa.h" />
     <ClInclude Include="CercadoraPropietari.h" />
+    <ClInclude Include="CercadoraPublic.h" />
     <ClInclude Include="CercadoraTipus.h" />
     <ClInclude Include="CercadoraUsuari.h" />
     <ClInclude Include="CercadoraValoracio.h" />
@@ -165,7 +167,7 @@
     <ClInclude Include="ConsultaMascota_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Delete_Mascota_forms.h">
+    <ClInclude Include="Elimina_Mascota_forms.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="EliminaCentresForm.h">
@@ -202,6 +204,8 @@
     <ClInclude Include="PassarellaCentre.h" />
     <ClInclude Include="PassarellaEsdeveniments.h" />
     <ClInclude Include="PassarellaMascota.h" />
+    <ClInclude Include="PassarellaParticipa.h" />
+    <ClInclude Include="PassarellaPublic.h" />
     <ClInclude Include="PassarellaTipus.h" />
     <ClInclude Include="PassarellaUsuari.h" />
     <ClInclude Include="PassarellaValoracio.h" />
@@ -222,7 +226,7 @@
     <ClInclude Include="TxCrearCentre.h" />
     <ClInclude Include="TxCrearMascota.h" />
     <ClInclude Include="TxCrearValoracio.h" />
-    <ClInclude Include="TxCrearVisita.h" />
+    <ClInclude Include="TxCrearEsdeveniment.h" />
     <ClInclude Include="TxEliminaCentre.h" />
     <ClInclude Include="TxEliminaMascota.h" />
     <ClInclude Include="TxEliminarValoracio.h" />
@@ -242,7 +246,9 @@
     <ClCompile Include="CercadoraEsdeveniments.cpp" />
     <ClCompile Include="CercadoraMascota.cpp" />
     <ClCompile Include="CercadoraClinica.cpp" />
+    <ClCompile Include="CercadoraParticipa.cpp" />
     <ClCompile Include="CercadoraPropietari.cpp" />
+    <ClCompile Include="CercadoraPublic.cpp" />
     <ClCompile Include="CercadoraTipus.cpp" />
     <ClCompile Include="CercadoraUsuari.cpp" />
     <ClCompile Include="CercadoraValoracio.cpp" />
@@ -272,6 +278,8 @@
     <ClCompile Include="PassarellaClinica.cpp" />
     <ClCompile Include="PassarellaEsdeveniments.cpp" />
     <ClCompile Include="PassarellaMascota.cpp" />
+    <ClCompile Include="PassarellaParticipa.cpp" />
+    <ClCompile Include="PassarellaPublic.cpp" />
     <ClCompile Include="PassarellaTipus.cpp" />
     <ClCompile Include="PassarellaUsuari.cpp" />
     <ClCompile Include="Ordinador.cpp" />
@@ -293,7 +301,7 @@
     <ClCompile Include="TxCrearCentre.cpp" />
     <ClCompile Include="TxCrearMascota.cpp" />
     <ClCompile Include="TxCrearValoracio.cpp" />
-    <ClCompile Include="TxCrearVisita.cpp" />
+    <ClCompile Include="TxCrearEsdeveniment.cpp" />
     <ClCompile Include="TxEliminaCentre.cpp" />
     <ClCompile Include="TxEliminaMascota.cpp" />
     <ClCompile Include="TxEliminarValoracio.cpp" />
@@ -379,8 +387,8 @@
       <DependentUpon>ModProp.h</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Delete_Mascota_forms.resx">
-      <DependentUpon>Delete_Mascota_forms.h</DependentUpon>
+    <EmbeddedResource Include="Elimina_Mascota_forms.resx">
+      <DependentUpon>Elimina_Mascota_forms.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

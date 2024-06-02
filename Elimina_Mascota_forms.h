@@ -163,7 +163,6 @@ namespace PetSalut {
 			this->label8->Size = System::Drawing::Size(142, 33);
 			this->label8->TabIndex = 15;
 			this->label8->Text = L"MY PETS";
-			this->label8->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::label8_Click);
 			// 
 			// label6
 			// 
@@ -236,7 +235,6 @@ namespace PetSalut {
 			this->label2->Size = System::Drawing::Size(252, 26);
 			this->label2->TabIndex = 11;
 			this->label2->Text = L"ELIMINAR MASCOTA";
-			this->label2->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::label2_Click);
 			// 
 			// label3
 			// 
@@ -250,7 +248,6 @@ namespace PetSalut {
 			this->label3->Size = System::Drawing::Size(530, 26);
 			this->label3->TabIndex = 3;
 			this->label3->Text = L"La teva mascota s\'ha eliminat correctament.";
-			this->label3->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::label3_Click);
 			// 
 			// petsList
 			// 
@@ -285,7 +282,6 @@ namespace PetSalut {
 			this->label7->Size = System::Drawing::Size(252, 26);
 			this->label7->TabIndex = 11;
 			this->label7->Text = L"ELIMINAR MASCOTA";
-			this->label7->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::label7_Click);
 			// 
 			// button1
 			// 
@@ -314,7 +310,6 @@ namespace PetSalut {
 			this->label1->Size = System::Drawing::Size(333, 25);
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"Quina Mascota vols ELIMINAR\?";
-			this->label1->Click += gcnew System::EventHandler(this, &Elimina_Mascota_forms::label1_Click);
 			// 
 			// panelConfirmacion
 			// 
@@ -346,7 +341,6 @@ namespace PetSalut {
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->panel1);
-			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"Elimina_Mascota_forms";
 			this->Text = L"PETSALUT";
 			this->panel1->ResumeLayout(false);
@@ -355,24 +349,11 @@ namespace PetSalut {
 			this->panel2->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+
 
 		}
 #pragma endregion
-	private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
+
 };
 }

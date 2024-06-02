@@ -7,7 +7,7 @@
 #include "PassarellaMascota.h"
 #include "CercadoraMascota.h"
 #include "Ordinador.h"
-#include "Delete_Mascota_forms.h"
+#include "Elimina_Mascota_forms.h"
 #include "Crea_Mascota_forms.h"
 #include "CercadoraPropietari.h"
 #include "CreaVisites_forms.h"
@@ -151,6 +151,9 @@ namespace PetSalut {
 		elimVisita->ShowDialog();
 
 		this->Visible = true;
+
+		if (visitaList->SelectedIndex != -1)
+			this->Close();
 
 	}
 
