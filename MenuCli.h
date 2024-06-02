@@ -356,6 +356,10 @@ private: System::Void Consulta_Click(System::Object^ sender, System::EventArgs^ 
 
 	PetSalut::InfoCli^ infoCli = gcnew PetSalut::InfoCli();
 
+	// Set the size and position of IniUsu to match PantallaPrincipal
+	infoCli->Size = this->Size;
+	infoCli->Location = this->Location;
+
 	this->Visible = false;
 
 	infoCli->ShowDialog();

@@ -120,7 +120,7 @@ namespace PetSalut {
 			this->label9->BackColor = System::Drawing::Color::Transparent;
 			this->label9->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label9->Location = System::Drawing::Point(458, 110);
+			this->label9->Location = System::Drawing::Point(739, 168);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(106, 25);
 			this->label9->TabIndex = 46;
@@ -134,7 +134,7 @@ namespace PetSalut {
 			this->label3->BackColor = System::Drawing::Color::Transparent;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(28, 206);
+			this->label3->Location = System::Drawing::Point(104, 267);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(166, 25);
 			this->label3->TabIndex = 36;
@@ -147,7 +147,7 @@ namespace PetSalut {
 			this->label7->BackColor = System::Drawing::Color::Transparent;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(252, 206);
+			this->label7->Location = System::Drawing::Point(443, 267);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(124, 25);
 			this->label7->TabIndex = 41;
@@ -160,7 +160,7 @@ namespace PetSalut {
 			this->label6->BackColor = System::Drawing::Color::Transparent;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(252, 110);
+			this->label6->Location = System::Drawing::Point(443, 171);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(128, 25);
 			this->label6->TabIndex = 40;
@@ -173,7 +173,7 @@ namespace PetSalut {
 			this->label4->BackColor = System::Drawing::Color::Transparent;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(28, 306);
+			this->label4->Location = System::Drawing::Point(104, 367);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(78, 25);
 			this->label4->TabIndex = 38;
@@ -186,7 +186,7 @@ namespace PetSalut {
 			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(28, 110);
+			this->label2->Location = System::Drawing::Point(104, 171);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(139, 25);
 			this->label2->TabIndex = 34;
@@ -200,7 +200,7 @@ namespace PetSalut {
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(28, 24);
+			this->label1->Location = System::Drawing::Point(104, 85);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(282, 42);
 			this->label1->TabIndex = 33;
@@ -216,7 +216,7 @@ namespace PetSalut {
 				static_cast<System::Byte>(0)));
 			this->nameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->nameLabel->Location = System::Drawing::Point(32, 151);
+			this->nameLabel->Location = System::Drawing::Point(108, 212);
 			this->nameLabel->Name = L"nameLabel";
 			this->nameLabel->Size = System::Drawing::Size(37, 17);
 			this->nameLabel->TabIndex = 47;
@@ -231,7 +231,7 @@ namespace PetSalut {
 				static_cast<System::Byte>(0)));
 			this->mailLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->mailLabel->Location = System::Drawing::Point(28, 239);
+			this->mailLabel->Location = System::Drawing::Point(104, 300);
 			this->mailLabel->Name = L"mailLabel";
 			this->mailLabel->Size = System::Drawing::Size(51, 17);
 			this->mailLabel->TabIndex = 48;
@@ -246,7 +246,7 @@ namespace PetSalut {
 				static_cast<System::Byte>(0)));
 			this->phoneLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->phoneLabel->Location = System::Drawing::Point(28, 339);
+			this->phoneLabel->Location = System::Drawing::Point(104, 400);
 			this->phoneLabel->Name = L"phoneLabel";
 			this->phoneLabel->Size = System::Drawing::Size(56, 17);
 			this->phoneLabel->TabIndex = 49;
@@ -261,7 +261,7 @@ namespace PetSalut {
 				static_cast<System::Byte>(0)));
 			this->usernameLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->usernameLabel->Location = System::Drawing::Point(252, 145);
+			this->usernameLabel->Location = System::Drawing::Point(443, 206);
 			this->usernameLabel->Name = L"usernameLabel";
 			this->usernameLabel->Size = System::Drawing::Size(73, 17);
 			this->usernameLabel->TabIndex = 51;
@@ -276,7 +276,7 @@ namespace PetSalut {
 				static_cast<System::Byte>(0)));
 			this->passwordLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->passwordLabel->Location = System::Drawing::Point(252, 239);
+			this->passwordLabel->Location = System::Drawing::Point(443, 300);
 			this->passwordLabel->Name = L"passwordLabel";
 			this->passwordLabel->Size = System::Drawing::Size(88, 17);
 			this->passwordLabel->TabIndex = 52;
@@ -289,7 +289,7 @@ namespace PetSalut {
 			this->descripcio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
 			this->descripcio->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->descripcio->Location = System::Drawing::Point(458, 149);
+			this->descripcio->Location = System::Drawing::Point(739, 207);
 			this->descripcio->Name = L"descripcio";
 			this->descripcio->Size = System::Drawing::Size(355, 200);
 			this->descripcio->TabIndex = 53;
@@ -301,7 +301,7 @@ namespace PetSalut {
 			this->mostraCentresButton->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->mostraCentresButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->mostraCentresButton->Location = System::Drawing::Point(461, 466);
+			this->mostraCentresButton->Location = System::Drawing::Point(742, 561);
 			this->mostraCentresButton->Margin = System::Windows::Forms::Padding(2);
 			this->mostraCentresButton->Name = L"mostraCentresButton";
 			this->mostraCentresButton->Size = System::Drawing::Size(171, 39);
@@ -315,7 +315,7 @@ namespace PetSalut {
 			this->modificarButton->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->modificarButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->modificarButton->Location = System::Drawing::Point(679, 466);
+			this->modificarButton->Location = System::Drawing::Point(923, 561);
 			this->modificarButton->Margin = System::Windows::Forms::Padding(2);
 			this->modificarButton->Name = L"modificarButton";
 			this->modificarButton->Size = System::Drawing::Size(171, 39);
@@ -329,7 +329,7 @@ namespace PetSalut {
 			this->tornaButton->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->tornaButton->Font = (gcnew System::Drawing::Font(L"Yu Gothic", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->tornaButton->Location = System::Drawing::Point(32, 466);
+			this->tornaButton->Location = System::Drawing::Point(97, 562);
 			this->tornaButton->Margin = System::Windows::Forms::Padding(2);
 			this->tornaButton->Name = L"tornaButton";
 			this->tornaButton->Size = System::Drawing::Size(171, 38);
@@ -344,7 +344,7 @@ namespace PetSalut {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(886, 531);
+			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->tornaButton);
 			this->Controls->Add(this->modificarButton);
 			this->Controls->Add(this->mostraCentresButton);
@@ -380,6 +380,10 @@ namespace PetSalut {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		PetSalut::ModCli^ modCli = gcnew PetSalut::ModCli();
+
+		// Set the size and position of IniUsu to match PantallaPrincipal
+		modCli->Size = this->Size;
+		modCli->Location = this->Location;
 
 		modCli->ShowDialog();
 

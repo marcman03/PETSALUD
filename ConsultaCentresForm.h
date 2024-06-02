@@ -115,10 +115,10 @@ namespace PetSalut {
 			this->centresList->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->centresList->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
 			this->centresList->FormattingEnabled = true;
-			this->centresList->Location = System::Drawing::Point(325, 189);
+			this->centresList->Location = System::Drawing::Point(228, 189);
 			this->centresList->Margin = System::Windows::Forms::Padding(2);
 			this->centresList->Name = L"centresList";
-			this->centresList->Size = System::Drawing::Size(515, 26);
+			this->centresList->Size = System::Drawing::Size(497, 26);
 			this->centresList->TabIndex = 3;
 			this->centresList->Click += gcnew System::EventHandler(this, &ConsultaCentresForm::fillPets);
 			// 
@@ -126,10 +126,10 @@ namespace PetSalut {
 			// 
 			this->consultar->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->consultar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
-			this->consultar->Location = System::Drawing::Point(844, 186);
+			this->consultar->Location = System::Drawing::Point(730, 189);
 			this->consultar->Margin = System::Windows::Forms::Padding(2);
 			this->consultar->Name = L"consultar";
-			this->consultar->Size = System::Drawing::Size(179, 29);
+			this->consultar->Size = System::Drawing::Size(207, 29);
 			this->consultar->TabIndex = 4;
 			this->consultar->Text = L"CONSULTAR";
 			this->consultar->UseVisualStyleBackColor = true;
@@ -141,10 +141,10 @@ namespace PetSalut {
 			this->descriptionPannel->BackColor = System::Drawing::SystemColors::Control;
 			this->descriptionPannel->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->descriptionPannel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
-			this->descriptionPannel->Location = System::Drawing::Point(325, 219);
+			this->descriptionPannel->Location = System::Drawing::Point(228, 219);
 			this->descriptionPannel->Margin = System::Windows::Forms::Padding(2);
 			this->descriptionPannel->Name = L"descriptionPannel";
-			this->descriptionPannel->Size = System::Drawing::Size(400, 261);
+			this->descriptionPannel->Size = System::Drawing::Size(497, 261);
 			this->descriptionPannel->TabIndex = 5;
 			this->descriptionPannel->Visible = false;
 			// 
@@ -200,6 +200,7 @@ namespace PetSalut {
 			this->button1->TabIndex = 9;
 			this->button1->Text = L"TORNAR";
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &ConsultaCentresForm::button1_Click);
 			// 
 			// tipusListBox
 			// 
@@ -208,11 +209,11 @@ namespace PetSalut {
 			this->tipusListBox->Enabled = false;
 			this->tipusListBox->FormattingEnabled = true;
 			this->tipusListBox->IntegralHeight = false;
-			this->tipusListBox->Location = System::Drawing::Point(730, 220);
+			this->tipusListBox->Location = System::Drawing::Point(730, 219);
 			this->tipusListBox->Name = L"tipusListBox";
 			this->tipusListBox->ScrollAlwaysVisible = true;
 			this->tipusListBox->SelectionMode = System::Windows::Forms::SelectionMode::None;
-			this->tipusListBox->Size = System::Drawing::Size(110, 160);
+			this->tipusListBox->Size = System::Drawing::Size(207, 160);
 			this->tipusListBox->TabIndex = 10;
 			this->tipusListBox->TabStop = false;
 			this->tipusListBox->UseTabStops = false;
@@ -381,5 +382,8 @@ namespace PetSalut {
 		this->Visible = true;
 
 	}
-	};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
+	}
+};
 }

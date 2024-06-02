@@ -333,7 +333,7 @@ namespace PetSalut {
 			   this->panel1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F));
 			   this->panel1->Location = System::Drawing::Point(80, 85);
 			   this->panel1->Name = L"panel1";
-			   this->panel1->Size = System::Drawing::Size(1032, 8001);
+			   this->panel1->Size = System::Drawing::Size(1032, 14625);
 			   this->panel1->TabIndex = 10;
 			   this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &Crea_Mascota_forms::panel1_Paint);
 			   // 
@@ -351,7 +351,7 @@ namespace PetSalut {
 			   this->panel2->Controls->Add(this->label10);
 			   this->panel2->Location = System::Drawing::Point(17, 400);
 			   this->panel2->Name = L"panel2";
-			   this->panel2->Size = System::Drawing::Size(1032, 7806);
+			   this->panel2->Size = System::Drawing::Size(1032, 14430);
 			   this->panel2->TabIndex = 19;
 			   this->panel2->Visible = false;
 			   // 
@@ -360,7 +360,7 @@ namespace PetSalut {
 			   this->button4->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
 			   this->button4->BackColor = System::Drawing::Color::Transparent;
 			   this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
-			   this->button4->Location = System::Drawing::Point(900, 7737);
+			   this->button4->Location = System::Drawing::Point(900, 14361);
 			   this->button4->Name = L"button4";
 			   this->button4->Size = System::Drawing::Size(127, 64);
 			   this->button4->TabIndex = 13;
@@ -416,7 +416,7 @@ namespace PetSalut {
 			   this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
 			   this->button3->Location = System::Drawing::Point(662, 461);
 			   this->button3->Name = L"button3";
-			   this->button3->Size = System::Drawing::Size(170, 7519);
+			   this->button3->Size = System::Drawing::Size(170, 14143);
 			   this->button3->TabIndex = 27;
 			   this->button3->Text = L"Sortir";
 			   this->button3->UseVisualStyleBackColor = true;
@@ -531,7 +531,7 @@ namespace PetSalut {
 			   this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F));
 			   this->button1->Location = System::Drawing::Point(838, 461);
 			   this->button1->Name = L"button1";
-			   this->button1->Size = System::Drawing::Size(170, 7519);
+			   this->button1->Size = System::Drawing::Size(170, 14143);
 			   this->button1->TabIndex = 10;
 			   this->button1->Text = L"Registrar";
 			   this->button1->UseVisualStyleBackColor = true;

@@ -245,8 +245,9 @@ namespace PetSalut {
 			// petsaludlabel
 			// 
 			this->petsaludlabel->AutoSize = true;
+			this->petsaludlabel->BackColor = System::Drawing::Color::Transparent;
 			this->petsaludlabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 28.25F));
-			this->petsaludlabel->Location = System::Drawing::Point(455, 9);
+			this->petsaludlabel->Location = System::Drawing::Point(491, 9);
 			this->petsaludlabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->petsaludlabel->Name = L"petsaludlabel";
 			this->petsaludlabel->Size = System::Drawing::Size(213, 44);
@@ -257,8 +258,9 @@ namespace PetSalut {
 			// mypetslabel
 			// 
 			this->mypetslabel->AutoSize = true;
+			this->mypetslabel->BackColor = System::Drawing::Color::Transparent;
 			this->mypetslabel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 20));
-			this->mypetslabel->Location = System::Drawing::Point(410, 63);
+			this->mypetslabel->Location = System::Drawing::Point(446, 63);
 			this->mypetslabel->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->mypetslabel->Name = L"mypetslabel";
 			this->mypetslabel->Size = System::Drawing::Size(325, 31);
@@ -270,7 +272,7 @@ namespace PetSalut {
 			this->petsList->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
 			this->petsList->FormattingEnabled = true;
 			this->petsList->Location = System::Drawing::Point(199, 136);
-			this->petsList->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->petsList->Margin = System::Windows::Forms::Padding(2);
 			this->petsList->Name = L"petsList";
 			this->petsList->Size = System::Drawing::Size(590, 26);
 			this->petsList->TabIndex = 3;
@@ -280,7 +282,7 @@ namespace PetSalut {
 			// 
 			this->consultar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
 			this->consultar->Location = System::Drawing::Point(793, 135);
-			this->consultar->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->consultar->Margin = System::Windows::Forms::Padding(2);
 			this->consultar->Name = L"consultar";
 			this->consultar->Size = System::Drawing::Size(179, 29);
 			this->consultar->TabIndex = 4;
@@ -294,7 +296,7 @@ namespace PetSalut {
 			this->descriptionPannel->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->descriptionPannel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11));
 			this->descriptionPannel->Location = System::Drawing::Point(199, 169);
-			this->descriptionPannel->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->descriptionPannel->Margin = System::Windows::Forms::Padding(2);
 			this->descriptionPannel->Name = L"descriptionPannel";
 			this->descriptionPannel->Size = System::Drawing::Size(773, 480);
 			this->descriptionPannel->TabIndex = 5;
@@ -356,6 +358,7 @@ namespace PetSalut {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->visitesButton);
@@ -367,7 +370,7 @@ namespace PetSalut {
 			this->Controls->Add(this->mypetslabel);
 			this->Controls->Add(this->petsaludlabel);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"ConsultaMascota_forms";
 			this->Text = L"PETSALUT";
 			this->ResumeLayout(false);
