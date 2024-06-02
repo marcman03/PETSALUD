@@ -210,6 +210,7 @@
     <ClInclude Include="PassarellaUsuari.h" />
     <ClInclude Include="PassarellaValoracio.h" />
     <ClInclude Include="PassarellaVisites.h" />
+    <ClInclude Include="PasswordEncrypt.h" />
     <ClInclude Include="RegUsu.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -288,6 +289,7 @@
     <ClCompile Include="PassarellaPropietari.cpp" />
     <ClCompile Include="PassarellaValoracio.cpp" />
     <ClCompile Include="PassarellaVisites.cpp" />
+    <ClCompile Include="PasswordEncrypt.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

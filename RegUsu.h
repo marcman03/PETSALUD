@@ -5,6 +5,7 @@
 #include "CercadoraPropietari.h"
 #include "PassarellaUsuari.h"
 #include "MenuProp.h"
+#include "PasswordEncrypt.h"
 
 namespace PetSalut {
 
@@ -761,12 +762,13 @@ namespace PetSalut {
 
 			String^ usernameS = username->Text;
 			String^ nomComplertS = name->Text;
-			String^ contrasenyaS = passwd1->Text;
+			String^ contrasenyaS = PasswordEncrypt::Encrypt(passwd1->Text);
 			String^ telefonS = phone->Text;
 			String^ tipusS = tipusSelected;
 			String^ correuElectronicS = mail->Text;
 			String^ dataNaixementS = date->Text;
 			String^ descripcioS = descripcio->Text;
+
 
 
 			TxRegistraUsu regUsu;
