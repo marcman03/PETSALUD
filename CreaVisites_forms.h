@@ -17,6 +17,7 @@
 #include "PassarellaVisites.h"
 #include "TxCrearEsdeveniment.h"
 #include "TxCrearValoracio.h"
+#include "CercadoraAten.h"
 
 namespace PetSalut {
 
@@ -103,16 +104,27 @@ namespace PetSalut {
 		// Limpiar los ítems del ComboBox antes de llenarlo nuevamente
 		CentresBox->Items->Clear();
 
-		// Crear instancia de la buscadora de centros
-		CercadoraCentre^ cercadora = gcnew CercadoraCentre();
+		CentresBox->Items->Clear();
 
-		// Obtener la lista de todos los centros
-		List<PassarellaCentre^>^ totsCentres = cercadora->CercatotsCentres();
+		// Obtener la mascota seleccionada en el ComboBox
+		PassarellaMascota^ selectedMascota = dynamic_cast<PassarellaMascota^>(petsList->SelectedItem);
 
-		// Llenar el ComboBox con los objetos PassarellaCentre^
-		for (int i = 0; i < totsCentres->Count; ++i) {
-			PassarellaCentre^ centre = totsCentres[i];
-			CentresBox->Items->Add(centre);
+		if (selectedMascota == nullptr) {
+			MessageBox::Show("Por favor, seleccione una mascota primero.");
+			return;
+		}
+
+		// Obtener el tipus de la mascota seleccionada
+		String^ tipus = selectedMascota->Tipus;
+		List<int>^ centreIds = CercadoraAten::cercaCentreIdsPerTipus(tipus);
+
+		// Llenar el ComboBox con los centre_id obtenidos
+		for each (int centreId in centreIds) {
+			PassarellaCentre^ centre = CercadoraCentre::cercaCentre(centreId);
+			if (centre != nullptr) {
+				// Llenar el ComboBox con los nombres y ubicaciones de los centros
+				CentresBox->Items->Add(centre->Nom + "  ( " + centre->Ubicacio + " )");
+			}
 		}
 	}
 
@@ -452,6 +464,7 @@ namespace PetSalut {
 			this->DiaBox->Name = L"DiaBox";
 			this->DiaBox->Size = System::Drawing::Size(640, 24);
 			this->DiaBox->TabIndex = 2;
+			this->DiaBox->MinDate = DateTime::Now;
 			// 
 			// nomLabel
 			// 

@@ -7,4 +7,5 @@ ref class CercadoraAten
 {
 	public:
 		List<String^>^ cercaTipusAten(int id);
+		static List<int>^ cercaCentreIdsPerTipus(String^ tipus);
 };

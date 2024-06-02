@@ -37,3 +37,33 @@ List<String^>^ CercadoraAten::cercaTipusAten(int id)
 
     return tipusList;
 }
+
+List<int>^ CercadoraAten::cercaCentreIdsPerTipus(String^ tipus) {
+    List<int>^ centreIds = gcnew List<int>();
+
+    MySqlConnection^ conn = (gcnew DBConnection())->getConnection();
+    String^ sql = "SELECT numeroid_centre FROM aten WHERE nom_tipus = @tipus;";
+
+    MySqlCommand^ cmd = gcnew MySqlCommand(sql, conn);
+    cmd->Parameters->AddWithValue("@tipus", tipus);
+
+    try {
+        conn->Open();
+        MySqlDataReader^ reader = cmd->ExecuteReader();
+
+        while (reader->Read()) {
+            int centreId = reader->GetInt32("numeroid_centre");
+            centreIds->Add(centreId);
+        }
+
+        reader->Close();
+    }
+    catch (Exception^ ex) {
+        throw gcnew Exception("Error en la búsqueda de centres: " + ex->Message);
+    }
+    finally {
+        conn->Close();
+    }
+
+    return centreIds;
+}
