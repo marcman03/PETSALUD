@@ -335,13 +335,11 @@ namespace PetSalut {
 
 			CercadoraValoracio^ cercadoraValoracio = gcnew CercadoraValoracio();
 			int^ val = cercadoraValoracio->cercaValMitja(numero_ID);
-			String^ valor;
-			if (val == 0) {
+			String^ valor= val->ToString();
+			if (valor == "0") {
 				valor = "No hi ha valoracions";
 			}
-			else {
-				valor = val->ToString();
-			}
+			
 			Label^ label_Valoracio = gcnew Label();
 			label_Valoracio->Text = "Valoracio mitja: " + valor;
 			label_Valoracio->Location = Point(10, label_Ubicacio->Bottom + 25);

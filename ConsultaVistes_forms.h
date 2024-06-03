@@ -495,11 +495,11 @@ namespace PetSalut {
 			// 
 			this->trackBar->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->trackBar->Location = System::Drawing::Point(149, 156);
-			this->trackBar->Minimum = 10;
+			this->trackBar->Minimum = 1;
 			this->trackBar->Name = L"trackBar";
 			this->trackBar->Size = System::Drawing::Size(260, 45);
 			this->trackBar->TabIndex = 1;
-			this->trackBar->Value = 10;
+			this->trackBar->Maximum = 10;
 			this->trackBar->Scroll += gcnew System::EventHandler(this, &ConsultaVistes_forms::trackBar_Scroll);
 			// 
 			// consultar
