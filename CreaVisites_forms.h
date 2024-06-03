@@ -104,8 +104,6 @@ namespace PetSalut {
 		// Limpiar los ítems del ComboBox antes de llenarlo nuevamente
 		CentresBox->Items->Clear();
 
-		CentresBox->Items->Clear();
-
 		// Obtener la mascota seleccionada en el ComboBox
 		PassarellaMascota^ selectedMascota = dynamic_cast<PassarellaMascota^>(petsList->SelectedItem);
 
@@ -122,13 +120,11 @@ namespace PetSalut {
 		for each (int centreId in centreIds) {
 			PassarellaCentre^ centre = CercadoraCentre::cercaCentre(centreId);
 			if (centre != nullptr) {
-				// Llenar el ComboBox con los nombres y ubicaciones de los centros
-				CentresBox->Items->Add(centre->Nom + "  ( " + centre->Ubicacio + " )");
+				// Llenar el ComboBox con los objetos PassarellaCentre
+				CentresBox->Items->Add(centre);
 			}
 		}
 	}
-
-
 
 	private: System::Void fillPets(System::Object^ sender, System::EventArgs^ e) {
 		Ordinador^ ord = Ordinador::getInstance();
@@ -159,7 +155,7 @@ namespace PetSalut {
 		}
 	}
 	private: System::Void guardarbutton_click(System::Object^ sender, System::EventArgs^ e) {
-	
+
 		// Oculta el panel1, lo que tambi�n oculta todos los controles dentro de �l
 		if (String::IsNullOrWhiteSpace(this->NomBox->Text)) {
 			this->adnomlabel->Visible = true;
@@ -184,6 +180,8 @@ namespace PetSalut {
 			int chipMascota = mascotaSeleccionada->Chip;
 			PassarellaCentre^ centroSeleccionado = safe_cast<PassarellaCentre^>(CentresBox->SelectedItem);
 			int numeroIDCentro = centroSeleccionado->Numero_ID;
+
+			String^ centroSeleccionadoStr = CentresBox->Text;
 
 			random_device rd;
 			mt19937 gen(rd());

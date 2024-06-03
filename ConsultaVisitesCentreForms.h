@@ -103,6 +103,7 @@ namespace PetSalut {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(ConsultaVisitesCentreForms::typeid));
 			this->visitesListBox = (gcnew System::Windows::Forms::ListBox());
 			this->visitesListView = (gcnew System::Windows::Forms::ListView());
 			this->Id = (gcnew System::Windows::Forms::ColumnHeader());
@@ -178,9 +179,10 @@ namespace PetSalut {
 			// label1
 			// 
 			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(453, 82);
+			this->label1->Location = System::Drawing::Point(501, 86);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(191, 25);
 			this->label1->TabIndex = 3;
@@ -189,6 +191,7 @@ namespace PetSalut {
 			// ConsultaVisitesCentreForms
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1184, 661);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->tancarButton);
