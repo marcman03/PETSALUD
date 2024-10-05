@@ -8,11 +8,11 @@ using namespace System::Windows::Forms;
 
 DBConnection::DBConnection() {
     try {
-        String^ host = "ubiwan.epsevg.upc.edu";
-        String^ database = "amep03";
-        String^ port = "3306";
-        String^ user = "amep03";
-        String^ password = "yieV7tooPae7-";
+        String^ host = "";
+        String^ database = "";
+        String^ port = "";
+        String^ user = "";
+        String^ password = "";
         
         String^ connectionString = "datasource=" + host + ";port=" + port + ";username=" + user + ";password=\"" + password + "\";database=" + database + ";";
 
